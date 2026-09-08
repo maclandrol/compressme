@@ -1,14 +1,15 @@
-# Compile the finite domain instead of approximating it
+# Precompute a finite token domain
 
-If a frozen inference path starts with a token lookup, its input domain is finite.
-For a deterministic function applied independently to each token, enumerate
-every token's result once and store the resulting table. No labels, optimization,
-student model or distributional fitting are involved.
+A frozen token encoder has a finite set of possible inputs. If it applies the
+same deterministic function independently to each token, we can evaluate every
+token once and store the results in a lookup table. This requires no labels,
+optimization, student model or distributional fitting.
 
-`compile_finite_lookup` recognizes an explicit sequential block containing an
-embedding followed by supported affine maps, normalization over the final feature
-axis, and pointwise activations. It refuses token mixing, training, custom hooks,
-mutating embedding options and known external parameter consumers.
+`compile_finite_lookup` supports explicit sequential blocks: an embedding,
+affine maps, normalization over the final feature axis and pointwise activations.
+Token mixing would break independence, while training or mutating embedding
+options would change the table's source computation. These cases, custom hooks
+and known external parameter consumers are refused.
 
 ```python
 from compressme import compile_finite_lookup
@@ -21,27 +22,28 @@ result = compile_finite_lookup(
 print(result.report)
 ```
 
-The result replaces that block, not its enclosing model. The compiler accepts it
-only when it saves both logical tensor bytes and unique registered backing
-storage, and passes full-vocabulary numerical checks using
-different batch layouts, scalar IDs, empty inputs and multidimensional indices.
-Repeated state keys and shared modules are counted once for resident storage;
-logical checkpoint entries alone can falsely suggest a saving.
-The enclosing model still needs a complete-output comparison. Learned parameters
-can have been trained originally; the exported lookup is an inference representation
+The result contains a replacement for the selected block. Acceptance requires
+savings in both logical tensor bytes and unique registered backing storage,
+plus full-vocabulary numerical comparisons across batch layouts, scalar IDs,
+empty inputs and multidimensional indices. Repeated state keys and shared
+modules count once toward resident storage; counting checkpoint entries alone
+can overstate the saving.
+
+The enclosing model still needs a complete-output comparison. Compilation uses
+the learned parameters, but the exported table is an inference representation
 and cannot preserve their original training parameterization.
 
-The smaller table can cross nonlinearities because every possible token is
-enumerated. This is partial evaluation of a known program over a finite domain.
-It does not justify compiling arbitrary continuous inputs or token interactions.
+Enumerating every possible token lets the table include nonlinear operations.
+This is partial evaluation of a known program over a finite domain. Continuous
+inputs or interactions between tokens fall outside that derivation.
 
 ## Preserve several consumers of the same token
 
-`FiniteTokenFanout` declares an embedding, a shared row-local prefix and named
-branches. `compile_finite_fanout` compiles all branches together, including an
-optional residual embedding output. This avoids dropping a live residual when
-precomputing attention projections, and applies to any model with the same
-declared computation.
+Precomputing attention projections must also preserve any live residual that
+uses the original embedding. `FiniteTokenFanout` describes these uses together:
+an embedding, a shared row-local prefix, named branches and an optional residual
+embedding output. `compile_finite_fanout` compiles the whole declaration, which
+can describe the same computation in any model.
 
 ```python
 from torch import nn
@@ -58,24 +60,26 @@ outputs = result.model(token_ids)  # q, k, v, residual
 result.save("compiled-token-branches", packing=True)
 ```
 
-This declaration defines the source computation; matching a custom module's
-name or attributes does not establish equivalence. `Float32RMSNorm` explicitly
+The declaration specifies the source computation. A custom module needs to
+match that computation, not merely its name or attributes. `Float32RMSNorm`
+explicitly
 accumulates variance in float32, restores the input dtype before multiplying by
 the scale, and is distinct from ordinary `nn.RMSNorm`. The compiler refuses
 unproved operations and in-place activations that could couple branches.
 
-Outputs share packed storage only when safe. Different dtypes use different
-tables; bit-identical output tables share retained coefficients, and constant
-tables use one row. Each returned tensor is independent, so mutating one output
+Different dtypes use different packed tables. Bit-identical output tables share
+their stored coefficients, and constant tables need only one row. Each returned
+tensor is independent, so mutating one output
 does not change another. Residual embeddings remain included in storage counts.
 The source weights are removed only within the declared block; an enclosing
 model retaining other consumers must count those weights separately.
 
-Both logical and unique backing bytes must decrease. Every token and several
-index layouts are checked separately for every named output. JSON recipes and
-strict tensor reload retain the packed representation without source weights.
-The compilation comparison is historical after reload or tracked mutation.
-Custom hooks and forward overrides cannot silently disappear during export.
+For each named output, the compiler compares every token across several index
+layouts. Both logical and unique backing bytes must decrease. JSON recipes and
+strict tensor reload preserve the packed representation without source weights.
+After reload or tracked mutation, the compilation comparison describes the
+earlier state. Export refuses custom hooks and forward overrides that would
+otherwise disappear.
 
 ### Match a known numerical execution shape
 
@@ -97,13 +101,15 @@ result = compile_finite_fanout(
 Here a call with one ID selects the singleton table, 2–15 IDs select the second
 table, and larger calls select the bulk table. Construction evaluates each
 token in `(1, evaluation_rows)` identical positions and refuses a profile if
-those positions disagree bitwise. These thresholds are empirical choices from
-the tested NovoMolGen MPS runtime, **not defaults for other models or devices**.
+those positions disagree bitwise. These thresholds came from the tested
+NovoMolGen MPS runtime. They are empirical
+choices, not defaults for other models or devices.
 The compiler tests every token, interval endpoints, mixed-token boundaries,
 composite/strided layouts and empty inputs without relaxing the error limits.
-This still does not prove every future floating-point execution equivalent.
+The measurements cover those executions; they cannot prove agreement for every
+future floating-point execution.
 
-Every additional table counts toward both storage gates. Shared residuals and
+Every additional table counts in both storage comparisons. Shared residuals and
 identical tables are deduplicated across profiles; inference gathers only the
 columns needed for the selected profile. Compilation requires extra work and
 temporary storage proportional to the proposed tables and evaluation shapes.
@@ -113,16 +119,18 @@ Changing a threshold invalidates the previous numerical comparison.
 The enclosing-model pass accepts the same settings as
 `fanout_row_count_profiles=...`; the Hugging Face workflow calls this option
 `finite_row_count_profiles=...`. It applies only to declared fanout graphs and
-still requires the full-model output gate. It does not automatically discover
-an arbitrary native model's token API or execute repository code.
+still requires complete-model output comparisons. The caller must declare the
+native token API; the pass neither discovers an arbitrary API nor executes
+repository code.
 
 ## Apply the pass inside another model
 
-Use `compile_finite_blocks` to select registered Sequential token encoders or
-explicit `FiniteTokenFanout` graphs, or discover eligible-looking ones. It retains the enclosing model class when a
-child is rewritten, verifies aliases against that model, and requires complete
-output examples. Unsupported or unprofitable blocks remain in place. Any failed
-complete-output comparison rolls back the proposed rewrites.
+`compile_finite_blocks` can select registered Sequential token encoders or
+explicit `FiniteTokenFanout` graphs, or discover possible candidates. When it
+rewrites a child, it retains the enclosing model class and checks aliases against
+that model. Unsupported blocks and those that save no storage remain in place.
+Complete-output examples are required; a failed comparison rolls back the
+proposed rewrites.
 
 ```python
 from compressme import Example, compile_finite_blocks
@@ -135,10 +143,10 @@ result = compile_finite_blocks(
 )
 ```
 
-Here the declared contract applies to each selected block: valid integer IDs go
-through its forward method, and no external caller reads the block's internal
-weights or relies on side effects. The enclosing model can still accept other
-inputs. Arbitrary Python API access cannot be inferred safely from a checkpoint.
+The contract applies to each selected block: callers pass valid integer IDs
+through its forward method, without reading internal weights or depending on
+side effects. The enclosing model can still accept other inputs. A checkpoint
+alone cannot establish how callers use an arbitrary Python API.
 
 The Hugging Face entry point provides the same pass after strict loading into
 a trusted local architecture with matching tensor names and dtypes:
@@ -157,30 +165,31 @@ result = compress_huggingface(
 result.save("compiled-model", packing=True)
 ```
 
-Repository IDs and example calls must refer to the actual model being compiled;
-this interface does not download and execute arbitrary Hub Python code. Stored
-recipes preserve strict replay through the original architecture factory.
+Supply the repository ID and examples for the actual model being compiled.
+The interface loads weights into the trusted local architecture without
+downloading and executing arbitrary Hub Python code. Stored recipes preserve
+strict replay through the original architecture factory.
 
 ## Small local errors can change a routing decision
 
-An exact real-arithmetic identity plus close local float32 outputs is insufficient
-when a later operation chooses a discrete expert. An actual OmniCell router table
-passed all-token local checks (maximum error 1.30e-6). For a gene near a top-k tie,
-a singleton call selected a different expert and changed the final embedding by
-0.2503. The full candidate was rejected, and it also increased resident storage
-because the original gene table had another live consumer.
+A rewrite can be exact in real arithmetic and still change which discrete
+expert a float32 calculation selects. An actual OmniCell router table passed
+all-token local comparisons with
+maximum error 1.30e-6. Yet for a gene near a top-k tie, a singleton call selected
+a different expert and changed the final embedding by 0.2503. We rejected the
+full candidate. It also increased resident storage because another live consumer
+still needed the original gene table.
 
-Validate all exposed outputs, including selected indices and relevant public
-state, and include small decision margins in representative probes. The package
-only checks what the caller's examples return; examples can wrap a method to
-include an otherwise hidden observable. Finite enumeration certifies coverage
-of token IDs for the tested local layouts, not every possible downstream
-floating-point execution. See [the actual counterexample](omnicell-stformer-audit.md).
+Complete-output examples should include selected indices, relevant public state
+and cases with small decision margins. The package compares what those examples
+return; a wrapper can expose an otherwise hidden observable. Enumerating tokens
+covers every ID at the tested local layouts. It does not cover every possible
+downstream floating-point execution. See [the actual counterexample](omnicell-stformer-audit.md).
 
 ## Share raw and normalized branches
 
-A related operation retains even less information when an embedding table is
-projected both with and without L2 normalization. For row \(e_i\), projection
+When an embedding feeds both raw and L2-normalized projections, those branches
+can share a smaller representation. For row \(e_i\), projection
 \(W\), bias \(b\), and normalization floor \(\epsilon\), store
 
 \[
@@ -201,24 +210,24 @@ accepts arbitrary raw vectors, it can retain the original projection for that
 API while using the lookup on token inputs. Whole-model accounting must include
 that retained projection.
 
-This is useful when the original embedding dimension is much wider than the
-observed projection. It is not restricted to genes, a particular training
-algorithm or a Hugging Face model family. The STATE SE adapter is the current
-real-checkpoint experiment; its complete-output validation determines whether
-that particular application is accepted.
+The opportunity comes from an embedding dimension much wider than its
+projection, independently of whether the tokens represent genes or how the
+model was trained or distributed. STATE SE provides a real-checkpoint experiment;
+complete-output validation determines whether that application is accepted.
 
-## What is and is not guaranteed
+## Real arithmetic and numerical agreement
 
 The identities are exact in real arithmetic. Stored float32 results can differ
 because GEMM reductions depend on batch shape and backend. Even identical input
-rows can receive slightly different last bits in a batched operation. Therefore
-the compiler reports its full-domain numerical measurements separately from
-the algebraic identity, and does not issue a universal floating-point certificate.
+rows can receive slightly different last bits in a batched operation. The
+compiler therefore reports full-domain numerical measurements alongside
+the algebraic identity. Those measurements are not a universal floating-point
+certificate.
 
-The generic operators have portable shape recipes and strict tensor reload.
-They do not keep an unreported copy of the source embedding or projection.
-Parameter-derived lookup tables contain the trained computation itself; they
-are not a cache of predictions for previously seen cells or molecules.
+Portable shape recipes and strict tensor reload preserve the compiled operators
+without an unreported copy of the source embedding or projection. Their tables
+store the trained computation over every token, independently of previously
+seen cells or molecules.
 
 ## Preserve constant rows at the original operation shape
 
@@ -226,24 +235,27 @@ A learned CLS or dataset token is constant, yet evaluating it alone can round
 differently from evaluating it inside a large matrix multiplication.
 `ShapeMatchedConstantRows` evaluates those known rows inside a zero-filled tensor
 with the original leading shape and positions, using an audited row-local encoder.
-It retains only the selected constant outputs in a bounded cache. The temporary
-first-call allocation and encoder work can be large; steady calls of the same
-shape reuse the small constant result. It never stores cell or molecule outputs.
+It retains only the selected constant outputs in a bounded cache. The first
+call may need a large temporary allocation and substantial encoder
+work. Later calls of the same shape reuse the small constant result. Cell and
+molecule outputs are never stored.
 
 The helper checks tracked tensor versions, identities, dtype, device, scalar
 module settings and precision settings. Mutation invalidates cached rows, and
 unversioned inference tensors are evaluated without caching. Calls that need
-gradients through the encoder or constants also avoid caching; fully frozen
-encoders can reuse constants in ordinary calls without a special grad context. Exact-shape execution is still a numerical strategy requiring target
-backend validation, not a theorem about every opaque kernel implementation.
+gradients through the encoder or constants also bypass the
+cache. Fully frozen encoders can reuse constants in ordinary calls without a
+special grad context. Matching the execution shape is a numerical strategy that
+needs target-backend validation; it cannot establish a theorem for every opaque
+kernel implementation.
 
-Finite lookup exports additionally label whether their local compilation gate
-still refers to the current tracked tensors. Changed weights or unvalidated
-replay retain the original measurements as historical evidence. Direct unsafe
+Finite lookup exports record whether the local compilation comparison still
+applies to the tracked tensors. After weights change or an unvalidated reload,
+the original measurements remain historical evidence. Direct unsafe
 storage writes that bypass PyTorch version tracking are outside this contract.
 
 Whole-model comparison reports distinguish equal numeric values (`exact`) from
 equal tensor value bytes (`bitwise`). Positive and negative zero compare equal
-numerically but have different bytes. This extra evidence field does not change
-the configured numerical acceptance thresholds; `bitwise_identical` summarises
-the byte result on the supplied examples only.
+numerically but have different bytes. The configured numerical acceptance
+thresholds stay the same.
+`bitwise_identical` summarises byte agreement on the supplied examples only.

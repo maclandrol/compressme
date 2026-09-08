@@ -10,6 +10,7 @@ Start with [installation](installation.md) and the [command-line guide](cli.md).
 | Reproduce the Boltz-2 shared bundle | [Boltz-2 tutorial](tutorials/boltz2.md) |
 | Reproduce the Mol-JEPA compressed model | [Mol-JEPA tutorial](tutorials/moljepa.md) |
 | Use STATE ST or SE artifacts | [STATE guide](state.md) |
+| Check Nesso-1 runtime changes | [Nesso-1 results](nesso.md) and [tutorial](tutorials/nesso.md) |
 | Validate a complete model on CPU, MPS or CUDA | [Backend validation](gpu-validation.md) |
 | Understand what has actually been verified | [Results and evidence](technical-report.md) |
 

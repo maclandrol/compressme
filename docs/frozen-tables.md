@@ -1,9 +1,9 @@
 # Lossless storage for related lookup tables
 
-`pack_lookup_tables` stores a family of equally shaped float32 lookup tables
-with one explicit base table and exact integer XOR differences. This is useful
-when a compiler needs several slightly different tables to reproduce different
-floating-point execution shapes.
+A compiler may need several slightly different lookup tables to reproduce the
+rounding of different floating-point execution shapes. `pack_lookup_tables`
+stores equally shaped float32 tables as one explicit base plus exact integer
+XOR differences.
 
 ```python
 from compressme import pack_lookup_tables
@@ -20,25 +20,25 @@ plus explicitly stored high-bit exceptions preserve every bit, including signed
 zeros and special floating-point encodings. Identical routes need no additional
 data. Incompressible routes retain a complete table.
 
-The compiler verifies every supplied table byte and reports logical and unique
-resident bytes separately, including integer indices, exception values and
-padding. A saving must exist against both source measures. It never calls a
-zero parameter count a model compression ratio: this representation uses frozen
-buffers. The optional package recipe is replayable with safe tensor files.
+The compiler verifies every supplied table byte and counts integer indices,
+exception values and padding in the stored result. Both logical bytes and
+unique resident bytes must decrease. Because this representation uses frozen
+buffers, a zero parameter count would conceal its memory cost; compression is
+reported in bytes. The optional package recipe reloads from safe tensor files.
 
 Only selected rows are decoded. Keeping the common bulk route as the explicit
-base avoids XOR decoding for that route. Alternate routes add integer gathers
-and reconstruction work, so this is a memory option, not a speed claim. The
-earlier research implementation measured 26.46% CPU and 35.74% MPS table-storage
-savings on NovoMolGen's already compiled tables, with roughly 18 and 29
-microseconds of extra tiny-call decoding respectively. Those timings belong to
-the archived research implementation, not the public implementation or the
-whole model.
+base avoids XOR decoding for that route. Alternate routes require integer
+gathers and reconstruction. In the archived
+research implementation, NovoMolGen's already compiled tables used 26.46% less
+CPU storage and 35.74% less MPS storage, at roughly 18 and 29 microseconds of extra
+tiny-call decoding respectively. Those measurements describe the research
+implementation. They establish neither the public implementation's latency nor
+a whole-model speedup.
 
-Exact reconstruction of supplied table values does not prove that a table
-matches its original neural network on every input shape. Finite-domain
-compilation, shape selection and complete-model validation remain separate.
-Device moves preserve the representation; precision changes, training, hooks
-and modified codec implementations are refused. Ordinary payload mutation makes
-the original byte verification historical, and malformed serialized payloads
-cannot reload as valid encoded data.
+XOR reconstruction preserves the supplied table values exactly. Whether those
+values reproduce the original network at a given input shape still depends on
+finite-domain compilation, shape selection and complete-model validation.
+Device moves preserve the representation. Precision changes, training, hooks
+and modified codec implementations are refused. After ordinary payload mutation,
+the original byte comparison remains historical evidence; malformed serialized
+payloads fail validation on reload.

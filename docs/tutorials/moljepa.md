@@ -5,7 +5,7 @@
 
 This recipe starts with a checkout of this private repository and the original published weights. It builds a new portable **SMILES-only** artifact, preserving predictions, CLS, all latent embeddings and requested attentions. It uses no fitting, distillation or lower-precision weights. The architecture-specific recipe composes affine projections, contracts eligible attention score maps and removes modality encoders unreachable when `embeddings_data=None`.
 
-The universal CLI's `--method affine` is not a substitute for this complete model recipe. [General workflow](../general-workflow.md) explains that boundary.
+This recipe combines several transformations beyond the general CLI's `--method affine` pass. [General workflow](../general-workflow.md) explains that boundary.
 
 ## 1. Install in an isolated environment
 
@@ -31,7 +31,7 @@ The tested package versions are recorded in [moljepa-macos-tested.txt](../../exa
 python examples/reproduce/fetch.py moljepa --directory work/moljepa-original
 ```
 
-The explicit fetch downloads 181,651,424 weight bytes plus six small source/configuration files from [Flogrammer/Mol-JEPA](https://huggingface.co/Flogrammer/Mol-JEPA/tree/4c912b450175f31b5ba913a5dc921c03b27b985a). It verifies each file against committed hashes. Existing correct files are reused; mismatched existing files are refused. It adds the small local package initializer, attribution/licence and a hash manifest needed by the loader. It does **not** import the downloaded Python. Building and loading subsequently execute this pinned, trusted local architecture.
+The explicit fetch downloads 181,651,424 weight bytes plus six small source/configuration files from [Flogrammer/Mol-JEPA](https://huggingface.co/Flogrammer/Mol-JEPA/tree/4c912b450175f31b5ba913a5dc921c03b27b985a). It verifies each file against committed hashes. Existing correct files are reused; mismatched existing files are refused. It adds the small local package initializer, attribution/licence and a hash manifest needed by the loader. Fetching does not import that Python. Building and loading subsequently execute this pinned, trusted local architecture.
 
 - HF revision: `4c912b450175f31b5ba913a5dc921c03b27b985a`.
 - Original `model.safetensors` SHA256: `a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14`.
@@ -93,4 +93,4 @@ print({name: getattr(value, "shape", type(value)) for name, value in output.item
 
 The artifact contains its tensor state, rewrite recipe and hashed architecture files. Keep the whole directory together and keep its optional Python dependencies installed. The original 182 MB checkpoint is needed only when reproducing the reference comparison, not for this prediction call.
 
-The [tutorial smoke record](../../examples/reproduce/reproduction-smoke.json) records fresh CPU builds/reloads from the pinned original weights, including all48 Boltz outputs and all requested Mol-JEPA output modes. The new benchmark command also passed a one-round execution smoke; the full historical timing study and these new tutorial entry points on MPS were not rerun in that smoke.
+The [tutorial smoke record](../../examples/reproduce/reproduction-smoke.json) records fresh CPU builds/reloads from the pinned original weights, including all 48 Boltz outputs and all requested Mol-JEPA output modes. The Mol-JEPA benchmark command also passed a one-round execution check. That tutorial check covered CPU builds and reloads; it did not repeat the full timing study or the MPS tutorial runs.

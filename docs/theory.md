@@ -1,8 +1,8 @@
 # What the compressor can guarantee
 
-`compressme` aims to reduce the computation and weights needed to evaluate an existing model while preserving its input and output contract. It uses algebraic rewrites and, when requested, bounded approximations. Neither operation requires a student model, training labels or distillation.
+`compressme` rewrites how a trained model is evaluated, with the aim of reducing its weights or computation while preserving its input and output contract. Some rewrites use exact algebra. Others, when requested, accept an approximation with a stated error bound. Both operate on the existing model without training labels, a student model or distillation.
 
-Three claims must remain separate:
+The guarantee depends on the operation:
 
 | Transformation | Guarantee | Required condition |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ where \(x\in\mathbb R^d\), \(h\in\mathbb R^n\), and consumer \(i\) has \(m_i\) o
 \boxed{y_i=(W_iA)x+(W_i a+b_i).}
 \]
 
-This identity holds for every input. It needs neither a low-rank approximation nor evidence that training produced small singular values. The reachable representation is contained in \(a+\operatorname{range}(A)\), whose dimension is at most \(d\). Each consumer only needs its action on that affine set.
+This identity holds for every input, regardless of the singular values learned during training. The representation can only reach \(a+\operatorname{range}(A)\), whose dimension is at most \(d\). Each consumer therefore needs only its action on that affine set; no low-rank approximation is involved.
 
 The producer may remain in the graph for a residual connection or another consumer. Eligible linear consumers can still read the original \(x\) through their fused weights. The public input, residual representation and output shapes remain unchanged.
 
@@ -45,9 +45,9 @@ nd+M\min(n,d).
 
 If all uses of the producer disappear, its cost can also be removed; then compare \(Md\) directly with \(nd+Mn\). These are counts for the stated dense implementations, not lower bounds over every possible matrix algorithm.
 
-The audited Mol-JEPA graph encoder provides a concrete candidate: an \(82\rightarrow512\) affine input projection followed directly by query, key and value projections with \(4096\) outputs each, plus a \(512\)-output skip projection. Thus \(M=12{,}800\). Keeping the producer for its residual use changes these consumer weights from \(12{,}800\times512\) to \(12{,}800\times82\), a reduction from 6,553,600 to 1,049,600 entries. The 5,504,000 saved weights are approximately 12.12% of the loaded model's 45,406,721 parameters. The checkpoint additionally contains 51 float32 buffer entries and one int64 buffer entry. This is a structural calculation for the [pinned Mol-JEPA implementation](https://huggingface.co/Flogrammer/Mol-JEPA/blob/4c912b450175f31b5ba913a5dc921c03b27b985a/modeling_moljepa.py) and [configuration](https://huggingface.co/Flogrammer/Mol-JEPA/blob/4c912b450175f31b5ba913a5dc921c03b27b985a/config.json), not a measured runtime result.
+In the audited Mol-JEPA graph encoder, this occurs in an \(82\rightarrow512\) affine input projection followed directly by query, key and value projections with \(4096\) outputs each, plus a \(512\)-output skip projection. Thus \(M=12{,}800\). Keeping the producer for its residual use changes these consumer weights from \(12{,}800\times512\) to \(12{,}800\times82\), a reduction from 6,553,600 to 1,049,600 entries. The 5,504,000 saved weights are approximately 12.12% of the loaded model's 45,406,721 parameters. The checkpoint additionally contains 51 float32 buffer entries and one int64 buffer entry. This is a structural calculation for the [pinned Mol-JEPA implementation](https://huggingface.co/Flogrammer/Mol-JEPA/blob/4c912b450175f31b5ba913a5dc921c03b27b985a/modeling_moljepa.py) and [configuration](https://huggingface.co/Flogrammer/Mol-JEPA/blob/4c912b450175f31b5ba913a5dc921c03b27b985a/config.json), not a measured runtime result.
 
-A safe compiler must prove the edge, rather than infer it from module names or one observed execution. A nonlinearity, normalisation, gate, input-dependent matrix, changed tensor, or in-place mutation between producer and consumer invalidates simple affine composition. Shared modules and tensors require accounting for every call site. Inference evaluation mode and the supported control-flow path are part of the rewrite contract.
+The compiler must establish that a consumer receives the producer's affine output unchanged. A nonlinearity, normalisation, gate, input-dependent matrix, changed tensor or in-place mutation between them invalidates this composition. Module names and one observed execution cannot establish the required dataflow. Shared modules and tensors need every call site accounted for, within the supported control-flow path and inference evaluation mode.
 
 ### Fine-tuning without reducing this block's function class
 
@@ -59,13 +59,13 @@ W_i=C_iA^+,\qquad b_i=c_i-W_i a,
 
 where \(A^+A=I_d\). Then \(W_i(Ax+a)+b_i=C_i x+c_i\) for every input. The producer can still supply the original residual branch. This establishes equivalence of the attainable functions while \(A\) remains full column rank; it does not establish equivalence of gradient updates, regularisation or training trajectories.
 
-The redundant directions can be written explicitly. Changing \(W_i\) to \(W_i+N_i\), with \(N_iA=0\), and changing its bias to \(b_i-N_i a\), preserves the function. Their dimension is \(m_i(n-d)\) for full-column-rank \(A\), matching the removed weight count. This is an exact quotient of redundant parameters, rather than an approximate low-rank restriction on the function.
+The redundant directions can be written explicitly. Changing \(W_i\) to \(W_i+N_i\), with \(N_iA=0\), and changing its bias to \(b_i-N_i a\), preserves the function. Their dimension is \(m_i(n-d)\) for full-column-rank \(A\), matching the removed weight count. Taking the quotient by these redundant parameters preserves the function class under the stated rank condition. It imposes no approximate low-rank restriction.
 
 For the audited Mol-JEPA projection, numerical SVD found rank 82, with singular values approximately 0.5494 to 6.6903 and condition number 12.18. These measurements support the full-column-rank premise for that checkpoint. They do not ensure that an unconstrained fine-tuning run will preserve it.
 
 ## Contract graph-attention scores before expanding features
 
-The audited graph attention has a second exact opportunity. For receiver node \(i\), source node \(j\), edge features \(e_{ji}\), and one head of width \(c\), write
+A graph-attention score uses query and key vectors through their dot product. In the audited graph attention, we can contract those projections before expanding the features. For receiver node \(i\), source node \(j\), edge features \(e_{ji}\), and one head of width \(c\), write
 
 \[
 q_i=Qx_i+b_q,\qquad k_j=Kx_j+b_k,\qquad g_{ji}=Ee_{ji}.
@@ -105,11 +105,11 @@ For equal source and receiver feature width \(d\), edge width \(e\), and biased 
 
 which is positive when \(d+e<2c\). For the audited \(H=8,c=512,e=17\) configuration, the first layer after affine fusion has \(d=82\), giving 614,200 fewer parameters. A later layer with \(d=512\) saves 2,031,480. These counts retain the edge-value projection and exclude unchanged value, skip and normalisation parameters. If the edge width or source feature width is too large, retain the original score implementation.
 
-Query-key product compression is established prior art; this use performs full contraction without rank truncation. The structural opportunity is that the audited graph attention expands each head to a width equal to or larger than its input features.
+Query-key product compression is established prior art. Here the contraction retains the full interaction, without rank truncation. It can save parameters because the audited graph attention expands each head to a width equal to or larger than its input features.
 
 ### Aggregate values before their linear expansion
 
-Let \(\widetilde\alpha_{ji,h}\) denote the attention coefficient actually used for messages, including attention dropout, and let
+Projecting every edge message can create a wide temporary tensor. Since the value projection is linear, attention can first aggregate the original node and edge features. Let \(\widetilde\alpha_{ji,h}\) denote the coefficient actually used for messages, including attention dropout, and let
 
 \[
 s_{i,h}=\sum_{j\to i}\widetilde\alpha_{ji,h}x_j,\qquad
@@ -123,7 +123,7 @@ Linearity gives the exact per-head message
 m_{i,h}=V_hs_{i,h}+E_ht_{i,h}+b_{v,h}a_{i,h}.
 \]
 
-This moves linear projections after graph aggregation. It can reduce scattered intermediate features from width \(c\) to \(d+e+1\) per head, while retaining the same value parameters. It is most attractive for the first fused layer; it is not automatically smaller for later layers with \(d=c\).
+Aggregating first changes the scattered width from \(c\) to \(d+e+1\) per head, while the value parameters stay the same. This is most attractive for the first fused layer. Later layers with \(d=c\) need not become smaller.
 
 Retain \(a_{i,h}\) explicitly. It is zero for nodes without incoming edges and need not equal one after dropout. If the edge projection has a bias, add it to the value bias in this formula. Head averaging can occur after these per-head computations. Different heads generally have different attention coefficients, so their raw-feature aggregates cannot be merged into one common aggregate.
 
@@ -133,13 +133,13 @@ The [PyG TransformerConv implementation](https://pytorch-geometric.readthedocs.i
 
 For training-mode equality, use the same dropout coefficients on the same ordered edge/head entries. At evaluation time dropout is inactive. Coordinate reassociation and subtraction of constant logit shifts can change floating-point results, so neither mode is guaranteed bit-identical.
 
-An independent float64 calculation checked the contracted scores and aggregated values on a graph with duplicate edges, self-loops, isolated nodes, query/key/value biases and a fixed dropout mask. Maximum discrepancies were approximately \(3.3\times10^{-16}\) for attention and \(1.8\times10^{-15}\) for values; input and edge gradient discrepancies were below \(2.6\times10^{-14}\). This verifies the derivation on that test, not the complete model or every backend.
+An independent float64 calculation checked the contracted scores and aggregated values on a graph with duplicate edges, self-loops, isolated nodes, query/key/value biases and a fixed dropout mask. Maximum discrepancies were approximately \(3.3\times10^{-16}\) for attention and \(1.8\times10^{-15}\) for values; input and edge gradient discrepancies were below \(2.6\times10^{-14}\). That calculation checks the derivation on one graph. It leaves complete-model and other-backend agreement to separate tests.
 
 The original model couples \(B,D\) through \(Q\), and couples the score-side \(D\) to the value-side \(E\). Its stacked affine score map \(\begin{bmatrix}B&u\\D&v\end{bmatrix}=\begin{bmatrix}K^\top\\E^\top\end{bmatrix}\begin{bmatrix}Q&b_q\end{bmatrix}\) has rank at most \(c\). Independently training contracted parameters can change these constraints; for \(d=c\), the new map has \(c+1\) columns and can acquire a rank unavailable to the original factorisation. The full-rank affine-family equivalence above does not automatically apply to this contraction. Input derivatives remain mathematically equal at corresponding fixed weights, while gradients with respect to the two parameterisations need the appropriate chain rule and generally follow different optimisation trajectories.
 
 ## Remove inactive branches only under an explicit input contract
 
-If a model contains encoders for several modalities but its deployed API accepts only SMILES, encoders that cannot execute for any valid SMILES request can be excluded from that specialised artifact. This is elimination of unreachable computation and unused state under a restricted domain.
+A multimodal model can retain encoders that its deployed API never calls. If that API accepts only SMILES, encoders unreachable for every valid SMILES request can be removed from the specialised artifact. The smaller artifact then supports that restricted domain.
 
 The Mol-JEPA audit identified 15,462,401 parameters in inactive modality encoders on the default SMILES-only route, approximately 34.05% of the model's 45,406,721 parameters. The percentage is an audit result for the [pinned checkpoint implementation](https://huggingface.co/Flogrammer/Mol-JEPA/blob/4c912b450175f31b5ba913a5dc921c03b27b985a/modeling_moljepa.py), not a general property of Mol-JEPA variants. Record the checkpoint identifier, exact counts and selected entry point alongside the exported artifact. In particular, a specialised export must reject requests that supply optional data for the removed modalities.
 
@@ -150,9 +150,9 @@ The guarantee is
 F_{\rm specialised}(x)=F_{\rm original}(x)
 \]
 
-in real arithmetic, provided the removed branches have no observable side effects and all supported outputs remain available. This export must reject unsupported modalities clearly. One successful SMILES trace does not prove that a branch is unreachable for every valid input.
+in real arithmetic, provided the removed branches have no observable side effects and all supported outputs remain available. Unsupported modalities must be rejected clearly. Establishing that a branch is unreachable requires more than one successful SMILES trace.
 
-Report this reduction separately from approximate weight compression. An encoder that was already inactive does not contribute inference FLOPs on that route, so removing its parameters primarily reduces storage and resident model state.
+An encoder that was already inactive contributes no inference FLOPs on this route. Removing it primarily reduces storage and resident model state, a different source of saving from approximate weight compression.
 
 ## Bound the approximation after normalisation
 
@@ -183,7 +183,7 @@ Then \(f(x)=Az(x)+c\), \(A\mathbf1=0\), and \(\|z(x)\|_2<\sqrt d\). Every centre
 x=\frac{\sqrt\epsilon\,z}{\sqrt{1-\|z\|_2^2/d}}.
 \]
 
-Thus LayerNorm removes one direction and bounds the others. It does not, by itself, imply a much smaller reachable subspace. The definition follows [Layer Normalization](https://arxiv.org/abs/1607.06450) and [PyTorch's LayerNorm semantics](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html).
+LayerNorm therefore removes one direction and bounds the others, while leaving the full centred ball reachable. A much smaller reachable subspace would need further structure. The definition follows [Layer Normalization](https://arxiv.org/abs/1607.06450) and [PyTorch's LayerNorm semantics](https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html).
 
 Write \(A=U\Sigma V^\top\), with singular values in descending order, and retain
 
@@ -199,9 +199,9 @@ The replacement computes \(f_r(x)=A_rz(x)+c\) through two dense projections. In 
 
 The upper bound follows from the operator norm of the residual. If the discarded singular value is positive, its right singular vector is centred. Scaling the input along that vector makes the normalised vector approach norm \(\sqrt d\), proving equality of the supremum. Zero residual gives zero error.
 
-More generally, for any rank-at-most-\(r\) replacement \(B\), the uniform error with the same normalisation and fused bias is \(\sqrt d\,\|(A-B)P\|_2\). Optimal low-rank approximation makes truncated SVD minimax within this class. This uses classical [low-rank matrix approximation](https://doi.org/10.1007/BF02288367); it is not a new SVD theorem or an optimum over all possible nonlinear replacement networks.
+More generally, for any rank-at-most-\(r\) replacement \(B\), the uniform error with the same normalisation and fused bias is \(\sqrt d\,\|(A-B)P\|_2\). Optimal low-rank approximation makes truncated SVD minimax within this class. The result follows from classical [low-rank matrix approximation](https://doi.org/10.1007/BF02288367). Its optimality is limited to this class of replacements; it makes no claim about all nonlinear replacement networks or a new SVD theorem.
 
-Choose the smallest rank satisfying the requested local tolerance, then require \(r(m+d)<md\) before accepting a parameter-saving factorisation. Include all biases and retained buffers in the actual artifact comparison. A flat spectrum can force a rank too large to save memory. Returning the original block is then the correct outcome.
+Choose the smallest rank satisfying the requested local tolerance, then require \(r(m+d)<md\) before accepting a parameter-saving factorisation. Include all biases and retained buffers in the actual artifact comparison. A flat spectrum can require too large a rank to save memory, in which case the compiler keeps the original block.
 
 This fusion requires fixed \(\gamma,\beta\) and a normalised shape matching the linear input dimension. Input-dependent adaptive normalisation and normalisation across additional tensor dimensions need separate derivations.
 
@@ -235,13 +235,13 @@ For approximate factors stored as \(\widehat A\) and fused bias \(\widehat c\), 
 \sqrt d\,\|(A-\widehat A)P\|_2+\|c-\widehat c\|_2.
 \]
 
-This residual includes factor and bias storage error if evaluated against the original coefficients. It still excludes rounding while computing normalisation and matrix products. An ordinary numerical SVD or spectral-norm estimate is not an outward-rounded, machine-verified upper bound. Describe such results as analytical bounds evaluated numerically, with their scope and dtype recorded.
+This residual includes factor and bias storage error if evaluated against the original coefficients. It still excludes rounding while computing normalisation and matrix products. An ordinary numerical SVD or spectral-norm estimate is not an outward-rounded, machine-verified upper bound. These are analytical bounds evaluated numerically; their recorded scope and dtype determine how they can be used.
 
 The input-dependent formula also assumes exact orthogonality. Subtracting nearly equal squared norms can produce a false zero after rounding; clamping a negative result alone does not certify the error. Formal numerical certification would require conservative arithmetic error bounds or interval calculations covering both preprocessing and execution.
 
 Exported certificates belong to specific parameter values. Subsequent fine-tuning invalidates them unless recomputed. Training the fused architecture also changes its optimisation parameterisation: gradient descent on \(WA\) is not generally equivalent to independently updating \(W\) and \(A\).
 
-## What remains to establish for structural models
+## From local error to structural predictions
 
 For a composition of Lipschitz blocks, local perturbation bounds can be propagated by a telescoping argument. If block \(\ell\) has a uniform replacement error \(\delta_\ell\), a valid end-to-end bound is
 
@@ -250,16 +250,16 @@ For a composition of Lipschitz blocks, local perturbation bounds can be propagat
 \le\sum_\ell\delta_\ell\prod_{j>\ell}L_j,
 \]
 
-using valid downstream Lipschitz constants on all intermediate states reached by the compared compositions. Large constants, recurrent sampling and input-dependent interactions can make this bound too loose to guide Boltz compression. A scalar block bound must therefore remain separate from measured coordinate error, pose validity, ensemble coverage, binding calibration and ligand ranking.
+using valid downstream Lipschitz constants on all intermediate states reached by the compared compositions. Large constants, recurrent sampling and input-dependent interactions can make this bound too loose to guide Boltz compression. Coordinate error, pose validity, ensemble coverage, binding calibration and ligand ranking still need to be measured separately from a scalar block bound.
 
 Fewer parameters or multiply-accumulates do not guarantee lower wall time. Two small matrix products can incur more launch overhead than one larger product. Apple Silicon evaluation needs representative sequence and atom counts, synchronised MPS timing, warm-up, peak memory and a CPU baseline. Removing CUDA-specific dependencies and kernels is a separate portability task.
 
 ## Relationship to existing compression work
 
-The exact affine rewrite is standard algebra applied to proven model dataflow. Eliminating inactive modalities is program specialisation. Neither should be presented as a new compression theorem.
+Affine composition applies standard algebra to proven model dataflow; removing inactive modalities is program specialisation. These are established principles, not new compression theorems.
 
 Activation-aware and training-free low-rank methods already include [SVD-LLM](https://arxiv.org/abs/2403.07378), [BALF](https://arxiv.org/abs/2509.25136) and [Swift-SVD](https://arxiv.org/abs/2604.01609). [KQ-SVD](https://arxiv.org/abs/2512.05916) treats query-key interactions directly, while [SAFE-SVD](https://arxiv.org/abs/2605.17985) studies output-function sensitivity and physical fidelity in scientific foundation models. Joint attention factorisation or output-aware rank allocation alone would duplicate substantial prior work.
 
 A different theoretical route, [width-independent compression of analytic networks](https://arxiv.org/abs/2608.21752), constructs smaller networks through derivative matching and reweighting. Its width dependence on the effective input dimension limits direct application to large structural models; it does not supply a ready general-purpose Boltz compressor.
 
-The proposed package contribution is a compiler that discovers valid reductions, preserves a declared API, records exact versus approximate guarantees, and rejects transformations that fail its error or cost requirements. Whether these ingredients deliver substantial compression on Boltz-2 and Mol-JEPA is an empirical question for their actual checkpoints and supported execution paths.
+The proposed contribution is to turn these principles into a compiler: discover a valid reduction, preserve the declared API, record its exact or approximate guarantee, and reject it if the error or cost is unacceptable. Measurements on actual Boltz-2 and Mol-JEPA checkpoints determine how much this saves on each supported execution path.

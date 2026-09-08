@@ -1,6 +1,6 @@
 # Exact contraction across LayerNorm
 
-An affine expansion followed by LayerNorm and another affine map can be evaluated without constructing the expanded representation. The nonlinearity only needs one scalar norm of that representation. The remaining computation can be contracted in advance.
+LayerNorm appears to interrupt affine composition, but its denominator only needs one scalar norm. In an affine expansion followed by LayerNorm and another affine map, we can compute that norm from the narrow input and contract the remaining maps in advance. The expanded representation no longer has to be constructed.
 
 Let
 
@@ -16,7 +16,7 @@ P=I-\mathbf1\mathbf1^\top/n,\quad
 \bar x=[x;1],\quad T=[PA\;Pa].
 \]
 
-Take the **full reduced QR factorisation** \(T=UR\), retaining every row of \(R\). Its dimension is \(k\times(d+1)\), where \(k=\min(n,d+1)\). No estimated numerical rank or truncation threshold is used. Since \(U^\top U=I\),
+Take the full reduced QR factorisation \(T=UR\), retaining every row of \(R\). Its dimension is \(k\times(d+1)\), where \(k=\min(n,d+1)\). No estimated numerical rank or truncation threshold is used. Since \(U^\top U=I\),
 
 \[
 \|Ph\|^2=\|T\bar x\|^2=\|R\bar x\|^2.
@@ -30,7 +30,7 @@ f(x)=\frac{D\bar x}{\sqrt{\|R\bar x\|^2/n+\epsilon}}+c.
 }
 \]
 
-This is the same mathematical function for every input. It stores \(D,R,c\), and needs neither the original expanded producer nor the original LayerNorm parameters. A Gram matrix \(T^\top T\) gives an equivalent quadratic form, but QR avoids forming a Gram matrix and evaluating potentially cancelling cross terms.
+The formula evaluates the same mathematical function for every input using only \(D,R,c\). It replaces the expanded producer and original LayerNorm parameters. A Gram matrix \(T^\top T\) would give an equivalent quadratic form; QR avoids forming that matrix and evaluating potentially cancelling cross terms.
 
 With all original biases and LayerNorm affine parameters present, the isolated block has
 
@@ -44,14 +44,14 @@ parameters. The contracted block has
 N_{\rm new}=m(d+1)+k(d+1)+m.
 \]
 
-For \(d=82,n=512,m=512\), these counts are 306,176 and 49,897, respectively, approximately 83.7% fewer parameters. This is a synthetic architectural example. A compiler must count source modules retained for other consumers before reporting a net saving. The normalisation denominator can be shared across several eligible downstream affine consumers.
+For \(d=82,n=512,m=512\), these counts are 306,176 and 49,897, respectively, approximately 83.7% fewer parameters. These counts describe a synthetic architecture. Any source modules needed by other consumers must be included in the net storage comparison. Several eligible downstream affine consumers can share the same normalisation denominator.
 
-The implementation supports one-dimensional standard LayerNorm between standard `nn.Linear` modules, requires matching finite materialised parameters, and rejects custom hooks or instance forwards. It does not cross intervening GELU, other elementwise nonlinearities, dropout, residual additions or input-dependent LayerNorm affine parameters without further analysis. It retains the original divisor \(n\) and epsilon.
+The supported block contains one-dimensional standard LayerNorm directly between standard `nn.Linear` modules, with matching finite materialised parameters. The original divisor \(n\) and epsilon are retained. Custom hooks and instance forwards are rejected; intervening GELU, other elementwise nonlinearities, dropout, residual additions or input-dependent LayerNorm affine parameters need separate analysis.
 
-Exactness is in real arithmetic. QR, centering, coefficient casting and runtime reassociation introduce numerical differences. The prototype converts offline in float64 and rejects coefficients that overflow their storage dtype. Float16/bfloat16 coefficients retain their storage type but use float32 arithmetic internally for this block. That path also changes numerical evaluation relative to the original; it does not promise bit identity. Automatic mixed precision is not audited.
+Exactness is in real arithmetic. QR, centering, coefficient casting and runtime reassociation introduce numerical differences. Offline conversion runs in float64 and rejects coefficients that overflow their storage dtype. Float16/bfloat16 coefficients keep their storage type while this block uses float32 arithmetic internally. That changes numerical evaluation relative to the original, so bit identity is not promised. Automatic mixed precision is unaudited.
 
 Twenty-four focused tests check output and input-gradient agreement in float64/float32, biases and absent biases, nonuniform signed LayerNorm scales, absent LayerNorm affine parameters, zero and constant producers, rank-deficient and wide matrices, float16/bfloat16 storage, frozen parameters and invalid-input rejection. The method has not been applied to an actual Mol-JEPA block with this exact topology.
 
 Independent fine-tuning of \(D,R,c\) changes the original coupling between numerator and denominator. Inference equivalence at conversion does not establish the same optimisation trajectory or function class during training.
 
-The underlying scalar-statistic idea has close precedent in [QK-Normed MLA](https://arxiv.org/abs/2606.16310), which preserves an exact latent attention path with post-projection RMSNorm. This prototype applies the algebra to generic affine–LayerNorm–affine chains, with centering, biases and a QR denominator. It should be presented as an exact compiler transformation, without claiming a new normalisation theorem.
+The underlying scalar-statistic idea has close precedent in [QK-Normed MLA](https://arxiv.org/abs/2606.16310), which preserves an exact latent attention path with post-projection RMSNorm. This prototype applies the algebra to generic affine–LayerNorm–affine chains, with centering, biases and a QR denominator. The contribution is this exact compiler transformation; the underlying normalisation identity is not a new theorem.

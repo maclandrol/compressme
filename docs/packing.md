@@ -1,4 +1,4 @@
-## Lossless checkpoint packing
+# Lossless checkpoint packing
 
 Packing reduces checkpoint storage and transfer size without rounding any values. It first rearranges bytes within fixed-size blocks, then applies Zstandard. Unpacking verifies the original length and SHA256 and returns exactly the original bytes, including tensor headers, signed zeros and NaN payload bits.
 
@@ -14,10 +14,9 @@ assert restored == checkpoint_bytes
 
 The default decoder limit is 1 GiB; callers can pass a larger explicit limit. Passing `None` disables that limit. The current bytes API decodes a whole checkpoint into memory; it is not a lazy tensor loader. Use a packed artifact in place of its plain weight file to obtain the reported disk saving. Keeping both copies consumes more disk.
 
-Empty frames receive explicit checksum, frame-boundary and bounded streaming
-validation, because the tested Zstandard one-shot decoder skips these checks for
-zero-length content. Their declared history window is capped at 1 MiB; canonical
-`pack_bytes(b"")` frames need no history. This hardening changes no encoded values.
+The decoder also checks empty frames: the tested Zstandard one-shot decoder
+skips some integrity checks on zero-length content. Their history window is
+capped at 1 MiB; the canonical `pack_bytes(b"")` frame needs no history.
 
 Measured on the final algebraically rewritten Mol-JEPA snapshots using 1 MiB blocks, four-byte groups and Zstandard level 9:
 
@@ -30,7 +29,7 @@ Each result passed byte-for-byte equality and SHA256 checks over three pack/unpa
 
 Raw Zstandard saved approximately 7.2%, whereas byte shuffling saved about 14.7%. Bit-plane shuffling was slightly worse in size and substantially slower to decode, so it was rejected. The tensor audit found no duplicate tensors, no exactly zero matrix rows or columns, and only one zero scalar buffer; exact sparse storage and tensor deduplication offer no material additional saving on these snapshots.
 
-Lazy decompression is a possible separate loader design: store independently compressed tensor/layer frames and decode only those being used. It would change the loading schedule and could lower peak weight residency when evicting old layers. It does not remove the decoded weights or their computation; repeated decompression can make inference slower, and activation memory is unaffected. The current package should not claim this capability until such a loader is implemented and measured.
+A layer-by-layer loader could decode independent frames as they are needed and evict old weights to reduce peak residency. That would add repeated decoding work, leave activation memory unchanged and potentially slow inference. Such a loader is not implemented here.
 
 The packing exactness claim concerns the supplied rewritten checkpoint. Algebraic model rewrites may already differ from the original model by floating-point reassociation; lossless packing adds no further difference.
 
@@ -65,12 +64,11 @@ preserves an existing destination. If deleting the private temporary link fails
 after no-clobber publication, the error explicitly states that the complete,
 verified destination was already committed.
 
-Unlike the older bytes API, `unpack_file` always requires a finite output cap:
+`unpack_file` requires a finite output cap:
 the default is 1 GiB, and `None` is refused. For the Boltz tensor file the example
 uses an explicit 3 GiB cap. A separate `max_window_bytes` limit defaults to 64 MiB
 and bounds decoder history memory. The default shuffle block is 1 MiB, limited
-to 16 MiB. Compression workspace also depends on Zstandard level. These bounds
-do not imply that the entire process uses only one block of RAM.
+to 16 MiB. Compression workspace also depends on Zstandard level. Process memory also includes Python, NumPy and codec workspace.
 
 The complete shared Boltz tensor file was packed and restored in a fresh
 standalone process:
@@ -99,7 +97,7 @@ to its original safetensors name before using `load_boltz2`.
 
 ## Shared state entries
 
-Exports now store repeated names of the same tensor storage view once and record
+Exports store repeated names of the same tensor storage view once and record
 an alias map. Shape, dtype, stride, storage offset and lazy view flags must all
 match. Equal-looking independent parameters are kept separate. Reload expands
 the state names before strict loading; the architecture constructor restores its
@@ -107,8 +105,8 @@ original parameter ties. This saves file bytes only, because those parameters
 already shared resident memory. Older artifacts without this optional manifest
 field continue to load.
 
-Shared transformed modules also have explicit alias recipes. Reload restores
-the same module instance at each recorded path before loading tensors. Tests
+For shared transformed modules, an alias recipe restores the same module
+instance at each recorded path before loading tensors. Tests
 cover shared lookups, tied encoders, signed zero, and rejection of malformed
 alias maps; unrelated views and independent equal weights remain separate unless
 the explicit [frozen parameter sharing pass](sharing.md) has established and

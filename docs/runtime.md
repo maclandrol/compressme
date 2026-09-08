@@ -1,12 +1,11 @@
-# Accelerating the computation that remains
+# Mol-JEPA inference on macOS
 
 **Original work:** Rottach et al., [Mol-JEPA (2026)](https://arxiv.org/abs/2608.22642) · [authors’ code](https://github.com/Boehringer-Ingelheim/mol-jepa) · [author-linked checkpoint](https://huggingface.co/Flogrammer/Mol-JEPA).
 { .original-work }
 
-Removing an encoder that a SMILES request never visits reduces resident weights,
-but does not shorten that request. The original parameter reduction therefore
-did not imply a comparable inference speedup. The next optimization targets the
-actual work in each forward call.
+Removing inactive encoders reduced Mol-JEPA's resident weights. Making a SMILES
+request faster required changing the work it actually executes: graph
+construction, attention, readouts and pooling.
 
 1. **Construct only observed graph features.** The original feature code builds
    an atom-pair table and computes graph distances, then selects adjacent pairs.
@@ -28,8 +27,8 @@ actual work in each forward call.
 
 The sparse descriptors and batches are bitwise equal to upstream in the tested
 cases. The graph and readout algebra is unchanged in real arithmetic; its
-floating-point reductions can differ. Complete outputs, including requested
-attention tensors, are validated rather than just the CLS vector.
+floating-point reductions can differ. Validation covers complete outputs,
+including requested attention tensors and the CLS vector.
 
 The Metal implementation uses float32 and supports inference. CPU, gradients,
 unsupported graph degrees and older Torch builds use ordinary PyTorch operations.
@@ -43,15 +42,15 @@ Run the reproducible complete-pipeline comparison from the project root:
   --checkpoint /path/to/original/model.safetensors
 ```
 
-The final measurements and every output error are retained in
+The measurements and output errors are recorded in
 [`benchmarks/moljepa_runtime_macos.json`](../benchmarks/moljepa_runtime_macos.json).
 The component profile is in `benchmarks/moljepa_runtime_profile.json`; the exact
 feature audit is in `benchmarks/moljepa_sparse_features.json`.
 
-These are reusable implementation techniques, not a universal compression ratio.
-The graph kernel applies to the supported contracted PyG attention operator;
-the SMILES feature adapter establishes the particular graph schema it requires.
-Different architectures need their own execution-contract checks.
+The graph kernel can be reused for the supported contracted PyG attention
+operator. Its input schema is established here by the SMILES feature adapter;
+other architectures need their own execution-contract checks. These conditions
+do not imply a universal compression ratio.
 
 ## Optional transfer coalescing
 
@@ -61,11 +60,11 @@ preserve float bits, large integer IDs, booleans, scalars and empty shapes. The
 result preserves values and shapes, not original strides or storage aliases.
 Gradient-carrying tensors require their original transfer path.
 
-This was 4–5 times faster for the transfer component in local MPS probes, but
-complete Mol-JEPA timings varied by batch: one final run improved batches 1 and
-32 while slowing batch 4. It is therefore optional: set
+Local MPS probes made the transfer component 4–5 times faster. Complete
+Mol-JEPA timing was mixed: one final run improved batches 1 and 32 while slowing
+batch 4. Coalescing therefore remains optional: set
 `accelerate_smiles(model, coalesced_transfer=True)`, or set the same attribute on
 an already accelerated model. The default remains false. The complete outputs
 and attention tensors were bitwise equal with this option on versus off. See
-`benchmarks/coalesced_transfer_final.json` for the samples. Component gains must
-not be multiplied into a whole-model speedup.
+`benchmarks/coalesced_transfer_final.json` for the samples. The complete-call
+samples determine the speedup; multiplying component gains would overstate it.

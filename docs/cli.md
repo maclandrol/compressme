@@ -105,5 +105,3 @@ from factory import make_model
 
 model = load(make_model, "compact").model
 ```
-
-This deliberately preserves an explicit architecture boundary: a repository URL is not treated as permission to import remote code, infer an API, or assume a biological model's validation contract.

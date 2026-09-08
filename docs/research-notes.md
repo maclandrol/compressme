@@ -1,19 +1,21 @@
-This document preserves the detailed research overview from 7 September 2026. For the current package interface and installation, use the [README](../README.md); for bounded claims, use the [technical report](technical-report.md). Historical measurements remain linked below.
+# Research overview, 7 September 2026
 
-# compressme
+compressme changes how a trained function is represented by removing algebraic
+redundancy, without training a student, collecting teacher targets or reducing
+weight precision. This overview retains the research details and measurements
+from this stage. Use the [README](../README.md) for installation and the package
+interface, and the [technical report](technical-report.md) for the consolidated
+results and their limits.
 
-**A working, training-free PyTorch compressor that removes algebraic redundancy.**
-It changes the representation of a trained function, without training a student,
-collecting teacher targets, or reducing weight precision. The first validated
-checkpoints include Mol-JEPA, STATE ST, STATE SE on CPU, and the complete Boltz-2
+The first validated checkpoints include Mol-JEPA, STATE ST, STATE SE on CPU, and the complete Boltz-2
 confidence/affinity pair on CPU and Apple MPS. The rewrite primitives also work
 independently of them.
 
-## What works now
+## Mol-JEPA results
 
 | Mol-JEPA artifact | Parameters | Reduction | Input contract |
 |---|---:|---:|---|
-| Original | 45,406,721 | — | All original modalities |
+| Original | 45,406,721 | n/a | All original modalities |
 | `artifacts/moljepa-full` | 35,225,561 | **22.42%** | All original forward inputs and outputs |
 | `artifacts/moljepa-smiles` | 19,763,160 | **56.47%** | SMILES; `embeddings_data=None` |
 
@@ -24,11 +26,12 @@ The SMILES artifact rejects additional modality inputs explicitly. Removing
 already inactive encoders saves storage and resident weights, not their already
 absent compute. The source and Python dependencies remain necessary.
 
-On an Apple M5 MacBook Air with 16 GB unified memory, the new SMILES runtime
-is about **2× faster than the original**, including fresh parsing, graph creation,
-device transfers and every prediction head. The final warmed, interleaved MPS run:
+On an Apple M5 MacBook Air with 16 GB unified memory, the SMILES runtime was
+about 2× faster than the original in the recorded warmed, interleaved MPS run.
+Each call included fresh parsing, graph creation, device transfers and every
+prediction head:
 
-| Molecules per call | Original | Previous compressed runtime | New runtime | Speedup vs original |
+| Molecules per call | Original | Earlier compressed runtime | Accelerated runtime | Speedup vs original |
 |---|---:|---:|---:|---:|
 | 1 | 14.47 ms | 12.59 ms | **6.56 ms** | **2.21×** |
 | 4 | 22.07 ms | 18.57 ms | **11.27 ms** | **1.96×** |
@@ -47,7 +50,7 @@ there is no persistent duplicate weight cache. Runtime parameter count remains
 1.35–1.59× faster than the original in the same final run.
 
 All 64 verification SMILES passed complete output and attention checks for the
-new runtime: maximum absolute difference **2.15e-6 on MPS** and **4.05e-6 on CPU**
+accelerated runtime: maximum absolute difference **2.15e-6 on MPS** and **4.05e-6 on CPU**
 against the original trained checkpoint. Sparse graph features were independently
 bitwise equal on 97 valid SMILES; invalid-input exceptions also matched.
 
@@ -58,30 +61,31 @@ Predictions, CLS vectors, latent embeddings and returned attention maps passed
 were not used to fit anything. This measures agreement with the checkpoint, not
 biological accuracy, and does not establish whether examples occurred in pretraining.
 
-**Exact means the same function in real arithmetic.** Composing matrices changes
-floating-point operation order. The Mol-JEPA algebraic rewrites do not claim bit-identical
-results or a machine-verified floating-point error certificate. If bitwise
-identity is mandatory, retain the original arithmetic; the separate removal of
-unreachable modality encoders can still save 34.05% on the SMILES-only route.
+The Mol-JEPA rewrite identities hold in real arithmetic. Composing matrices
+changes floating-point operation order, so these results establish neither
+bit-identical outputs nor a machine-verified floating-point error certificate.
+For a byte-identity requirement, retain the original arithmetic; removing only
+unreachable modality encoders still saves 34.05% on the SMILES-only route.
 
 ## Run the compressed model
 
-The package also has a general Hugging Face entry point and a dated biology-model
-registry. `inspect_huggingface(repo_id)` pins and inspects weights without executing
-model code. `compress_huggingface(repo_id, model_factory, validation=...)` applies
+The Hugging Face entry point accepts other model architectures, and a dated
+biology-model registry records their audit status.
+`inspect_huggingface(repo_id)` pins and inspects weights without executing model
+code. `compress_huggingface(repo_id, model_factory, validation=...)` applies
 an exact pass to a caller-owned architecture and rejects proposals that fail the
 complete-output checks. See the [Hub workflow](../docs/huggingface.md) and
 [general design](../docs/general-workflow.md). It does not infer a computation graph
 or promise a compression ratio from tensor names alone.
 
-The environment and both artifacts are prepared in this project:
+With the prepared project environment and artifacts:
 
 ```bash
 cd ~/Code/compressme
 .venv/bin/python examples/moljepa.py predict --device mps CCO 'c1ccccc1'
 ```
 
-Or keep the original callable API in Python:
+The Python loader preserves the callable API:
 
 ```python
 from compressme import load_moljepa
@@ -113,13 +117,14 @@ uv pip install --python .venv/bin/python -e '.[molecules,test,packing]'
 .venv/bin/python -m pytest -q
 ```
 
-The development environment's exact package versions are recorded in
-`benchmarks/environment.txt`. Molecular dependencies are optional for the
-generic affine and low-rank package.
+Exact development dependency versions are recorded in
+`benchmarks/environment.txt`. The generic affine and low-rank package does not
+require the optional molecular dependencies.
 
-## The general idea: store what the computation can observe
+## Store the parameter combinations used by the computation
 
-The core reductions have explicit algebraic or structural conditions.
+Each reduction follows from a specific restriction on the input domain or the
+way a later operation uses an intermediate value.
 
 **Affine reachability.** If a narrow input is expanded and immediately projected
 again, the downstream operation can only observe that narrow affine image:
@@ -129,8 +134,8 @@ h=Ax+a,\qquad y=Wh+b
 \quad\Longrightarrow\quad y=(WA)x+(Wa+b).
 \]
 
-There is no need to estimate a low rank. The preceding computation proves the
-restricted domain. An expansion from 82 to 512 followed by a 4096-output linear
+The preceding computation proves the restricted domain, so no estimated low
+rank is needed. An expansion from 82 to 512 followed by a 4096-output linear
 map can be stored as a 4096-by-82 map. Residual branches that need the expansion
 are retained. This removes 5,504,000 parameters from Mol-JEPA's first graph layer.
 
@@ -146,17 +151,17 @@ edge conditioning, removes key-bias terms that are constant within a softmax row
 and preserves each head, scaling, dropout, isolated-node behaviour and returned
 attention. It removes another 4,677,160 parameters from this checkpoint.
 
-These are classical identities, not claims of a new linear algebra theorem.
-The useful research direction is an automatic compiler that finds *observable
-parameter combinations* in trained programs and exports only those combinations.
-Here it produces actual checkpoint savings without an approximation hypothesis.
+These classical identities turn the compiler problem into locating observable
+parameter combinations in a trained program. Exporting those combinations
+produces checkpoint savings here without an approximation hypothesis; the
+identities themselves are not new linear algebra theorems.
 Query/key composition is also related to prior compression work such as
 [KQ-SVD](https://arxiv.org/abs/2512.05916); this implementation performs no SVD
 truncation on that path. See [the derivations and prior art](../docs/theory.md).
 
-**Keep the normalization statistic, remove the expansion.** Even LayerNorm need
-not be a barrier. For `Linear(d,n) → LayerNorm(n) → Linear(n,m)`, center the first
-affine map to form `T`, compute full reduced QR `T=UR`, and retain:
+**Contract around the normalization statistic.** For
+`Linear(d,n) → LayerNorm(n) → Linear(n,m)`, center the first affine map to form
+`T`, compute full reduced QR `T=UR`, and retain:
 
 \[
 y=\frac{D[x;1]}{\sqrt{\|R[x;1]\|^2/n+\epsilon}}+c.
@@ -165,9 +170,10 @@ y=\frac{D[x;1]}{\sqrt{\|R[x;1]\|^2/n+\epsilon}}+c.
 The wide intermediate is represented by a contracted numerator and a small
 denominator statistic. There is no rank truncation. An 82→512→LayerNorm→512
 test block drops from **306,176 to 49,897 parameters (83.7%)**, with float32
-relative output error about 4.8e-7. This is a constructed general-operator test,
-**not an additional Mol-JEPA reduction**: its relevant encoders put GELU in the
-way. FX discovers eligible sandwiches automatically. See the
+relative output error about 4.8e-7. This result comes from a constructed
+general-operator test. Mol-JEPA gains no additional reduction from it because
+GELU interrupts the relevant encoder paths. FX discovers eligible sandwiches
+automatically. See the
 [proof and limitations](../docs/normalization-statistic.md).
 
 **Store identical frozen rows once.** A frozen embedding table whose rows have
@@ -188,8 +194,8 @@ checkpoint is not required to reload. See [STATE usage and scope](../docs/state.
 
 **Evaluate the whole finite token domain.** A fixed vocabulary can be passed
 through its original row-local encoder once, including LayerNorm and nonlinear
-activations. Store those smaller outputs as an inference lookup. This is partial
-evaluation, not fitting a student. `compile_finite_lookup` checks every token and
+activations. Those smaller outputs form an inference lookup produced by partial
+evaluation. `compile_finite_lookup` checks every token and
 additional tensor layouts; it rejects a proposal that fails the local numerical
 gate or does not save bytes. `compile_finite_blocks` discovers or selects such
 blocks inside a model and requires complete-output checks with rollback. The
@@ -206,8 +212,8 @@ custom raw-vector inputs. Parameters fall from **212,038,824 to 151,243,944
 (28.67%)**. Extended CPU tests include 2,048-gene inputs and every numerical head;
 maximum observed error is **6.68e-6**. Short CPU timings improved **1.39×** for
 32 tokens and **1.11×** for 2,048 tokens (five interleaved rounds). The MPS
-candidate failed, so this adapter
-is restricted to CPU float32. Seven constructed AnnData variants reproduce
+candidate failed the complete-output gate, restricting this finite-table
+adapter to CPU float32. Seven constructed AnnData variants reproduce
 original preprocessing and all 1,034 exported features bitwise. Use
 `load_state_se_encoder(...).encode_adata(...)` for that workflow. The original
 model gene-name helper still requires its protein dictionary separately.
@@ -250,7 +256,7 @@ from compressme import contract_attention
 result = contract_attention(model, input_contract="homogeneous_coo")
 ```
 
-This backend currently supports PyG `TransformerConv` with homogeneous dense node
+This backend supports PyG `TransformerConv` with homogeneous dense node
 features, COO edges, `concat=False`, `beta=False`, `root_weight=True`, and ordinary
 source-to-target sum aggregation. Unsupported or unprofitable operators stay
 unchanged. The explicit input contract matters: PyG's broader sparse and bipartite
@@ -305,7 +311,7 @@ and decompressed buffers. `load(..., max_unpack_bytes=...)` allows an explicit
 larger bound for artifacts above the default 1 GiB limit. See
 [format and evidence](../docs/packing.md).
 
-## Reproduce and extend
+## Checkpoints, reproduction and remaining work
 
 The pinned upstream checkpoint is
 [`Flogrammer/Mol-JEPA` at `4c912b4`](https://huggingface.co/Flogrammer/Mol-JEPA/tree/4c912b450175f31b5ba913a5dc921c03b27b985a).
@@ -323,23 +329,23 @@ new compressor code is separate from that upstream material.
 `benchmarks/` contains raw timings, errors and fixed verification SMILES. The
 optional-modality audit is reproducible with `examples/audit_moljepa_api.py`.
 
-STATE ST and the numerical STATE SE adapter are validated as described above.
-Boltz-2 now has a [portable shared bundle](../docs/boltz2.md), described below
-and in the `list_targets()` registry. NovoMolGen 32M AtomWise has a [token-only research
+The STATE ST and numerical STATE SE validation scopes are given above.
+Boltz-2 has a [portable shared bundle](../docs/boltz2.md), described below and
+in the `list_targets()` registry. NovoMolGen 32M AtomWise has a [token-only research
 experiment](../docs/novomolgen.md): 12,599 complete-output tensor comparisons per
 device are bitwise identical on CPU and MPS after generic lookup save/reload.
 The weight reductions are modest (1.676% CPU, 1.267% MPS), with no material
 speedup established. This is not a production adapter or arbitrary
-`inputs_embeds` support. Other NovoMolGen variants are outside current scope.
+`inputs_embeds` support. Other NovoMolGen variants are outside the tested scope.
 X-Cell and OmniCell were removed from the work plan, and stFormer is set aside.
 Bioptimus remains gated after an authenticated weight-access check and is deferred.
 Earlier surveys remain available with `list_targets(include_inactive=True)`;
 an archived entry is not a support claim.
 
-**Boltz-2: 49.55% less joint weight storage, with the original arithmetic.**
-Its released confidence and affinity checkpoints share 5,019 byte-identical named
-tensors. The general frozen-storage pass reduces registered weights for both
-loaded models from **4.09 GB to 2.06 GB** while retaining every Parameter object,
+Boltz-2 saves 49.55% of joint weight storage while retaining the original
+arithmetic. Its released confidence and affinity checkpoints share 5,019
+byte-identical named tensors. The general frozen-storage pass reduces registered
+weights for both loaded models from **4.09 GB to 2.06 GB** while retaining every Parameter object,
 input and output. All 48 returned native tensors match the original bytes on
 CPU and MPS, both immediately and after a fresh portable reload, on one small
 protein–ligand fixture using the standard sampling schedules. This reduces
@@ -371,11 +377,11 @@ but three warmed timing pairs show no reliable MPS improvement and only a small
 CPU affinity benefit. It stays off by default; [all timing rows](../benchmarks/boltz2_request_timing.json)
 and [the runtime contract](../docs/boltz2.md#optional-reuse-within-a-prediction) remain available.
 
-Two additional general storage tools are available: [immutable parameter
-sharing](../docs/sharing.md) for related frozen models, and [lossless table
-differences](../docs/frozen-tables.md) for families of compiled float32 lookup tables.
-Both count all retained storage and keep dtype unchanged. Storage sharing
-preserves Parameter objects and enumeration; neither tool assumes a speedup.
+[Immutable parameter sharing](../docs/sharing.md) applies to related frozen
+models, while [lossless table differences](../docs/frozen-tables.md) encode
+families of compiled float32 lookups. Both account for all retained storage
+and preserve dtype. Storage sharing also preserves Parameter objects and
+enumeration. Their storage reductions do not establish faster execution.
 
 An experimental [general FX request compiler](../experiments/request_fx/README.md)
 finds branches depending only on explicitly fixed request inputs and frozen
@@ -398,7 +404,7 @@ and shared-edge projections, is not an additional inference-artifact reduction,
 and has no measured training speedup. Its failed arbitrary-input float32
 raw-logit stress check remains in the evidence.
 
-The [optimization record](../docs/optimization-record.md) preserves accepted,
-rejected and optional candidates. No finite search establishes that all possible
-optimizations have been exhausted. Unsupported cases and failed numerical gates
-remain explicit.
+The [optimization record](../docs/optimization-record.md) keeps the accepted,
+rejected and optional candidates, including unsupported cases and failed
+numerical gates. The search is bounded by those tests; it cannot establish that
+every possible optimization has been exhausted.

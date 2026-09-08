@@ -29,13 +29,13 @@ Pages use file-style URLs so ordinary navigation also works directly from the ex
 
 Equations render with bundled KaTeX 0.16.22 scripts, styles and fonts. The extracted site needs no external math CDN. Its [license](assets/katex/LICENSE), [download provenance and file hashes](assets/katex/PROVENANCE.json) are included; the build tests verify those bytes. This follows the [KaTeX self-hosting approach](https://katex.org/docs/browser.html).
 
-This is an HTML download, not a hosted website. The workflow does not enable GitHub Pages or deploy anything publicly. For a private repository, artifact downloads require a signed-in account with repository read access. The artifact retention is set to 14 days and is also subject to repository policy. See [GitHub's artifact access documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts) and [artifact storage guide](https://docs.github.com/en/actions/tutorials/store-and-share-data).
+The workflow produces downloadable HTML and leaves public hosting disabled. For a private repository, artifact downloads require a signed-in account with repository read access. The artifact retention is set to 14 days and is also subject to repository policy. See [GitHub's artifact access documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts) and [artifact storage guide](https://docs.github.com/en/actions/tutorials/store-and-share-data).
 
 ## Source and historical evidence links
 
 Documentation-to-documentation links stay inside the generated site. Links to checked-in source, scripts and historical benchmark reports point to the private repository. In Actions they use the build's commit; local builds default to `main`. You need repository access to follow them.
 
-Three small legacy references originally lived beside excluded vendor or model artifact directories. Their license/provenance text and artifact README are copied into [bounded documentation attachments](assets/evidence/provenance.json); their original byte hashes are recorded there. No model tensors are copied into the site. Missing repository references fail the build instead of becoming guessed links.
+Three small legacy references originally lived beside excluded vendor or model artifact directories. Their license/provenance text and artifact README are copied into [bounded documentation attachments](assets/evidence/provenance.json); their original byte hashes are recorded there. No model tensors are copied into the site. Missing repository references fail the build.
 
 The Markdown build hook only resolves links and verifies files. It does not import compressme or any architecture. A successful documentation build verifies documentation structure, not numerical model correctness. Use the [backend validation guide](gpu-validation.md) for model checks.
 

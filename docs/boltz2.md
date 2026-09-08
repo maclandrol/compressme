@@ -3,12 +3,12 @@
 **Original work:** Passaro et al., [Boltz-2 (2025)](https://doi.org/10.1101/2025.06.14.659707) · [original code](https://github.com/jwohlwend/boltz) · [upstream checkpoints](https://huggingface.co/boltz-community/boltz-2).
 { .original-work }
 
-The portable bundle contains the original Boltz-2 confidence and affinity models.
-Its general compression pass stores byte-identical, immutable parameters once
-across the pair. It uses no distillation, rank truncation or precision change.
-Both original native batch APIs and all returned tensors remain available.
+Sharing identical frozen weights between Boltz-2's confidence and affinity models
+reduces their joint registered tensor storage by 49.55%. Both original batch APIs
+and all returned tensors remain available, with unchanged FP32 weights and no
+distillation or rank truncation.
 
-## Measured result
+## Storage and output preservation
 
 | Quantity | Original pair | Shared pair |
 | --- | ---: | ---: |
@@ -16,14 +16,12 @@ Both original native batch APIs and all returned tensors remain available.
 | Logical Parameter values | 1,021,780,232 | 1,021,780,232 |
 | Weight precision | FP32 | FP32 |
 
-The registered storage saving is **49.55%**. This is a comparison with both
-models loaded, including their original internal aliases. A workflow that
-unloads one model before loading the other has a different memory baseline.
-Process RSS, allocator reservations, activations and temporary load memory are
-not the same as registered tensor storage. The saved safetensors file is
-2,062,669,224 bytes, with a 5,429,443-byte rewrite manifest and small JSON
-architecture files. Training checkpoint and optimizer overhead are excluded
-from the fair inference-state comparison.
+This comparison loads both models and accounts for their original internal
+aliases. Unloading one model before loading the other gives a different memory
+baseline. Registered storage excludes process overhead, allocator reservations,
+activations and temporary load memory, as well as training checkpoint and
+optimizer state. The saved safetensors file occupies 2,062,669,224 bytes, with a
+5,429,443-byte rewrite manifest and small JSON architecture files.
 
 All 5,019 common named tensors in the published checkpoints are byte-identical.
 The general pass uses hashes to identify candidates, then compares their actual
@@ -32,9 +30,12 @@ only backing storage changes. See [the transferable pass and its contract](shari
 
 ## Load on a Mac
 
-The project now has a prepared `.venv-boltz` environment with the verified
-source and tested dependency versions. To reproduce it in a new checkout,
-use an isolated Python 3.12 environment with the pinned upstream source:
+For a fresh checkout, follow the [Boltz-2 reproduction tutorial](tutorials/boltz2.md)
+to download the pinned weights and assets and build the shared bundle. The
+examples here use the prepared local artifact and fixture.
+
+Use an isolated Python 3.12 environment with the pinned upstream source to
+reproduce the tested `.venv-boltz` environment:
 
 ```bash
 cd ~/Code/compressme
@@ -47,9 +48,9 @@ uv pip install --python .venv-boltz/bin/python -e . \
 The tested dependency inventory is in
 [the runtime environment](../experiments/boltz2-runtime/environment.json), with
 [the complete pinned requirements](../experiments/boltz2-runtime/requirements-tested.txt).
-Boltz source verification checks all 107 Python files, not only the package
-version. A different source revision needs its own compatibility validation.
-The loader imports Boltz lazily; other compressme models do not need it installed.
+The loader verifies all 107 Python source files and imports Boltz only when
+needed. Other compressme models do not require it; another Boltz revision needs
+its own compatibility check.
 
 ```python
 import torch
@@ -70,12 +71,11 @@ models first, so cold-load peak memory is higher than final resident weights.
 The weights are frozen and must remain immutable. Moving the returned bundle
 again can split shared allocations; load directly onto the intended device.
 
-Native preprocessing, molecular reference assets, MSA preparation and output
-writers remain upstream components. The small reference molecule directory in
-the evidence is sufficient only for the supplied protein/ethanol fixture; it is
-not a complete chemistry cache. Arbitrary native inputs need the appropriate
-upstream assets. This loader accepts the usual native batches unchanged and
-does not replace the entire Boltz command-line application.
+The loader accepts native batches unchanged. Preprocessing, molecular reference
+assets, MSA preparation and output writers remain upstream components; the
+loader covers the models rather than the entire Boltz command-line application.
+The small molecule directory used for the protein/ethanol fixture covers that
+fixture only. Other inputs need the appropriate upstream chemistry assets.
 
 ## Run an unchanged native input file
 
@@ -91,14 +91,12 @@ The included numerical fixture can run entirely from local assets:
   --output /tmp/compressme-boltz-example --device mps
 ```
 
-Choose a new output directory for each run. For other inputs, supply their native
-MSA files and the required molecular references. The example does not submit
-sequences to an MSA server. The small included reference directory is not a full
-Boltz chemistry cache. The file-based workflow was also checked with optional
-request-invariant computation enabled; all 48 tensor outputs matched the original
-MPS bytes. The final runtime source hash is recorded correctly in
-[the final composition report](../benchmarks/boltz2_yaml_mps_final.json), with
-complete outputs and tested source in
+Choose a new output directory for each run and supply any required native MSA
+files; the example does not submit sequences to an MSA server. With optional
+request-invariant computation enabled, this file-based workflow also matched
+all 48 original MPS tensor outputs byte for byte. The tested runtime source hash
+is in [the final composition report](../benchmarks/boltz2_yaml_mps_final.json);
+complete outputs and source are in
 [the composition evidence](../experiments/boltz2-yaml-composition/README.md).
 
 ## What was verified
@@ -109,16 +107,15 @@ The fixture is a 20-residue protein plus ethanol, empty MSA, 23 tokens and 160
 padded atoms. Confidence used 200 diffusion steps, 3 recycles and 1 sample;
 affinity used 200 steps, 5 recycles and 3 samples.
 
-Every returned tensor was compared, including structure, confidence and affinity
-outputs: **48 tensor leaves / 639,024 value bytes per backend**. Original
-self-repeats, shared execution and a fresh-process portable reload all matched
-bytes, including signed zeros. Fresh reload tests forbade `torch.load`. The public `compressme.load_boltz2`
-entry point was independently rerun on both devices with the same complete
-byte agreement; reproduce it with `examples/verify_boltz2_reload.py`.
+All returned structure, confidence and affinity tensors were compared:
+48 tensor leaves and 639,024 value bytes per backend. Original self-repeats,
+shared execution and fresh-process reload matched byte for byte, including
+signed zeros. Reload checks forbade `torch.load`; an independent run through
+the public `compressme.load_boltz2` entry point passed on both devices.
 Native writers also produced mmCIF, confidence, pLDDT, PAE, PDE and affinity
-outputs. Comparisons use the same backend and both the preprocessing and
-sampling random seeds. CPU and MPS are not claimed to produce identical values
-to each other. The upstream mixed-BF16 CLI mode was not this FP32 reference.
+outputs. Each comparison holds the backend and preprocessing and sampling seeds
+fixed. It establishes neither CPU/MPS equality nor equivalence to the upstream
+mixed-BF16 CLI mode.
 
 Run the complete public-loader check in the prepared project environment:
 
@@ -134,11 +131,11 @@ The [checkpoint audit](../experiments/boltz2-weight-audit/README.md) documents
 safe static extraction, publisher checksums and the complete tensor equality
 analysis. No checkpoint pickle was executed during extraction or reload.
 
-These are numerical execution and preservation tests on one small fixture.
-They do not establish biological accuracy, large-complex memory requirements,
-a universal floating-point certificate or a speedup. Storage sharing leaves the
-original arithmetic unchanged. The optional compute experiment below is not
-enabled by this storage loader.
+These checks establish output preservation on one small fixture. Biological
+accuracy, large-complex memory requirements and other floating-point execution
+conditions remain untested. Sharing storage leaves the arithmetic unchanged,
+so it provides no computational speedup. The loader leaves the separate compute
+experiment below disabled.
 
 ## Lossless file packing
 
@@ -152,10 +149,10 @@ records hashes, sizes and diagnostic pack/unpack times.
 
 `pack_file` and `unpack_file` work on any ordinary file; no model adapter is
 required. Their [API and output limits](packing.md#stream-large-files) are explicit.
-The supplied Boltz loader continues to read plain safetensors: unpack a transport
-copy before loading. Keeping both copies consumes more disk. This codec saves
-disk/transport bytes and adds no change to the reconstructed model's values,
-resident weight size or prediction computation.
+Unpack the transport copy before loading: the Boltz loader reads plain
+safetensors. Keeping both copies consumes more disk. Packing preserves every
+reconstructed value and changes only file storage and transfer size; resident
+weights and prediction computation stay the same.
 
 The ready-to-load bundle is `artifacts/boltz2-shared`. A complete packed transport
 copy is supplied separately at
@@ -164,12 +161,11 @@ with the original manifest, architecture, hashes and restoration instructions.
 
 ## Optional reuse within a prediction
 
-Some diffusion conditioning depends only on fixed request inputs and frozen
-weights. The optional adapter computes these branches once with their original
-operators, dtype and full execution shapes, then reuses their values throughout
-the 200 score calls. It leaves every timestep and time-dependent branch intact.
-All 48 output tensor leaves pass byte comparisons on both CPU and MPS, including
-original self-repeat and post-restoration controls.
+The optional adapter computes fixed diffusion-conditioning branches once per
+request, using their original operators, dtype and full execution shapes. It
+reuses those values through the 200 score calls while preserving every timestep
+and time-dependent branch. All 48 output tensor leaves match on CPU and MPS,
+including original self-repeat and post-restoration controls.
 
 The model must be frozen, unmodified, exclusively owned by the request and used
 without gradients. Model state and conditioning must remain immutable throughout the
@@ -196,12 +192,11 @@ All 12 timed pairs passed full output byte checks.
 | MPS | Affinity | 10.880 s | 10.965 s | 1.000× | 0.992–1.007× |
 
 A speed ratio above one is faster. The median paired ratio need not equal the
-ratio of the two independent medians when timings drift. Confidence is
+ratio of the two independent medians when timings drift. Confidence timings are
 inconsistent; CPU affinity shows a small benefit in three pairs, and MPS has no
-reliable gain. This evidence does **not** justify enabling the adapter by default
-or claiming general acceleration. The transferable FX discovery prototype is
-[a separate research component](../experiments/request_fx/README.md); this native
-Boltz integration uses verified source-specific invariant analysis.
+reliable gain. The adapter therefore remains opt-in, with no general acceleration
+claim. This Boltz integration uses source-specific invariant analysis; automatic
+FX discovery is [a separate research component](../experiments/request_fx/README.md).
 
 ## Pinned original files
 

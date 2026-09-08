@@ -1,14 +1,14 @@
-# Optimization evidence and stopping criteria
+# What the optimizations changed
 
-**Original models:** [Mol-JEPA — Rottach et al.](https://arxiv.org/abs/2608.22642) · [Boltz-2 — Passaro et al.](https://doi.org/10.1101/2025.06.14.659707) · [STATE — Arc Institute](https://arcinstitute.org/manuscripts/State).
+**Original models:** [Mol-JEPA, Rottach et al.](https://arxiv.org/abs/2608.22642) · [Boltz-2, Passaro et al.](https://doi.org/10.1101/2025.06.14.659707) · [STATE, Arc Institute](https://arcinstitute.org/manuscripts/State).
 { .original-work }
 
-This record distinguishes algebraic correctness, checkpoint agreement, resident
-weights, file size and elapsed time. A passing result in one column does not
-establish the others. None of the delivered reductions uses distillation,
-quantization or truncated low-rank approximation.
+The tested changes reduce resident weights, file size or execution time under
+different conditions. The tables separate those effects from algebraic
+correctness and agreement with the original checkpoint. None of the delivered
+reductions uses distillation, quantization or truncated low-rank approximation.
 
-## Accepted
+## Validated reductions
 
 | General operation | Real checkpoint evidence | Practical effect |
 |---|---|---|
@@ -24,28 +24,36 @@ quantization or truncated low-rank approximation.
 | Full-vocabulary partial evaluation through nonlinear row encoders | STATE SE CPU, including 2,048-gene numerical inputs | 28.67% fewer parameters while retaining raw-vector forward; maximum observed error 6.68e-6 |
 | Contract a LayerNorm sandwich using its denominator statistic | Constructed eligible operator | 83.7% fewer parameters in an 82→512→512 example; not an extra biology-model saving |
 
-General integration now discovers closed finite-token blocks inside ordinary
-PyTorch models and exposes the pass through the Hugging Face workflow. It checks
-complete requested outputs and rolls back failed proposals. STATE SE also has a
-portable h5ad loader: seven constructed variants preserve preprocessing and all
-1,034 exported features bitwise, without the original protein dictionary.
+The general compiler discovers closed finite-token blocks inside ordinary
+PyTorch models, including through the Hugging Face workflow. It compares complete
+requested outputs and rolls back proposals that fail. For STATE SE, a portable
+h5ad loader also preserves preprocessing and all 1,034 exported features bitwise
+on seven constructed variants, without the original protein dictionary.
 
-NovoMolGen now has a complete token-only 32M experiment using tables matched
-to numerical execution shapes. CPU uses two tables and saves 528,896 parameters
+The NovoMolGen token-only 32M experiment uses tables matched to numerical
+execution shapes. CPU uses two tables and saves 528,896 parameters
 (1.676%); MPS uses three and saves 399,872 (1.267%). All 12,599 CPU and 12,599 MPS
 tensor comparisons were bitwise identical, including hidden states, attention
-and generation/cache outputs. This is a research adapter under an explicit
-token-only contract, not preservation of arbitrary native embedding inputs.
+and generation/cache outputs. The research adapter requires token-only inputs;
+arbitrary native embedding inputs remain outside its contract.
 The reusable fanout compiler, including ordinary table save/reload, reproduces
 the same complete results. Earlier manual-layout timings are essentially neutral;
 generic-layout timings are recorded separately. See [the detailed audit](novomolgen.md).
 
-## Rejected or optional
+## Rejected and optional candidates
 
+- **Nesso-1 runtime layout and bookkeeping:** contiguous channelwise contraction
+  gives modest CPU gains on the recorded native inputs. One ownership walk
+  replaces three during state checks, preserving the same checked metadata.
+  Attention-copy removal and repeated-conditioning reuse offer no dependable MPS
+  gain; a fused-attention probe changes output bytes and remains rejected for
+  the strict contract. Lossless checkpoint packing separately saves 14.91% of
+  disk/transport bytes. [Methods, timings and reproduction](nesso.md).
 - **Boltz request-invariant conditioning:** all 48 native output tensors match
   bytes on CPU and MPS, including all 12 timed pairs. MPS timing is neutral or
-  inconsistent; CPU affinity improves slightly in three pairs. Optional only,
-  with extra request cache memory and an explicit immutable ownership contract.
+  inconsistent; CPU affinity improves slightly in three pairs. The adapter is
+  optional because it adds request-cache memory and requires explicit immutable
+  ownership.
   [Complete results](../experiments/boltz2-request-runtime/lean/README.md).
 - **STATE SE lossless original-table storage:** a portable representation restores
   all original float32 row bytes before inference and preserves the broader
@@ -84,7 +92,7 @@ generic-layout timings are recorded separately. See [the detailed audit](novomol
   well. The earlier equally packed comparison was 10,392 bytes larger after the
   rewrite. The claim is resident/raw weight saving, not smaller packed files.
 
-## Fine-tuning research
+## Fine-tuning experiments
 
 An isolated experiment preserves simultaneous SGD on two consecutive bias-free
 linear maps using their product and two Gram matrices. Exact rational checks and
@@ -93,21 +101,20 @@ is 2.15e-6. A fixed hidden subspace gives a simpler alternative: four trajectori
 including momentum and weight decay, retain the same effective computation while
 reducing a constructed width from 64 to 12.
 
-These are conditional mathematical identities with numerical experiments. They
-are not a production optimizer, a novelty claim or a measured biological-model
-speedup. Intervening nonlinearities, observable hidden states and coordinatewise
-Adam updates fall outside the tested contract. The required Gram matrices can
-also be larger than the source weights. See [proof, code and complete results](../experiments/gram_sgd/gram-sgd-note.md).
+These experiments test conditional mathematical identities. They do not
+establish a production optimizer, a new theorem or a biological-model speedup.
+Intervening nonlinearities, observable hidden states and coordinatewise Adam
+updates fall outside the tested contract. The required Gram matrices can also
+be larger than the source weights. See [proof, code and complete results](../experiments/gram_sgd/gram-sgd-note.md).
 
-An actual Mol-JEPA component now tests this principle under a narrower contract:
-only the first graph layer's query/key weights and biases are trained; the input
-and shared edge projections stay frozen. Two fixed orthonormal subspaces reduce
-trainable Q/K coefficients from 4,202,496 to 243,024. The full tested component,
+The Mol-JEPA component experiment trains only the first graph layer's query/key
+weights and biases. The input and shared edge projections stay frozen. Two fixed
+orthonormal subspaces reduce trainable Q/K coefficients from 4,202,496 to 243,024. The full tested component,
 including retained value, edge, skip and input weights, falls from 6,678,528 to
 2,750,833 values. Twenty molecular SGD steps pass in float32 and float64; the
 worst molecular convolution-output difference is 1.43e-6.
 
-This does not further shrink the current bilinear inference artifact. One
+This does not further shrink the bilinear inference artifact. One
 arbitrary-input float32 raw-logit stress check fails, and unfreezing either
 projection introduces directions outside the retained subspace. Adam and
 unrestricted whole-model fine-tuning are not covered. The [derivation and
@@ -116,19 +123,19 @@ and negative evidence; no fine-tuning speed claim is made.
 
 ## Evidence boundaries
 
-Whole-model probes use actual trained checkpoints and compare every requested
-numerical output, with dtype and shape checks. These are not biological quality
-benchmarks or proofs over every possible input. Reassociated float32 arithmetic
-can depend on tensor shape and execution backend. Every artifact must state its
-validated device, inputs, tolerance and any remaining helper-API limitations.
+Whole-model probes compare every requested numerical output from trained
+checkpoints, including dtype and shape. They establish agreement on those cases,
+not biological quality or equality for every possible input. Reassociated
+float32 arithmetic can depend on tensor shape and backend, so each artifact
+records its validated device, inputs, tolerance and helper-API limits.
 
-The current priority is Boltz-2. Full official checkpoint hashes and equality
-of all 5,019 common tensors are verified. General immutable parameter-storage
-sharing reduces the joint structure/confidence and affinity model's registered
-state from 4,087,121,944 to 2,061,868,568 bytes. Both native models retain their
-logical parameters and operations. All 48 tested tensor outputs match byte for
-byte on CPU and MPS at standard sampling schedules. Fresh portable reload
-also passes all 48 byte comparisons on each backend. This is a joint memory/storage result, not a single-model speedup.
+For Boltz-2, the official checkpoint hashes and byte equality of all 5,019
+common tensors are verified. Immutable parameter-storage sharing reduces joint registered state from
+4,087,121,944 to 2,061,868,568 bytes while retaining both native models' logical
+parameters and operations. All 48 tested tensor outputs match byte for byte on
+CPU and MPS at standard sampling schedules, including after fresh portable
+reload. The [Boltz-2 report](boltz2.md) gives the full checks. This reduces joint
+memory/storage; it does not speed up a single model.
 
 A separate [general request compiler](../experiments/request_fx/README.md)
 propagates declared static inputs through an audited pure FX graph and evaluates
@@ -150,9 +157,8 @@ Bioptimus remains gated after the supplied-token access check and is deferred.
 Other NovoMolGen variants are out of scope. Their older audits remain historical
 evidence; they are not outstanding tasks or compressed-model support claims.
 
-There is no finite experiment that proves no further optimization exists.
-A practical stopping point is reached when the currently applicable candidates
-have been implemented and tested, unsupported cases retain their original
-execution, and remaining ideas have a stated missing hypothesis, failed output
-check, unavailable asset or unmeasured tradeoff. New checkpoints and backend
-changes can reopen those candidates.
+This search cannot prove that no further optimization exists. It stops when
+the applicable candidates have been tested and each remaining idea has a specific
+obstacle: a missing hypothesis, failed output check, unavailable asset or
+unmeasured tradeoff. Unsupported cases retain their original execution. A new
+checkpoint or backend can justify testing a rejected candidate again.

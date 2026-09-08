@@ -1,12 +1,11 @@
-# A checkpoint is the starting point, not the entire proof
+# From a checkpoint to a tested model rewrite
 
-The intended input to compressme is a Hugging Face model ID, a reproducible
-architecture constructor and representative inference calls. The checkpoint
-provides the numbers. The code establishes how those numbers are consumed.
-Validation measures numerical agreement for the supplied calls. These are
-different kinds of evidence and the package keeps them separate.
+To rewrite a model, compressme needs its weights, a reproducible architecture
+constructor and representative inference calls. The weights may come from
+Hugging Face or a local file. The code tells us which tensors the model uses,
+and the example calls let us check whether a rewrite preserves its outputs.
 
-The public interface is built around four stages:
+The workflow has four steps:
 
 1. **Inspect.** Pin a repository revision, identify the selected weight files,
    list tensor storage and architecture requirements. Multiple checkpoint
@@ -28,22 +27,22 @@ The public interface is built around four stages:
    reduces disk space. Hardware execution can fuse operations and eliminate
    intermediate tensors without further parameter reduction.
 
-The important organizing idea is **store only distinctions the program can
-observe**. A downstream projection can observe a composition of two matrices;
-attention observes a bilinear interaction; normalization observes a small
-statistic; a frozen constant table contains no distinction between rows; a
-finite vocabulary only exposes the encoder outputs at its actual token rows.
-These reductions have explicit algebraic or structural conditions. They do
-not require fitting a student or changing precision.
+The useful reduction depends on how the tensors are consumed. Two consecutive
+affine maps may be stored as their composition. Query/key projections may be
+replaced by their bilinear interaction. A frozen table of identical rows needs
+only one stored row. For a fixed vocabulary, a deterministic row encoder can
+sometimes be evaluated once per token and replaced by its outputs. Each case
+has algebraic or structural conditions that must hold before a rewrite applies;
+none requires fitting a student or changing precision.
 
 There cannot be a guaranteed large compression ratio for every trained tensor
 under an exact-output requirement. A model may contain no removable algebraic
 redundancy, and a matrix with a small-looking spectrum can still matter at a
-sensitive nonlinear boundary. The package should return an unchanged model
-and an explanation when its exact conditions do not hold. Arbitrary pruning,
-approximation and biological quality are separate questions.
+sensitive nonlinear boundary. The package returns an unchanged model and an explanation when none of its
+supported reductions applies. Pruning or approximation would need a different
+error contract, and biological quality still needs its own evaluation.
 
-The immediate targets cover complementary architectures:
+The model examples exercise different conditions:
 
 | Target | What it tests |
 |---|---|
@@ -51,6 +50,7 @@ The immediate targets cover complementary architectures:
 | STATE ST | Frozen redundant tables and expression/count prediction API preservation |
 | STATE SE | Fixed gene lookup paths, aliases, normalization and large gene-level tables |
 | Boltz-2 | Iterative structure/affinity computations and large pair activations |
+| Nesso-1 | Repeated pair contractions, Python bookkeeping and full affinity/metadata outputs |
 | NovoMolGen | Small token vocabularies, first-layer projection fanout, autoregressive masks/cache and sampling |
 
 Target inclusion is not a claim that every architecture has a validated adapter.
@@ -73,8 +73,7 @@ safety of discarding an embedding that arbitrary Python helpers also read. See
 output checks. `compress_huggingface(..., method="finite_lookup",
 finite_input_contract="token_indices_only")` uses that same implementation after
 strict pinned-checkpoint loading. An explicit module path is optional; an explicit
-contract is required. Generality comes from recognizing valid operator patterns,
-not from model-name-specific tensor deletion. Metadata for prior transformations
+contract is required. The same operator pattern can apply in different architectures. Metadata for prior transformations
 must survive composition so the exported model still reloads correctly.
 
 Repeated affine compilation keeps an existing graph when new filters would need

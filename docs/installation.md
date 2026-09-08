@@ -36,14 +36,14 @@ Combine extras when needed, for example `'.[torch,hub,packing]'`. Hub model comp
 
 NumPy is included in the model runtime because the safetensors Torch serializer uses it. This requirement is separate from the optional Zstandard file codec.
 
-All existing top-level Python APIs remain available. They load their implementation when requested. Requesting a Torch-based API without that extra raises an installation hint. Avoid `from compressme import *` in lightweight applications: it requests every model API and therefore requires the model runtime.
+Top-level Python APIs load their implementation when requested. Requesting a Torch-based API without that extra raises an installation hint. Avoid `from compressme import *` in lightweight applications: it requests every model API and therefore requires the model runtime.
 
 Use separate environments for model stacks with conflicting requirements. In particular, the audited STATE loaders use Transformers 4.52.3, while the Mol-JEPA research environment was validated separately. Model extras provide dependencies; they do not include checkpoints, data assets or exported artifact directories. Mol-JEPA and STATE artifacts contain separately supplied, trusted architecture files. The Boltz loader checks the installed source against revision `b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc`; a matching version string alone is insufficient.
 
 For CPU or Apple MPS execution, install a PyTorch build supporting that backend. CUDA requires a suitable PyTorch build, driver and device. Installing an extra does not establish that a particular model, shape or backend has passed numerical validation.
 
-The wheel contains the library and small Boltz provenance/configuration files. The source distribution additionally contains public tests, operational documentation and the small standalone backend-validation example used by those tests. Neither contains model weights, exported artifacts, vendored architecture archives or local research evidence. Those files remain separate from package installation.
+The wheel contains the library, small Boltz provenance/configuration files and upstream licence notices. The source distribution additionally contains public tests, operational documentation and the small standalone backend-validation example used by those tests. Neither contains model weights, exported artifacts, vendored architecture archives or local research evidence. Those files remain separate from package installation.
 
-The upstream-dependent sparse Mol-JEPA fixture stays in the repository and is excluded from the source distribution together with its vendored architecture. Generic tests and the standalone backend runner are included.
+The sparse Mol-JEPA fixture and Nesso tutorial-protocol tests stay in the repository because they need source or examples excluded from the source distribution. Generic tests and the standalone backend runner are included.
 
 For contributor checks, install `'.[torch,packing,test]'` and run `python -m pytest`. Optional model tests may skip when their dependencies or architecture fixtures are absent. The sparse Mol-JEPA tests explicitly skip in a clean clone without its upstream architecture; set `COMPRESSME_MOLJEPA_SOURCE` to the source directory created by the [Mol-JEPA tutorial](tutorials/moljepa.md) to enable them. Documentation checks use the separate [docs build](building-docs.md).

@@ -12,7 +12,7 @@ print(plan["revision"], plan["selected"], plan["weight_bytes"])
 print(get_target("state")["hf_id"])
 ```
 
-The same inspection is available from the project environment:
+From the command line:
 
 ```bash
 .venv/bin/python -m compressme inspect Flogrammer/Mol-JEPA
@@ -54,7 +54,7 @@ of the enclosing model can remain available. The compiler refuses known external
 weight aliases and only accepts rewrites that save both logical tensor bytes and
 unique registered backing storage. See [finite-domain compilation](finite-domains.md).
 
-Every proposal must pass the supplied complete-output examples. A failed gate
+Every proposal is compared against the original on the supplied examples. A failed check
 returns the loaded original model with a rejection report. An unchanged model
 is a valid outcome when no exact condition applies. Dynamic Python forwards
 can require a model-specific adapter instead of FX tracing.

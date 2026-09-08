@@ -1,18 +1,22 @@
-# STATE ST and SE: general passes on pretrained models
+# STATE: storage savings, CPU speed and GPU limits
 
 **Original work:** [STATE paper](https://doi.org/10.1101/2025.06.26.661135) · [Arc Institute project](https://arcinstitute.org/manuscripts/State) · [original code](https://github.com/ArcInstitute/state) · [ST checkpoint](https://huggingface.co/arcinstitute/ST-HVG-Replogle) · [SE checkpoint](https://huggingface.co/arcinstitute/SE-100M).
 { .original-work }
 
-The selected checkpoint is
-[`arcinstitute/ST-HVG-Replogle`, K562](https://huggingface.co/arcinstitute/ST-HVG-Replogle/tree/bb6a9562cbbf1fd152df14cc53b4cc7517c77175),
-with the published STATE source pinned to
-[`9bbfe78`](https://github.com/ArcInstitute/state/tree/9bbfe78a434a55205e4de834e1ea99f85f7a3add).
+STATE offers three different tradeoffs. ST uses 21.25% less resident weight
+storage with unchanged outputs on CPU and MPS. SE's finite tables are smaller
+and faster in the measured CPU requests but fail the MPS numerical gate. A separate SE representation
+preserves original bytes on both devices, saving 6.31% of registered storage at
+the cost of slower inference.
 
-Its 32,000 × 328 token table is frozen and entirely zero. The ordinary expression
-path bypasses token lookup. The general constant-row embedding pass stores one
-row and preserves both expression inference and ordinary token IDs. It reduces
-49,396,728 parameters to 38,901,056, and raw tensor storage from 197,586,912 to
-155,604,224 bytes: **21.25% less resident weight storage**.
+## ST: remove a redundant frozen table
+
+In [`arcinstitute/ST-HVG-Replogle`, K562](https://huggingface.co/arcinstitute/ST-HVG-Replogle/tree/bb6a9562cbbf1fd152df14cc53b4cc7517c77175),
+the 32,000 × 328 token table is frozen and entirely zero. Storing one row preserves
+ordinary token IDs and expression inference, which already bypasses the lookup.
+This reduces 49,396,728 parameters to 38,901,056 and raw tensor storage from
+197,586,912 to 155,604,224 bytes. The published STATE source is pinned to
+[`9bbfe78`](https://github.com/ArcInstitute/state/tree/9bbfe78a434a55205e4de834e1ea99f85f7a3add).
 
 All outputs of `predict_step`, including decoded gene counts and metadata, were
 bitwise identical on CPU and MPS for 1, 7, 64 and 128 cells, padded/unpadded
@@ -20,12 +24,11 @@ inputs, and integer/one-hot batch labels. These are constructed numerical probes
 with actual trained weights, not a held-out biological benchmark. Token lookup
 at multiple vocabulary positions also remains identical.
 
-This does **not** save active FLOPs on expression prediction. It also does not
-improve an already losslessly packed file: the unchanged baseline packs to
-132,137,704 bytes and the new layout to 132,148,096 bytes, about 0.008% larger.
-The zero table already compresses almost for free. The benefit is resident
-weights and unpacked storage. The original 471.7 MB training checkpoint contains
-additional training state and is not the fair inference-weight denominator.
+Expression prediction performs the same FLOPs. Lossless file packing already
+handles the zero table cheaply: the unchanged baseline packs to 132,137,704
+bytes, versus 132,148,096 bytes for the new layout, about 0.008% larger. The
+saving is in resident weights and unpacked storage. Comparing against the
+original 471.7 MB training checkpoint would also count unrelated training state.
 
 The artifact, including local architecture/configuration and original licenses,
 is prepared in `artifacts/state-st-hvg-k562`. Use the separate STATE environment:
@@ -42,10 +45,10 @@ model = load_state_st("artifacts/state-st-hvg-k562", device="mps")
 output = model.predict_step(batch, batch_idx=0, padded=False)
 ```
 
-The batch uses the original `ctrl_cell_emb`, `pert_emb` and `batch` fields,
-with the checkpoint's gene, perturbation and batch ordering. Original
-preprocessing remains necessary. The compressed numerical model retains the
-original `forward` and `predict_step`; this is not a replacement AnnData CLI.
+Use the original `ctrl_cell_emb`, `pert_emb` and `batch` fields and the
+checkpoint's gene, perturbation and batch ordering. The model retains `forward`
+and `predict_step`; it still needs upstream preprocessing and does not provide
+an ST AnnData CLI.
 
 For a new machine, install `.[state,packing,hub]` in a separate environment.
 The published checkpoint requires Transformers 4.52.3 for its explicit
@@ -59,31 +62,30 @@ reads the compressed safetensors payload and replay recipe; the original
 training checkpoint is unnecessary. Evidence is in `benchmarks/state_st_export.json`,
 `state_st_reload.json`, `state_st_cpu.json` and `state_st_mps.json`.
 
-The later `state_st_cpu_bytes.json` and `state_st_mps_bytes.json` explicitly
-compare logical tensor bytes, including the sign of zero, for all four complete
-output cases and all 32,000 token rows. Both pass after portable reload. Earlier
-reports used numeric equality while calling it bitwise equality; the new reports
-supply the stronger measurement. Reproduce with `examples/verify_state_st_bytes.py`
-and explicit `--checkpoint`, `--artifact`, `--device` and `--output` paths.
+`state_st_cpu_bytes.json` and `state_st_mps_bytes.json` check logical tensor
+bytes, including signed zero, for all four complete output cases and all 32,000
+token rows after portable reload. Both pass. Earlier reports called numeric
+equality “bitwise”; only these explicit byte comparisons support that stronger
+claim. Reproduce them with `examples/verify_state_st_bytes.py` and explicit
+`--checkpoint`, `--artifact`, `--device` and `--output` paths.
 
-The transferable operation is `deduplicate_embeddings(model)`, also available
-through `compress_huggingface(..., method="constant_embeddings")`. It is not
-specific to gene models or zero values. It accepts any eligible frozen table
-whose rows are bitwise identical, and retains tables that fail its conditions.
+`deduplicate_embeddings(model)` accepts any eligible frozen table with
+bitwise-identical rows, including nonzero rows outside gene models. It retains
+tables that fail its conditions and is also available through
+`compress_huggingface(..., method="constant_embeddings")`.
 
-## What the STATE SE 5,120-dimensional vectors mean
+## SE: compile known protein features for CPU
 
-Each known gene has a fixed vector of 5,120 floating-point features derived from
-its protein sequence by ESM2. These are protein features, not 5,120 different
-genes and not a cell's expression measurements. In an ordinary workflow, gene
-names select these vectors and expression counts provide separate cell-specific
-information. STATE projects the protein features to 1,024 internal features
-before processing the cell.
+Each known gene has 5,120 fixed floating-point features derived from its protein
+sequence by ESM2. Gene names select these protein vectors; expression counts
+supply the separate cell-specific information. STATE projects each vector to
+1,024 internal features before processing the cell. The 5,120 dimensions describe
+one protein, rather than different genes or expression measurements.
 
 For 19,790 entries, the original float32 protein table occupies about 405.30 MB.
-Keeping the original 5,120→1,024 encoder costs about 21 MB, so it is possible to
-retain arbitrary raw-vector inputs while replacing the much larger known-gene
-table. Removing that raw-vector API is not necessary for the current hybrid.
+Keeping the original 5,120→1,024 encoder costs about 21 MB. The hybrid replaces
+the much larger known-gene table while retaining this encoder for arbitrary
+raw-vector inputs.
 
 The CPU adapter stores two 1,024-feature tables: one for the raw-gene
 encoder branch and one for the normalized gene-sentence branch. A smaller shared
@@ -92,14 +94,14 @@ failed the numerical checks. Full-vocabulary evaluation across the nonlinear
 encoder, followed by shape-matched constant rows, passes the extended CPU gate.
 See [finite-domain compilation](finite-domains.md) for the transferable method.
 
-The strict scope matters: numeric gene-ID batch calls and original raw-vector
-forward calls are validated. The AnnData ingestion/export workflow additionally
-passes seven constructed datasets, as detailed below. The original `StateEmbeddingModel.get_gene_embedding`
-helper tests a sum over raw protein vectors; preserving that exact helper needs
-the original protein dictionary supplied separately. Direct access to the removed
-raw `pe_embedding.weight` is not reconstructed by the compressed lookup.
+Validation covers numeric gene-ID batches, original raw-vector forward calls
+and seven constructed AnnData ingestion/export datasets described below.
+`StateEmbeddingModel.get_gene_embedding` tests a sum over raw protein vectors,
+so this helper still needs the original protein dictionary supplied separately.
+The compressed lookup does not reconstruct direct access to raw
+`pe_embedding.weight`.
 
-## Run the portable STATE SE numerical adapter
+### Load and validate the CPU adapter
 
 Use the prepared `.venv-state` environment. The artifact includes the smaller
 float32 tables, all retained numerical heads, the original raw-vector encoder,
@@ -120,12 +122,11 @@ with torch.inference_mode():
         ids, mask, counts=None)
 ```
 
-The original numeric `_compute_embedding_for_batch` entry point is also retained,
-as are the callable raw `forward` and `gene_embedding_layer`. `gene_names` and
-`gene_to_index` provide known vocabulary metadata; unknown-gene behavior is not
-invented. Supply `protein_embeddings=...` only when using the original model's
-raw-vector gene-name helper. That dictionary's extra memory is separate from the
-compressed model's 151,243,944 parameters.
+The adapter retains `_compute_embedding_for_batch`, raw `forward` and
+`gene_embedding_layer`. `gene_names` and `gene_to_index` expose the known
+vocabulary without adding an unknown-gene policy. Supply `protein_embeddings=...`
+only for the original raw-vector gene-name helper; that dictionary's memory is
+additional to the compressed model's 151,243,944 parameters.
 
 The weight file is **511,190,195 bytes**. Extended checks compare 105 numerical
 outputs over seven cases, including 2,048-gene inputs; maximum observed absolute
@@ -159,15 +160,16 @@ case spends more time in the unchanged transformer, so the same weight reduction
 does not imply the same runtime gain. First calls at a new shape and all raw
 samples are retained in `benchmarks/state_se_cpu_runtime.json`.
 
-## Lossless original STATE SE on Apple GPU
+## SE: preserve original bytes on CPU and Apple GPU
 
-A separate artifact, `artifacts/state-se-100m-lossless`, now passes the original
-STATE SE model on CPU and Apple MPS. It keeps the complete original encoder and
-all heads. The 19,790 × 5,120 gene table is stored as independently compressed
-16-row blocks. Each request reconstructs the selected original float32 bytes,
-then executes the original normalization, projection and transformer operations
-at their original shapes. There are no shape profiles, rounded values or cached
-cell predictions. This avoids the GPU rounding mismatch of the CPU finite tables.
+`artifacts/state-se-100m-lossless` saves 6.31% of registered storage and matches
+original STATE SE outputs byte for byte on CPU and Apple MPS, but runs
+considerably slower in the measured requests. It retains the complete encoder
+and all heads, storing the 19,790 × 5,120 gene table in independently compressed
+16-row blocks. Each request reconstructs the selected float32 bytes and runs the
+original normalization, projection and transformer at their original shapes.
+This avoids the finite tables' GPU rounding mismatch without shape profiles,
+rounded values or cached cell predictions.
 
 ```python
 import torch
@@ -186,14 +188,13 @@ raw zero-sum guard, without a second protein dictionary. Reading
 that snapshot does not modify this frozen representation. Training and mutable
 weight aliases are outside its contract.
 
-Registered model storage is **848,155,296 → 794,613,047 bytes: 6.31% less**.
-The candidate total includes **351,756,951 bytes of CPU compressed payload and
-index metadata**, which count toward the Mac's unified memory. Parameter counts
-alone are misleading here because the compressed table is represented by byte
-buffers. There is no persistent decoded-row cache. Requested row tensors,
-CPU-to-GPU copies, decompression workspace, activations and allocator overhead
-are additional; peak request memory has not been measured. A single decoded
-block contains at most 327,680 bytes, but this is not a peak-memory bound.
+Registered storage falls from 848,155,296 to 794,613,047 bytes. The latter includes
+351,756,951 bytes of CPU compressed payload and index metadata, which count
+toward the Mac's unified memory. Counting parameters alone misses these byte
+buffers. There is no persistent decoded-row cache; requested rows, CPU-to-GPU
+copies, decompression workspace, activations and allocator overhead add to this
+total. Peak request memory is unmeasured. The 327,680-byte maximum decoded block
+size does not bound that peak.
 
 Fresh portable reload passes **377 tensor byte comparisons per device** on CPU
 and MPS, with byte-identical source self-repeats. This includes 25 complete model
@@ -204,10 +205,9 @@ observed output difference is zero. The source is the same pinned SE-100M
 checkpoint; these are constructed numerical checks, not biological benchmarks
 or NVIDIA CUDA validation.
 
-This storage path adds CPU decoding and transfers and is considerably slower
-in the measured requests. Three warmed, interleaved pairs on the Apple M5 used
-fresh gene/count values and the original numerical batch entry point. Every
-paired output remained byte-identical.
+CPU decoding and transfers add latency. Three warmed, interleaved pairs on the
+Apple M5 used fresh gene/count values and the original numerical batch entry
+point. Every paired output remained byte-identical.
 
 | Backend | Cells × tokens | Original median | Lossless median | Latency multiplier |
 |---|---:|---:|---:|---:|
@@ -216,17 +216,16 @@ paired output remained byte-identical.
 | Apple MPS | 1 × 32 | 14.22 ms | 77.38 ms | 5.44× |
 | Apple MPS | 1 × 2,048 | 233.41 ms | 1,141.89 ms | 4.89× |
 
-These are same-run ratios; the short sample is not a general performance bound.
-Internal decoding and device transfers are included, while model loading and
-external input construction are excluded. Optional downstream decoder calls
-were validated separately and are not included in this timing scope. Raw pairs
-are retained in `experiments/state-se-mps-fix/latency-cpu.json` and
-`latency-mps.json`. This path is an explicit memory option, with no acceleration
-claim.
-The CPU finite-table artifact remains the smaller, faster CPU option; its MPS
-rejection remains in force. The lossless artifact is selected by its manifest,
-so `load_state_se` does not silently change an existing artifact's representation.
-AnnData validation below still refers to the CPU finite-table workflow.
+These same-run ratios cover internal decoding and device transfers, excluding
+loading and external input construction. Optional downstream decoder calls were
+validated separately and excluded from timing. Three pairs do not give a general
+performance bound; raw samples are in
+`experiments/state-se-mps-fix/latency-cpu.json` and `latency-mps.json`.
+
+Choose this artifact for its memory tradeoff. The finite-table artifact remains
+smaller and faster on CPU and is still rejected on MPS. `load_state_se` selects
+the representation recorded in the manifest; it never silently substitutes one
+for the other. AnnData validation below covers the CPU finite-table workflow.
 
 Rebuild the lossless artifact using `examples/state_se/build_lossless.py` with
 explicit `--checkpoint`, `--architecture` and `--output` paths. Validate on either
@@ -240,11 +239,11 @@ eligible frozen float32 embedding and uses the general serializer.
 
 See `experiments/state-se-mps-fix/portable-reload-cpu.json` and
 `portable-reload-mps.json` for complete output metrics and exact source hashes.
-The new backend runner explicitly permits only the packed embedding's CPU codec
-buffers; its output anchor and all ordinary model state must be on the requested
-device. Earlier backend reports retain their original runner hashes.
+The backend runner permits CPU codec buffers only for the packed embedding;
+its output anchor and ordinary model state must be on the requested device.
+Earlier reports retain their original runner hashes.
 
-## Encode AnnData with the portable model
+## Encode AnnData with the CPU finite tables
 
 The reusable loader bundles the original pinned dataset and collator with the
 compressed model. It uses the artifact's ordered gene vocabulary and does not
@@ -277,14 +276,13 @@ existing obsm values and cell ordering survive export. Original edge-case
 failures, including empty data and missing padding candidates, are retained.
 Fresh-process reload also passed with torch.load forbidden in parent and workers.
 
-These checks cover CPU float32 h5ad embedding. They do not validate an unseen
-biological dataset, the expression decoder, LanceDB ingestion or every option of
-the original Inference class. Evidence is in `benchmarks/state_se_anndata.json`
-and `benchmarks/state_se_anndata_portable.json`; the reproducible public loader
-check is `examples/verify_state_se_anndata.py`.
+The explicit byte check in `benchmarks/state_se_anndata_bytes.json` passes all
+seven original-versus-portable cases, including the nine preprocessing fields
+and all 1,034 output features. The earlier `benchmarks/state_se_anndata.json`
+and `benchmarks/state_se_anndata_portable.json` reports used numeric equality
+under a bitwise label; they remain separate evidence. Reproduce the public loader
+check with `examples/verify_state_se_anndata.py`.
 
-`benchmarks/state_se_anndata_bytes.json` repeats all seven original-versus-portable
-cases with explicit byte comparison for the nine preprocessing fields and all
-1,034 output features. All pass. This strengthens the older checks that used
-numeric equality under a bitwise label; it does not add a biological dataset or
-an Apple GPU validation claim.
+This validates CPU float32 h5ad embedding on the constructed datasets. Unseen
+biological datasets, the expression decoder, LanceDB ingestion, Apple GPU AnnData
+execution and other options of the original Inference class remain untested.

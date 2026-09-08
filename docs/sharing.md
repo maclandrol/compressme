@@ -1,9 +1,9 @@
 # Share immutable model weights
 
-Related checkpoints can contain large, exactly identical tensors. For frozen
-inference, `share_frozen_parameters` stores matching parameter data once while
-each model continues to execute its original operations. It applies to an
-ordinary model or to several models in an `nn.ModuleDict`.
+When related checkpoints contain identical tensors, keeping a separate copy
+for each model wastes memory. `share_frozen_parameters` lets frozen models
+share that storage while executing their original operations. It works within
+one ordinary model or across several models in an `nn.ModuleDict`.
 
 ```python
 import torch
@@ -19,9 +19,9 @@ print(result.report["saved_resident_storage_bytes"])
 # Both original model interfaces remain callable through result.model.
 ```
 
-Apply the pass **after moving models to their final device**. A later device or
+Apply the pass after moving models to their final device. A later device or
 dtype conversion can allocate separate storage again. The default returns a
-copy; `inplace=True` avoids temporarily copying a large model bundle.
+copy; use `inplace=True` to avoid temporarily copying a large model bundle.
 
 The pass checks ordinary frozen, contiguous, finite real parameters. Shape,
 stride, device, dtype and every value byte must match. SHA256 only finds
@@ -30,30 +30,32 @@ parameters, custom Parameter subclasses and noncontiguous weights are retained.
 Parameter/buffer storage aliases and distinct views of one allocation require a
 separate preserving adapter and are refused before copying.
 
-Distinct Parameter objects remain distinct. Iterating `parameters()` therefore
-still visits the same number of parameters; sums or other computations over
-that sequence retain their values. The saving is **resident storage bytes**,
-not fewer logical parameters, reduced precision or fewer operations.
+Sharing the data leaves the Parameter objects distinct. Iterating `parameters()`
+still visits
+the same number of parameters, so sums and other computations over that
+sequence retain their values. Resident storage bytes decrease; logical parameter
+count, precision and operation count remain unchanged.
 
-If two immutable arrays contain identical bits, replacing their backing
-allocations with one allocation preserves the values read by each operation.
-This uses no numerical approximation. The contract excludes inspecting storage
-addresses and mutating shared weights. Separate Parameter objects have separate
-version counters, so a write through one alias need not invalidate a validation
-seal observing another. Earlier compiler seals are explicitly made historical;
-complete-model comparisons still establish the actual execution evidence.
+The value-preservation argument is direct: if two immutable arrays contain
+identical bits, both can read from one allocation without approximation. This
+requires callers to leave shared weights unchanged and not depend on their
+storage addresses. Separate Parameter objects have separate version counters,
+so a write through one alias may escape a validation check on another. Earlier
+compiler checks are therefore retained as historical evidence; complete-model
+comparisons establish execution agreement after sharing.
 
 `CompressionResult.save` records both existing Parameter-object aliases and
 the new data-storage aliases. Reload checks that alias payloads agree before
-restoring shared storage and strict-loading all tensor names. This avoids
-silently expanding the shared weights during ordinary CPU reload. After moving
-the reloaded model to another device, apply the pass again. The saved recipe is
-independent of Boltz or any other model family.
+restoring shared storage and strict-loading all tensor names. The weights then
+stay shared during ordinary CPU reload. Apply the pass
+again after moving the reloaded model to another device. The recipe works
+independently of Boltz or any other model family.
 
 For Boltz-2, the complete official structure/confidence and affinity checkpoints
 have 5,019 common tensor names, all byte-identical. A separate safe tensor-bank
 export reduces their combined inference distribution by 49.55%, relative to
-independently deduplicated inference states. The actual model-level sharing and
-full-output execution checks are recorded in the Boltz evidence. This joint
-storage result does not halve the arithmetic of one model, and a workflow that
-already unloads models sequentially has a different resident-memory baseline.
+independently deduplicated inference states. The Boltz evidence records the
+model-level sharing and full-output execution
+checks. The saving applies to joint storage: each model still performs its
+original arithmetic. A workflow that unloads models sequentially has a different
+resident-memory baseline.
