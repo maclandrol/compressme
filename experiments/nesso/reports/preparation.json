@@ -1,0 +1,170 @@
+{
+  "format": "compressme.nesso.preparation.v1",
+  "cases": [
+    {
+      "format": "compressme.nesso.fixture.v1",
+      "case": "tiny20",
+      "fixture": {
+        "protein_residues": 20,
+        "ligand_heavy_atoms": 3,
+        "scope": "synthetic peptide/ethanol execution smoke; no binding label"
+      },
+      "input_yaml_sha256": "e7962a3bfc596a31544f526406b780705eab42519b058a9ff5d09e9d872a298f",
+      "sequence_sha256": "5a52efc76a4a4ceb3c992ff17426b3545634646080bb6acec132c47c278c9846",
+      "record_id": "tiny20",
+      "tensor_file": {
+        "name": "batch.safetensors",
+        "bytes": 770704,
+        "sha256": "d8f9f30a59b6222f6ad9f652a82a2bb8ac9314eea10bdb95c73c918b1e310e3d"
+      },
+      "esm_embedding_sha256": "b126e57ed7e2ec30e1d6e6cba9dcfabefd0b9570ca2b51caddde713e82c39480",
+      "token_count": 23,
+      "atom_count": 170,
+      "preprocessing_seconds": {
+        "parse": 0.01573883299715817,
+        "esm": 7.853861583018443,
+        "features_and_collate": 3.3497587920282967
+      }
+    },
+    {
+      "format": "compressme.nesso.fixture.v1",
+      "case": "fragment130",
+      "fixture": {
+        "protein_residues": 130,
+        "ligand_heavy_atoms": 13,
+        "scope": "exact upstream tests/test_forward.py fragment; no binding label"
+      },
+      "input_yaml_sha256": "0281015d26fec8a4b0d25bf08a8ef25392db3f59ceaebb1b6f75243f2e6f3d33",
+      "sequence_sha256": "e25484a4f20b1ab53a641e25d21ba10dca8cf0a633f505a05ec3b479897611d2",
+      "record_id": "fragment130",
+      "tensor_file": {
+        "name": "batch.safetensors",
+        "bytes": 5406984,
+        "sha256": "b76de28ea99f3e02849d567657a25d59d76628331b289acda54a1d314ccc8f6a"
+      },
+      "esm_embedding_sha256": "b45e037eb0229574d281b7eedea544deb4b234032ed760790d2640baf8a07e0c",
+      "token_count": 143,
+      "atom_count": 1018,
+      "preprocessing_seconds": {
+        "parse": 0.029499625001335517,
+        "esm": 5.044676624995191,
+        "features_and_collate": 3.5062803339969832
+      }
+    },
+    {
+      "format": "compressme.nesso.fixture.v1",
+      "case": "tutorial384",
+      "fixture": {
+        "protein_residues": 384,
+        "ligand_heavy_atoms": 13,
+        "scope": "unchanged full upstream tutorial/smiles.yaml input; no binding label"
+      },
+      "input_yaml_sha256": "3290fa58e9881b358a69a86cdbde9c5c4f1bd01289d2b0bc059035eb89ebfafa",
+      "sequence_sha256": "978a204bab1837aa3304a838a621e6ef24fb4e878395db76c9c9ed095ce25f48",
+      "record_id": "tutorial384",
+      "tensor_file": {
+        "name": "batch.safetensors",
+        "bytes": 22833768,
+        "sha256": "f167c8866650a0a5ae28de81d7da329546f910c5278e67d9d7ccbd8d188dff8e"
+      },
+      "esm_embedding_sha256": "60039888de91d6e6bb4109045dfcf4b5ce31826531767adcf6fb58550912aeff",
+      "token_count": 397,
+      "atom_count": 2974,
+      "preprocessing_seconds": {
+        "parse": 0.12738087499747053,
+        "esm": 6.434540250018472,
+        "features_and_collate": 3.4940784579957835
+      }
+    }
+  ],
+  "source": {
+    "repository": "https://github.com/recursionpharma/nesso",
+    "revision": "6c72f66720d9d3447fd73c515cda963e39128b1f",
+    "python_sha256": {
+      "nesso/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/data/const.py": "7f067519d4fe3de17e9be7c6060ed4f4386be7af8fea94cdd7d0cc33e214b58f",
+      "nesso/data/crop.py": "05db4dafe65a1945779004a79e98da9befef2054680fa8f6d2f601854918f24d",
+      "nesso/data/esm.py": "919c4a375f38d852126b59d9a57b866a1749aece46c302178a6f1390d73f64ba",
+      "nesso/data/featurizer.py": "efb0feb51570f8f0cd3b752645f18bc449d342efaae72efbcb9d7667f7302252",
+      "nesso/data/inference.py": "c5e1b697e3b4209cdbfdf6b552a7520a723f0a61cd3edc06247aaf81189a0428",
+      "nesso/data/io.py": "15bae2fa9b3d1157bf2993cac6cf8cf5bc103f450c6f56188f1b045ec28cc95d",
+      "nesso/data/pad.py": "b17cd59e97df94a5b4f2cf3ed8802fd854c1cc78072280459296d5b12793939e",
+      "nesso/data/tokenize.py": "17d56dc5ffd71d6b4cc9e64e34c62b90392d68165efaf31a21a80e4176d23f96",
+      "nesso/data/types.py": "2dbbb7cd09a60d300605c0da3bce81d4753b66d08e2c356e42a3de730a80a253",
+      "nesso/data/writer.py": "2157ae9d2906ce0785a8278c20e7494151c890c0ded87cbcbcad1381f923943c",
+      "nesso/data/yaml_input.py": "87da0204b20bf9b40dc4b94719142accff57a51fa16b1805bea3d44fc747e49f",
+      "nesso/main.py": "2f7e9c9aad48767611f207c8369bf3d7b8635b8c19a0328f79acb59513b1422c",
+      "nesso/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/inference/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/inference/distogram.py": "4945e146d309939ee5af20c6ee65d06db1c21cb589e15a67fa057352c026a425",
+      "nesso/model/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/layers/attention.py": "9cbd0ebbbb73c8859be3ff8dd519e78a25170d35648c819ef995c379963d5a47",
+      "nesso/model/layers/dropout.py": "914afcfdaf380adc98af240ed7f54ae388c6003e75a95e074d44165cc57dc427",
+      "nesso/model/layers/initialize.py": "aa8983778da4d8a9b01d5c7a8c4c3808eeff29f6fa3db8feb2c3b8006a9fd7ea",
+      "nesso/model/layers/pairformer.py": "a535805510312e2a4b92b424dfbccf30f86b8ff6943b6b33d940a1f653c3561b",
+      "nesso/model/layers/transition.py": "e887ab67c376deded4fe69c2bad2435c8d5159f61bdaaa0425dfe68dbc0af9fd",
+      "nesso/model/layers/triangular_attention/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/layers/triangular_attention/attention.py": "0cfcf385560e06b24e9c770cdd4c2445b9956ce703c31d73818c7b8b3157f422",
+      "nesso/model/layers/triangular_attention/primitives.py": "1a32ae7ce437e636a1f95abab5bae22911395c66d063f672661c226107c0f7ff",
+      "nesso/model/layers/triangular_attention/utils.py": "78a0ff1a0f748a724c13df207d8c769412e97e7d5ed6a245004555a802c01db0",
+      "nesso/model/layers/triangular_mult.py": "746b1b227f7e252226cae19df931327bcb25e2174d352231c03d8781d06e6a31",
+      "nesso/model/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/models/nesso1.py": "279ce81038665773610d0eae98c9414ec299a2be3e24731f261e65abb33fd6be",
+      "nesso/model/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nesso/model/modules/affinity.py": "96bd8e68d0e21d97f4ff73f62a48a84407f66c373b17cba8b829065c283feaf6",
+      "nesso/model/modules/encoders.py": "f05bf42d2cfc2f603ee1f68ae37ab24400ef381ed6800772424a9b890d94c59c",
+      "nesso/model/modules/esm_module.py": "32dca1d5f5df84cca4e6936f712548f779a12c3484b686d5d9eccd76166c5baa",
+      "nesso/model/modules/transformers.py": "50c573f0e61b032490940efb1a90266f5aea92ea14fe969832a5ad0d2ca8a6f6",
+      "nesso/model/modules/trunk.py": "2b9e191ae35412b5798b313a07b1af5870d592532401e3c9a75fbe2227cb5727",
+      "nesso/model/modules/utils.py": "63859c98e354fc4b45b4f930da0cb972619d6cdf77351b45d82a5f2324fbdafa"
+    }
+  },
+  "esm": {
+    "repository": "facebook/esm2_t33_650M_UR50D",
+    "revision": "08e4846e537177426273712802403f7ba8261b6c",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "files": {
+      "config.json": {
+        "bytes": 724,
+        "sha256": "539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b"
+      },
+      "model.safetensors": {
+        "bytes": 2609506392,
+        "sha256": "a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0"
+      },
+      "special_tokens_map.json": {
+        "bytes": 125,
+        "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+      },
+      "tokenizer_config.json": {
+        "bytes": 95,
+        "sha256": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad"
+      },
+      "vocab.txt": {
+        "bytes": 93,
+        "sha256": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+      }
+    },
+    "model_load_seconds": 0.18467683301423676
+  },
+  "ccd": {
+    "repository": "recursionpharma/nesso",
+    "revision": "499ed12b0343918ab01b2519226390cf8eca038a",
+    "bytes": 412923533,
+    "sha256": "7ed0ccd3903f19627926a5e41a5c0b5309c127a071cb9498dcae96926799ffd8"
+  },
+  "seed": 42,
+  "threads": 4,
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.16.1",
+    "rdkit": "2026.3.6",
+    "numpy": "2.5.3",
+    "safetensors": "0.8.0",
+    "lightning": "2.6.5"
+  },
+  "scope": "No Nesso prediction executed. Genuine CPU ESM features and unchanged native parsing/featurization.",
+  "reproducibility": "Benchmarks reload exact saved batch bytes. Independent preprocessing can differ across RDKit/platform versions; ETKDG options remain unchanged."
+}

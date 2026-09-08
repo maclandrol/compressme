@@ -1,0 +1,2921 @@
+{
+  "model": "Nesso-1",
+  "device": "cpu",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "torch": "2.14.0",
+  "nesso": "1.0.0",
+  "threads": 4,
+  "precision": "float32; native metadata casts retained",
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "float32_matmul_precision": "highest",
+  "use_kernels": false,
+  "seed": 42,
+  "predict_args": {
+    "pose_protein_cutoff": 15.0,
+    "recycling_steps": 5,
+    "refine_protein_inference": true,
+    "refine_protein_cutoff": 22.0,
+    "refine_protein_tokens_budget": 256,
+    "affinity_protein_cutoff": 15.0,
+    "save_metadata": true
+  },
+  "checkpoint_sha256": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622",
+  "hparams_sha256": "06aa0c44fcd44eaa2c5c2473bfcf0d9a3af892d867e5279859bb22eb0f6e2d72",
+  "benchmark_sha256": "e81475dcfeb0711aa2ee4381bff83f30b986e8c39dc9327d3935f7591e2e3c4d",
+  "preparation_script_sha256": "612ccda1a88cb86db2a7b3acbcebee1111f118f22d307fc61b3b075168492a1d",
+  "validation_script_sha256": "cf98a3ca009489689cb916e39c5293eee56cd844d6991e70ed114aba523d8dfb",
+  "parameters": 41223928,
+  "unique_registered_storage_bytes": 164895712,
+  "checkpoint_load_and_device_seconds": 1.1861932500032708,
+  "timing_scope": "warmed native predict_step, all metadata; includes per-call adapter construction, state audit, request setup/cleanup and native pocket-selection transfers; excludes checkpoint load, ESM, YAML/RDKit, file I/O, external input/output transfers, RNG reset and validation",
+  "quality_scope": "numerical preservation of native outputs; no labelled biological accuracy evaluation",
+  "cases": [
+    {
+      "case": "tiny20",
+      "batch_sha256": "d8f9f30a59b6222f6ad9f652a82a2bb8ac9314eea10bdb95c73c918b1e310e3d",
+      "batch_metadata_sha256": "73fefcbe38a3e1ec3947242e4e6bd0c35c3232125000c8e54955be315d19f25e",
+      "tokens": 23,
+      "padded_tokens": 23,
+      "variants": {
+        "packed": {
+          "forward": {
+            "tensor_leaves": 11,
+            "bitwise_identical": true,
+            "max_abs": 0.0,
+            "metrics": {
+              "output['keep_indices']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['crop_protein_tokens']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['pdistogram']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['z']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_keep_indices']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['affinity_pred_value']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_repr']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_logits_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value1']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value2']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_probability_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              }
+            }
+          },
+          "predict_step": {
+            "tensor_leaves": 21,
+            "bitwise_identical": true,
+            "max_abs": 0.0,
+            "metrics": {
+              "output['pdistogram']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['token_pad_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pair']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pp']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pl']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_ll']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_pp']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_pl']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_ll']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['pocket_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['token_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value1']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value2']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_logits_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_probability_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['z_full']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['expected_distances_full']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['refine_mask_full']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['pocket_mask_full']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['mol_type_refined']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "runtime_counters": {
+            "nesso_revision": "6c72f66720d9d3447fd73c515cda963e39128b1f",
+            "requests": 1,
+            "single_chunk_modules": 0,
+            "single_chunk_elisions": 0,
+            "single_chunk_copies": 0,
+            "fallback_calls": 0,
+            "esm_computations": 0,
+            "esm_reuses": 0,
+            "peak_cached_bytes": 0,
+            "packed_triangle_modules": 128,
+            "packed_triangle_calls": 608
+          },
+          "pairs": [
+            {
+              "reference_seconds": 0.8750772920029704,
+              "candidate_seconds": 0.8353960840031505,
+              "speedup": 1.0474998731256564,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            },
+            {
+              "reference_seconds": 0.8650453749869484,
+              "candidate_seconds": 0.8334030419937335,
+              "speedup": 1.0379676235852435,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            },
+            {
+              "reference_seconds": 0.8558250829810277,
+              "candidate_seconds": 0.7877252920006867,
+              "speedup": 1.086451192658013,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            }
+          ],
+          "median_paired_speedup": 1.0474998731256564,
+          "paired_speedup_range": [
+            1.0379676235852435,
+            1.086451192658013
+          ],
+          "reference_median_seconds": 0.8650453749869484,
+          "candidate_median_seconds": 0.8334030419937335,
+          "status": "accepted_byte_identical"
+        }
+      },
+      "reference_forward_self_repeat": {
+        "tensor_leaves": 11,
+        "bitwise_identical": true,
+        "max_abs": 0.0,
+        "metrics": {
+          "output['keep_indices']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['crop_protein_tokens']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['pdistogram']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['z']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_keep_indices']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['affinity_pred_value']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_repr']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_logits_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value1']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value2']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_probability_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "reference_predict_self_repeat": {
+        "tensor_leaves": 21,
+        "bitwise_identical": true,
+        "max_abs": 0.0,
+        "metrics": {
+          "output['pdistogram']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['token_pad_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pair']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pp']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pl']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_ll']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_pp']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_pl']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_ll']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['pocket_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['token_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value1']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value2']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_logits_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_probability_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['z_full']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['expected_distances_full']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['refine_mask_full']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['pocket_mask_full']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['mol_type_refined']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "case": "fragment130",
+      "batch_sha256": "b76de28ea99f3e02849d567657a25d59d76628331b289acda54a1d314ccc8f6a",
+      "batch_metadata_sha256": "1fece2478b8adc78b463a59332ba5e56c2de366fe2bde44bf59551a92d059c08",
+      "tokens": 143,
+      "padded_tokens": 143,
+      "variants": {
+        "packed": {
+          "forward": {
+            "tensor_leaves": 11,
+            "bitwise_identical": true,
+            "max_abs": 0.0,
+            "metrics": {
+              "output['keep_indices']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['crop_protein_tokens']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['pdistogram']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['z']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_keep_indices']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['affinity_pred_value']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_repr']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_logits_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value1']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value2']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_probability_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              }
+            }
+          },
+          "predict_step": {
+            "tensor_leaves": 21,
+            "bitwise_identical": true,
+            "max_abs": 0.0,
+            "metrics": {
+              "output['pdistogram']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['token_pad_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pair']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pp']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_pl']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_ll']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_pp']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_pl']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['entropy_crop_ll']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['pocket_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['token_mask']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value1']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_pred_value2']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_logits_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['affinity_probability_binary']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['z_full']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['expected_distances_full']": {
+                "relative_l2": 0.0,
+                "max_abs": 0.0,
+                "rmse": 0.0,
+                "exact": true,
+                "bitwise": true
+              },
+              "output['refine_mask_full']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['pocket_mask_full']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              },
+              "output['mol_type_refined']": {
+                "exact": true,
+                "bitwise": true,
+                "relative_l2": 0.0,
+                "max_abs": 0.0
+              }
+            }
+          },
+          "runtime_counters": {
+            "nesso_revision": "6c72f66720d9d3447fd73c515cda963e39128b1f",
+            "requests": 1,
+            "single_chunk_modules": 0,
+            "single_chunk_elisions": 0,
+            "single_chunk_copies": 0,
+            "fallback_calls": 0,
+            "esm_computations": 0,
+            "esm_reuses": 0,
+            "peak_cached_bytes": 0,
+            "packed_triangle_modules": 128,
+            "packed_triangle_calls": 608
+          },
+          "pairs": [
+            {
+              "reference_seconds": 25.491886083997088,
+              "candidate_seconds": 25.281000334012788,
+              "speedup": 1.0083416695224903,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            },
+            {
+              "reference_seconds": 27.746160417009378,
+              "candidate_seconds": 25.04404050001176,
+              "speedup": 1.1078947271705757,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            },
+            {
+              "reference_seconds": 26.687061874981737,
+              "candidate_seconds": 23.8032547920011,
+              "speedup": 1.1211517966000901,
+              "reference_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              },
+              "candidate_gate": {
+                "tensor_leaves": 21,
+                "bitwise_identical": true,
+                "max_abs": 0.0,
+                "metrics": {
+                  "output['pdistogram']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_pad_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pair']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pp']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_pl']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['entropy_crop_ll']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['pocket_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['token_mask']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value1']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_pred_value2']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_logits_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['affinity_probability_binary']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['z_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['expected_distances_full']": {
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0,
+                    "rmse": 0.0,
+                    "exact": true,
+                    "bitwise": true
+                  },
+                  "output['refine_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['pocket_mask_full']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  },
+                  "output['mol_type_refined']": {
+                    "exact": true,
+                    "bitwise": true,
+                    "relative_l2": 0.0,
+                    "max_abs": 0.0
+                  }
+                }
+              }
+            }
+          ],
+          "median_paired_speedup": 1.1078947271705757,
+          "paired_speedup_range": [
+            1.0083416695224903,
+            1.1211517966000901
+          ],
+          "reference_median_seconds": 26.687061874981737,
+          "candidate_median_seconds": 25.04404050001176,
+          "status": "accepted_byte_identical"
+        }
+      },
+      "reference_forward_self_repeat": {
+        "tensor_leaves": 11,
+        "bitwise_identical": true,
+        "max_abs": 0.0,
+        "metrics": {
+          "output['keep_indices']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['crop_protein_tokens']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['pdistogram']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['z']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_keep_indices']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['affinity_pred_value']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_repr']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_logits_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value1']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value2']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_probability_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "reference_predict_self_repeat": {
+        "tensor_leaves": 21,
+        "bitwise_identical": true,
+        "max_abs": 0.0,
+        "metrics": {
+          "output['pdistogram']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['token_pad_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pair']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pp']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_pl']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_ll']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_pp']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_pl']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['entropy_crop_ll']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['pocket_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['token_mask']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value1']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_pred_value2']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_logits_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['affinity_probability_binary']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['z_full']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['expected_distances_full']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output['refine_mask_full']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['pocket_mask_full']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          },
+          "output['mol_type_refined']": {
+            "exact": true,
+            "bitwise": true,
+            "relative_l2": 0.0,
+            "max_abs": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "nesso_source_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/const.py": "7f067519d4fe3de17e9be7c6060ed4f4386be7af8fea94cdd7d0cc33e214b58f",
+    "data/crop.py": "05db4dafe65a1945779004a79e98da9befef2054680fa8f6d2f601854918f24d",
+    "data/esm.py": "919c4a375f38d852126b59d9a57b866a1749aece46c302178a6f1390d73f64ba",
+    "data/featurizer.py": "efb0feb51570f8f0cd3b752645f18bc449d342efaae72efbcb9d7667f7302252",
+    "data/inference.py": "c5e1b697e3b4209cdbfdf6b552a7520a723f0a61cd3edc06247aaf81189a0428",
+    "data/io.py": "15bae2fa9b3d1157bf2993cac6cf8cf5bc103f450c6f56188f1b045ec28cc95d",
+    "data/pad.py": "b17cd59e97df94a5b4f2cf3ed8802fd854c1cc78072280459296d5b12793939e",
+    "data/tokenize.py": "17d56dc5ffd71d6b4cc9e64e34c62b90392d68165efaf31a21a80e4176d23f96",
+    "data/types.py": "2dbbb7cd09a60d300605c0da3bce81d4753b66d08e2c356e42a3de730a80a253",
+    "data/writer.py": "2157ae9d2906ce0785a8278c20e7494151c890c0ded87cbcbcad1381f923943c",
+    "data/yaml_input.py": "87da0204b20bf9b40dc4b94719142accff57a51fa16b1805bea3d44fc747e49f",
+    "main.py": "2f7e9c9aad48767611f207c8369bf3d7b8635b8c19a0328f79acb59513b1422c",
+    "model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/inference/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/inference/distogram.py": "4945e146d309939ee5af20c6ee65d06db1c21cb589e15a67fa057352c026a425",
+    "model/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/layers/attention.py": "9cbd0ebbbb73c8859be3ff8dd519e78a25170d35648c819ef995c379963d5a47",
+    "model/layers/dropout.py": "914afcfdaf380adc98af240ed7f54ae388c6003e75a95e074d44165cc57dc427",
+    "model/layers/initialize.py": "aa8983778da4d8a9b01d5c7a8c4c3808eeff29f6fa3db8feb2c3b8006a9fd7ea",
+    "model/layers/pairformer.py": "a535805510312e2a4b92b424dfbccf30f86b8ff6943b6b33d940a1f653c3561b",
+    "model/layers/transition.py": "e887ab67c376deded4fe69c2bad2435c8d5159f61bdaaa0425dfe68dbc0af9fd",
+    "model/layers/triangular_attention/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/layers/triangular_attention/attention.py": "0cfcf385560e06b24e9c770cdd4c2445b9956ce703c31d73818c7b8b3157f422",
+    "model/layers/triangular_attention/primitives.py": "1a32ae7ce437e636a1f95abab5bae22911395c66d063f672661c226107c0f7ff",
+    "model/layers/triangular_attention/utils.py": "78a0ff1a0f748a724c13df207d8c769412e97e7d5ed6a245004555a802c01db0",
+    "model/layers/triangular_mult.py": "746b1b227f7e252226cae19df931327bcb25e2174d352231c03d8781d06e6a31",
+    "model/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/models/nesso1.py": "279ce81038665773610d0eae98c9414ec299a2be3e24731f261e65abb33fd6be",
+    "model/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "model/modules/affinity.py": "96bd8e68d0e21d97f4ff73f62a48a84407f66c373b17cba8b829065c283feaf6",
+    "model/modules/encoders.py": "f05bf42d2cfc2f603ee1f68ae37ab24400ef381ed6800772424a9b890d94c59c",
+    "model/modules/esm_module.py": "32dca1d5f5df84cca4e6936f712548f779a12c3484b686d5d9eccd76166c5baa",
+    "model/modules/transformers.py": "50c573f0e61b032490940efb1a90266f5aea92ea14fe969832a5ad0d2ca8a6f6",
+    "model/modules/trunk.py": "2b9e191ae35412b5798b313a07b1af5870d592532401e3c9a75fbe2227cb5727",
+    "model/modules/utils.py": "63859c98e354fc4b45b4f930da0cb972619d6cdf77351b45d82a5f2324fbdafa"
+  },
+  "runtime_sha256": {
+    "nesso_runtime.py": "ea43fda930abb973aa0cbc1a5a7b85348ede224bcb308f2623179a9473665003",
+    "chunking.py": "07ec708f113051905e2804980406d2509cc0fa8b6b1f6fdecf54679c47667812",
+    "contractions.py": "8292d5ca99d3850bb1ec527bcaa61b0bf5995234f9220a7fa7eb877294c697b8"
+  },
+  "process_peak_rss_bytes": 930955264,
+  "peak_rss_scope": "whole benchmark process including reference/candidate output snapshots; not a per-variant comparison",
+  "status": "accepted_byte_identical"
+}

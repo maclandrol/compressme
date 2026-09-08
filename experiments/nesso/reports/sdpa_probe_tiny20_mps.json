@@ -1,0 +1,230 @@
+{
+  "device": "mps",
+  "case": "tiny20",
+  "method": "SDPA mathematical equivalent; floating-point order changes",
+  "reference_diagnostic_seconds": 0.3923473340109922,
+  "candidate_diagnostic_seconds": 0.22191691599437036,
+  "forward": {
+    "output['keep_indices']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    },
+    "output['crop_protein_tokens']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    },
+    "output['pdistogram']": {
+      "relative_l2": 2.829746683283488e-07,
+      "max_abs": 0.000732421875,
+      "rmse": 4.7643311080171494e-05,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['z']": {
+      "relative_l2": 2.5638729909558553e-07,
+      "max_abs": 0.00244140625,
+      "rmse": 5.7291722125186034e-05,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_keep_indices']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    },
+    "output['affinity_pred_value']": {
+      "relative_l2": 6.536384325802678e-07,
+      "max_abs": 1.1920928955078125e-06,
+      "rmse": 1.1920928955078125e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_repr']": {
+      "relative_l2": 1.700444394412202e-06,
+      "max_abs": 1.2069940567016602e-05,
+      "rmse": 1.908064573940101e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_logits_binary']": {
+      "relative_l2": 4.702001115888468e-06,
+      "max_abs": 1.7583370208740234e-06,
+      "rmse": 1.7583370208740234e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_pred_value1']": {
+      "relative_l2": 7.876486785336817e-07,
+      "max_abs": 1.6689300537109375e-06,
+      "rmse": 1.6689300537109375e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_pred_value2']": {
+      "relative_l2": 3.899080869666593e-07,
+      "max_abs": 5.960464477539062e-07,
+      "rmse": 5.960464477539062e-07,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_probability_binary']": {
+      "relative_l2": 1.0236682332202863e-06,
+      "max_abs": 4.172325134277344e-07,
+      "rmse": 4.172325134277344e-07,
+      "exact": false,
+      "bitwise": false
+    }
+  },
+  "predict": {
+    "output['pdistogram']": {
+      "relative_l2": 2.829746683283488e-07,
+      "max_abs": 0.000732421875,
+      "rmse": 4.7643311080171494e-05,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['token_pad_mask']": {
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "exact": true,
+      "bitwise": true
+    },
+    "output['entropy_pair']": {
+      "relative_l2": 2.393459519635962e-06,
+      "max_abs": 3.460794687271118e-05,
+      "rmse": 1.6108206735099998e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['entropy_pp']": {
+      "relative_l2": 8.828208881778453e-08,
+      "max_abs": 5.960464477539063e-08,
+      "rmse": 5.960464477539063e-08,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['entropy_pl']": {
+      "relative_l2": 1.8497111537305114e-07,
+      "max_abs": 1.1920928955078125e-07,
+      "rmse": 1.1920928955078125e-07,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['entropy_ll']": {
+      "relative_l2": 4.034381423159898e-06,
+      "max_abs": 2.6542693376541138e-08,
+      "rmse": 2.6542693376541138e-08,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['entropy_crop_pp']": {
+      "relative_l2": 8.908883591270755e-08,
+      "max_abs": 5.960464477539063e-08,
+      "rmse": 5.960464477539063e-08,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['entropy_crop_pl']": {
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "exact": true,
+      "bitwise": true
+    },
+    "output['entropy_crop_ll']": {
+      "relative_l2": 4.034381423159898e-06,
+      "max_abs": 2.6542693376541138e-08,
+      "rmse": 2.6542693376541138e-08,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['pocket_mask']": {
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "exact": true,
+      "bitwise": true
+    },
+    "output['token_mask']": {
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "rmse": 0.0,
+      "exact": true,
+      "bitwise": true
+    },
+    "output['affinity_pred_value']": {
+      "relative_l2": 6.536384325802678e-07,
+      "max_abs": 1.1920928955078125e-06,
+      "rmse": 1.1920928955078125e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_pred_value1']": {
+      "relative_l2": 7.876486785336817e-07,
+      "max_abs": 1.6689300537109375e-06,
+      "rmse": 1.6689300537109375e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_pred_value2']": {
+      "relative_l2": 3.899080869666593e-07,
+      "max_abs": 5.960464477539062e-07,
+      "rmse": 5.960464477539062e-07,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_logits_binary']": {
+      "relative_l2": 4.702001115888468e-06,
+      "max_abs": 1.7583370208740234e-06,
+      "rmse": 1.7583370208740234e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['affinity_probability_binary']": {
+      "relative_l2": 1.0236682332202863e-06,
+      "max_abs": 4.172325134277344e-07,
+      "rmse": 4.172325134277344e-07,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['z_full']": {
+      "relative_l2": 8.113005298824674e-07,
+      "max_abs": 0.03125,
+      "rmse": 0.00018129021136594387,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['expected_distances_full']": {
+      "relative_l2": 3.0720771944718167e-07,
+      "max_abs": 8.392333984375e-05,
+      "rmse": 4.569218789694164e-06,
+      "exact": false,
+      "bitwise": false
+    },
+    "output['refine_mask_full']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    },
+    "output['pocket_mask_full']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    },
+    "output['mol_type_refined']": {
+      "exact": true,
+      "bitwise": true,
+      "relative_l2": 0.0,
+      "max_abs": 0.0
+    }
+  },
+  "bitwise_identical": false
+}

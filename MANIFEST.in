@@ -5,11 +5,14 @@ include LICENSE LICENSE.* COPYING COPYING.*
 recursive-include src/compressme *.py
 include src/compressme/data/boltz2/*.json
 include src/compressme/data/boltz2/BOLTZ_LICENSE
+include src/compressme/data/nesso/NESSO_LICENSE src/compressme/data/nesso/NOTICE
 include docs/installation.md
 include docs/cli.md docs/gpu-validation.md
 recursive-include tests test_*.py
 # This fixture executes the separately archived upstream Mol-JEPA checkout.
 exclude tests/test_sparse_graph.py
+# Reproduction script protocols use repository-only examples and optional Nesso.
+exclude tests/test_nesso_examples.py
 prune vendor
 prune experiments
 prune examples

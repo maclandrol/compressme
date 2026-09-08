@@ -32,7 +32,7 @@ include = ["compressme", "compressme.*"]
 namespaces = false
 
 [tool.setuptools.package-data]
-compressme = ["data/boltz2/*.json", "data/boltz2/BOLTZ_LICENSE"]
+compressme = ["data/boltz2/*.json", "data/boltz2/BOLTZ_LICENSE", "data/nesso/NESSO_LICENSE", "data/nesso/NOTICE"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

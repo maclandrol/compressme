@@ -1,0 +1,28 @@
+{
+  "nesso_repository": "recursionpharma/nesso",
+  "nesso_revision": "499ed12b0343918ab01b2519226390cf8eca038a",
+  "files": {
+    "v1.0.0/hparams.json": {
+      "bytes": 1732,
+      "sha256": "06aa0c44fcd44eaa2c5c2473bfcf0d9a3af892d867e5279859bb22eb0f6e2d72"
+    },
+    "v1.0.0/model.safetensors": {
+      "bytes": 165426752,
+      "sha256": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622"
+    },
+    "LICENSE": {
+      "bytes": 11355,
+      "sha256": "0e3af7f367f197d0ec2ca9c52937edf5442b764a8bf19efdfa71dcd6937d7be5"
+    },
+    "ccd.pkl": {
+      "bytes": 412923533,
+      "sha256": "7ed0ccd3903f19627926a5e41a5c0b5309c127a071cb9498dcae96926799ffd8"
+    }
+  },
+  "esm": {
+    "repository": "facebook/esm2_t33_650M_UR50D",
+    "revision": "08e4846e537177426273712802403f7ba8261b6c",
+    "snapshot": "/Users/manu/.cache/huggingface/hub/models--facebook--esm2_t33_650M_UR50D/snapshots/08e4846e537177426273712802403f7ba8261b6c",
+    "weights_sha256": "a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0"
+  }
+}

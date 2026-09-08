@@ -51,6 +51,9 @@ nav:
           - Reproduce: tutorials/boltz2.md
           - Results and limits: boltz2.md
       - STATE: state.md
+      - Nesso-1:
+          - Results and limits: nesso.md
+          - Reproduce: tutorials/nesso.md
   - Evidence:
       - Technical report: technical-report.md
       - Model status: biology-targets.md

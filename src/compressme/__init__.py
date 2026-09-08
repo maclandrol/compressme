@@ -30,6 +30,9 @@ _EXPORTS = {
     "Float32RMSNorm": "finite_fanout", "compile_finite_fanout": "finite_fanout",
     "XorProfileLookup": "frozen_tables", "pack_lookup_tables": "frozen_tables",
     "load_boltz2": "boltz2_io", "pack_file": "packing_files", "unpack_file": "packing_files",
+    "FinalEmbedding": "final_embedding",
+    "channelwise_token_contraction": "contractions",
+    "nesso_inference_optimizations": "nesso_runtime",
 }
 
 __all__ = list(_EXPORTS) + ["accelerate_smiles", "contract_attention"]

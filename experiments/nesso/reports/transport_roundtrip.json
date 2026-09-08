@@ -1,0 +1,26 @@
+{
+  "pack": {
+    "raw_bytes": 165426752,
+    "packed_bytes": 140754378,
+    "sha256": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622",
+    "format": "CMPRPACK-v1",
+    "block_bytes": 1048576,
+    "status": "verified_lossless_file",
+    "output": "/Users/manu/Code/compressme/work/nesso/model.cmprpack",
+    "scope": "Disk/transport only; no resident-model memory or inference-speed reduction"
+  },
+  "unpack": {
+    "raw_bytes": 165426752,
+    "packed_bytes": 140754378,
+    "sha256": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622",
+    "format": "CMPRPACK-v1",
+    "block_bytes": 1048576,
+    "zstd_window_bytes": 4194304,
+    "status": "verified_lossless_file",
+    "output": "/Users/manu/Code/compressme/work/nesso/restored.safetensors",
+    "scope": "Disk/transport only; no resident-model memory or inference-speed reduction"
+  },
+  "complete_byte_comparison": true,
+  "saved_percent": 14.914379749171403,
+  "scope": "Disk/transport only; weights, precision, resident state and inference computation unchanged"
+}

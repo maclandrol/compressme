@@ -8,6 +8,24 @@ from pathlib import Path
 
 
 _TARGETS = {
+    "nesso": {
+        "name": "Nesso-1", "aliases": ["nesso1", "nesso-1"],
+        "audited_on": "2026-09-08",
+        "status": "pretrained_scoped_runtime_byte_verified_cpu_mps", "adapter_available": True,
+        "repository": "https://github.com/recursionpharma/nesso",
+        "paper": "https://doi.org/10.64898/2026.08.01.742196",
+        "source_revision": "6c72f66720d9d3447fd73c515cda963e39128b1f",
+        "hf_id": "recursionpharma/nesso", "hf_revision": "499ed12b0343918ab01b2519226390cf8eca038a",
+        "checkpoint": "v1.0.0/model.safetensors", "checkpoint_bytes": 165426752,
+        "parameters_before": 41223928, "parameters_after": 41223928,
+        "lossless_packed_checkpoint_bytes": 140754378,
+        "contract": "Original frozen native forward and predict_step; all tensor outputs and metadata, FP32 and original RNG calls retained",
+        "macos": "CPU layout optimisation gives modest measured gains; original Nesso runs on MPS but tested wrappers offer no dependable speedup",
+        "blockers": ["CUDA unavailable for validation", "No labelled biological accuracy benchmark", "ESM-2 preprocessing remains a separate 650M-parameter model"],
+        "runtime": "compressme.nesso_inference_optimizations",
+        "validation_scope": "Two prepared inputs: 20 or 130 protein residues plus ligand (23/143 tokens), genuine ESM-2 features, five recycles and native cropping. Complete 11 forward and 21 predict_step tensor leaves compared bytewise on each tested backend; source and input hashes recorded.",
+        "packing_note": "Checkpoint disk/transport saving only; restored bytes verified, unchanged resident parameters and arithmetic",
+    },
     "moljepa": {
         "name":"Mol-JEPA", "aliases":["mol-jepa"],
         "status":"pretrained_numerically_verified", "adapter_available":True,

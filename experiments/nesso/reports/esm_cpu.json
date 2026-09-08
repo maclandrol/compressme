@@ -1,0 +1,291 @@
+{
+  "accepted": true,
+  "status": "passed",
+  "mode": "paired",
+  "device": "cpu",
+  "cases": [
+    {
+      "name": "fragment130:A",
+      "sequence_characters": 130,
+      "encoded_shape": [
+        1,
+        132
+      ],
+      "sequence_sha256": "e25484a4f20b1ab53a641e25d21ba10dca8cf0a633f505a05ec3b479897611d2",
+      "yaml_sha256": "0281015d26fec8a4b0d25bf08a8ef25392db3f59ceaebb1b6f75243f2e6f3d33",
+      "outputs": {
+        "original": {
+          "shape": [
+            1,
+            132,
+            1280
+          ],
+          "dtype": "torch.float32",
+          "tensor_bytes": 675840,
+          "tensor_sha256": "1464e3e295b622173983859bc757fd441c93d8110007f9fae721113b458ef3b1",
+          "safetensors_sha256": "b45e037eb0229574d281b7eedea544deb4b234032ed760790d2640baf8a07e0c",
+          "safetensors_roundtrip_byte_equal": true
+        },
+        "final": {
+          "shape": [
+            1,
+            132,
+            1280
+          ],
+          "dtype": "torch.float32",
+          "tensor_bytes": 675840,
+          "tensor_sha256": "1464e3e295b622173983859bc757fd441c93d8110007f9fae721113b458ef3b1",
+          "safetensors_sha256": "b45e037eb0229574d281b7eedea544deb4b234032ed760790d2640baf8a07e0c",
+          "safetensors_roundtrip_byte_equal": true
+        }
+      },
+      "source_self_repeat": {
+        "original": {
+          "accepted": true,
+          "byte_equal": true,
+          "finite": true,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "saved_embedding_byte_equal": true
+        },
+        "final": {
+          "accepted": true,
+          "byte_equal": true,
+          "finite": true,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "saved_embedding_byte_equal": true
+        }
+      },
+      "same_run_gate": {
+        "accepted": true,
+        "byte_equal": true,
+        "finite": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "saved_embedding_byte_equal": true
+      },
+      "pairs": [
+        {
+          "order": [
+            "final",
+            "original"
+          ],
+          "latency_ms": {
+            "final": 195.22749999305233,
+            "original": 195.28954199631698
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        },
+        {
+          "order": [
+            "original",
+            "final"
+          ],
+          "latency_ms": {
+            "original": 193.42199998209253,
+            "final": 192.24366699927486
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        },
+        {
+          "order": [
+            "original",
+            "final"
+          ],
+          "latency_ms": {
+            "original": 194.89837498986162,
+            "final": 193.55883399839513
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        }
+      ],
+      "median_ms": {
+        "original": 194.89837498986162,
+        "final": 193.55883399839513
+      },
+      "analytical_extra_retained_hidden_bytes": 22302720,
+      "original_over_final_speed_ratio": 1.0069205882459367
+    },
+    {
+      "name": "tutorial384:A",
+      "sequence_characters": 384,
+      "encoded_shape": [
+        1,
+        386
+      ],
+      "sequence_sha256": "978a204bab1837aa3304a838a621e6ef24fb4e878395db76c9c9ed095ce25f48",
+      "yaml_sha256": "3290fa58e9881b358a69a86cdbde9c5c4f1bd01289d2b0bc059035eb89ebfafa",
+      "outputs": {
+        "original": {
+          "shape": [
+            1,
+            386,
+            1280
+          ],
+          "dtype": "torch.float32",
+          "tensor_bytes": 1976320,
+          "tensor_sha256": "6f9a3a78a79493dbe0466f2390a1f1063200f160c92b98829eea596d99c8b93b",
+          "safetensors_sha256": "60039888de91d6e6bb4109045dfcf4b5ce31826531767adcf6fb58550912aeff",
+          "safetensors_roundtrip_byte_equal": true
+        },
+        "final": {
+          "shape": [
+            1,
+            386,
+            1280
+          ],
+          "dtype": "torch.float32",
+          "tensor_bytes": 1976320,
+          "tensor_sha256": "6f9a3a78a79493dbe0466f2390a1f1063200f160c92b98829eea596d99c8b93b",
+          "safetensors_sha256": "60039888de91d6e6bb4109045dfcf4b5ce31826531767adcf6fb58550912aeff",
+          "safetensors_roundtrip_byte_equal": true
+        }
+      },
+      "source_self_repeat": {
+        "original": {
+          "accepted": true,
+          "byte_equal": true,
+          "finite": true,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "saved_embedding_byte_equal": true
+        },
+        "final": {
+          "accepted": true,
+          "byte_equal": true,
+          "finite": true,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "saved_embedding_byte_equal": true
+        }
+      },
+      "same_run_gate": {
+        "accepted": true,
+        "byte_equal": true,
+        "finite": true,
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "saved_embedding_byte_equal": true
+      },
+      "pairs": [
+        {
+          "order": [
+            "original",
+            "final"
+          ],
+          "latency_ms": {
+            "original": 441.9365839858074,
+            "final": 439.425124990521
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        },
+        {
+          "order": [
+            "original",
+            "final"
+          ],
+          "latency_ms": {
+            "original": 442.70104201859795,
+            "final": 447.01695899129845
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        },
+        {
+          "order": [
+            "original",
+            "final"
+          ],
+          "latency_ms": {
+            "original": 450.8636250102427,
+            "final": 451.75587499397807
+          },
+          "output_gate": {
+            "accepted": true,
+            "byte_equal": true,
+            "finite": true,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "saved_embedding_byte_equal": true
+          }
+        }
+      ],
+      "median_ms": {
+        "original": 442.70104201859795,
+        "final": 447.01695899129845
+      },
+      "analytical_extra_retained_hidden_bytes": 65218560,
+      "original_over_final_speed_ratio": 0.9903450710629873
+    }
+  ],
+  "weights_sha256": "a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0",
+  "checkpoint_revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "config_sha256": "539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b",
+  "python": "3.12.14",
+  "torch": "2.14.0",
+  "transformers": "5.16.1",
+  "attention_implementation": "sdpa",
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "threads": 4,
+  "rounds": 3,
+  "warmup": 2,
+  "source_hashes": {
+    "/Users/manu/Code/compressme/examples/nesso/benchmark_esm.py": "e9a22c6a9df269253e03910cb9086f9e176b34cf320a62700fa0840fd067b142",
+    "/Users/manu/Code/compressme/vendor/nesso/nesso/data/esm.py": "919c4a375f38d852126b59d9a57b866a1749aece46c302178a6f1390d73f64ba",
+    "/Users/manu/Code/compressme/.venv-nesso/lib/python3.12/site-packages/transformers/models/esm/modeling_esm.py": "1db9e9ad740ec689bf1cf0ca9d7143539af9e676da6021e9281fb1c7e3f649cc",
+    "/Users/manu/Code/compressme/.venv-nesso/lib/python3.12/site-packages/transformers/utils/output_capturing.py": "28921dca36f8892e6f50c8b92ebfff3e9aff945f32a88c275e41b1dc0f1b65c1",
+    "/Users/manu/Code/compressme/src/compressme/final_embedding.py": "9d7cfbed5b998a892b58a736b7e58b79112fcaa1a6a674ecf004a7c59c145fb4"
+  },
+  "unique_parameters": {
+    "original_masked_lm": 651043254,
+    "selected_backbone": 649400981,
+    "unique_task_head_difference": 1642273
+  },
+  "retention_note": "Analytical retained hidden tensors: extra33*B*T*1280float32 values for this checkpoint. Not allocator usage or measured peak memory.",
+  "rss_high_water": {
+    "after_loading_bytes": 334577664,
+    "after_inference_bytes": 3020079104,
+    "scope": "Whole-process lifetime high-water RSS, including model loading and allocator caches. Separate original-only/final-only processes are required for any comparison; loading may dominate both."
+  },
+  "timing_scope": "Nesso ESM preprocessing only: tokenizer, unchanged input transfer, selected model invocation and CPU result transfer; model/tokenizer loading excluded. No Nesso affinity-model inference.",
+  "pretrained_embedding_gate_passed": true,
+  "full_nesso_validation": false,
+  "original_vs_final_comparison_ran": true
+}

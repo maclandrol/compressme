@@ -1,0 +1,12 @@
+# Synthetic20-residue peptide and ethanol; execution smoke only, no binding label.
+# Original project: https://github.com/recursionpharma/nesso
+sequences:
+  - protein:
+      id: A
+      sequence: ACDEFGHIKLMNPQRSTVWY
+  - ligand:
+      id: B
+      smiles: "CCO"
+properties:
+  - affinity:
+      binder: B

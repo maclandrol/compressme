@@ -27,10 +27,11 @@ checkpoints, vendor checkouts, research archives and environments.
 ## Reproduce the model results
 
 The tutorials start from a fresh checkout and pinned upstream weights and source,
-then build compressed artifacts and check complete outputs:
+then build artifacts or apply runtime changes and check complete outputs:
 
 - [Mol-JEPA: SMILES in, all embeddings out](docs/tutorials/moljepa.md).
 - [Boltz-2: share confidence and affinity weights](docs/tutorials/boltz2.md).
+- [Nesso-1: exact output checks, CPU layout optimisation and lossless packing](docs/tutorials/nesso.md).
 
 Checkpoints and generated tensors are downloaded or created locally and are not
 committed. Each tutorial distinguishes model reconstruction, output validation,
@@ -125,7 +126,7 @@ conditions and numerical gates are described in the [general workflow](docs/gene
 - `artifacts/`, `vendor/`, `.venv*`: local weights, research checkouts and model environments, excluded from release packages.
 
 Prepared model workflows: [Mol-JEPA](docs/runtime.md), [STATE](docs/state.md),
-[Boltz-2](docs/boltz2.md). The [optimisation record](docs/optimization-record.md)
+[Boltz-2](docs/boltz2.md), [Nesso-1](docs/nesso.md). The [optimisation record](docs/optimization-record.md)
 keeps accepted, rejected and optional ideas separate. X-Cell and OmniCell are
 removed from active scope; stFormer and gated Bioptimus are deferred. Only the
 selected NovoMolGen 32M AtomWise variant remains in the supporting research.

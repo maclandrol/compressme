@@ -1,0 +1,21 @@
+Nesso integration attribution
+
+Nesso-1: Copyright 2026 Recursion Pharmaceuticals.
+https://github.com/recursionpharma/nesso
+Source revision 6c72f66720d9d3447fd73c515cda963e39128b1f.
+Apache License 2.0; complete publisher licence is in NESSO_LICENSE.
+
+The scoped nesso_runtime.py adapter follows the original Nesso conditioning
+and triangle-update evaluation order. Compressme adds temporary instance
+wrappers, input/state checks, request-local reuse, and explicit matrix packing.
+No upstream source tree is included in this package.
+
+The single-chunk dispatch semantics in chunking.py follow the OpenFold utility
+used by Nesso: Copyright 2021 AlQuraishi Laboratory, Apache License 2.0.
+https://github.com/aqlaboratory/openfold
+The general helper adds a guarded single-chunk path and retains an original
+fallback supplied by the caller.
+
+Nesso triangular multiplication credits Boltz: Copyright (c) 2024 Jeremy
+Wohlwend, MIT License. The complete notice is included in ../boltz2/BOLTZ_LICENSE.
+https://github.com/jwohlwend/boltz
