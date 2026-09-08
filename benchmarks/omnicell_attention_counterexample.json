@@ -1,0 +1,11 @@
+{
+  "scope": "Synthetic attention-layout counterexample; no whole-model port",
+  "shape_BT_HD": [
+    2,
+    5,
+    3,
+    4
+  ],
+  "maximum_absolute_difference": 1.941500186920166,
+  "same_shape": true
+}

@@ -1,0 +1,52 @@
+{
+  "codec": "compressme packing v1: byte shuffle, 1MiB blocks, four-byte groups, zstd level9",
+  "zstandard_python": "0.25.0",
+  "counts": "complete safetensors bytes including headers",
+  "memory_scope": "disk/transfer reduction; complete decoded tensors have unchanged resident bytes; functions materialize bytes and require temporary RAM",
+  "artifacts": {
+    "moljepa-full": {
+      "raw_bytes": 140926608,
+      "packed_bytes": 120213589,
+      "size_ratio": 1.1723018102387743,
+      "fraction_of_raw": 0.8530226527555392,
+      "raw_sha256": "56f3b4b1f39ffd6cc4fcb55fdf4fab6ac38e9e53af80f394a389aef73e2a423c",
+      "packed_sha256": "4af0bc8ac520274d26101f05fb5e5e72dd5139bd0843645f41a0c0b81d4752de",
+      "pack_seconds": [
+        0.7358046250010375,
+        0.6970644170069136,
+        0.6841485410113819
+      ],
+      "unpack_seconds": [
+        0.1716014170087874,
+        0.15630458400119096,
+        0.15550554200308397
+      ],
+      "median_pack_seconds": 0.6970644170069136,
+      "median_unpack_seconds": 0.15630458400119096,
+      "exact_byte_equality": true,
+      "artifact": "/private/tmp/compressme-lossless/moljepa-full.cmppack"
+    },
+    "moljepa-smiles": {
+      "raw_bytes": 79064748,
+      "packed_bytes": 67506691,
+      "size_ratio": 1.17121350237712,
+      "fraction_of_raw": 0.8538152932581281,
+      "raw_sha256": "38b7cd77e0fe74b94673fb27e48012d0c87c3f65f75dbcd8e4b2a3a5fb20f096",
+      "packed_sha256": "964ea0ff1156da81123f06f90343a2474b30bcd347b330b894ede83321ddc1b9",
+      "pack_seconds": [
+        0.3896662500046659,
+        0.3868326249939855,
+        0.381812625011662
+      ],
+      "unpack_seconds": [
+        0.09029454202391207,
+        0.0889197500073351,
+        0.08685420799884014
+      ],
+      "median_pack_seconds": 0.3868326249939855,
+      "median_unpack_seconds": 0.0889197500073351,
+      "exact_byte_equality": true,
+      "artifact": "/private/tmp/compressme-lossless/moljepa-smiles.cmppack"
+    }
+  }
+}

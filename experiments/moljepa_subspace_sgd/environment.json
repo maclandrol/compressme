@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "packages": {
+    "torch": "2.14.0",
+    "torch-geometric": "2.8.0.post1",
+    "safetensors": "0.8.0",
+    "molfeat": "0.11.0",
+    "rdkit": "2026.3.6"
+  }
+}

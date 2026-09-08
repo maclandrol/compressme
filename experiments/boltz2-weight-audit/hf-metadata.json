@@ -1,0 +1,71 @@
+{
+  "_id": "6842e9adbaddca60594666d1",
+  "id": "boltz-community/boltz-2",
+  "private": false,
+  "tags": [
+    "license:mit",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 16,
+  "modelId": "boltz-community/boltz-2",
+  "author": "boltz-community",
+  "sha": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "lastModified": "2025-06-06T13:18:27.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "mit"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "7be5fc7f47d5db027d120b8024982df93db95b74",
+      "size": 24
+    },
+    {
+      "rfilename": "boltz2_aff.ckpt",
+      "blobId": "25a519f867a57d440bb7897b63522cc87aeb3d05",
+      "size": 2062139170,
+      "lfs": {
+        "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+        "size": 2062139170,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "boltz2_conf.ckpt",
+      "blobId": "1b5e3eeb8e8ace389133320c3a45eefd1ee7e7d8",
+      "size": 2286561469,
+      "lfs": {
+        "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+        "size": 2286561469,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "mols.tar",
+      "blobId": "208ea19ae0a7c18dbc1b224b74c4a33f726f8738",
+      "size": 1855662080,
+      "lfs": {
+        "sha256": "39e076d96dbec6b4e86982bbda16f3a53a2a60c9bdc17828d88f6f9a0c7d1fd7",
+        "size": 1855662080,
+        "pointerSize": 135
+      }
+    }
+  ],
+  "spaces": [
+    "ALHCH/boltz2-binding-affinity",
+    "introvoyz041/boltz2-binding-affinity",
+    "muhammadhasyim/boltz-demo"
+  ],
+  "createdAt": "2025-06-06T13:14:21.000Z",
+  "usedStorage": 6204362719
+}

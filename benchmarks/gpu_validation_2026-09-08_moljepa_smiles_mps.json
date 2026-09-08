@@ -1,0 +1,2890 @@
+{
+  "device": "mps",
+  "hardware": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "cuda_build_version": null,
+    "cuda_available": false,
+    "cuda_devices": [],
+    "mps_built": true,
+    "mps_available": true,
+    "nvidia_smi_found": false
+  },
+  "status": "passed",
+  "accepted": true,
+  "accepted_tolerance": true,
+  "bitwise_identical": false,
+  "atol": 1e-05,
+  "relative_l2_tolerance": 1e-05,
+  "require_bitwise": false,
+  "rule": "Every floating leaf: max_abs <= atol AND relative_l2 <= rtol; discrete/non-tensor outputs exact. Source self-repeat must also pass.",
+  "scope": "Complete outputs returned by the trusted cases, on this backend; not biological accuracy, cross-device equivalence, or a speed benchmark.",
+  "source_hashes": {
+    "/private/tmp/compressme-release-staging/examples/validate_backends.py": "d6661b42681fc4af91418bcaec0dca8b5e9f6e05f327d9d7bcb24dfb037d615b",
+    "/private/tmp/compressme-release-staging/src/compressme/validation.py": "cf98a3ca009489689cb916e39c5293eee56cd844d6991e70ed114aba523d8dfb",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/architecture/configuration_moljepa.py": "018dc87dabcdac7c4a5a41ea31cd9abdd69e4a62d0be561dfc213eaab2f98fde",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/architecture/collator.py": "7fee36ea055ad42f5413f4f5785965c94572782297efc36536f59e36907b8d3b",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/architecture/__init__.py": "790a096e3c1a9e401629848d66aac2ce34c2e09e91f8cbc5da46fba89563fa02",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/architecture/modeling_moljepa.py": "89eed5f7ebd458b2d4e6a1e4ad90aed275b7b35bfaa88f4a85a59833e57a0d4d",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/architecture/data.py": "0a42442271324795549273ad3c43bd1a045f1fcae295c8df1bf93673e4447e21",
+    "/Users/manu/Code/compressme/artifacts/moljepa-smiles/manifest.json": "e9836147a2f32aab28a309b70d5c5908d154b7579f8d49715f10706f21ed4d89",
+    "/private/tmp/compressme-release-staging/src/compressme/graph_metal.py": "faff6c9891232380e17442c0f1a520c93ecba3b77e0ba5dee37d285fecffc34f",
+    "/private/tmp/compressme-release-staging/src/compressme/sharing.py": "8a841828df3a7a7e5c3cbb62ffdd989993d8a8419fef46433461d84d0e2897ae",
+    "/private/tmp/compressme-release-staging/src/compressme/attention.py": "883ef70571c9da7b1659135eb589029106a8b135f931cd29b635c987d6e0683a",
+    "/private/tmp/compressme-release-staging/src/compressme/moljepa_io.py": "df38228ffb56a4f31c7a1db5b1f95fdddb0cd68775e9590d27797744f0816ec3",
+    "/private/tmp/compressme-release-staging/src/compressme/packing_files.py": "5fd6525b8546ac317d32ff89e3ff772b94de0a013d39509f7c2f4189cfeb4db5",
+    "/private/tmp/compressme-release-staging/src/compressme/targets.py": "1ea12cf311cccd4a1f470d5e14a2e21974e2dc3c890b401124d6443fa8721c24",
+    "/private/tmp/compressme-release-staging/src/compressme/compiler.py": "2a529e5be49c12a09f237a1b3f6a2d2ee4c5d18b515c5d3edb7af0b1d947b409",
+    "/private/tmp/compressme-release-staging/src/compressme/checkpoint.py": "04d809bb89ad8bf3e43de2046421a0c475a8c0ed64c3989d6f8c800ff502ee69",
+    "/private/tmp/compressme-release-staging/src/compressme/smiles_runtime.py": "d745172f06f2e2c8775429ebbbd62ef1856eafa4658984a09ba1d9c0fc3ec37d",
+    "/private/tmp/compressme-release-staging/src/compressme/state_io.py": "9269ebb1dd0da9c867b0a41d95b35381689ceb9c2c31e4a851d78c3b82761f49",
+    "/private/tmp/compressme-release-staging/src/compressme/state_se_io.py": "c506b6e0d1b16c3af190f87b95dc24a04f6ed43b6e249d7714cee30d79c98889",
+    "/private/tmp/compressme-release-staging/src/compressme/linear.py": "f8e3276d0e2c5059eb68169d19a08da0050894f202de74b94dc109f878bd1c9b",
+    "/private/tmp/compressme-release-staging/src/compressme/readouts.py": "47d193fa16fac6378aae399df0a2fd15d5bfd613b749a5b96774ba52f6982361",
+    "/private/tmp/compressme-release-staging/src/compressme/affine.py": "0d8087313e076946910953cb6ffa18a2cd5f53d2c1142b7d038f910500d9e544",
+    "/private/tmp/compressme-release-staging/src/compressme/__init__.py": "581828da46bf5d49eede8f09ee9b44ca3da781248565d56b3c4525bc784dace1",
+    "/private/tmp/compressme-release-staging/src/compressme/shape_constants.py": "a33bd968f2e88609fd602a424d1ea0b27e0ca6837b944ea6c11b2188a9e50b4b",
+    "/private/tmp/compressme-release-staging/src/compressme/finite_lookup.py": "1e36a388ea56ec083df2a29687472677c7c44687f54c65a2c430ec76e22a8734",
+    "/private/tmp/compressme-release-staging/src/compressme/moljepa.py": "2dd581b2f38b2d36f2bac9072d32fe78f3e5a224df53a3ffb719ef04f404dfbb",
+    "/private/tmp/compressme-release-staging/src/compressme/runtime.py": "43bf145e448676585df82f4ae5a8871e01b5844ddef1730bce5f8cf04e9fec6c",
+    "/private/tmp/compressme-release-staging/src/compressme/hub.py": "e889a4645cc5ecd8aabd8809fb80ed6a258de0909e53e1977494c4584a457763",
+    "/private/tmp/compressme-release-staging/src/compressme/boltz2_runtime.py": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+    "/private/tmp/compressme-release-staging/src/compressme/transfer.py": "ddb72dd410b34a1c322f098844284710c530399181e400372183966aff91d175",
+    "/private/tmp/compressme-release-staging/src/compressme/frozen_tables.py": "7d66cdb07223916b06c00503ab9e77ed3b55ba83148b2e09e53b732c157a6eb2",
+    "/private/tmp/compressme-release-staging/src/compressme/packing.py": "a563a90f35ad1f4558040fea42bd64fd1bdde4dce00415b62e938d3a3f442d32",
+    "/private/tmp/compressme-release-staging/src/compressme/boltz2_io.py": "05a4d815da023098eeb402a31ceb2ee44536038f2fbf1167a439ee45a7007592",
+    "/private/tmp/compressme-release-staging/src/compressme/constant_embeddings.py": "4d3272fb088af384e8d576c5e09f9cb5529fd351edcd0939e7c7f6be462b1a07",
+    "/private/tmp/compressme-release-staging/src/compressme/state_anndata.py": "22bfbd922ebd0413719d43924f694c2da2261fd6c13e8ce6a53a9ef9492cdee6",
+    "/private/tmp/compressme-release-staging/src/compressme/finite_fanout.py": "b83130353cf74b89c6a274259b84f17824041349f07576ae7acdff0315343fbb",
+    "/private/tmp/compressme-release-staging/src/compressme/sparse_graph.py": "f17476a5a598c8e78960df71edbe6a3734eb45834f0d66f389431b8169cf3d05",
+    "/private/tmp/compressme-release-staging/src/compressme/finite_blocks.py": "402078abade762bbc123ac6b269865bad9624dcd75323c56dc18d1735f6fa3e9",
+    "/private/tmp/compressme-release-staging/src/compressme/norm_sandwich.py": "f9eaae6b9cb117f3de7a0a96d9337a4a5d9b5da70c636713fd57794131b64f58",
+    "/private/tmp/compressme-release-staging/src/compressme/__main__.py": "e50e364f7cbd37e374ebdddc129cce648136bf7afbbc4cfb9cb7a7e3917f6f75",
+    "/private/tmp/compressme-release-staging/src/compressme/serialization.py": "56cce642c06bd4e4b9f9644ca21c9e0f5d85cd671adf04046d7380b5b49e72ea"
+  },
+  "cases": [
+    {
+      "name": "smiles-0-4-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 2.8464354829576484e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.7179626680096552e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.477739310291621e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.80943693100139e-07,
+            "max_abs": 1.6391277313232422e-07,
+            "rmse": 3.983441072606569e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.8464354829576484e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 6.661379850492159e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.3419522845429327e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1465796492475771e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.8464226199048678e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.251905775678691e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.61080826842687e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3419522845429327e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.82101464897027e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-0-4-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.834766387939453e-07,
+        "max_relative_l2": 2.577257216954591e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.5238397249134563e-07,
+            "max_abs": 9.834766387939453e-07,
+            "rmse": 1.310760650272253e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.5325744284853846e-07,
+            "max_abs": 1.4528632164001465e-07,
+            "rmse": 3.5908837468683465e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.577257216954591e-07,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 6.031434541250074e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 5.207257648629701e-08,
+            "max_abs": 2.384185791015625e-07,
+            "rmse": 1.3558482325809739e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.5152751488868128e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 3.6954976201428916e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.3147519684538085e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0437641225375065e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.7579838262928244e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.3147519684538085e-07,
+            "max_abs": 2.086162567138672e-07,
+            "rmse": 4.69991674658865e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.255052187458878e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.617646414124679e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 6.244650699398665e-08,
+            "max_abs": 2.682209014892578e-07,
+            "rmse": 1.625961145996545e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.8840254984400928e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 4.594816823128643e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-4-8-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 1.6366245222584103e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.0248246289775995e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 8.728091493085822e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 1.4507528410910877e-07,
+            "max_abs": 1.341104507446289e-07,
+            "rmse": 2.0467505436409532e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 1.6366245222584103e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 3.864797397157106e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.34105057894202e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.063205690612745e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.7571638627272855e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.111710216302105e-07,
+            "max_abs": 1.6391277313232422e-07,
+            "rmse": 4.390061764124825e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.34105057894202e-07,
+            "max_abs": 5.662441253662109e-07,
+            "rmse": 7.88970433086703e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-4-8-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.685754776000977e-07,
+        "max_relative_l2": 1.7109060052258946e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 9.71599655174751e-08,
+            "max_abs": 9.685754776000977e-07,
+            "rmse": 8.27479199052956e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 1.5739769436297555e-07,
+            "max_abs": 1.341104507446289e-07,
+            "rmse": 2.2205974701457586e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 1.7109060052258946e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 4.0402089199421995e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 5.2132383226901624e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 1.3581919436661837e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 8.705523470032696e-08,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 2.118154086283806e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.3201106517455673e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0280418339598028e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.727215961299526e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.1473292698902657e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.440313717885072e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3201106517455673e-07,
+            "max_abs": 4.917383193969727e-07,
+            "rmse": 7.840255764726524e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 8.303028746247688e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 2.163167316195718e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.8254391490317604e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 4.4415036110051804e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-8-12-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 3.476510217454141e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.001106344734167e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.6673942444411097e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.476510217454141e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.7615138568587645e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3359289682224414e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.879009603309094e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.47168145454085e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.141548879823185e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.784416048553802e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.3857110874947173e-07,
+            "max_abs": 1.564621925354004e-07,
+            "rmse": 4.637153136351773e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.47168145454085e-07,
+            "max_abs": 4.3213367462158203e-07,
+            "rmse": 8.19963847567557e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-8-12-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 3.406076671170579e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0704984631862194e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.7252143070607053e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.406076671170579e-07,
+            "max_abs": 1.564621925354004e-07,
+            "rmse": 4.665046256742237e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.275142310377804e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.735439901204845e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.572023530887576e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.4695739214943214e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.6833512651552613e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 4.086306177051222e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.505903008335371e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.043633125612959e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.7028291348089564e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.505903008335371e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.801770859701587e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.4445454238837467e-07,
+            "max_abs": 5.066394805908203e-07,
+            "rmse": 8.135546974247127e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.907783706277372e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 2.5561997608838028e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.005924688390606e-07,
+            "max_abs": 5.066394805908203e-07,
+            "rmse": 4.869347601146134e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-12-16-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.792577429651622e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1996857470101327e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.81217597669944e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.792577429651622e-07,
+            "max_abs": 2.2351741790771484e-07,
+            "rmse": 5.1465304155113606e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.453792061860751e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 8.031503173522522e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.5695102987422827e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.2903310327274245e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.8868526478563116e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.407028472679636e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.6233401918361446e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.5695102987422827e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 8.300596208106583e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-12-16-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.5944242477416992e-06,
+        "max_relative_l2": 3.6762041616351455e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1499869685862458e-07,
+            "max_abs": 1.5944242477416992e-06,
+            "rmse": 1.7712324220420542e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.6762041616351455e-07,
+            "max_abs": 2.086162567138672e-07,
+            "rmse": 4.9886117579583434e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.4089567626538837e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 7.927242337366235e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 5.687733101113685e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 1.4722445398641328e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.493140036863426e-07,
+            "max_abs": 7.152557373046875e-07,
+            "rmse": 5.980630093341551e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.414671626773128e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.2324851659919948e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.839197244220104e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.338940601646553e-07,
+            "max_abs": 1.6391277313232422e-07,
+            "rmse": 4.530944858375262e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.414671626773128e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.940531773388036e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.893096846690593e-08,
+            "max_abs": 5.662441253662109e-07,
+            "rmse": 2.56078433287163e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.9480424513531726e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 4.673031251917537e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-16-20-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.3487196950667375e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0683702076285921e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.7825027968858128e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.2348507986565664e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.54565170981673e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3487196950667375e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.742683579159033e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.6386613515533753e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.348339422171949e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 2.0237777418279076e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4174359119265054e-07,
+            "max_abs": 2.0116567611694336e-07,
+            "rmse": 4.8022225330111934e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.6386613515533753e-07,
+            "max_abs": 5.662441253662109e-07,
+            "rmse": 8.413067100927199e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-16-20-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.341376733882898e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.8872215244243128e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.6263905334758014e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.341376733882898e-07,
+            "max_abs": 1.862645149230957e-07,
+            "rmse": 4.695343278423998e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2618599829302123e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.5418525253354e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 5.944593464201384e-08,
+            "max_abs": 2.682209014892578e-07,
+            "rmse": 1.5515941622777235e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.331444726177646e-07,
+            "max_abs": 8.940696716308594e-07,
+            "rmse": 5.6364558056889565e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.413348446738681e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0978236589469874e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.8078855585614016e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.0788937723122644e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.3264990242535583e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.413348446738681e-07,
+            "max_abs": 4.3958425521850586e-07,
+            "rmse": 7.892113928127662e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 8.464050185991163e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 2.2091957905777273e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.1907369378294854e-07,
+            "max_abs": 5.662441253662109e-07,
+            "rmse": 5.296283370273384e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-20-24-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.3113021850585938e-06,
+        "max_relative_l2": 3.2660780695271817e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0063374873986272e-07,
+            "max_abs": 1.3113021850585938e-06,
+            "rmse": 1.7296115056398333e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.126242673838588e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.321615034793377e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2660780695271817e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.592231075094782e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0132789611816406e-06,
+        "max_relative_l2": 3.3342480510235646e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9813810114267107e-07,
+            "max_abs": 1.0132789611816406e-06,
+            "rmse": 1.7080971750487135e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.2115876081778776e-07,
+            "max_abs": 1.3597309589385986e-07,
+            "rmse": 4.43959306460872e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3342480510235646e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.750697051990552e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-20-24-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.389873285273163e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0672993623280735e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.7821651650255611e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.389873285273163e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.686049306934853e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2765402743291816e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.616551305312317e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 5.9297660252058916e-08,
+            "max_abs": 2.384185791015625e-07,
+            "rmse": 1.5461762398897094e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.6417078879551944e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 4.0306636602629255e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.6689300537109375e-06,
+        "max_relative_l2": 3.5638286419577444e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1595246064547423e-07,
+            "max_abs": 1.6689300537109375e-06,
+            "rmse": 1.8616701561331065e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.5638286419577444e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.926519469100133e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.4192009806443974e-07,
+            "max_abs": 7.152557373046875e-07,
+            "rmse": 7.948176281026799e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 8.479827214447669e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 2.2111002865233418e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.014399975773926e-07,
+            "max_abs": 8.344650268554688e-07,
+            "rmse": 4.945684210422747e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-24-28-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0132789611816406e-06,
+        "max_relative_l2": 3.2989407273310776e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9335696142666073e-07,
+            "max_abs": 1.0132789611816406e-06,
+            "rmse": 1.6148295066526192e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.2989407273310776e-07,
+            "max_abs": 1.9371509552001953e-07,
+            "rmse": 4.5619472097792764e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.193288037602332e-07,
+            "max_abs": 4.3213367462158203e-07,
+            "rmse": 7.254835260673698e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0281801223754883e-06,
+        "max_relative_l2": 3.4939350955954933e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1022176135438434e-07,
+            "max_abs": 1.0281801223754883e-06,
+            "rmse": 1.7556766545708527e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.387813646487698e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.684845315287068e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.4939350955954933e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 7.937875704148475e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-24-28-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.043081283569336e-06,
+        "max_relative_l2": 3.197588902250464e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9195608233355068e-07,
+            "max_abs": 1.043081283569336e-06,
+            "rmse": 1.603130005551566e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.9449737021081214e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.072463128036402e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.197588902250464e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.264606359016416e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 6.987702712040406e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 1.831129418736865e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.31951826914499e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 5.503690237812419e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.524281354646936e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.183608666986978e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.8236507704645078e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.329880177823999e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.604731864077496e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.524281354646936e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 8.00681936377502e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.968885903110343e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 2.0882487439826938e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.5678467943773035e-07,
+            "max_abs": 6.854534149169922e-07,
+            "rmse": 6.09291744859668e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-28-32-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.5237667982388815e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1401068352812892e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.7742586311315537e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.5237667982388815e-07,
+            "max_abs": 1.862645149230957e-07,
+            "rmse": 4.7424551076897326e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.464229270804811e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.728859444808937e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.5497207641601562e-06,
+        "max_relative_l2": 3.859336615626694e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.494148473356024e-07,
+            "max_abs": 1.5497207641601562e-06,
+            "rmse": 2.0677773572896748e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.545752817868154e-07,
+            "max_abs": 1.564621925354004e-07,
+            "rmse": 4.7720449520405906e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.859336615626694e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 8.610362629218712e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-28-32-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1324882507324219e-06,
+        "max_relative_l2": 3.4478606925432004e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0843488533047563e-07,
+            "max_abs": 1.1324882507324219e-06,
+            "rmse": 1.7280324210217342e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4478606925432004e-07,
+            "max_abs": 1.9371509552001953e-07,
+            "rmse": 4.640297058326738e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.4463692188973706e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.689012843831992e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.652642173352376e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.5255300813174972e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.417003405922103e-07,
+            "max_abs": 6.556510925292969e-07,
+            "rmse": 5.768987691154887e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.7881393432617188e-06,
+        "max_relative_l2": 4.182087650740334e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.516278233633824e-07,
+            "max_abs": 1.7881393432617188e-06,
+            "rmse": 2.0861240963269742e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 4.182087650740334e-07,
+            "max_abs": 2.8312206268310547e-07,
+            "rmse": 5.628455078061945e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.915299873853655e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 8.735219329502438e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 1.0123300835062315e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.64867383686482e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.563347507672467e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 6.118286876916224e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-32-36-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.3709068298339844e-06,
+        "max_relative_l2": 3.222127342552e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9331620940885235e-07,
+            "max_abs": 1.3709068298339844e-06,
+            "rmse": 1.649575473686759e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.1177131165531523e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.299928684448148e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.222127342552e-07,
+            "max_abs": 4.917383193969727e-07,
+            "rmse": 7.147957848809929e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.416078981912289e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9740644935489934e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.6844776658884648e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.416078981912289e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.711432852713744e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.409519976101358e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 7.56366911760398e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-32-36-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.2083379096798087e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.7979494244068414e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.5341979636901912e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.2083379096798087e-07,
+            "max_abs": 1.7136335372924805e-07,
+            "rmse": 4.424917994639282e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.046953697343979e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 6.759353317294679e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 6.345974452293718e-08,
+            "max_abs": 2.384185791015625e-07,
+            "rmse": 1.6594608120689044e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.4290225979537455e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 5.757098674250914e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.371651958981367e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9511651034559832e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.6649375604839957e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.371651958981367e-07,
+            "max_abs": 2.086162567138672e-07,
+            "rmse": 4.650159629365966e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.348926521880036e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.429248962587846e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.450249824214662e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.471223192819031e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.8737273542391853e-07,
+            "max_abs": 8.940696716308594e-07,
+            "rmse": 6.811106638195239e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-36-40-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 2.822720387839998e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.6411550598390324e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.4196683224971303e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.822720387839998e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 3.897187102140064e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.76093621322488e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 6.178615816714565e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.6916765532699906e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.2581857258994013e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.9534258643963878e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.6916765532699906e-07,
+            "max_abs": 2.086162567138672e-07,
+            "rmse": 5.0969108774128463e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.6414122397617193e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 8.149006540607544e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-36-40-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 2.9373017666673306e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.592895049086364e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.377921358195438e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.9373017666673306e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.055383545300065e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.783565224370883e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 6.229256458070131e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 6.784218929740324e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 1.7731508346978906e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.1045000526823437e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 4.948518674798034e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.466315742619155e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.994619463775184e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.7254299096381603e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.466315742619155e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.785766305986897e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.454297227746783e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.730267329697165e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.46123424506765e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 2.4728263596228175e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.7248689186087153e-07,
+            "max_abs": 7.748603820800781e-07,
+            "rmse": 6.407253215758058e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-40-44-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.5236283689694656e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.037068677600204e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.779436072547563e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4635481661955487e-07,
+            "max_abs": 1.9371509552001953e-07,
+            "rmse": 5.0034626983389923e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.5236283689694656e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 8.112559888412045e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1622905731201172e-06,
+        "max_relative_l2": 3.532296649981167e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1135948504290017e-07,
+            "max_abs": 1.1622905731201172e-06,
+            "rmse": 1.8462838101437217e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.532296649981167e-07,
+            "max_abs": 1.8998980522155762e-07,
+            "rmse": 5.1027771751942516e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.522383359969008e-07,
+            "max_abs": 5.066394805908203e-07,
+            "rmse": 8.109693465219754e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-40-44-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.1519719907802213e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.8060004355250555e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.577591577422743e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.1519719907802213e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.5533577560228534e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.110361533730085e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.161082774095935e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 6.039731664053687e-08,
+            "max_abs": 2.384185791015625e-07,
+            "rmse": 1.578361188811761e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.285347797395482e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 5.3612539721581035e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 3.3105106889319386e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9099330672568544e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.6683796200024765e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.3105106889319386e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.782383715952211e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2555572988614885e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.495371531617717e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.758828506965131e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 2.5502716048357662e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.710858027933535e-07,
+            "max_abs": 7.450580596923828e-07,
+            "rmse": 6.359468955569344e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-44-48-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1324882507324219e-06,
+        "max_relative_l2": 3.3043071886815804e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.8889644816212267e-07,
+            "max_abs": 1.1324882507324219e-06,
+            "rmse": 1.6449095986538145e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.27823615058652e-07,
+            "max_abs": 2.086162567138672e-07,
+            "rmse": 4.731837572829028e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3043071886815804e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 7.542227967371475e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.412225204809498e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9512151595971925e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.6991174668914905e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.395157110059321e-07,
+            "max_abs": 1.862645149230957e-07,
+            "rmse": 4.9006024096714364e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.412225204809498e-07,
+            "max_abs": 6.854534149169922e-07,
+            "rmse": 7.788555633942933e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-44-48-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.427734317237354e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.878757685737217e-07,
+            "max_abs": 1.0132789611816406e-06,
+            "rmse": 1.636021528962487e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.427734317237354e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.947624641728152e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3377728270077964e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.618614833625457e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.364413431472278e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 1.913765747155296e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 3.021733743014576e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 7.101095762877016e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 3.3098936449056845e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.8690438127828775e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.6275626918258232e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.3098936449056845e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.777532283258583e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.3044324220191735e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.542513877338055e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 9.867950076853624e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.5643515301592045e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.840425748490106e-07,
+            "max_abs": 7.748603820800781e-07,
+            "rmse": 6.675020687708743e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-48-52-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.3113021850585938e-06,
+        "max_relative_l2": 3.2632166757215216e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.0380481140626635e-07,
+            "max_abs": 1.3113021850585938e-06,
+            "rmse": 1.7046301283433976e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.991966336447512e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.1705169593402966e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2632166757215216e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.328364180294224e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.470238054686693e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.140495999234866e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.7903178755779222e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.18693980181508e-07,
+            "max_abs": 1.564621925354004e-07,
+            "rmse": 4.442291455607612e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.470238054686693e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.793282145886573e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-48-52-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.2910439815858074e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1038977964426706e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.7597070136107898e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.258552725177562e-07,
+            "max_abs": 1.9371509552001953e-07,
+            "rmse": 4.5421131493080675e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2910439815858074e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 7.390857222231127e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.513795359314166e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 1.95705209474926e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.0848184335084874e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 4.976763787677928e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 3.4555947225376204e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.178857249530849e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.8224033458940064e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4555947225376204e-07,
+            "max_abs": 1.6391277313232422e-07,
+            "rmse": 4.816770987513303e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.447788846458343e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.742866773933506e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.719743334759145e-08,
+            "max_abs": 3.2782554626464844e-07,
+            "rmse": 2.010693549896736e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.601911326921797e-07,
+            "max_abs": 7.152557373046875e-07,
+            "rmse": 6.211139475000574e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-52-56-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 3.46155411214304e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.8414736388899822e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.5398497811687478e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.46155411214304e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 4.5440545025608824e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.2177185523480617e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 6.967752166236871e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.7303819932244664e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.141280626315788e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.7905499346929494e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4381470716510756e-07,
+            "max_abs": 1.7136335372924805e-07,
+            "rmse": 4.5133275908058365e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.7303819932244664e-07,
+            "max_abs": 8.940696716308594e-07,
+            "rmse": 8.077890216723089e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-52-56-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0132789611816406e-06,
+        "max_relative_l2": 3.5622368959051234e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9504479997041002e-07,
+            "max_abs": 1.0132789611816406e-06,
+            "rmse": 1.6309747087950894e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.5622368959051234e-07,
+            "max_abs": 1.9371509552001953e-07,
+            "rmse": 4.676223033455881e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.375235367407241e-07,
+            "max_abs": 4.470348358154297e-07,
+            "rmse": 7.308844221551921e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.129318934191463e-08,
+            "max_abs": 3.5762786865234375e-07,
+            "rmse": 1.868838669254526e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.3491149316658265e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 5.5186315032871046e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.430511474609375e-06,
+        "max_relative_l2": 3.708084504564107e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.2522818396973108e-07,
+            "max_abs": 1.430511474609375e-06,
+            "rmse": 1.8833697274585524e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.708084504564107e-07,
+            "max_abs": 1.6391277313232422e-07,
+            "rmse": 4.8676802461330026e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.7052843887227455e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 8.023543085389598e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 8.85707882401493e-08,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 2.321743711530521e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 3.031471238767508e-07,
+            "max_abs": 7.450580596923828e-07,
+            "rmse": 7.121649287592633e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-56-60-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.177082356414517e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.7879191772446312e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.5593613381648013e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.9849645969457697e-07,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 4.193017145549465e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.177082356414517e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 7.231615732767717e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.5497207641601562e-06,
+        "max_relative_l2": 3.55481199058436e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.1599358399473275e-07,
+            "max_abs": 1.5497207641601562e-06,
+            "rmse": 1.8838214191096721e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.4629006237481417e-07,
+            "max_abs": 1.7136335372924805e-07,
+            "rmse": 4.864379866872402e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.55481199058436e-07,
+            "max_abs": 6.556510925292969e-07,
+            "rmse": 8.091396896350132e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-56-60-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 9.5367431640625e-07,
+        "max_relative_l2": 2.801101676082481e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.6858094199078147e-07,
+            "max_abs": 9.5367431640625e-07,
+            "rmse": 1.470304708507976e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.748433803813062e-07,
+            "max_abs": 1.341104507446289e-07,
+            "rmse": 3.860759411898771e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.801101676082481e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 6.375815458050672e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 4.2256936900053417e-08,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 1.0978783903012115e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.0273935607434447e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 4.7924011023781105e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 3.490971928654841e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.9789448604210074e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.7259673079260499e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 3.3661893446622097e-07,
+            "max_abs": 1.7136335372924805e-07,
+            "rmse": 4.7285283628107796e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 3.490971928654841e-07,
+            "max_abs": 5.364418029785156e-07,
+            "rmse": 7.946085276514289e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.785540502245427e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 2.0227629594750135e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 2.889441844830432e-07,
+            "max_abs": 5.960464477539062e-07,
+            "rmse": 6.830131332440939e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-60-64-attention-False",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.0728836059570312e-06,
+        "max_relative_l2": 2.9431761349147395e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.7296992340422215e-07,
+            "max_abs": 1.0728836059570312e-06,
+            "rmse": 1.4552752520344061e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.9431761349147395e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 3.850697441169809e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.9063575739015055e-07,
+            "max_abs": 4.172325134277344e-07,
+            "rmse": 6.316437725553343e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 3,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 212992,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.6689300537109375e-06,
+        "max_relative_l2": 4.677080702765708e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 2.7380098436881196e-07,
+            "max_abs": 1.6689300537109375e-06,
+            "rmse": 2.3036131871517329e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 4.677080702765708e-07,
+            "max_abs": 2.4586915969848633e-07,
+            "rmse": 6.119247326258418e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 4.342416739286954e-07,
+            "max_abs": 6.556510925292969e-07,
+            "rmse": 9.43745021548955e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "smiles-60-64-attention-True",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 1.1920928955078125e-06,
+        "max_relative_l2": 2.8788458946112434e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.6338611099635488e-07,
+            "max_abs": 1.1920928955078125e-06,
+            "rmse": 1.3746422137047662e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.8788458946112434e-07,
+            "max_abs": 1.4901161193847656e-07,
+            "rmse": 3.766531000910476e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.802025759246553e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 6.089691416117332e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 4.612808463514397e-08,
+            "max_abs": 1.7881393432617188e-07,
+            "rmse": 1.2125046454553386e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.957378184902708e-07,
+            "max_abs": 4.76837158203125e-07,
+            "rmse": 4.671281627059151e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 234624,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 2.1457672119140625e-06,
+        "max_relative_l2": 4.466326834250225e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 3.014624795920994e-07,
+            "max_abs": 2.1457672119140625e-06,
+            "rmse": 2.5363419679207417e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 4.3296125431488246e-07,
+            "max_abs": 2.1606683731079102e-07,
+            "rmse": 5.664638005190291e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 4.466326834250225e-07,
+            "max_abs": 8.642673492431641e-07,
+            "rmse": 9.706745947768022e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 7.233077550338986e-08,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 1.901258246487643e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 3.1160541141508537e-07,
+            "max_abs": 7.748603820800781e-07,
+            "rmse": 7.43646089683914e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    },
+    {
+      "name": "isolated-helium-attention",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 58656,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 5,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 58656,
+        "accepted_tolerance": true,
+        "bitwise_identical": false,
+        "numeric_equal": false,
+        "max_abs": 7.152557373046875e-07,
+        "max_relative_l2": 2.329670911694156e-07,
+        "metrics": {
+          "output[\"output['predictions']\"]": {
+            "relative_l2": 1.536140497622581e-07,
+            "max_abs": 7.152557373046875e-07,
+            "rmse": 1.2744165991232451e-07,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['cls']\"]": {
+            "relative_l2": 2.329670911694156e-07,
+            "max_abs": 8.940696716308594e-08,
+            "rmse": 3.194662126133086e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['embeddings']\"]": {
+            "relative_l2": 2.2909626068850117e-07,
+            "max_abs": 2.980232238769531e-07,
+            "rmse": 5.310230756617921e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][0]\"]": {
+            "relative_l2": 4.377593319147804e-08,
+            "max_abs": 1.1920928955078125e-07,
+            "rmse": 1.1342795817965672e-08,
+            "exact": false,
+            "bitwise": false
+          },
+          "output[\"output['attentions'][1]\"]": {
+            "relative_l2": 1.2781147274188635e-07,
+            "max_abs": 2.384185791015625e-07,
+            "rmse": 3.139410748922947e-08,
+            "exact": false,
+            "bitwise": false
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "cublas_workspace_config": null,
+    "mps_fallback_environment": null,
+    "mps_fast_math_environment": null,
+    "cpu_threads": 4,
+    "execution": "torch.inference_mode; autocast explicitly disabled"
+  },
+  "model": {
+    "recipe": "moljepa-smiles",
+    "artifact": "/Users/manu/Code/compressme/artifacts/moljepa-smiles",
+    "reference_weights": "/private/tmp/compressme-models/Mol-JEPA/model.safetensors",
+    "reference_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14"
+  },
+  "reference": {
+    "class": "compressme_local_moljepa_ba83cc2248a14510.modeling_moljepa.MolJEPAModel",
+    "parameters": 45406721,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "candidate": {
+    "class": "compressme.smiles_runtime.FastSmilesMolJEPA",
+    "parameters": 19763160,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "candidate_tensor_comparisons": 133
+}

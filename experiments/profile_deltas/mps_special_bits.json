@@ -1,0 +1,5 @@
+{
+  "device": "mps",
+  "special_float_bit_pattern_cases": 42,
+  "different_bytes": 0
+}

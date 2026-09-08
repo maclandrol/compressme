@@ -1,0 +1,15 @@
+{
+  "source_checkpoint_repository": "arcinstitute/SE-100M",
+  "source_checkpoint_revision": "bc72702320639217128df42673e94a9658f67d24",
+  "checkpoint_sha256": "7ee823583ad10c6a12befba6df12dfcd61ac0972deab57be3b4db24a0045af86",
+  "case": "dense_log",
+  "seed": 2932,
+  "batch_size": 2,
+  "dtype": "float32",
+  "shape": [
+    3,
+    1034
+  ],
+  "sha256": "9a3ebd6a6d5a1137eb7de92df934b9bb2fe436772b72f4a5e5f685989af9d5ea",
+  "comparison": "Bitwise against the previously validated original upstream output; synthetic count fixture with real pretrained weights"
+}

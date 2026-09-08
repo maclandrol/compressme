@@ -1,0 +1,49 @@
+{
+  "scope": "Joint immutable Boltz-2 confidence and affinity model storage; one protein-ethanol full-schedule fixture per backend",
+  "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+  "hf_revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "registered_storage_bytes_before": 4087121944,
+  "registered_storage_bytes_after": 2061868568,
+  "storage_reduction_percent": 49.55206631339013,
+  "logical_parameter_values": 1021780232,
+  "dtype": "float32",
+  "output_tensors_per_backend": 48,
+  "compared_value_bytes_per_backend": 639024,
+  "speedup_claim": null,
+  "biological_quality_benchmark": false,
+  "artifact": "artifacts/boltz2-shared",
+  "reports": {
+    "sharing_cpu": {
+      "accepted_bitwise": true,
+      "report": "experiments/boltz2-runtime/sharing-cpu.json",
+      "sha256": "0c98cc9a46918e4d11cac4e1750a1218b9ce222846700473eab263dab753f4f5"
+    },
+    "reload_cpu": {
+      "accepted_bitwise": true,
+      "report": "experiments/boltz2-runtime/reload-cpu.json",
+      "sha256": "f1050d00d5856c6276cab281d61c535a69dc6d137903fd8a641d10e4b78c857a"
+    },
+    "sharing_mps": {
+      "accepted_bitwise": true,
+      "report": "experiments/boltz2-runtime/sharing-mps.json",
+      "sha256": "afe1e2700bbe22d715c04e0a29a0d7e90de5e71afd8a8d2024827f8108796143"
+    },
+    "reload_mps": {
+      "accepted_bitwise": true,
+      "report": "experiments/boltz2-runtime/reload-mps.json",
+      "sha256": "42292ef4edd6b98673dc91b5400365cff06fd0cff5d86070e477fb70b1e9c8e7"
+    },
+    "public_reload_cpu": {
+      "accepted_bitwise": true,
+      "report": "benchmarks/boltz2_public_reload_cpu.json",
+      "sha256": "388352d150a4831ee14556ef2c0bec05b00a430cb3063aef45bbd816193e38e7",
+      "loader_sha256": "05a4d815da023098eeb402a31ceb2ee44536038f2fbf1167a439ee45a7007592"
+    },
+    "public_reload_mps": {
+      "accepted_bitwise": true,
+      "report": "benchmarks/boltz2_public_reload_mps.json",
+      "sha256": "faa3be4ad12601920deed5f2818c661351d929b70639c7980004e41fa9dd9073",
+      "loader_sha256": "05a4d815da023098eeb402a31ceb2ee44536038f2fbf1167a439ee45a7007592"
+    }
+  }
+}

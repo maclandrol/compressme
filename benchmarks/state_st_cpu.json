@@ -1,0 +1,89 @@
+{
+  "method": "exact_frozen_constant_embedding_rows",
+  "parameters_before": 49396728,
+  "parameters_after": 38901056,
+  "layers": [
+    {
+      "path": "transformer_backbone.embed_tokens",
+      "status": "deduplicated",
+      "parameters_before": 10496000,
+      "parameters_after": 328,
+      "recipe": {
+        "kind": "ConstantRowEmbedding",
+        "num_embeddings": 32000,
+        "embedding_dim": 328,
+        "padding_idx": 0,
+        "norm_type": 2.0,
+        "scale_grad_by_freq": false,
+        "dtype": "float32",
+        "training": false
+      }
+    },
+    {
+      "path": "batch_encoder",
+      "status": "retained",
+      "reason": "Embedding must already be frozen"
+    }
+  ],
+  "guarantee": "Identical stored row bits and unchanged F.embedding token-index lookup; frozen weights only",
+  "performance": "Reduces stored weight bytes; full-weight contiguous consumers can materialize the original shape",
+  "kind": "actual_pretrained_State_ST_HVG_Replogle_K562",
+  "repository": "arcinstitute/ST-HVG-Replogle",
+  "revision": "bb6a9562cbbf1fd152df14cc53b4cc7517c77175",
+  "checkpoint": "fewshot/k562/checkpoints/final.ckpt",
+  "input_examples": "Synthetic numerical API checks; not a biological benchmark",
+  "dtype": "float32",
+  "device": "cpu",
+  "source_commit": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+  "embedding_table_nonzero": 0,
+  "cases": [
+    {
+      "cells": 1,
+      "padded": false,
+      "batch_labels_onehot": false,
+      "all_outputs_bitwise_equal": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      }
+    },
+    {
+      "cells": 7,
+      "padded": false,
+      "batch_labels_onehot": true,
+      "all_outputs_bitwise_equal": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      }
+    },
+    {
+      "cells": 64,
+      "padded": true,
+      "batch_labels_onehot": false,
+      "all_outputs_bitwise_equal": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      }
+    },
+    {
+      "cells": 128,
+      "padded": true,
+      "batch_labels_onehot": true,
+      "all_outputs_bitwise_equal": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      }
+    }
+  ]
+}

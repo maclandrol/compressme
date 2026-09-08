@@ -1,0 +1,321 @@
+{
+  "device": "mps",
+  "batch_size": 4,
+  "threads": 4,
+  "agreement": {
+    "accepted": true,
+    "examples": 8,
+    "relative_tolerance": 1e-05,
+    "absolute_tolerance": 1e-05,
+    "metrics": [
+      {
+        "output['predictions']": {
+          "relative_l2": 2.083118502453216e-07,
+          "max_abs": 1.1920928955078125e-06,
+          "rmse": 1.7830010894796883e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.327627328817294e-07,
+          "max_abs": 2.2351741790771484e-07,
+          "rmse": 4.70644169540243e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.396829731008995e-07,
+          "max_abs": 6.556510925292969e-07,
+          "rmse": 7.985513735167577e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 7.599012518663405e-08,
+          "max_abs": 2.980232238769531e-07,
+          "rmse": 1.97917860923543e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.1367031739664188e-07,
+          "max_abs": 5.960464477539062e-07,
+          "rmse": 5.204953269280968e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.221291434440586e-07,
+          "max_abs": 1.0728836059570312e-06,
+          "rmse": 1.8404475839008917e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.5071627703129755e-07,
+          "max_abs": 2.086162567138672e-07,
+          "rmse": 4.781410590202113e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.5586023490855487e-07,
+          "max_abs": 4.76837158203125e-07,
+          "rmse": 8.34033439115235e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 1.1073159989284168e-07,
+          "max_abs": 5.960464477539062e-07,
+          "rmse": 2.861555989171664e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.2730238743684293e-07,
+          "max_abs": 7.748603820800781e-07,
+          "rmse": 5.4852637280542336e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.2366654772444236e-07,
+          "max_abs": 1.3113021850585938e-06,
+          "rmse": 1.9278547451325778e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.2526317962072674e-07,
+          "max_abs": 1.7881393432617188e-07,
+          "rmse": 4.533636578187369e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.568702586547543e-07,
+          "max_abs": 7.450580596923828e-07,
+          "rmse": 8.273537980044288e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 7.533640275838261e-08,
+          "max_abs": 2.980232238769531e-07,
+          "rmse": 1.965367160017481e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 1.942375569991394e-07,
+          "max_abs": 5.960464477539062e-07,
+          "rmse": 4.7324918284056935e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.3234457742350722e-07,
+          "max_abs": 1.1920928955078125e-06,
+          "rmse": 1.933359213800854e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.478299083508527e-07,
+          "max_abs": 2.3096799850463867e-07,
+          "rmse": 4.746054224227043e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.61149252564205e-07,
+          "max_abs": 5.662441253662109e-07,
+          "rmse": 8.131517312002448e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 9.09972355378337e-08,
+          "max_abs": 4.76837158203125e-07,
+          "rmse": 2.382725114016627e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.4343914618622055e-07,
+          "max_abs": 6.705522537231445e-07,
+          "rmse": 5.7933994728645765e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 1.9613031372491485e-07,
+          "max_abs": 1.1920928955078125e-06,
+          "rmse": 1.685138467349028e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.3386083751216664e-07,
+          "max_abs": 1.9371509552001953e-07,
+          "rmse": 4.60701731535216e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.274891516149574e-07,
+          "max_abs": 5.364418029785156e-07,
+          "rmse": 7.296965030629055e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 8.630434249905846e-08,
+          "max_abs": 3.5762786865234375e-07,
+          "rmse": 2.2562640846356922e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.415387502092839e-07,
+          "max_abs": 8.344650268554688e-07,
+          "rmse": 5.7022052341104995e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.075313753809885e-07,
+          "max_abs": 1.430511474609375e-06,
+          "rmse": 1.810015563494859e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.4280820979569746e-07,
+          "max_abs": 1.7881393432617188e-07,
+          "rmse": 4.9501778577559173e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.3798367017693114e-07,
+          "max_abs": 4.76837158203125e-07,
+          "rmse": 7.748137816897156e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 8.747209146853174e-08,
+          "max_abs": 3.5762786865234375e-07,
+          "rmse": 2.279515841874991e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.797604161290724e-07,
+          "max_abs": 8.344650268554688e-07,
+          "rmse": 6.568681754004344e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.2049493530800349e-07,
+          "max_abs": 1.3113021850585938e-06,
+          "rmse": 1.8440084803839176e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.4274523815263254e-07,
+          "max_abs": 2.086162567138672e-07,
+          "rmse": 4.640501725126283e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.5433346454800405e-07,
+          "max_abs": 4.76837158203125e-07,
+          "rmse": 7.816440513377547e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 9.183721223344033e-08,
+          "max_abs": 4.76837158203125e-07,
+          "rmse": 2.3996977265103425e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.7412770707601006e-07,
+          "max_abs": 6.556510925292969e-07,
+          "rmse": 6.492077780293103e-08,
+          "exact": false
+        }
+      },
+      {
+        "output['predictions']": {
+          "relative_l2": 2.499865108724083e-07,
+          "max_abs": 2.3692846298217773e-06,
+          "rmse": 2.1421199376456694e-07,
+          "exact": false
+        },
+        "output['cls']": {
+          "relative_l2": 3.8786203166655976e-07,
+          "max_abs": 2.5331974029541016e-07,
+          "rmse": 5.2647829797817915e-08,
+          "exact": false
+        },
+        "output['embeddings']": {
+          "relative_l2": 3.8649073719219886e-07,
+          "max_abs": 6.556510925292969e-07,
+          "rmse": 8.600747849782929e-08,
+          "exact": false
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 7.582898323802699e-08,
+          "max_abs": 3.5762786865234375e-07,
+          "rmse": 1.9816962525922988e-08,
+          "exact": false
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 2.638352968426128e-07,
+          "max_abs": 1.1026859283447266e-06,
+          "rmse": 6.266585871466154e-08,
+          "exact": false
+        }
+      }
+    ],
+    "scope": "empirical agreement on these examples only; not biological accuracy or distributional equivalence"
+  },
+  "seconds": {
+    "original": [
+      0.018436541024129838,
+      0.01854045898653567,
+      0.013118708011461422,
+      0.013494542014086619,
+      0.012925749993883073,
+      0.014188417000696063,
+      0.013359874981688336,
+      0.013883457984775305,
+      0.012920875014970079,
+      0.013091374974464998,
+      0.014431708987103775,
+      0.014064875023905188,
+      0.014300832990556955,
+      0.014934791979612783,
+      0.01751158299157396,
+      0.01692154200281948,
+      0.017022290994646028,
+      0.013000542006921023,
+      0.013274208991788328,
+      0.012668709008721635
+    ],
+    "compressed": [
+      0.014626249991124496,
+      0.011066250008298084,
+      0.010697375022573397,
+      0.010489667009096593,
+      0.010975040990160778,
+      0.012374749989248812,
+      0.010699042002670467,
+      0.009969582984922454,
+      0.01161483401665464,
+      0.012269917002413422,
+      0.012129125010687858,
+      0.010529625025810674,
+      0.01175258299917914,
+      0.013981124997371808,
+      0.012500250013545156,
+      0.012864999996963888,
+      0.015053333976538852,
+      0.010956375015666708,
+      0.011959166004089639,
+      0.010456000018166378
+    ]
+  },
+  "median_seconds": {
+    "original": 0.013974166504340246,
+    "compressed": 0.01168370850791689
+  },
+  "speedup": 1.1960386117876307
+}

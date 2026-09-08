@@ -1,0 +1,13 @@
+{
+  "description": "64 hand-selected valid SMILES held out from compressor development examples. These are numerical API verification inputs, not a biological benchmark or a claim of exclusion from Mol-JEPA pretraining.",
+  "smiles": [
+    "C", "CC", "CCC", "CCCC", "CCCCC", "CCCCCC", "CC(C)C", "CC(C)(C)C",
+    "C1CCCCC1", "C1CCCC1", "C1CCC1", "C1CC1", "CC1CCCCC1", "C1CCC2CCCCC2C1", "C1CCC2(CC1)CCCC2", "C1COCCN1",
+    "CO", "CCCO", "CC(C)O", "CC(C)(C)O", "OCCO", "OCCCO", "CCOCC", "COCCOC",
+    "CN", "CCN", "CCCN", "CNC", "CN(C)C", "NCCN", "NCCO", "N1CCCCC1",
+    "CC=O", "CCC=O", "CC(=O)C", "CCC(=O)C", "CC(=O)O", "CCC(=O)O", "CC(=O)OC", "CCOC(=O)C",
+    "c1ccncc1", "c1ccoc1", "c1ccsc1", "c1ncc[nH]1", "c1cn[nH]c1", "c1ccc2ccccc2c1", "c1ccc2[nH]ccc2c1", "c1cnc2ccccc2n1",
+    "CCS", "CSSC", "CS(=O)C", "CS(=O)(=O)C", "NC(=O)N", "NCC(=O)O", "N[C@@H](CO)C(=O)O", "N[C@@H](CC(=O)O)C(=O)O",
+    "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O", "FC(F)(F)c1ccccc1", "Clc1ccc(Br)cc1", "N#Cc1ccccc1", "C[N+](C)(C)C", "CC(=O)[O-]", "[Na+].[Cl-]", "O=P(O)(O)O"
+  ]
+}

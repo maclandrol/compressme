@@ -1,0 +1,11 @@
+{
+  "fresh_process": true,
+  "torch_load_forbidden": true,
+  "complete_output_fingerprints_equal": true,
+  "cases": 7,
+  "output_comparisons": 105,
+  "parameters": 151243944,
+  "known_gene_names": 19790,
+  "mps_loader_rejected": true,
+  "runtime_token_device_guard_checked": true
+}

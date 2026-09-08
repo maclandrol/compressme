@@ -1,0 +1,44 @@
+name: Documentation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONHASHSEED: "0"
+      PYTHONDONTWRITEBYTECODE: "1"
+      COMPRESSME_DOCS_REVISION: ${{ github.sha }}
+    steps:
+      - name: Check out the private source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up documentation Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install only the pinned documentation tools
+        run: python -m pip install --constraint requirements/docs.txt '.[docs]'
+      - name: Check documentation link handling
+        run: python -m unittest discover -s tests -p test_docs_hooks.py
+      - name: Build with strict local link checks
+        run: python -m mkdocs build --strict
+      - name: Store private HTML artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: compressme-docs-${{ github.sha }}
+          path: site/
+          if-no-files-found: error
+          retention-days: 14

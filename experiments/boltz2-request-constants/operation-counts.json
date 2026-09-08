@@ -1,0 +1,26 @@
+{
+  "one_score_call": {
+    "atom_condition_linears": 36,
+    "single_prefix_linears": 1,
+    "atom_condition_layernorms": 12,
+    "single_prefix_layernorms": 1,
+    "atom_condition_sigmoids": 24
+  },
+  "score_calls_per_request_example": 200,
+  "prepared_layouts_example": 1,
+  "saved_calls_for_example": {
+    "linear": 7363,
+    "layernorm": 2587,
+    "sigmoid": 4776
+  },
+  "fixture": {
+    "tokens": 23,
+    "atoms": 160,
+    "atom_width": 128,
+    "token_condition_width": 768,
+    "multiplicity1_cache_bytes": 3019776,
+    "multiplicity3_cache_bytes": 9059328
+  },
+  "macs_saved_at_multiplicity1": 21479620608,
+  "scope": "Arithmetic counts from the audited source, not measured speedup. Each extra score call caused by native sample chunking has its own actual multiplicity; preparation occurs once per distinct layout."
+}

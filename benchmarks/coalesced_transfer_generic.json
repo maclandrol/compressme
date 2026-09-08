@@ -1,0 +1,2413 @@
+{
+  "method": "Generic value-exact mixed-dtype CPU\u2192MPS one-copy transfer with typed views. No molecule/output caching. Actual production versus same weights and operations with coalesced transfer; all64 gates both attention modes.20 randomized interleaved rounds after10 warmups; synchronized. Independent synthetic graph-shaped tensors test transfer portability.",
+  "gates": [
+    {
+      "offset": 0,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "name": "coalesced64",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "name": "coalesced256",
+      "return_attn": false,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "name": "coalesced64",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "name": "coalesced256",
+      "return_attn": true,
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    }
+  ],
+  "synthetic": {
+    "16": {
+      "separate": {
+        "median_ms": 1.7665835039224476,
+        "min_ms": 1.575292000779882,
+        "max_ms": 3.790375019889325,
+        "ms": [
+          3.790375019889325,
+          1.575292000779882,
+          2.7395420183893293,
+          1.7732919950503856,
+          1.5853330260142684,
+          1.6072079888544977,
+          3.100208006799221,
+          1.6325420001521707,
+          1.5815840160939842,
+          1.5804999857209623,
+          1.6370000084862113,
+          1.7418750212527812,
+          1.8348750018049031,
+          1.7802079964894801,
+          3.561041987268254,
+          1.7598750127945095,
+          1.8161660118494183,
+          1.5902919985819608,
+          2.7914170059375465,
+          3.3231670095119625
+        ]
+      },
+      "coalesced": {
+        "median_ms": 0.33010399783961475,
+        "min_ms": 0.25704200379550457,
+        "max_ms": 1.6445829824078828,
+        "ms": [
+          0.3330000035930425,
+          0.8319579937960953,
+          0.6838330009486526,
+          0.3242089878767729,
+          0.2792499726638198,
+          0.3215830074623227,
+          0.3160419873893261,
+          0.6099579914007336,
+          0.32104100682772696,
+          0.327207992086187,
+          0.28254202334210277,
+          0.2920420083682984,
+          0.3427499905228615,
+          1.0385829955339432,
+          0.3821660066023469,
+          0.31333399238064885,
+          0.6915840203873813,
+          0.25704200379550457,
+          1.6445829824078828,
+          0.3904579789377749
+        ]
+      },
+      "bytes": 6996
+    },
+    "128": {
+      "separate": {
+        "median_ms": 1.6508954868186265,
+        "min_ms": 1.2626249808818102,
+        "max_ms": 5.211040988797322,
+        "ms": [
+          1.3983329990878701,
+          1.5972089895512909,
+          1.4942499983590096,
+          1.2626249808818102,
+          1.6846660000737756,
+          1.5889169881120324,
+          2.845790993887931,
+          2.4168749805539846,
+          2.1065420005470514,
+          1.7025000124704093,
+          2.032292017247528,
+          1.5386669838335365,
+          5.211040988797322,
+          3.6220410256646574,
+          1.9059999904129654,
+          1.568375009810552,
+          1.6171249735634774,
+          1.599459006683901,
+          1.3022079947404563,
+          2.0957910164725035
+        ]
+      },
+      "coalesced": {
+        "median_ms": 0.3318539966130629,
+        "min_ms": 0.25275000371038914,
+        "max_ms": 0.7088329875841737,
+        "ms": [
+          0.2567920018918812,
+          0.2888329909183085,
+          0.2728750114329159,
+          0.2644580090418458,
+          0.25275000371038914,
+          0.3526250075083226,
+          0.3333750064484775,
+          0.48483299906365573,
+          0.3330000035930425,
+          0.33070798963308334,
+          0.3075420099776238,
+          0.2800830116029829,
+          0.7088329875841737,
+          0.44595799408853054,
+          0.41500001680105925,
+          0.32774999272078276,
+          0.3427499905228615,
+          0.2995409886352718,
+          0.3955409920308739,
+          0.371750007616356
+        ]
+      },
+      "bytes": 55828
+    },
+    "1024": {
+      "separate": {
+        "median_ms": 2.0388124976307154,
+        "min_ms": 1.5150419785641134,
+        "max_ms": 3.6860410182271153,
+        "ms": [
+          1.6550830041524023,
+          2.634040982229635,
+          3.0832919874228537,
+          2.7550420199986547,
+          1.9542499794624746,
+          2.0329999970272183,
+          2.721791999647394,
+          2.8447920049075037,
+          2.4412500206381083,
+          1.5157919842749834,
+          1.5305840061046183,
+          2.671499998541549,
+          3.6045830056536943,
+          1.9760419963859022,
+          1.7690000240691006,
+          1.5612920105922967,
+          1.5536250139120966,
+          1.5150419785641134,
+          2.0446249982342124,
+          3.6860410182271153
+        ]
+      },
+      "coalesced": {
+        "median_ms": 0.5263750063022599,
+        "min_ms": 0.3645830147434026,
+        "max_ms": 2.2895830043125898,
+        "ms": [
+          0.3645830147434026,
+          2.2895830043125898,
+          0.5942920106463134,
+          0.5505000008270144,
+          0.6334169884212315,
+          0.4750409862026572,
+          0.507416989421472,
+          0.7193750061560422,
+          0.9424579911865294,
+          0.5894160130992532,
+          0.510375015437603,
+          0.47058399650268257,
+          0.6207500118762255,
+          0.5423749971669167,
+          0.5733750003855675,
+          0.37937500746920705,
+          0.4916250181850046,
+          0.3803750150837004,
+          0.42295799357816577,
+          0.49845801549963653
+        ]
+      },
+      "bytes": 446484
+    }
+  },
+  "full_api": {
+    "1": {
+      "production": {
+        "median_ms": 13.734916487010196,
+        "min_ms": 9.188291995087638,
+        "max_ms": 25.930542004061863,
+        "ms": [
+          9.220250009093434,
+          17.178791022161022,
+          16.568082995945588,
+          13.877541990950704,
+          15.657790994737297,
+          18.945249990792945,
+          13.592290983069688,
+          13.18887498928234,
+          10.748666012659669,
+          9.188291995087638,
+          12.963207991560921,
+          13.098415976855904,
+          25.930542004061863,
+          12.680665997322649,
+          12.043750000884756,
+          18.036374996881932,
+          18.7125840166118,
+          14.58795799408108,
+          16.168625006685033,
+          12.542332988232374
+        ]
+      },
+      "coalesced64": {
+        "median_ms": 9.924833502736874,
+        "min_ms": 8.480416989186779,
+        "max_ms": 23.203167016617954,
+        "ms": [
+          8.525457989890128,
+          9.70283299102448,
+          14.149583003018051,
+          9.538083977531642,
+          9.078292001504451,
+          9.28879200364463,
+          23.203167016617954,
+          10.639750020345673,
+          9.53849998768419,
+          9.292792004998773,
+          10.245749988825992,
+          16.316042019752786,
+          18.822000012733042,
+          11.73987498623319,
+          9.01458301814273,
+          8.597707987064496,
+          13.852541014784947,
+          10.547042009420693,
+          10.146834014449269,
+          8.480416989186779
+        ]
+      },
+      "coalesced256": {
+        "median_ms": 10.454562492668629,
+        "min_ms": 7.948082988150418,
+        "max_ms": 15.951957990182564,
+        "ms": [
+          7.948082988150418,
+          10.559207992628217,
+          9.206749993609264,
+          9.828875015955418,
+          8.556209009839222,
+          15.951957990182564,
+          8.985375025076792,
+          11.374249996151775,
+          12.360084016108885,
+          8.809249993646517,
+          9.379708004416898,
+          15.273875003913417,
+          15.398250019643456,
+          10.34991699270904,
+          10.893208993365988,
+          9.3346250068862,
+          15.109666011994705,
+          9.109125006943941,
+          11.258167010964826,
+          11.262791987974197
+        ]
+      }
+    },
+    "4": {
+      "production": {
+        "median_ms": 22.185207999427803,
+        "min_ms": 17.051625007297844,
+        "max_ms": 40.553375001763925,
+        "ms": [
+          17.505416995845735,
+          23.905000009108335,
+          18.800291989464313,
+          22.354374988935888,
+          33.71345900814049,
+          21.736416994826868,
+          35.03970798919909,
+          40.553375001763925,
+          26.660333009203896,
+          17.74016601848416,
+          19.98770801583305,
+          20.329332997789606,
+          18.46020799712278,
+          19.417333998717368,
+          22.016041009919718,
+          26.303374994313344,
+          24.619082978460938,
+          23.058333987137303,
+          17.051625007297844,
+          26.731417019618675
+        ]
+      },
+      "coalesced64": {
+        "median_ms": 21.703874997911043,
+        "min_ms": 15.594666998367757,
+        "max_ms": 50.79754101461731,
+        "ms": [
+          25.923209002939984,
+          17.669749999186024,
+          24.041625001700595,
+          20.624249998945743,
+          50.79754101461731,
+          19.0747499873396,
+          24.323916994035244,
+          26.36041698860936,
+          18.470374983735383,
+          26.586833992041647,
+          22.834666015114635,
+          17.08016701741144,
+          16.253250010777265,
+          18.83849999285303,
+          26.638374984031543,
+          23.693708993960172,
+          22.783499996876344,
+          18.5494170000311,
+          15.594666998367757,
+          16.413332981755957
+        ]
+      },
+      "coalesced256": {
+        "median_ms": 18.992208511917852,
+        "min_ms": 15.825874987058342,
+        "max_ms": 31.626082985894755,
+        "ms": [
+          16.860000003362074,
+          31.626082985894755,
+          20.10620801593177,
+          19.746209000004455,
+          17.454125016229227,
+          24.98537499923259,
+          25.40562502690591,
+          19.332166004460305,
+          19.172291998984292,
+          15.825874987058342,
+          25.303458009148017,
+          17.077916010748595,
+          17.755415989086032,
+          28.56549998978153,
+          18.31250000395812,
+          17.788375000236556,
+          18.030791979981586,
+          18.81212502485141,
+          16.888667014427483,
+          21.37408297858201
+        ]
+      }
+    },
+    "32": {
+      "production": {
+        "median_ms": 59.668437505024485,
+        "min_ms": 52.31575001380406,
+        "max_ms": 213.02154200384393,
+        "ms": [
+          56.455459009157494,
+          65.55920900427736,
+          213.02154200384393,
+          56.15729102282785,
+          56.795582990162075,
+          52.8075420006644,
+          53.81787501391955,
+          59.52675000298768,
+          56.79958302062005,
+          52.31575001380406,
+          59.815999993588775,
+          55.896875011967495,
+          54.44529198575765,
+          60.10087500908412,
+          64.92945799254812,
+          59.81012500706129,
+          63.18674999056384,
+          93.005250004353,
+          66.98158400831744,
+          69.88741699024104
+        ]
+      },
+      "coalesced64": {
+        "median_ms": 61.70514549012296,
+        "min_ms": 50.80804199678823,
+        "max_ms": 99.26545800408348,
+        "ms": [
+          62.157167005352676,
+          66.83008398977108,
+          99.26545800408348,
+          63.843958982033655,
+          61.62733299424872,
+          51.97362499893643,
+          60.82991597941145,
+          54.74099999992177,
+          54.04529100633226,
+          56.568625004729256,
+          50.80804199678823,
+          60.73279198608361,
+          55.0986249872949,
+          60.435625026002526,
+          64.8149999906309,
+          64.5499579841271,
+          67.3294170119334,
+          82.36295799724758,
+          62.830292008584365,
+          61.7829579859972
+        ]
+      },
+      "coalesced256": {
+        "median_ms": 63.96287551615387,
+        "min_ms": 52.66662497888319,
+        "max_ms": 152.4990829930175,
+        "ms": [
+          75.81566699082032,
+          59.47450001258403,
+          64.41591598559171,
+          65.97429202520289,
+          63.9430420123972,
+          60.97129199770279,
+          52.66662497888319,
+          56.23083299724385,
+          60.49091598833911,
+          73.01125000230968,
+          61.233291984535754,
+          65.92616700800136,
+          57.28916698717512,
+          63.982709019910544,
+          67.31470799422823,
+          67.10916699375957,
+          54.603249998763204,
+          152.4990829930175,
+          56.144208007026464,
+          67.15704099042341
+        ]
+      }
+    }
+  }
+}

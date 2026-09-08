@@ -1,0 +1,72 @@
+{
+  "memory": {
+    "total": 17179869184,
+    "available": 6351028224,
+    "percent": 63.0,
+    "used": 7002521600,
+    "free": 2966077440,
+    "active": 3414376448,
+    "inactive": 3339337728,
+    "wired": 3588145152
+  },
+  "swap": {
+    "total": 12884901888,
+    "used": 11691950080,
+    "free": 1192951808,
+    "percent": 90.7,
+    "sin": 747278647296,
+    "sout": 7271038976
+  },
+  "processes": [
+    {
+      "name": "Codex (Service)",
+      "cpu_percent": 9.9,
+      "rss_mb": 47
+    },
+    {
+      "name": "Codex (Renderer)",
+      "cpu_percent": 7.1,
+      "rss_mb": 1427
+    },
+    {
+      "name": "codex",
+      "cpu_percent": 2.8,
+      "rss_mb": 326
+    },
+    {
+      "name": "Code Helper (Renderer)",
+      "cpu_percent": 2.4,
+      "rss_mb": 332
+    },
+    {
+      "name": "Google Chrome Helper (Renderer)",
+      "cpu_percent": 2.2,
+      "rss_mb": 131
+    },
+    {
+      "name": "Code Helper",
+      "cpu_percent": 2.0,
+      "rss_mb": 72
+    },
+    {
+      "name": "iTerm2",
+      "cpu_percent": 1.7,
+      "rss_mb": 38
+    },
+    {
+      "name": "trustd",
+      "cpu_percent": 1.4,
+      "rss_mb": 19
+    },
+    {
+      "name": "python3.12",
+      "cpu_percent": 1.4,
+      "rss_mb": 22
+    },
+    {
+      "name": "Google Chrome Helper (Renderer)",
+      "cpu_percent": 1.3,
+      "rss_mb": 127
+    }
+  ]
+}

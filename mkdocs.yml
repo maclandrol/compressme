@@ -1,0 +1,72 @@
+site_name: compressme
+site_description: Training-free model transformations, tested outputs and reproducible workflows.
+repo_url: https://github.com/maclandrol/compressme
+repo_name: Private source repository
+edit_uri: blob/main/docs/
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+strict: true
+theme:
+  name: mkdocs
+  color_mode: light
+  user_color_mode_toggle: true
+  highlightjs: false
+nav:
+  - Start: index.md
+  - Usage:
+      - Installation: installation.md
+      - Command line: cli.md
+      - General workflow: general-workflow.md
+      - Hugging Face: huggingface.md
+  - Models:
+      - Reproduce Boltz-2: tutorials/boltz2.md
+      - Reproduce Mol-JEPA: tutorials/moljepa.md
+      - Boltz-2 results and limits: boltz2.md
+      - State: state.md
+      - Target status: biology-targets.md
+  - Results: technical-report.md
+  - Methods:
+      - Theory and prior art: theory.md
+      - Shared frozen weights: sharing.md
+      - Finite domains: finite-domains.md
+      - Lossless file packing: packing.md
+      - Lossless table storage: frozen-tables.md
+      - Packed original embeddings: packed-embeddings.md
+  - Backends:
+      - GPU validation: gpu-validation.md
+      - macOS: macos.md
+      - Runtime: runtime.md
+  - Build these docs: building-docs.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - fenced_code
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+plugins:
+  - search
+hooks:
+  - tools/docs_hooks.py
+extra_css:
+  - assets/site.css
+  - assets/katex/katex.min.css
+extra_javascript:
+  - assets/katex/katex.min.js
+  - assets/katex/auto-render.min.js
+  - assets/math.js
+exclude_docs: |
+  social-posts.md
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn

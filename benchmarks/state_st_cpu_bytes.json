@@ -1,0 +1,163 @@
+{
+  "checkpoint_sha256": "121ff54db0e6f9f53b2777bbf45139757367ed827a111824213e6bf3777b2618",
+  "device": "cpu",
+  "dtype": "float32",
+  "torch_version": "2.14.0",
+  "validation": "Actual pretrained weights; synthetic numerical API cases",
+  "equality_method": "Explicit contiguous logical tensor value bytes; signed zero distinguished",
+  "portable_reload_forbids_torch_load": true,
+  "cases": [
+    {
+      "cells": 1,
+      "padded": false,
+      "batch_labels_onehot": false,
+      "metrics": {
+        "output['preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['batch']": {
+          "exact": true,
+          "bitwise": true,
+          "relative_l2": 0.0,
+          "max_abs": 0.0
+        },
+        "output['ctrl_cell_emb']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['pert_cell_counts_preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        }
+      },
+      "tensor_value_bytes_compared": 24008,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 7,
+      "padded": false,
+      "batch_labels_onehot": true,
+      "metrics": {
+        "output['preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['batch']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['ctrl_cell_emb']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['pert_cell_counts_preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        }
+      },
+      "tensor_value_bytes_compared": 169568,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 64,
+      "padded": true,
+      "batch_labels_onehot": false,
+      "metrics": {
+        "output['preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['batch']": {
+          "exact": true,
+          "bitwise": true,
+          "relative_l2": 0.0,
+          "max_abs": 0.0
+        },
+        "output['ctrl_cell_emb']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['pert_cell_counts_preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        }
+      },
+      "tensor_value_bytes_compared": 1536512,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 128,
+      "padded": true,
+      "batch_labels_onehot": true,
+      "metrics": {
+        "output['preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['batch']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['ctrl_cell_emb']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        },
+        "output['pert_cell_counts_preds']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true,
+          "bitwise": true
+        }
+      },
+      "tensor_value_bytes_compared": 3100672,
+      "all_outputs_bitwise_equal": true
+    }
+  ],
+  "all_32000_token_rows_bitwise_equal": true,
+  "token_table_value_bytes_compared": 41984000,
+  "all_outputs_bitwise_equal": true,
+  "verification_script": "examples/verify_state_st_bytes.py",
+  "verification_script_sha256": "ebfdc97175c7b5bd409e2eb4beaf1d0e57c5581675e579ec211512de862ca6fc",
+  "byte_validation_source_sha256": "cf98a3ca009489689cb916e39c5293eee56cd844d6991e70ed114aba523d8dfb"
+}

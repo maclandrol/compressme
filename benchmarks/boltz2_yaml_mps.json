@@ -1,0 +1,123 @@
+{
+  "checks": {
+    "confidence": {
+      "tensor_leaves": 21,
+      "all_bytes_equal": true,
+      "max_abs": 0.0
+    },
+    "affinity": {
+      "tensor_leaves": 27,
+      "all_bytes_equal": true,
+      "max_abs": 0.0
+    }
+  },
+  "accepted": true,
+  "runtime_report": {
+    "device": "mps",
+    "seed": 1729,
+    "artifact": "/private/tmp/compressme-staging/artifacts/boltz2-shared",
+    "input": "/private/tmp/compressme-staging/experiments/boltz2-runtime/tiny_complex.yaml",
+    "precision": "float32",
+    "outputs": {
+      "confidence": {
+        "tensor_leaves": 21,
+        "predict_args": {
+          "recycling_steps": 3,
+          "sampling_steps": 200,
+          "diffusion_samples": 1,
+          "max_parallel_samples": 1,
+          "write_confidence_summary": true,
+          "write_full_pae": true,
+          "write_full_pde": true
+        },
+        "request_runtime": {
+          "requests": [
+            {
+              "score_calls": 200,
+              "optimized_score_calls": 200,
+              "fallback_score_calls": 0,
+              "prepared_layouts": [
+                {
+                  "multiplicity": 1,
+                  "c_shape": [
+                    1,
+                    160,
+                    128
+                  ],
+                  "prefix_shape": [
+                    1,
+                    23,
+                    768
+                  ],
+                  "cached_bytes": 3019776
+                }
+              ],
+              "cached_bytes": 3019776,
+              "cache_cleared": true,
+              "boundary_state_unchanged": true,
+              "wrapper_installations": 1
+            }
+          ],
+          "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+          "contract": "exclusive_immutable_native_request"
+        }
+      },
+      "affinity": {
+        "tensor_leaves": 27,
+        "predict_args": {
+          "recycling_steps": 5,
+          "sampling_steps": 200,
+          "diffusion_samples": 3,
+          "max_parallel_samples": 1,
+          "write_confidence_summary": false,
+          "write_full_pae": true,
+          "write_full_pde": true
+        },
+        "request_runtime": {
+          "requests": [
+            {
+              "score_calls": 200,
+              "optimized_score_calls": 200,
+              "fallback_score_calls": 0,
+              "prepared_layouts": [
+                {
+                  "multiplicity": 3,
+                  "c_shape": [
+                    3,
+                    160,
+                    128
+                  ],
+                  "prefix_shape": [
+                    3,
+                    23,
+                    768
+                  ],
+                  "cached_bytes": 9059328
+                }
+              ],
+              "cached_bytes": 9059328,
+              "cache_cleared": true,
+              "boundary_state_unchanged": true,
+              "wrapper_installations": 1
+            }
+          ],
+          "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+          "contract": "exclusive_immutable_native_request"
+        }
+      }
+    },
+    "runtime_sha256": "8b7a477f978a8532852fd81e241c78182516bc4975d672d580a5848a76e11eb6",
+    "files": [
+      "predictions/tiny_complex/affinity_tiny_complex.json",
+      "predictions/tiny_complex/confidence_tiny_complex_model_0.json",
+      "predictions/tiny_complex/pae_tiny_complex_model_0.npz",
+      "predictions/tiny_complex/pde_tiny_complex_model_0.npz",
+      "predictions/tiny_complex/plddt_tiny_complex_model_0.npz",
+      "predictions/tiny_complex/pre_affinity_tiny_complex.npz",
+      "predictions/tiny_complex/tiny_complex_model_0.cif"
+    ]
+  },
+  "example_sha256": "6fad65d4c907189554b0790e5c4c95e494ea3d3ea8ffa43e3cdc4e7c4ba3ff1c",
+  "executed_runtime_module_sha256": "5a2ee9a0ad7738217ddd0cff9c5be7a2fb39e1110dcd5df6c6ae85e2e85fc26a",
+  "runtime_hash_recording_correction": "The nested runtime_report.runtime_sha256 hashes the contextmanager wrapper in stdlib contextlib.py. The actual staging runtime module was separately verified unchanged at the SHA recorded here. The example now unwraps the decorator before hashing."
+}

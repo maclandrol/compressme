@@ -1,0 +1,79 @@
+{
+  "finite": {
+    "method": "exact_finite_row_lookup",
+    "input_contract": "token_indices_only",
+    "domain_size": 13,
+    "output_width": 3,
+    "parameters_before": 555,
+    "evaluation_device": "mps:0",
+    "torch_version": "2.14.0",
+    "tensor_bytes_before": 2220,
+    "enumeration_chunk_size": 4,
+    "validation_chunk_size": 5,
+    "guarantee": "Exact partial-evaluation identity in ideal arithmetic; stored lookup is validated numerically on the entire token domain; inference only",
+    "floating_point_scope": "Every token checked in the recorded chunk layouts and shape probes; future batch/device rounding is not universally bounded",
+    "ownership_scope": "Standalone source block only; no enclosing model was inspected",
+    "parameters_after": 39,
+    "tensor_bytes_after": 156,
+    "stored_rows": 13,
+    "constant_output_rows": false,
+    "constant_basis": null,
+    "output_dtype": "float32",
+    "validation": {
+      "accepted": true,
+      "tokens_checked": 13,
+      "shape_probes": 6,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bitwise_identical": true,
+      "absolute_tolerance": 1e-05,
+      "relative_tolerance": 1e-05
+    },
+    "status": "accepted_on_full_domain_validation"
+  },
+  "finite_portable_mps_bitwise": true,
+  "projected": {
+    "method": "exact_shared_projected_token_lookup",
+    "input_contract": "raw_or_l2_normalized_token_indices",
+    "domain_size": 23,
+    "output_width": 3,
+    "source_width": 32,
+    "evaluation_device": "mps:0",
+    "torch_version": "2.14.0",
+    "parameters_before": 835,
+    "tensor_bytes_before": 3340,
+    "normalize_eps": 1e-12,
+    "guarantee": "Exact raw/normalized affine identity in ideal arithmetic; stored tensors are validated numerically on both complete token domains; inference only",
+    "ownership_scope": "Caller must cover all external embedding/linear consumers before claiming whole-model savings",
+    "floating_point_scope": "Full raw and normalized token domains checked in recorded chunk layouts and shape probes; future device/batch rounding not universally bounded",
+    "parameters_after": 95,
+    "tensor_bytes_after": 380,
+    "enumeration_chunk_size": 8,
+    "validation_chunk_size": 5,
+    "validation": {
+      "accepted": true,
+      "branches": {
+        "raw": {
+          "accepted": true,
+          "tokens_checked": 23,
+          "shape_probes": 6,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise_identical": true
+        },
+        "normalized": {
+          "accepted": true,
+          "tokens_checked": 23,
+          "shape_probes": 6,
+          "max_abs": 2.384185791015625e-07,
+          "relative_l2": 2.225483641975382e-08,
+          "bitwise_identical": false
+        }
+      },
+      "absolute_tolerance": 1e-05,
+      "relative_tolerance": 1e-05
+    },
+    "status": "accepted_on_full_domain_validation"
+  },
+  "bypassed_unfreeze_rejected": true
+}

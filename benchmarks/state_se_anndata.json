@@ -1,0 +1,238 @@
+{
+  "source_revision": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+  "actual_pretrained_weights": true,
+  "device": "cpu",
+  "dtype": "float32",
+  "workers": 1,
+  "pad_length": 2048,
+  "new_dependencies": [],
+  "preprocessing": [
+    {
+      "case": "dense_log",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": null,
+      "ids_first8": [
+        3,
+        0,
+        6,
+        4,
+        10,
+        8,
+        2,
+        9
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "csr_log",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": null,
+      "ids_first8": [
+        3,
+        0,
+        6,
+        4,
+        10,
+        8,
+        2,
+        9
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "csc_raw_negative",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": null,
+      "ids_first8": [
+        3,
+        0,
+        6,
+        4,
+        10,
+        8,
+        2,
+        9
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "column_fallback",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": "gene_symbol",
+      "ids_first8": [
+        3,
+        0,
+        6,
+        4,
+        10,
+        8,
+        2,
+        9
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "partial_index_precedence",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": "gene_symbol",
+      "ids_first8": [
+        3,
+        0,
+        2,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "duplicate_names",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": null,
+      "ids_first8": [
+        3,
+        0,
+        6,
+        4,
+        0,
+        8,
+        2,
+        9
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "case": "zero_counts",
+      "batches": 2,
+      "nine_fields_bitwise_equal": true,
+      "selected_column": null,
+      "ids_first8": [
+        3,
+        0,
+        6,
+        2,
+        8,
+        4,
+        9,
+        2
+      ],
+      "cell_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "encoding": [
+    {
+      "case": "dense_log",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "column_fallback",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "partial_index_precedence",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "zero_counts",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "csr_log",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "csc_raw_negative",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    },
+    {
+      "case": "duplicate_names",
+      "shape": [
+        3,
+        1034
+      ],
+      "maximum_absolute_error": 0.0,
+      "bitwise_equal": true,
+      "allclose_1e5": true
+    }
+  ],
+  "explicit_seed_reproducible": true,
+  "caller_rng_preserved": true,
+  "h5ad_metadata_roundtrip": true,
+  "existing_files_protected": true,
+  "no_overlap_reference_exception": "AssertionError",
+  "zero_cells_reference_exception": "ValueError",
+  "no_padding_candidates_reference_exception": "RuntimeError",
+  "wrong_vocabulary_order_rejected": true
+}

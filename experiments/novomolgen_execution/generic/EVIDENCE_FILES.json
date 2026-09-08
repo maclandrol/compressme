@@ -1,0 +1,90 @@
+{
+  "scope": "Portable generic compiler audit scripts and reports only; new byte reports are separate from historical numeric reports; no checkpoints, dependencies or package copies",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7627,
+      "sha256": "cfdce0e95c39031ef3f5a99159204e9aad4b1fe22f49f2b9c87c6f6b6fe6a551"
+    },
+    {
+      "path": "benchmark.py",
+      "bytes": 6015,
+      "sha256": "660863c6befa337789f9d6bf95c1ad0dcc08527b99dfca8039d20027605ddb36"
+    },
+    {
+      "path": "boundary_probe.py",
+      "bytes": 3745,
+      "sha256": "a5693aa50cbab322b83b2a7ec0faa07923426197cf162e8e99d574e07283fd70"
+    },
+    {
+      "path": "probe.py",
+      "bytes": 13355,
+      "sha256": "a63792219957a8d4c9c0090f3438cb0a4dd8aad9aa88347791aa81b933f61085"
+    },
+    {
+      "path": "prototype.py",
+      "bytes": 6688,
+      "sha256": "3ae2419341fa969d0d3c17919ddaece8efe887f616e17273c2c180fcd21a7c22"
+    },
+    {
+      "path": "reports/benchmark-cpu.json",
+      "bytes": 11324,
+      "sha256": "e8cc377e8625954bfed4b8aef1a3a87f81204a394b1d8259d44cee1937a8e349"
+    },
+    {
+      "path": "reports/benchmark-mps-b4-recheck.json",
+      "bytes": 3982,
+      "sha256": "4d69b808908ed8459c4c4222e56e081eddae9a6effd26da02611184340c3b735"
+    },
+    {
+      "path": "reports/benchmark-mps.json",
+      "bytes": 11334,
+      "sha256": "f43859702066decb6ce21122ea4bc2688f8209c03ab90e7255e7bf3676f27de3"
+    },
+    {
+      "path": "reports/cpu-boundaries-bytes.json",
+      "bytes": 88342,
+      "sha256": "18a384a7c26e5a5727a425a4d6397aaa6b6885771920e3f828dac082ba0f4627"
+    },
+    {
+      "path": "reports/cpu-boundaries.json",
+      "bytes": 44078,
+      "sha256": "53d4744432aa10bfd7178196932bc46fca9c695c7494d1b3f0f0200f79a4a43b"
+    },
+    {
+      "path": "reports/cpu-eager-bytes.json",
+      "bytes": 981850,
+      "sha256": "3b3f94716a1856cd69328edab210c29aebeea5552d35d8d664b28214d5e0cf96"
+    },
+    {
+      "path": "reports/cpu-eager.json",
+      "bytes": 940678,
+      "sha256": "1189d39936b8d80dc8cd37bed1247a892906cf1063e87268bd7dfab6aeb2c748"
+    },
+    {
+      "path": "reports/mps-boundaries-bytes.json",
+      "bytes": 88342,
+      "sha256": "1fe9b0a01f4486d5a6f084ee8d646cf8359200eba38f40582d30be434cc2a763"
+    },
+    {
+      "path": "reports/mps-boundaries.json",
+      "bytes": 44078,
+      "sha256": "7fc816006b5e5c0273cc3d99ed19d88acb92046ba3d377188f767555544c0f71"
+    },
+    {
+      "path": "reports/mps-eager-bytes.json",
+      "bytes": 982460,
+      "sha256": "57cd212550d66a5a99d3ac521d417d625d6d126391209773b5622c46d78027da"
+    },
+    {
+      "path": "reports/mps-eager.json",
+      "bytes": 941288,
+      "sha256": "82ba1a3bafa46cc47bcf8b895eaf475600493e59127e47f359f653846985975b"
+    },
+    {
+      "path": "test_byte_comparison.py",
+      "bytes": 2386,
+      "sha256": "31b44b9107fc6eccd72f1046eda4361ceae02afbc287459ae4bd1bf08373b297"
+    }
+  ]
+}

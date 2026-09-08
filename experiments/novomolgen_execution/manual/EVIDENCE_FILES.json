@@ -1,0 +1,152 @@
+[
+  {
+    "path": "CANDIDATE_EVIDENCE.md",
+    "bytes": 6938,
+    "sha256": "db38356509f59aeb0c48956ec1894b7eb08343c0071e648e217189c4b64c10da"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5566,
+    "sha256": "9e7a7a261bc5b379599a6bb8c9688bb2a3cea7dbed46ee76cd325629672ef1d2"
+  },
+  {
+    "path": "benchmark-cpu.json",
+    "bytes": 11275,
+    "sha256": "aaec244ca00d56193fa16629f395b8392c4950cd7fddce1b8bc217dd6500bcd7"
+  },
+  {
+    "path": "benchmark-mps.json",
+    "bytes": 11308,
+    "sha256": "ce56ee72b79097da41f22d7a09feaae3e938acb3017c8fc2289d01110b421b2f"
+  },
+  {
+    "path": "benchmark.py",
+    "bytes": 5807,
+    "sha256": "e6b80b044f8d59ad08fe7a316b97ac6a912f2ee984cb8867627a967d13c97814"
+  },
+  {
+    "path": "native-cpu-eager-token-type-failure.json",
+    "bytes": 17088,
+    "sha256": "52e62d7b05bfa5de8b5927313b04645340d37daf65ea08ba51ab03b921b92b8f"
+  },
+  {
+    "path": "native-cpu-eager.json",
+    "bytes": 19356,
+    "sha256": "7d71bdfaba878fa4dfb47bd1a17537c682d425690c15a3a8dfab3dea4c063c95"
+  },
+  {
+    "path": "native-cpu-sdpa.json",
+    "bytes": 19355,
+    "sha256": "d0598aa5af1d398757afc2ad420cf890edf397a216b4d1779f04a153c0d5b33b"
+  },
+  {
+    "path": "native-mps-eager.json",
+    "bytes": 19492,
+    "sha256": "dd0a442fb2edd1579c176c9c64e8290ce1b4b6607bc1c76e24d95bd959404b82"
+  },
+  {
+    "path": "native-mps-sdpa.json",
+    "bytes": 19491,
+    "sha256": "4e296e198c9b5b631d6526b1de590d44f66048985f6e6f54d627a75dac019591"
+  },
+  {
+    "path": "native_smoke.py",
+    "bytes": 12148,
+    "sha256": "af0c387db839334af2e6a148aa3472d62b7ac4369e1406d62be17d60f2975195"
+  },
+  {
+    "path": "regimes/boundary_probe.py",
+    "bytes": 3206,
+    "sha256": "cc61d00a9b559e0606407d40ce55c2134f1f09fc95120b6884924addcc547569"
+  },
+  {
+    "path": "regimes/mps-boundaries.json",
+    "bytes": 44078,
+    "sha256": "7fc816006b5e5c0273cc3d99ed19d88acb92046ba3d377188f767555544c0f71"
+  },
+  {
+    "path": "regimes/mps-eager-native-tables.json",
+    "bytes": 937042,
+    "sha256": "5be47b269d0cef4b27aff01763a499ebe82f4737e9d1bebfd711baca0c3d6103"
+  },
+  {
+    "path": "regimes/probe.py",
+    "bytes": 9635,
+    "sha256": "fbb2b18f20876998f783f9384569872bb55dd45cf84f227b880fad1aef4cebb9"
+  },
+  {
+    "path": "regimes/prototype.py",
+    "bytes": 6631,
+    "sha256": "187f814b00e5852bb455e889dba178f23c24440ac061ef25fecc64a72bfad986"
+  },
+  {
+    "path": "regimes/shape_grid.py",
+    "bytes": 1670,
+    "sha256": "b0f2aaf300bac303c5ecdb40e2b44267c2baae15d2a8d1d8067531bcf3352547"
+  },
+  {
+    "path": "single-table/cpu-eager.json",
+    "bytes": 813267,
+    "sha256": "04face163b8c42436581d232c7d0a32515ffa78d3bc47f08217c31af6729d7f9"
+  },
+  {
+    "path": "single-table/probe.py",
+    "bytes": 7571,
+    "sha256": "45c076d7fa6a85cfea7c0b0d8a7bec6994c3e6b5504a1d06221f3ae53a84a629"
+  },
+  {
+    "path": "single-table/prototype.py",
+    "bytes": 4985,
+    "sha256": "a973ee54a73966cc6d3f61a0c1da0968a1dee99a6d981a7c6db8b944d416c49a"
+  },
+  {
+    "path": "singleton/boundary_probe.py",
+    "bytes": 3206,
+    "sha256": "cc61d00a9b559e0606407d40ce55c2134f1f09fc95120b6884924addcc547569"
+  },
+  {
+    "path": "singleton/cpu-boundaries.json",
+    "bytes": 44078,
+    "sha256": "53d4744432aa10bfd7178196932bc46fca9c695c7494d1b3f0f0200f79a4a43b"
+  },
+  {
+    "path": "singleton/cpu-eager.json",
+    "bytes": 937003,
+    "sha256": "f16f32c78a7bff0278de46d21ad874adb7bbf4f280b6c329a87020898d98ed86"
+  },
+  {
+    "path": "singleton/mps-eager-cpu-tables.json",
+    "bytes": 1491763,
+    "sha256": "3a94504c2593c757fce7b6444bf53572711810b89965a9ef37c650f792754b7f"
+  },
+  {
+    "path": "singleton/mps-eager-native-tables.json",
+    "bytes": 1288275,
+    "sha256": "ef600cfaeccb9f3a0dad670b40e4c288e3c28a5fd760d1f98bdaaa8015b0e835"
+  },
+  {
+    "path": "singleton/mps-shape-grid.json",
+    "bytes": 6154,
+    "sha256": "9a2da28ac35b250ead67be108fa7119b97f3e4a53e5600682136a829fe50694f"
+  },
+  {
+    "path": "singleton/probe.py",
+    "bytes": 9557,
+    "sha256": "9be37963eb4912798738afdb2f3337a097764dd32871161e7fd59d5bba3a4416"
+  },
+  {
+    "path": "singleton/prototype.py",
+    "bytes": 6100,
+    "sha256": "dad37d1998d33bd5b9010d53bb92f3ebcdfb8b96e2ed7697a77b76d09c937a84"
+  },
+  {
+    "path": "singleton/shape_grid.py",
+    "bytes": 1628,
+    "sha256": "39a13c5a2d1f6aed2db61df104298773300ccc3eab5d335d14dd01a2e87a83ff"
+  },
+  {
+    "path": "singleton/summary.json",
+    "bytes": 5012,
+    "sha256": "a3820c3f0d72b38053c015b104c8693d957d840d59e9d5e1c8f2e722358eb4ea"
+  }
+]

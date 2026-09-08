@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compressme"
+version = "0.1.0"
+description = "Training-free model transformations and lossless checkpoint utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+docs = ["mkdocs==1.6.1", "pymdown-extensions==10.16.1"]
+torch = ["torch>=2.2", "safetensors>=0.4", "numpy"]
+molecules = ["torch>=2.2", "safetensors>=0.4", "transformers", "torch-geometric", "rdkit", "molfeat", "numpy"]
+packing = ["numpy", "zstandard>=0.23"]
+hub = ["huggingface-hub>=0.25"]
+state = ["torch>=2.2", "safetensors>=0.4", "anndata", "geomloss", "lightning", "omegaconf", "scikit-learn", "numpy", "pandas", "scipy", "requests", "transformers==4.52.3"]
+boltz = ["torch>=2.2", "safetensors>=0.4", "numpy", "boltz==2.2.1"]
+
+[project.scripts]
+compressme = "compressme.__main__:main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["compressme", "compressme.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+compressme = ["data/boltz2/*.json", "data/boltz2/BOLTZ_LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

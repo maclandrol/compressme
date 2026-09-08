@@ -1,0 +1,23 @@
+{
+  "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+  "checkpoint_hf_revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "shared_tensor_file_sha256": "8cf4b5a7766d58793111d15f258cc73256217db539ca9261b53ce1c10a16b214",
+  "source_files": {
+    "src/boltz/model/modules/transformersv2.py": {
+      "sha256": "4fbecbe835ec2d7286d5a46e408cb9134b2378bce8dd443df58b80392736f982",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/transformersv2.py"
+    },
+    "src/boltz/model/modules/diffusionv2.py": {
+      "sha256": "e68643da577decddaef25e97313fa0d014d5653752d0a97282ec1a78665d697a",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/diffusionv2.py"
+    },
+    "src/boltz/model/modules/encodersv2.py": {
+      "sha256": "2938af17252607d056106fc04a3afa0ea96b145fa7485764ebf33d646c99e0d4",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/encodersv2.py"
+    },
+    "src/boltz/model/models/boltz2.py": {
+      "sha256": "f05169e66488910fc11c6a56b56d19a58e3f43649586218df75573eeff7a9945",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/models/boltz2.py"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-07",
+  "model": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+  "revision": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+  "checkpoint_sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+  "compiler": "compile_finite_fanout with explicit row_count_profiles",
+  "contract": "Frozen float32 two-dimensional token IDs; research wrapper, no arbitrary inputs_embeds or whole-model production export",
+  "proof_scope": "Real-arithmetic row-local identity; explicit byte agreement on these tested outputs only, not every possible input or future backend",
+  "backends": {
+    "cpu": {
+      "parameters_before": 31556096,
+      "parameters_after": 31027200,
+      "parameter_reduction_percent": 1.6760501679295214,
+      "main_cases": 123,
+      "boundary_cases": 134,
+      "tensor_leaves": 12599,
+      "bytes_compared": 314076156,
+      "all_tensor_bytes_equal": true,
+      "lookup_reloaded": true,
+      "local_validation_cases": 370,
+      "source_sha256": "b83130353cf74b89c6a274259b84f17824041349f07576ae7acdff0315343fbb",
+      "reports": [
+        "experiments/novomolgen_execution/generic/reports/cpu-eager-bytes.json",
+        "experiments/novomolgen_execution/generic/reports/cpu-boundaries-bytes.json"
+      ]
+    },
+    "mps": {
+      "parameters_before": 31556096,
+      "parameters_after": 31156224,
+      "parameter_reduction_percent": 1.2671782973407097,
+      "main_cases": 123,
+      "boundary_cases": 134,
+      "tensor_leaves": 12599,
+      "bytes_compared": 314076156,
+      "all_tensor_bytes_equal": true,
+      "lookup_reloaded": true,
+      "local_validation_cases": 748,
+      "source_sha256": "b83130353cf74b89c6a274259b84f17824041349f07576ae7acdff0315343fbb",
+      "reports": [
+        "experiments/novomolgen_execution/generic/reports/mps-eager-bytes.json",
+        "experiments/novomolgen_execution/generic/reports/mps-boundaries-bytes.json"
+      ]
+    }
+  },
+  "runtime": {
+    "conclusion": "No material speedup established",
+    "initial_rounds": 9,
+    "initial_warmups": 3,
+    "mps_noisy_case_recheck_rounds": 25,
+    "mps_noisy_case_recheck_warmups": 10,
+    "scope": "Medians and uncertainty/raw samples recorded; historical timing gates establish numerical equality, not explicit bytes",
+    "evidence": "experiments/novomolgen_execution/generic/README.md"
+  }
+}

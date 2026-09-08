@@ -1,0 +1,58 @@
+{
+  "report": {
+    "before": 35225561,
+    "after": 34506201,
+    "saved": 719360,
+    "guarantee": "exact affine/bilinear contraction in real arithmetic; all modalities preserved"
+  },
+  "dtype": "float32",
+  "device": "cpu",
+  "batch": 16,
+  "uma_atoms": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    32,
+    64,
+    128,
+    256
+  ],
+  "all_api_errors": {
+    "predictions": {
+      "max_abs": 3.6954879760742188e-06,
+      "relative_l2": 3.8743465876098957e-07
+    },
+    "cls": {
+      "max_abs": 3.2782554626464844e-07,
+      "relative_l2": 5.543444092784928e-07
+    },
+    "embeddings": {
+      "max_abs": 1.0281801223754883e-06,
+      "relative_l2": 4.220124606482376e-07
+    }
+  },
+  "attention_errors": [
+    1.3113021850585938e-06,
+    9.5367431640625e-07
+  ],
+  "no_uma_bit_identical": true,
+  "uma_encoder_errors": {
+    "max_abs": 1.424551010131836e-05,
+    "relative_l2": 4.839982011617394e-06
+  },
+  "internal_encoder_tolerance": {
+    "atol": 5e-05,
+    "rtol": 1e-05,
+    "note": "Earlier 128-atom internal encoder stress test exceeded 1e-5 absolute at some near-zero coordinates; public model outputs retain 1e-5 tolerance."
+  },
+  "passed": true
+}

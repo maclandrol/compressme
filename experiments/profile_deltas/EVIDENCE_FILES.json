@@ -1,0 +1,34 @@
+{
+  "profile_deltas.py": {
+    "bytes": 9896,
+    "sha256": "3f0c37a1c6e38ef7eeb2e8a753eb50268e150593c4f0fe0206e5d51acbe85643"
+  },
+  "audit.py": {
+    "bytes": 7784,
+    "sha256": "6e87e7e1cef1f3afebf9410340c35d99c2b2ccd2bcb7da42cca754a8215daaa4"
+  },
+  "test_profile_deltas.py": {
+    "bytes": 3826,
+    "sha256": "12b163f3b10e123fae9414414469b4a5fb4fed2d16a72728e69f5a487dbdf0e2"
+  },
+  "README.md": {
+    "bytes": 6284,
+    "sha256": "4dcb6ae97a61af7a09456b5f70a190fc5666e8d26c69655f7fa4b8a4881e2ab5"
+  },
+  "cpu.json": {
+    "bytes": 5336,
+    "sha256": "90e77f0a347bbe267c4291d7c4ffabb8c1687afab1bed4b1d5f8f0b2711e5ce0"
+  },
+  "mps.json": {
+    "bytes": 8906,
+    "sha256": "76e38914c32aa62fef8866b0bb5d792557284258fe7ee79963d854f9b0b0bd99"
+  },
+  "mps_special_bits.json": {
+    "bytes": 87,
+    "sha256": "448180825ba81cd38471fc586452fd93c25d30b7920a247e51338c84750ad45e"
+  },
+  "initial_statistics.json": {
+    "bytes": 13643,
+    "sha256": "8d289886101d0d9ec04bc82717c65429e36c4e48169906e7544a3ef331de2bff"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "mode": "smoke",
+  "fresh_process": true,
+  "torch_load_forbidden_in_parent_and_workers": true,
+  "original_state_package_not_imported": true,
+  "public_loader": "compressme.load_state_se_encoder",
+  "output": {
+    "shape": [
+      3,
+      1034
+    ],
+    "dtype": "float32",
+    "sha256": "9a3ebd6a6d5a1137eb7de92df934b9bb2fe436772b72f4a5e5f685989af9d5ea"
+  },
+  "matches_recorded_original_output_bitwise": true,
+  "explicit_seed_reproducible": true,
+  "caller_rng_preserved": true,
+  "unrelated_accelerator_seed_functions_not_called": true,
+  "h5ad_metadata_roundtrip": true,
+  "existing_files_protected": true,
+  "wrong_vocabulary_order_rejected": true,
+  "torch_version": "2.14.0",
+  "threads": 4
+}

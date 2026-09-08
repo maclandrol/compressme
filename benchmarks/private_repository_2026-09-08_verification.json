@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-08",
+  "scope": "Private repository preparation; current integrated regression and new artifact reproduction",
+  "tests": {
+    "integrated_passed": 621,
+    "integrated_skipped": 1,
+    "skip_reason": "Documentation dependencies absent in model environment; all 9 documentation tests passed separately",
+    "command": "python -m pytest tests experiments/tests examples/reproduce/test_helpers.py -q -ra",
+    "apple_mps_available": true,
+    "docs_tests_passed": 9,
+    "strict_docs_build_passed": true
+  },
+  "tutorial_reproduction": "examples/reproduce/reproduction-smoke.json",
+  "state_lossless": {
+    "cpu_report": "experiments/state-se-mps-fix/portable-reload-cpu.json",
+    "mps_report": "experiments/state-se-mps-fix/portable-reload-mps.json",
+    "tensor_byte_comparisons_each": 377,
+    "registered_state_bytes_before": 848155296,
+    "registered_state_bytes_after": 794613047,
+    "mps_latency_multiplier_range": [
+      4.89,
+      5.44
+    ],
+    "cuda_tested": false
+  },
+  "cleanup": {
+    "weights_environments_and_generated_site_excluded": true,
+    "existing_local_model_assets_preserved": true,
+    "secret_pattern_scan_findings": 0
+  },
+  "visual_review": "Report figures, theory equations and reproduction tutorial inspected in a browser; readable, no observed clipping",
+  "source_sha256": {
+    "src/compressme/packed_embedding.py": "d64325c810ea9d17631be19a6bf9c397e3a6c773449b7f265c8a38b50b9d49b3",
+    "src/compressme/serialization.py": "6dcf462af93847e877b85790c9079a38a33ebcf842d7919de391c743925e3c3a",
+    "src/compressme/state_se_io.py": "ffd96650d33f1b0dc05ebbf01c4ffc157b88db3118f2a258e8366d9856443c60",
+    "examples/validate_backends.py": "278eea9cad6419430b3f96a9199b4ef5182bc29c17cef82d5a26237048fd8709",
+    ".github/workflows/docs.yml": "5c5db161824f57bfc789fbca57c24e701b490d5cdfca48e6e14be7212fcd78d5",
+    "mkdocs.yml": "95cd5ae004e0e80a2b69c1ec5be9d1013c0a2bbcc0618ebbcebb061aed075cf4"
+  }
+}

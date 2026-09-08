@@ -1,0 +1,4 @@
+{
+  "artifact": "/private/tmp/compressme-private-staging/work/artifacts/state-se-100m-lossless",
+  "checkpoint": "/private/tmp/compressme-models/state-se100m/model.safetensors"
+}

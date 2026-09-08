@@ -1,0 +1,25 @@
+{
+  "embedding_metadata_domain": {
+    "original_shape": [
+      1,
+      2
+    ],
+    "metadata_mismatch_rejected": "Embedding attributes and weight shape differ"
+  },
+  "mutation_validation": {
+    "saved_status": "historical_or_invalidated_finite_lookup_validation",
+    "saved_validation": {
+      "accepted": false,
+      "scope": "No current comparison for the exported state; previous metrics are historical"
+    },
+    "actual_max_abs": 100.0
+  },
+  "finite_replay": {
+    "dtype": "torch.float64",
+    "bitwise_equal": true
+  },
+  "projected_replay": {
+    "dtype": "torch.float64",
+    "bitwise_equal": true
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "pickle_end": 895876,
+  "ops": {
+    "PROTO": 1,
+    "EMPTY_DICT": 889,
+    "BINPUT": 256,
+    "MARK": 13748,
+    "BINUNICODE": 11914,
+    "BININT1": 23798,
+    "BININT2": 8129,
+    "GLOBAL": 13,
+    "TUPLE": 12980,
+    "BINPERSID": 6490,
+    "TUPLE2": 7275,
+    "NEWFALSE": 6660,
+    "EMPTY_TUPLE": 7712,
+    "REDUCE": 13103,
+    "BINGET": 32450,
+    "TUPLE1": 4853,
+    "LONG_BINPUT": 51026,
+    "BININT": 1369,
+    "SETITEMS": 761,
+    "SETITEM": 16,
+    "LONG_BINGET": 3573,
+    "NEWTRUE": 176,
+    "EMPTY_LIST": 9,
+    "BINFLOAT": 64,
+    "NONE": 136,
+    "APPENDS": 7,
+    "APPEND": 2,
+    "NEWOBJ": 246,
+    "BUILD": 246,
+    "STOP": 1
+  },
+  "globals": [
+    "__builtin__ dict",
+    "__builtin__ list",
+    "__builtin__ long",
+    "collections OrderedDict",
+    "collections defaultdict",
+    "omegaconf.base ContainerMetadata",
+    "omegaconf.base Metadata",
+    "omegaconf.dictconfig DictConfig",
+    "omegaconf.listconfig ListConfig",
+    "omegaconf.nodes AnyNode",
+    "torch FloatStorage",
+    "torch._utils _rebuild_tensor_v2",
+    "typing Any"
+  ],
+  "head": [
+    [
+      "PROTO",
+      2,
+      0
+    ],
+    [
+      "EMPTY_DICT",
+      null,
+      2
+    ],
+    [
+      "BINPUT",
+      0,
+      3
+    ],
+    [
+      "MARK",
+      null,
+      5
+    ],
+    [
+      "BINUNICODE",
+      "epoch",
+      6
+    ],
+    [
+      "BINPUT",
+      1,
+      16
+    ],
+    [
+      "BININT1",
+      37,
+      18
+    ],
+    [
+      "BINUNICODE",
+      "global_step",
+      20
+    ],
+    [
+      "BINPUT",
+      2,
+      36
+    ],
+    [
+      "BININT2",
+      23750,
+      38
+    ],
+    [
+      "BINUNICODE",
+      "pytorch-lightning_version",
+      41
+    ],
+    [
+      "BINPUT",
+      3,
+      71
+    ],
+    [
+      "BINUNICODE",
+      "2.5.0.post0",
+      73
+    ],
+    [
+      "BINPUT",
+      4,
+      89
+    ],
+    [
+      "BINUNICODE",
+      "state_dict",
+      91
+    ],
+    [
+      "BINPUT",
+      5,
+      106
+    ],
+    [
+      "EMPTY_DICT",
+      null,
+      108
+    ],
+    [
+      "BINPUT",
+      6,
+      109
+    ],
+    [
+      "MARK",
+      null,
+      111
+    ],
+    [
+      "BINUNICODE",
+      "input_embedder.atom_encoder.embed_atom_features.weight",
+      112
+    ],
+    [
+      "BINPUT",
+      7,
+      171
+    ],
+    [
+      "GLOBAL",
+      "torch._utils _rebuild_tensor_v2",
+      173
+    ],
+    [
+      "BINPUT",
+      8,
+      206
+    ],
+    [
+      "MARK",
+      null,
+      208
+    ],
+    [
+      "MARK",
+      null,
+      209
+    ],
+    [
+      "BINUNICODE",
+      "storage",
+      210
+    ],
+    [
+      "BINPUT",
+      9,
+      222
+    ],
+    [
+      "GLOBAL",
+      "torch FloatStorage",
+      224
+    ],
+    [
+      "BINPUT",
+      10,
+      244
+    ],
+    [
+      "BINUNICODE",
+      "0",
+      246
+    ],
+    [
+      "BINPUT",
+      11,
+      252
+    ],
+    [
+      "BINUNICODE",
+      "cpu",
+      254
+    ],
+    [
+      "BINPUT",
+      12,
+      262
+    ],
+    [
+      "BININT2",
+      49664,
+      264
+    ],
+    [
+      "TUPLE",
+      null,
+      267
+    ],
+    [
+      "BINPUT",
+      13,
+      268
+    ],
+    [
+      "BINPERSID",
+      null,
+      270
+    ],
+    [
+      "BININT1",
+      0,
+      271
+    ],
+    [
+      "BININT1",
+      128,
+      273
+    ],
+    [
+      "BININT2",
+      388,
+      275
+    ],
+    [
+      "TUPLE2",
+      null,
+      278
+    ],
+    [
+      "BINPUT",
+      14,
+      279
+    ],
+    [
+      "BININT2",
+      388,
+      281
+    ],
+    [
+      "BININT1",
+      1,
+      284
+    ],
+    [
+      "TUPLE2",
+      null,
+      286
+    ],
+    [
+      "BINPUT",
+      15,
+      287
+    ],
+    [
+      "NEWFALSE",
+      null,
+      289
+    ],
+    [
+      "GLOBAL",
+      "collections OrderedDict",
+      290
+    ],
+    [
+      "BINPUT",
+      16,
+      315
+    ],
+    [
+      "EMPTY_TUPLE",
+      null,
+      317
+    ]
+  ]
+}

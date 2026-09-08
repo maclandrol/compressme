@@ -1,0 +1,2195 @@
+{
+  "status": "static_opcode_metadata_only_no_unpickling_or_model_execution",
+  "pickle_bytes": 844990,
+  "pickle_sha256": "ceccee17c7beb94b60d56bba9be694f355526cc1184ee7262948560f246e7751",
+  "top_level_keys": [
+    "pytorch-lightning_version",
+    "state_dict",
+    "hparams_name",
+    "hyper_parameters"
+  ],
+  "tensor_entries": 5539,
+  "named_tensor_values": 529378245,
+  "unique_state_storage_values": 515055429,
+  "named_values_by_top_module": {
+    "input_embedder": 1123248,
+    "s_init": 147456,
+    "z_init_1": 49152,
+    "z_init_2": 49152,
+    "rel_pos": 17792,
+    "token_bonds": 128,
+    "contact_conditioning": 17536,
+    "s_norm": 768,
+    "z_norm": 256,
+    "s_recycle": 147456,
+    "z_recycle": 16384,
+    "msa_module": 3207424,
+    "pairformer_module": 196534272,
+    "diffusion_conditioning": 393232,
+    "structure_module": 293896448,
+    "distogram_module": 8256,
+    "affinity_module1": 5490755,
+    "token_bonds_type": 896,
+    "confidence_module": 25026367,
+    "affinity_module2": 3251267
+  },
+  "storage_alias_groups": [
+    {
+      "storage_key": "23",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "24",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "44",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "45",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "65",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "66",
+      "names": [
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+        "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3867",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3868",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3888",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3889",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3909",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3910",
+      "names": [
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3934",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.0.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.0.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3935",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.0.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.0.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3955",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.1.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.1.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3956",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.1.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.1.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3976",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.2.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.2.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3977",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.2.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.2.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3997",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.3.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.3.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "3998",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.3.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.3.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4018",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.4.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.4.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4019",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.4.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.4.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4039",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.5.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.5.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4040",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.5.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.5.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4060",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.6.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.6.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4061",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.6.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.6.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4081",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.7.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.7.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4082",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.7.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.7.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4102",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.8.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.8.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4103",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.8.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.8.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4123",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.9.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.9.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4124",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.9.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.9.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4144",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.10.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.10.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4145",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.10.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.10.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4165",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.11.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.11.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4166",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.11.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.11.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4186",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.12.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.12.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4187",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.12.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.12.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4207",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.13.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.13.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4208",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.13.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.13.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4228",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.14.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.14.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4229",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.14.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.14.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4249",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.15.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.15.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4250",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.15.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.15.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4270",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.16.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.16.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4271",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.16.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.16.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4291",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.17.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.17.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4292",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.17.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.17.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4312",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.18.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.18.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4313",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.18.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.18.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4333",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.19.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.19.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4334",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.19.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.19.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4354",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.20.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.20.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4355",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.20.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.20.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4375",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.21.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.21.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4376",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.21.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.21.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4396",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.22.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.22.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4397",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.22.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.22.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4417",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.23.output_projection_linear.weight",
+        "structure_module.score_model.token_transformer.layers.23.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768,
+            768
+          ],
+          "stride": [
+            768,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4418",
+      "names": [
+        "structure_module.score_model.token_transformer.layers.23.output_projection_linear.bias",
+        "structure_module.score_model.token_transformer.layers.23.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            768
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4441",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4442",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4462",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4463",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4483",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection.0.weight"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128,
+            128
+          ],
+          "stride": [
+            128,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "storage_key": "4484",
+      "names": [
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+        "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection.0.bias"
+      ],
+      "views": [
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        },
+        {
+          "offset": 0,
+          "shape": [
+            128
+          ],
+          "stride": [
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "hyper_parameters": {
+    "atom_s": 128,
+    "atom_z": 16,
+    "token_s": 384,
+    "token_z": 128,
+    "num_bins": 64,
+    "training_args": {
+      "recycling_steps": 5,
+      "sampling_steps": 200,
+      "diffusion_multiplicity": 16,
+      "diffusion_samples": 1,
+      "affinity_loss_weight": 1.0,
+      "confidence_loss_weight": 0.0001,
+      "diffusion_loss_weight": 4.0,
+      "distogram_loss_weight": 0.03,
+      "bfactor_loss_weight": 0.0,
+      "affinity_groups_weight": {
+        "0": 15.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0
+      },
+      "adam_beta_1": 0.9,
+      "adam_beta_2": 0.95,
+      "adam_eps": 1e-08,
+      "lr_scheduler": "af3",
+      "base_lr": 1e-06,
+      "max_lr": 0.0001,
+      "lr_warmup_no_steps": 1000,
+      "lr_start_decay_after_n_steps": 50000,
+      "lr_decay_every_n_steps": 50000,
+      "lr_decay_factor": 0.95,
+      "weight_decay": 0.001,
+      "weight_decay_exclude": true,
+      "symmetry_correction": false
+    },
+    "validation_args": {
+      "recycling_steps": 5,
+      "sampling_steps": 200,
+      "diffusion_samples": 1,
+      "symmetry_correction": false
+    },
+    "embedder_args": {
+      "atom_encoder_depth": 3,
+      "atom_encoder_heads": 4,
+      "add_mol_type_feat": true,
+      "add_method_conditioning": true,
+      "add_modified_flag": true,
+      "add_cyclic_flag": true
+    },
+    "msa_args": {
+      "msa_s": 64,
+      "msa_blocks": 4,
+      "msa_dropout": 0.15,
+      "z_dropout": 0.25,
+      "miniformer_blocks": false,
+      "pairwise_head_width": 32,
+      "pairwise_num_heads": 4,
+      "use_paired_feature": true,
+      "activation_checkpointing": true,
+      "use_trifast": true
+    },
+    "pairformer_args": {
+      "num_blocks": 64,
+      "num_heads": 16,
+      "dropout": 0.25,
+      "post_layer_norm": false,
+      "activation_checkpointing": true,
+      "use_trifast": true
+    },
+    "score_model_args": {
+      "sigma_data": 16,
+      "dim_fourier": 256,
+      "atom_encoder_depth": 3,
+      "atom_encoder_heads": 4,
+      "token_transformer_depth": 24,
+      "token_transformer_heads": 16,
+      "atom_decoder_depth": 3,
+      "atom_decoder_heads": 4,
+      "conditioning_transition_layers": 2,
+      "transformer_post_ln": false,
+      "activation_checkpointing": true
+    },
+    "diffusion_process_args": {
+      "sigma_min": 0.0004,
+      "sigma_max": 160.0,
+      "sigma_data": 16.0,
+      "rho": 7,
+      "P_mean": -1.2,
+      "P_std": 1.5,
+      "gamma_0": 0.8,
+      "gamma_min": 1.0,
+      "noise_scale": 1.0,
+      "step_scale": 1.0,
+      "mse_rotational_alignment": true,
+      "coordinate_augmentation": true,
+      "alignment_reverse_diff": true,
+      "synchronize_sigmas": true
+    },
+    "diffusion_loss_args": {
+      "add_smooth_lddt_loss": true,
+      "add_bond_loss": false,
+      "nucleotide_loss_weight": 5.0,
+      "ligand_loss_weight": 10.0,
+      "filter_by_plddt": 0.0
+    },
+    "confidence_model_args": {
+      "use_gaussian": false,
+      "num_dist_bins": 64,
+      "max_dist": 22,
+      "use_miniformer": false,
+      "no_trunk_feats": false,
+      "add_s_to_z_prod": true,
+      "add_s_input_to_s": true,
+      "use_s_diffusion": false,
+      "add_z_input_to_z": true,
+      "pairformer_args": {
+        "num_blocks": 8,
+        "num_heads": 16,
+        "dropout": 0.25
+      },
+      "confidence_args": {
+        "num_plddt_bins": 50,
+        "num_pde_bins": 64,
+        "num_pae_bins": 64,
+        "relative_confidence": "none",
+        "use_separate_heads": true
+      }
+    },
+    "num_val_datasets": 1,
+    "chain_sampling_args": null,
+    "atom_feature_dim": 388,
+    "template_args": {
+      "template_dim": 64,
+      "template_blocks": 2,
+      "activation_checkpointing": false,
+      "use_trifast": true
+    },
+    "use_miniformer": false,
+    "use_miniformer_plus": false,
+    "recycling_detach": true,
+    "confidence_prediction": true,
+    "affinity_prediction": true,
+    "token_level_confidence": true,
+    "confidence_imitate_trunk": false,
+    "confidence_regression": false,
+    "alpha_pae": 1.0,
+    "relative_confidence_supervision_weight": 0.0,
+    "structure_prediction_training": false,
+    "skip_run_structure": false,
+    "run_trunk_and_structure": true,
+    "validate_structure": false,
+    "atoms_per_window_queries": 32,
+    "atoms_per_window_keys": 128,
+    "compile_pairformer": false,
+    "compile_structure": false,
+    "compile_confidence": false,
+    "compile_affinity": false,
+    "compile_msa": false,
+    "representative_lddt": false,
+    "exclude_ions_from_lddt": true,
+    "ema": false,
+    "ema_decay": 0.995,
+    "ignore_ckpt_shape_mismatch": false,
+    "min_dist": 2.0,
+    "max_dist": 22.0,
+    "maximum_bond_distance": 0,
+    "predict_args": null,
+    "dynamic_args": {},
+    "compute_tistogram": false,
+    "num_tistogram_axis": 1,
+    "symmetry_correction_trunk": false,
+    "fix_sym_check": true,
+    "cyclic_pos_enc": true,
+    "trunk_resolved_loss": false,
+    "num_distograms": 1,
+    "aggregate_distogram": true,
+    "bond_type_feature": true,
+    "use_no_atom_char": false,
+    "no_random_recycling_training": true,
+    "use_atom_backbone_feat": false,
+    "use_residue_feats_atoms": false,
+    "conditioning_cutoff_min": 4.0,
+    "conditioning_cutoff_max": 20.0,
+    "guidance_args": null,
+    "use_templates": false,
+    "compile_templates": false,
+    "predict_bfactor": false,
+    "log_loss_every_steps": 50,
+    "checkpoint_diffusion_conditioning": true,
+    "use_templates_v2": false,
+    "affinity_ensemble": true,
+    "affinity_mw_correction": false,
+    "affinity_model_args1": {
+      "use_cross_transformer": false,
+      "num_dist_bins": 64,
+      "max_dist": 22,
+      "groups": {
+        "0": 1,
+        "1": 4,
+        "2": 6,
+        "3": 4,
+        "4": 1
+      },
+      "pairformer_args": {
+        "num_blocks": 8,
+        "dropout": 0.25,
+        "activation_checkpointing": true,
+        "use_trifast": true
+      },
+      "transformer_args": {
+        "num_blocks": 12,
+        "num_heads": 8,
+        "token_s": 384,
+        "activation_checkpointing": true
+      }
+    },
+    "affinity_model_args2": {
+      "use_cross_transformer": false,
+      "num_dist_bins": 64,
+      "max_dist": 22,
+      "groups": {
+        "0": 1,
+        "1": 4,
+        "2": 6,
+        "3": 4,
+        "4": 1
+      },
+      "pairformer_args": {
+        "num_blocks": 4,
+        "dropout": 0.25,
+        "activation_checkpointing": true,
+        "use_trifast": true
+      },
+      "transformer_args": {
+        "num_blocks": 12,
+        "num_heads": 8,
+        "token_s": 384,
+        "activation_checkpointing": true
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "epoch": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "global_step": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "pytorch-lightning_version": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "state_dict": {
+    "tensor_objects": 5102,
+    "unique_storage_count": 5102,
+    "storage_values": 521047871,
+    "dtypes": {
+      "torch FloatStorage": 5102
+    },
+    "storage_values_outside_state_dict": 0
+  },
+  "loops": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "callbacks": {
+    "tensor_objects": 5140,
+    "unique_storage_count": 5140,
+    "storage_values": 521047909,
+    "dtypes": {
+      "torch FloatStorage": 5140
+    },
+    "storage_values_outside_state_dict": 38
+  },
+  "optimizer_states": {
+    "tensor_objects": 1350,
+    "unique_storage_count": 1350,
+    "storage_values": 50052546,
+    "dtypes": {
+      "torch FloatStorage": 1350
+    },
+    "storage_values_outside_state_dict": 50052546
+  },
+  "lr_schedulers": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "hparams_name": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "hyper_parameters": {
+    "tensor_objects": 0,
+    "unique_storage_count": 0,
+    "storage_values": 0,
+    "dtypes": {},
+    "storage_values_outside_state_dict": 0
+  },
+  "total_unique_values": 571100455,
+  "unique_extra_values": 50052584
+}

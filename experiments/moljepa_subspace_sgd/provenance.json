@@ -1,0 +1,9 @@
+{
+  "hf_id": "Flogrammer/Mol-JEPA",
+  "revision": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+  "license": "CC-BY-NC-4.0",
+  "checkpoint_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14",
+  "modeling_source_sha256": "89eed5f7ebd458b2d4e6a1e4ad90aed275b7b35bfaa88f4a85a59833e57a0d4d",
+  "scope": "first graph convolution; only original Q/K weights+biases updated by plain SGD; input and shared-edge projections frozen",
+  "status": "research_only; float32 arbitrary-input raw-logit stress gate fails; molecular component trajectories pass"
+}

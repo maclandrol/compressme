@@ -1,0 +1,413 @@
+{
+  "actual_first_gate_checkpoint_duplicates_equal": true,
+  "tensor_sha256": {
+    "output_projection_linear.weight": "84bbaef63707ef82d6dd0a2f08b4847475cd69cdcdfd62556d40fdbb9eb53235",
+    "output_projection_linear.bias": "f1efb95a35dec38ce5c4ffc912be684ff28a616eb1b303a4e9073eb3fdc1b4a8",
+    "output_projection.0.weight": "84bbaef63707ef82d6dd0a2f08b4847475cd69cdcdfd62556d40fdbb9eb53235",
+    "output_projection.0.bias": "f1efb95a35dec38ce5c4ffc912be684ff28a616eb1b303a4e9073eb3fdc1b4a8"
+  },
+  "source_registration_is_same_module": true,
+  "loaded_equals_last_child_alias": true,
+  "actual_first_gate_forward_bitwise_equal": true,
+  "strict_load_child_alias_wins_if_values_differ": true,
+  "architecture_alias_pairs": [
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+      "last": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.1.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.2.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.0.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.0.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.0.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.0.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.1.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.1.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.1.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.1.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.2.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.2.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.2.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.2.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.3.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.3.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.3.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.3.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.4.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.4.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.4.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.4.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.5.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.5.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.5.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.5.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.6.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.6.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.6.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.6.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.7.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.7.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.7.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.7.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.8.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.8.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.8.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.8.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.9.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.9.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.9.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.9.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.10.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.10.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.10.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.10.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.11.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.11.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.11.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.11.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.12.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.12.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.12.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.12.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.13.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.13.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.13.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.13.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.14.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.14.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.14.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.14.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.15.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.15.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.15.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.15.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.16.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.16.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.16.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.16.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.17.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.17.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.17.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.17.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.18.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.18.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.18.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.18.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.19.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.19.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.19.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.19.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.20.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.20.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.20.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.20.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.21.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.21.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.21.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.21.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.22.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.22.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.22.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.22.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.23.output_projection_linear.weight",
+      "last": "structure_module.score_model.token_transformer.layers.23.output_projection.0.weight",
+      "numel": 589824,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.token_transformer.layers.23.output_projection_linear.bias",
+      "last": "structure_module.score_model.token_transformer.layers.23.output_projection.0.bias",
+      "numel": 768,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.0.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.1.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection_linear.weight",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection.0.weight",
+      "numel": 16384,
+      "same_storage": false
+    },
+    {
+      "first": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection_linear.bias",
+      "last": "structure_module.score_model.atom_attention_decoder.atom_decoder.diffusion_transformer.layers.2.output_projection.0.bias",
+      "numel": 128,
+      "same_storage": false
+    }
+  ],
+  "potential_inference_duplicate_values": 14322816,
+  "limitation": "Only one actual gate was executed. Full Boltz2 construction/loading/outputs were not validated; source ties and strict-load precedence are audit evidence for a future alias-aware inference export, not a shipped compressed model."
+}

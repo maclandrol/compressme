@@ -1,0 +1,1212 @@
+{
+  "audit_date": "2026-09-07",
+  "collection_url": "https://huggingface.co/collections/chandar-lab/novomolgen",
+  "paper": "https://arxiv.org/abs/2508.13408v2",
+  "source": {
+    "repository": "chandar-lab/NovoMolGen",
+    "revision": "d7c520674701533e2b5e18a8ace826aed611e7b0",
+    "files_downloaded": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/README.md",
+        "bytes": 6448,
+        "sha256": "f1c5db876b300bbb8b0542315a489593ee4e6cf819505310e63fefc149665f49",
+        "git_blob_sha1": "a1b84d4ae4c470a2f047097891e04c3198390ef1"
+      },
+      {
+        "path": "notebooks/checkpoint_quickstart.ipynb",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/notebooks/checkpoint_quickstart.ipynb",
+        "bytes": 13043,
+        "sha256": "bbd1dd78d792f833db9bc4962a05355fe0dc503b6cf9686e6442a23805b748c9",
+        "git_blob_sha1": "3dfc98a8d0c71d0c62aeaf04988ed8f794af714b"
+      },
+      {
+        "path": "notebooks/goal_directed_optimization.ipynb",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/notebooks/goal_directed_optimization.ipynb",
+        "bytes": 124253,
+        "sha256": "cbbc307d4a0cc82f604cd489939f73a3e3ce463b1a99f004afc9f689b54fb9f9",
+        "git_blob_sha1": "5f50bb4a754d31f59909f188c27d34d573d3ea98"
+      },
+      {
+        "path": "pixi.toml",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/pixi.toml",
+        "bytes": 2242,
+        "sha256": "c83306e134251d0a481e1a94a99c14f38413b9100d4bfdfdbac8f9d3d50cc1e5",
+        "git_blob_sha1": "fec18801bfb65e015aabbcf1be362bbb4eb98f30"
+      },
+      {
+        "path": "requirements.txt",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/requirements.txt",
+        "bytes": 1038,
+        "sha256": "d9a384a92a563135ef3e3f6e5d82d9a0dc87474ad345ec8b9f98943184eea84a",
+        "git_blob_sha1": "d1d128a2cebcda0ea98849c3ec4539e5ab10ebdd"
+      },
+      {
+        "path": "src/models/__init__.py",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/src/models/__init__.py",
+        "bytes": 188,
+        "sha256": "2bfb620e89934bf4274892bb6cfee657630d92293e5a4c2c340c2bbb56df066e",
+        "git_blob_sha1": "fca52601c8d0babb53ec0ac3ac7269aea1d5b411"
+      },
+      {
+        "path": "src/models/model_with_value_head.py",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/src/models/model_with_value_head.py",
+        "bytes": 4593,
+        "sha256": "c001aa5fa7313dfc9a40e8b321207f445025484df6d377eaf3ea848095223cc1",
+        "git_blob_sha1": "a8cb50622bad02e6b4f4eff06173c265d9e1648d"
+      },
+      {
+        "path": "src/models/modeling_novomolgen.py",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/src/models/modeling_novomolgen.py",
+        "bytes": 13685,
+        "sha256": "1fd6368dff6b015799419faade6e192a4245601cf060800e826efe6c3659bd2d",
+        "git_blob_sha1": "b6078ee942ceb869ef87ec330a978f12d53c1980"
+      },
+      {
+        "path": "src/models/modeling_utils.py",
+        "url": "https://raw.githubusercontent.com/chandar-lab/NovoMolGen/d7c520674701533e2b5e18a8ace826aed611e7b0/src/models/modeling_utils.py",
+        "bytes": 6187,
+        "sha256": "ca1c669e9601f630187eacceefda42f5eb45606559df0c9ca8c930112cd40592",
+        "git_blob_sha1": "e1ca62aa5f018cfcf49a9bf3ea9781531ca2e083"
+      }
+    ]
+  },
+  "transformers_source": {
+    "version": "4.46.2",
+    "revision": "ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e",
+    "path": "src/transformers/models/llama/modeling_llama.py",
+    "sha256": "733e7625fec5abcfa416ab9b866cb91875d41007f2e31c3e90d2ae0111ae98f7",
+    "license": {
+      "name": "Apache-2.0",
+      "retained_path": "sources/TRANSFORMERS_LICENSE",
+      "repository": "huggingface/transformers",
+      "revision": "ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e/LICENSE",
+      "bytes": 11418,
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+    }
+  },
+  "download_scope": "Metadata/config/tokenizer/source and exact safetensors headers for all six variants; subsequently the explicitly authorized 32M AtomWise native checkpoint only was downloaded outside this audit directory and verified by full SHA-256.",
+  "models": [
+    {
+      "id": "novomolgen_32m_smiles_atomwise",
+      "repository": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+      "status": "source_and_first_qkv_span_cpu_audited",
+      "supported": false,
+      "weights_downloaded": true,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "9c5692e454e87c2298d0e213453e09c248ce686f",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/tree/9c5692e454e87c2298d0e213453e09c248ce686f",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 126262031,
+          "weight_sha256": "f69572af2c86bd4d270094ec6d28048043001267c57f71b754fe17a59a8bd173",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 15,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/README.md",
+              "bytes": 2677,
+              "sha256": "b7a81067a9cdacc8ceb6dcb1ef4aa6461a846fead4db765f267673590c4ec27a",
+              "git_blob_sha1": "27589501b332e738a4ab1ad0c769ba935993c5dd"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/config.json",
+              "bytes": 863,
+              "sha256": "f343aff57873a618d8fddc2b32d06899e8e2ca1a0ccd1b824452f9dcbf305478",
+              "git_blob_sha1": "980a67bc55b4b8b95ada4f6e489c4b03738b9153"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/9c5692e454e87c2298d0e213453e09c248ce686f/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/tree/dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 126236496,
+          "weight_sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/config.json",
+              "bytes": 690,
+              "sha256": "f3cc487205aa417f4786f50d49a4120097baaffd80a9510ccfe5c37aa4ed3a34",
+              "git_blob_sha1": "7c0caab0176c921cbd9da85757efdb910034652d"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 512,
+        "intermediate_size": 1024,
+        "num_hidden_layers": 12,
+        "num_attention_heads": 8,
+        "num_key_value_heads": 8,
+        "head_dim": 64,
+        "vocab_size": 84,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+        "revision": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_AtomWise/resolve/dcd3f59261bebf84142c13617d4e129b4b0d0fdc/model.safetensors",
+        "header_bytes": 12104,
+        "downloaded_bytes": 12112,
+        "header_sha256": "31b8814c07321366ca4ee9d8112f9c9c132585442b952d181295db38a16f6b2f",
+        "stored_tensor_count": 111,
+        "stored_values": 31556096,
+        "dtype_values": {
+          "F32": 31556096
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "WordLevel",
+        "vocabulary_size": 84,
+        "dropout": null,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 786432,
+          "proposed_lookup_values": 129024,
+          "projection_values_saved": 657408,
+          "optional_first_norm_values_saved": 512,
+          "projection_saving_fraction_of_model": 0.020832995310953548,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ],
+      "checkpoint_payload_in_audit_directory": false,
+      "local_span_audit": {
+        "report": "novomolgen32_first_qkv_cpu.json",
+        "script": "probe_first_qkv.py",
+        "checkpoint_sha256_verified": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+        "scope": "First token-only embedding/RMSNorm/QKV span; no RoPE/attention/cache/full-model execution",
+        "output_comparisons": 372,
+        "failed_comparisons": 0,
+        "max_abs": 5.7220458984375e-06,
+        "relative_l2": 5.38022524153663e-07,
+        "source_span_values": 829952,
+        "candidate_span_values": 172032,
+        "speed_measured": false,
+        "whole_model_validated": false,
+        "macos_mps_validated": false
+      },
+      "followup_scope": "Original source-audit flags above are historical; the following result is a restricted token-input research experiment, not broad native API support.",
+      "token_only_research": {
+        "devices": [
+          "cpu",
+          "mps"
+        ],
+        "dtype": "float32",
+        "reference": "Native LlamaForCausalLM Transformers 4.46.2",
+        "main_cases_per_device": 123,
+        "additional_boundary_cases_per_device": 134,
+        "tensor_comparisons_per_device": 12599,
+        "all_tested_tensor_bits_equal": true,
+        "parameters_original": 31556096,
+        "parameters_cpu": 31027200,
+        "parameters_mps": 31156224,
+        "inputs_embeds_supported": false,
+        "production_adapter": false,
+        "timing": "Essentially neutral; see complete recorded samples",
+        "evidence": "experiments/novomolgen_execution/generic/README.md",
+        "generic_compiler": "compile_finite_fanout",
+        "generic_lookup_save_reload_verified": true,
+        "generic_full_model_tensor_comparisons_per_device": 12599,
+        "generic_local_cases": {
+          "cpu": 370,
+          "mps": 748
+        },
+        "whole_model_adapter": "research_only",
+        "byte_comparison": "Explicit contiguous tensor value bytes, including signed zero",
+        "bytes_checked_per_backend": 314076156,
+        "byte_tensor_dtype_counts_per_backend": {
+          "float32": 12439,
+          "int64": 16,
+          "bool": 144
+        }
+      }
+    },
+    {
+      "id": "novomolgen_32m_smiles_bpe",
+      "repository": "chandar-lab/NovoMolGen_32M_SMILES_BPE",
+      "status": "metadata_and_source_audited_only",
+      "supported": false,
+      "weights_downloaded": false,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "04df117cf13811c64cc97cd6c7e25ee2bd9297f4",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/tree/04df117cf13811c64cc97cd6c7e25ee2bd9297f4",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 127964879,
+          "weight_sha256": "656cc7e124bcbf9b047d85d27f7af71f31092ba97968b99b71dedd276067cdeb",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/README.md",
+              "bytes": 2656,
+              "sha256": "12e997d2ca8e56a2f9d77760005dcfeb77f96e6aae31a3956bd6a372c39073b1",
+              "git_blob_sha1": "ea3506240f0d7b196e3d8476f4ce1298d6a8e591"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/config.json",
+              "bytes": 864,
+              "sha256": "ba39af2000e8e5e44689fd89d836df86575130749619c1f32a39009a6829c1b9",
+              "git_blob_sha1": "bfdcb5277e65beaf95f470fb736868d994ffc711"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/04df117cf13811c64cc97cd6c7e25ee2bd9297f4/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/tree/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 127940448,
+          "weight_sha256": "f33b79a20e40567b91c6776f5e7c439799f62f573560d8638ad6301329b74b28",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/config.json",
+              "bytes": 691,
+              "sha256": "e939b97c1146e15c3d1bb501a295199fb6e96a563e59f3f6e202f5edbf90dc3e",
+              "git_blob_sha1": "f68ef64e2f01946ee853dd9677a82e223835e8e5"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 512,
+        "intermediate_size": 1024,
+        "num_hidden_layers": 12,
+        "num_attention_heads": 8,
+        "num_key_value_heads": 8,
+        "head_dim": 64,
+        "vocab_size": 500,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_32M_SMILES_BPE",
+        "revision": "e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_32M_SMILES_BPE/resolve/e1cab1287c3906ff9c7646e6c3d714f3a8c9a40e/model.safetensors",
+        "header_bytes": 12120,
+        "downloaded_bytes": 12128,
+        "header_sha256": "99e35359d5c920289314ed58d65bb16ddbeac72e4898ed8a54a7ee8aac7a495c",
+        "stored_tensor_count": 111,
+        "stored_values": 31982080,
+        "dtype_values": {
+          "F32": 31982080
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "BPE",
+        "vocabulary_size": 500,
+        "dropout": 0.1,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 786432,
+          "proposed_lookup_values": 768000,
+          "projection_values_saved": 18432,
+          "optional_first_norm_values_saved": 512,
+          "projection_saving_fraction_of_model": 0.0005763227407348115,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ]
+    },
+    {
+      "id": "novomolgen_157m_smiles_atomwise",
+      "repository": "chandar-lab/NovoMolGen_157M_SMILES_AtomWise",
+      "status": "metadata_and_source_audited_only",
+      "supported": false,
+      "weights_downloaded": false,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "7027dd7a795bc1fe1c04afbdc38635cf4f38f83b",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/tree/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 629775126,
+          "weight_sha256": "4b3dd6fa6d9eca1c78c4c920e21024e2ed1bad9e49c73a8fb546bff7b856736a",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 10,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/README.md",
+              "bytes": 2680,
+              "sha256": "4dd3123b45f8d413715ca218a4d04fc6110599796cde0fcb6a7978e9dd0be5ef",
+              "git_blob_sha1": "28af4d06b9a9d5f58eea7950b3abc4171f33b1f9"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/config.json",
+              "bytes": 865,
+              "sha256": "c2550b2293875d5aa4e6fb3592957918225e4bb3726860d23ae12209f7c4f254",
+              "git_blob_sha1": "1ea46cac097db5ea54233de900d18cb6c333cb7f"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/7027dd7a795bc1fe1c04afbdc38635cf4f38f83b/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "9a9a78c46a8a745044ae17fbf0a39b027afdc522",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/tree/9a9a78c46a8a745044ae17fbf0a39b027afdc522",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 629725448,
+          "weight_sha256": "240958ef1c7d1619e4e76e29433993e16a02283de9b6b3d81ad39081f27a3e02",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/config.json",
+              "bytes": 692,
+              "sha256": "2705d40107eb2a2666ad8040112023ab09bc8711834e644184660570614f7897",
+              "git_blob_sha1": "f7db7baedf09505a21928e25063d945aa34e0fe0"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 640,
+        "intermediate_size": 2560,
+        "num_hidden_layers": 24,
+        "num_attention_heads": 10,
+        "num_key_value_heads": 10,
+        "head_dim": 64,
+        "vocab_size": 84,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_157M_SMILES_AtomWise",
+        "revision": "9a9a78c46a8a745044ae17fbf0a39b027afdc522",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_AtomWise/resolve/9a9a78c46a8a745044ae17fbf0a39b027afdc522/model.safetensors",
+        "header_bytes": 24320,
+        "downloaded_bytes": 24328,
+        "header_sha256": "d86961b3430f6941ca75d66c9a9629769dea3c15f79e567ed43d39c6665867d8",
+        "stored_tensor_count": 219,
+        "stored_values": 157425280,
+        "dtype_values": {
+          "F32": 157425280
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "WordLevel",
+        "vocabulary_size": 84,
+        "dropout": null,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 1228800,
+          "proposed_lookup_values": 161280,
+          "projection_values_saved": 1067520,
+          "optional_first_norm_values_saved": 640,
+          "projection_saving_fraction_of_model": 0.0067811218122019535,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ]
+    },
+    {
+      "id": "novomolgen_157m_smiles_bpe",
+      "repository": "chandar-lab/NovoMolGen_157M_SMILES_BPE",
+      "status": "metadata_and_source_audited_only",
+      "supported": false,
+      "weights_downloaded": false,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "b3ee118e3a89242c1f7ff24277436f95f4edc549",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/tree/b3ee118e3a89242c1f7ff24277436f95f4edc549",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 631903062,
+          "weight_sha256": "e811728357c0b9960dc22da448e79a603ef2dd50aa8234f184c423611ba62d55",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/README.md",
+              "bytes": 2660,
+              "sha256": "f11939e093de15f77aa0da17bc23aab3c87bda3400678fefb44d96ed34512fa2",
+              "git_blob_sha1": "b88a11f390088814cfc01e1e2ae010c7f1b42375"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/config.json",
+              "bytes": 866,
+              "sha256": "6bcf550b8e688526aac48001064c237a43a37ec4b767994df5d56ccc497dae3f",
+              "git_blob_sha1": "4bdbb9f79d9fce87c543ab515ea6f8c952a7de57"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/b3ee118e3a89242c1f7ff24277436f95f4edc549/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "e133b9792d10e0d9ebd8fb5245c41106ba4f1e63",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/tree/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 631855376,
+          "weight_sha256": "8ff50ff23a186c7e28ca9e64cd2da261930708b36d52edf93156ff7da559d7b3",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/config.json",
+              "bytes": 693,
+              "sha256": "6378b4dd1b50a5fa81464b39114288bd24654767828525ee23baa92158b5423d",
+              "git_blob_sha1": "64b21e136f4285392a0f5c8f462f840aef46c4fa"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 640,
+        "intermediate_size": 2560,
+        "num_hidden_layers": 24,
+        "num_attention_heads": 10,
+        "num_key_value_heads": 10,
+        "head_dim": 64,
+        "vocab_size": 500,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_157M_SMILES_BPE",
+        "revision": "e133b9792d10e0d9ebd8fb5245c41106ba4f1e63",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_157M_SMILES_BPE/resolve/e133b9792d10e0d9ebd8fb5245c41106ba4f1e63/model.safetensors",
+        "header_bytes": 24328,
+        "downloaded_bytes": 24336,
+        "header_sha256": "b1a2c838f98576a41e301dd310092ea2ab831f223cec143e41497c6c3e265506",
+        "stored_tensor_count": 219,
+        "stored_values": 157957760,
+        "dtype_values": {
+          "F32": 157957760
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "BPE",
+        "vocabulary_size": 500,
+        "dropout": 0.1,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 1228800,
+          "proposed_lookup_values": 960000,
+          "projection_values_saved": 268800,
+          "optional_first_norm_values_saved": 640,
+          "projection_saving_fraction_of_model": 0.00170172076382952,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ]
+    },
+    {
+      "id": "novomolgen_300m_smiles_atomwise",
+      "repository": "chandar-lab/NovoMolGen_300M_SMILES_AtomWise",
+      "status": "metadata_and_source_audited_only",
+      "supported": false,
+      "weights_downloaded": false,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "500f1c025a03cd79e474e9eb492a990db32d9326",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/tree/500f1c025a03cd79e474e9eb492a990db32d9326",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 1208773654,
+          "weight_sha256": "6149e167f5797173f70c6defc0bd585556889eb7a9d232d12d8dcea575475838",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 11,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/README.md",
+              "bytes": 2680,
+              "sha256": "46620c269be2c7e3f4a7688c5f570c2bb545c91722dfcc232135ccc8c6969e95",
+              "git_blob_sha1": "cd9ff331a96f3f3bc109b4cdce746b8e4a8d0ffe"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/config.json",
+              "bytes": 865,
+              "sha256": "eacc085b603a2d86975a370897cff48a48ff5dfcbb6d16544b27759e97b1b7bc",
+              "git_blob_sha1": "be8928bb59f863a1224ae962031347b4f6d3bb8a"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/500f1c025a03cd79e474e9eb492a990db32d9326/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "2be770a56c42eb29c5c74c5461e39be936827eb0",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/tree/2be770a56c42eb29c5c74c5461e39be936827eb0",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 1208707848,
+          "weight_sha256": "b0802302f00d1d2b5429b3404436c9517d2710a02b86eb607a5017182564d5ad",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/config.json",
+              "bytes": 692,
+              "sha256": "baafefdc2998dcf5f8f33fb2f292313e7aa8671191e1cb07a2ada8915495551a",
+              "git_blob_sha1": "8551a4cd07c44d9da342c23e53bd38da73b126c2"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/tokenizer.json",
+              "bytes": 3564,
+              "sha256": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+              "git_blob_sha1": "4ba0d07daeb872d950d9a46ca2f437a6ab26d26b"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 768,
+        "intermediate_size": 3072,
+        "num_hidden_layers": 32,
+        "num_attention_heads": 12,
+        "num_key_value_heads": 12,
+        "head_dim": 64,
+        "vocab_size": 84,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_300M_SMILES_AtomWise",
+        "revision": "2be770a56c42eb29c5c74c5461e39be936827eb0",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_AtomWise/resolve/2be770a56c42eb29c5c74c5461e39be936827eb0/model.safetensors",
+        "header_bytes": 32512,
+        "downloaded_bytes": 32520,
+        "header_sha256": "5f3ec5575fdac5a973b0a80f74a6ac3e18021499a611cbfb2665a5127034b0f4",
+        "stored_tensor_count": 291,
+        "stored_values": 302168832,
+        "dtype_values": {
+          "F32": 302168832
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "WordLevel",
+        "vocabulary_size": 84,
+        "dropout": null,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 1769472,
+          "proposed_lookup_values": 193536,
+          "projection_values_saved": 1575936,
+          "optional_first_norm_values_saved": 768,
+          "projection_saving_fraction_of_model": 0.005215415466807642,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ]
+    },
+    {
+      "id": "novomolgen_300m_smiles_bpe",
+      "repository": "chandar-lab/NovoMolGen_300M_SMILES_BPE",
+      "status": "metadata_and_source_audited_only",
+      "supported": false,
+      "weights_downloaded": false,
+      "inference_validated": false,
+      "macos_validated": false,
+      "compression_validated": false,
+      "revisions": {
+        "main": {
+          "sha": "281af33c1bcc2255e802bed4c442ef7a24795ab0",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/tree/281af33c1bcc2255e802bed4c442ef7a24795ab0",
+          "weight_file": "pytorch_model.bin",
+          "weight_bytes": 1211326870,
+          "weight_sha256": "b2c3c25c79d8b9317f7bebe4ff9029ec9524ea66cb426569cd2a7fd8ca8c2e37",
+          "dtype": null,
+          "dtype_evidence": "not_read; main config has no torch_dtype",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "README.md",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/README.md",
+              "bytes": 2660,
+              "sha256": "0364abd160db90b94116fb40fd233ecab7d3a1cb2b667820291ba6f33fc79925",
+              "git_blob_sha1": "3b66373d447697d80873d1f2297b1daf20ecfda6"
+            },
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/config.json",
+              "bytes": 866,
+              "sha256": "bdeb279539ad305245f306ea63b78eae66641b4e25cf193e453874fd82af374a",
+              "git_blob_sha1": "d7a984032b2e295c4e47b3d0999c4ff33aa1715a"
+            },
+            {
+              "path": "modeling_novomolgen.py",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/modeling_novomolgen.py",
+              "bytes": 14228,
+              "sha256": "a1d0142725f7c836b0e54a482b45c7e535e89b157ac6467e9c434630232a8667",
+              "git_blob_sha1": "acd1bbd2caadfbfb8411bfe8cead9d2be35cf267"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/281af33c1bcc2255e802bed4c442ef7a24795ab0/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        },
+        "hf-checkpoint": {
+          "sha": "e63d6e00dec33370dc0ad846ae2b66b1bfb6813a",
+          "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/tree/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a",
+          "weight_file": "model.safetensors",
+          "weight_bytes": 1211263760,
+          "weight_sha256": "3733bade018e30fe6898a032f2790c7dc502c51c7ddf7b52bdbb9b6c40d6f384",
+          "dtype": "float32",
+          "dtype_evidence": "safetensors_header",
+          "weight_file_count_in_revision": 1,
+          "files": [
+            {
+              "path": "config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/config.json",
+              "bytes": 693,
+              "sha256": "8306ec55721f90619d3059d40a1d11bfba37b2f2b372b031d899ffd7fed52dfe",
+              "git_blob_sha1": "7dd4b734216830e15ab200936c5d19d483200dbe"
+            },
+            {
+              "path": "generation_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/generation_config.json",
+              "bytes": 132,
+              "sha256": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+              "git_blob_sha1": "df3c513ecb028551c0d1ca5addfc1b4865d2857d"
+            },
+            {
+              "path": "special_tokens_map.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/special_tokens_map.json",
+              "bytes": 555,
+              "sha256": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18",
+              "git_blob_sha1": "f6119589e367b2de0fc8cbd2f1217667532e3174"
+            },
+            {
+              "path": "tokenizer.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/tokenizer.json",
+              "bytes": 32984,
+              "sha256": "1122664aeab2308d083761f689295332954716c610a6c508c3566563f5a308e8",
+              "git_blob_sha1": "7c1e432ac0364a7c87f94a009458164e8f42fe35"
+            },
+            {
+              "path": "tokenizer_config.json",
+              "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/tokenizer_config.json",
+              "bytes": 943,
+              "sha256": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+              "git_blob_sha1": "324b85b91119755bf897d9f03b50665e4d3b2a0d"
+            }
+          ]
+        }
+      },
+      "architecture": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "hidden_size": 768,
+        "intermediate_size": 3072,
+        "num_hidden_layers": 32,
+        "num_attention_heads": 12,
+        "num_key_value_heads": 12,
+        "head_dim": 64,
+        "vocab_size": 500,
+        "max_position_embeddings": 2048,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 10000.0,
+        "hidden_act": "silu",
+        "attention_bias": false,
+        "mlp_bias": false,
+        "tie_word_embeddings": false,
+        "transformers_version": "4.46.2",
+        "normalization": "custom transformers.models.llama.modeling_llama.LlamaRMSNorm, not torch.nn.RMSNorm (upstream v4.46.2)"
+      },
+      "header": {
+        "repository": "chandar-lab/NovoMolGen_300M_SMILES_BPE",
+        "revision": "e63d6e00dec33370dc0ad846ae2b66b1bfb6813a",
+        "url": "https://huggingface.co/chandar-lab/NovoMolGen_300M_SMILES_BPE/resolve/e63d6e00dec33370dc0ad846ae2b66b1bfb6813a/model.safetensors",
+        "header_bytes": 32520,
+        "downloaded_bytes": 32528,
+        "header_sha256": "0c240d8f4b3c0e66d01af7e9e8b4fbab7bdcf7e5da16c1007d3dbe853232bd5d",
+        "stored_tensor_count": 291,
+        "stored_values": 302807808,
+        "dtype_values": {
+          "F32": 302807808
+        },
+        "tensor_payload_downloaded": false
+      },
+      "tokenizer": {
+        "type": "BPE",
+        "vocabulary_size": 500,
+        "dropout": 0.1,
+        "bos_id": 2,
+        "eos_id": 3,
+        "pad_id": 1
+      },
+      "candidates": [
+        {
+          "method": "finite_token_first_qkv",
+          "status": "architecture_candidate_unvalidated",
+          "source_projection_values": 1769472,
+          "proposed_lookup_values": 1152000,
+          "projection_values_saved": 617472,
+          "optional_first_norm_values_saved": 768,
+          "projection_saving_fraction_of_model": 0.0020391548159814955,
+          "input_contract": "input_ids only; arbitrary inputs_embeds requires retained fallback weights and removes the storage saving",
+          "preserve": [
+            "embedding table for residual and returned hidden states",
+            "RoPE after lookup",
+            "attention mask",
+            "positions",
+            "causal KV cache",
+            "all logit/hidden-state output routes"
+          ],
+          "blocker": "Generic compiler needs audited custom LlamaRMSNorm and fanout extraction; whole-model numerical validation required"
+        }
+      ]
+    }
+  ],
+  "downloaded_payload_verification": {
+    "repository": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+    "revision": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+    "weight_file": "model.safetensors",
+    "bytes": 126236496,
+    "sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699"
+  }
+}

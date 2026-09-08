@@ -1,0 +1,2408 @@
+{
+  "scope": "Actual checkpoint embedder only; full transformer attention and biological outputs unvalidated",
+  "source_revision": "fc2d818d1d78345f0c7ccf686f34caff5bbd846a",
+  "checkpoint": {
+    "repository": "PJSucas/OmniCell-v1",
+    "revision": "9a33a49daa919237189909e4d9ba48117f3ca12f",
+    "sha256": "12497eb1dc76985ca3bcd88845a6b6edb7fcfdbb6c6df43d3da56645d922c0c7"
+  },
+  "config": {
+    "num_gene": 60607,
+    "d_model": 512,
+    "token_per_cell": 2000,
+    "heads": 8,
+    "dropout": 0.15,
+    "dim": 64,
+    "base": 10000.0,
+    "eps": 1e-06,
+    "multiple_of": 512,
+    "rotary": 1,
+    "num_layers": 10,
+    "num_shared": 5,
+    "num_routing": 10,
+    "topk": 5,
+    "use_flash": 1,
+    "hidden_dim": 2048
+  },
+  "checkpoint_keys": 109,
+  "checkpoint_tensor_values": 73521152,
+  "embedding_shape": [
+    60607,
+    512
+  ],
+  "embedding_dtype": "torch.float32",
+  "embedding_zero_rows": 0,
+  "embedder_values_before": 31305728,
+  "finite_compile_seconds": 0.09401666698977351,
+  "finite_report": {
+    "method": "exact_finite_row_lookup",
+    "input_contract": "token_indices_only",
+    "domain_size": 60607,
+    "output_width": 10,
+    "parameters_before": 31298048,
+    "evaluation_device": "cpu",
+    "torch_version": "2.14.0",
+    "tensor_bytes_before": 125192192,
+    "enumeration_chunk_size": 1024,
+    "resident_storage_bytes_before": 125192192,
+    "storage_accounting": "Unique registered tensor backing allocations; allocator overhead and external Python owners excluded",
+    "validation_chunk_size": 257,
+    "guarantee": "Exact partial-evaluation identity in ideal arithmetic; stored lookup is validated numerically on the entire token domain; inference only",
+    "floating_point_scope": "Every token checked in the recorded chunk layouts and shape probes; future batch/device rounding is not universally bounded",
+    "ownership_scope": "Standalone source block only; no enclosing model was inspected",
+    "parameters_after": 606070,
+    "tensor_bytes_after": 2424280,
+    "resident_storage_bytes_after": 2424280,
+    "stored_rows": 60607,
+    "constant_output_rows": false,
+    "constant_basis": null,
+    "output_dtype": "float32",
+    "validation": {
+      "accepted": true,
+      "tokens_checked": 60607,
+      "shape_probes": 6,
+      "max_abs": 1.296401023864746e-06,
+      "relative_l2": 3.395992177664985e-09,
+      "bitwise_identical": false,
+      "absolute_tolerance": 1e-05,
+      "relative_tolerance": 1e-05
+    },
+    "status": "accepted_on_full_domain_validation"
+  },
+  "unique_logit_rows_bitwise": 60607,
+  "router_values_before": 267264,
+  "table_values_after": 606070,
+  "whole_embedder_values_after_finite": 31644534,
+  "full_embedder_gates": [
+    {
+      "shape": [
+        1,
+        1
+      ],
+      "values_range": [
+        0,
+        10
+      ],
+      "embedding": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "shape": [
+        1,
+        32
+      ],
+      "values_range": [
+        0,
+        10
+      ],
+      "embedding": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 16384,
+        "bitwise": true
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "shape": [
+        4,
+        32
+      ],
+      "values_range": [
+        0,
+        10
+      ],
+      "embedding": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 65536,
+        "bitwise": true
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "shape": [
+        1,
+        2000
+      ],
+      "values_range": [
+        0,
+        10
+      ],
+      "embedding": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1024000,
+        "bitwise": true
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "shape": [
+        2,
+        2000
+      ],
+      "values_range": [
+        0,
+        10
+      ],
+      "embedding": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 2048000,
+        "bitwise": true
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    }
+  ],
+  "full_embedder_all_gates_accepted": true,
+  "all_token_routing": {
+    "probability_max_abs": 0.0,
+    "ordered_topk_index_mismatches": 0,
+    "minimum_topk_boundary_gap": 7.450580596923828e-09
+  },
+  "targeted_singleton_small_margin": [
+    {
+      "gene_id": 6281,
+      "compiled_boundary_gap": 7.450580596923828e-09,
+      "selected_expert_difference": 2,
+      "embedding": {
+        "max_abs": 0.2503035068511963,
+        "mismatches": 512,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25085,
+      "compiled_boundary_gap": 1.2293457984924316e-07,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 3106,
+      "compiled_boundary_gap": 1.7881393432617188e-07,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25359,
+      "compiled_boundary_gap": 5.21540641784668e-07,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 25397,
+      "compiled_boundary_gap": 9.387731552124023e-07,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 52432,
+      "compiled_boundary_gap": 1.1324882507324219e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 44568,
+      "compiled_boundary_gap": 1.773238182067871e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 39951,
+      "compiled_boundary_gap": 2.2426247596740723e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 38174,
+      "compiled_boundary_gap": 2.473592758178711e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 50952,
+      "compiled_boundary_gap": 2.5033950805664062e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 14852,
+      "compiled_boundary_gap": 2.7045607566833496e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 12100,
+      "compiled_boundary_gap": 3.1422823667526245e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 29990,
+      "compiled_boundary_gap": 3.6209821701049805e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 49634,
+      "compiled_boundary_gap": 4.149973392486572e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 48345,
+      "compiled_boundary_gap": 4.194676876068115e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 2192,
+      "compiled_boundary_gap": 4.5746564865112305e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 7.152557373046875e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 30383,
+      "compiled_boundary_gap": 4.582107067108154e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 54675,
+      "compiled_boundary_gap": 4.9173831939697266e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 3650,
+      "compiled_boundary_gap": 4.928559064865112e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 20110,
+      "compiled_boundary_gap": 5.155801773071289e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 21061,
+      "compiled_boundary_gap": 5.45009970664978e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 7366,
+      "compiled_boundary_gap": 6.15045428276062e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 28392,
+      "compiled_boundary_gap": 6.295740604400635e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 5582,
+      "compiled_boundary_gap": 7.502734661102295e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 7865,
+      "compiled_boundary_gap": 7.715076208114624e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 60481,
+      "compiled_boundary_gap": 8.13603401184082e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 5.960464477539062e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 13917,
+      "compiled_boundary_gap": 8.352100849151611e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 5007,
+      "compiled_boundary_gap": 8.828938007354736e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 1731,
+      "compiled_boundary_gap": 8.977949619293213e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 30487,
+      "compiled_boundary_gap": 9.413808584213257e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 59665,
+      "compiled_boundary_gap": 9.909272193908691e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 26988,
+      "compiled_boundary_gap": 9.942799806594849e-06,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 21425,
+      "compiled_boundary_gap": 1.0520219802856445e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 16526,
+      "compiled_boundary_gap": 1.0758638381958008e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 5027,
+      "compiled_boundary_gap": 1.0788440704345703e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 59311,
+      "compiled_boundary_gap": 1.0985881090164185e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 8260,
+      "compiled_boundary_gap": 1.1228024959564209e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 57870,
+      "compiled_boundary_gap": 1.1894851922988892e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 58479,
+      "compiled_boundary_gap": 1.2330710887908936e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 23126,
+      "compiled_boundary_gap": 1.2449920177459717e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 40722,
+      "compiled_boundary_gap": 1.2889504432678223e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 48452,
+      "compiled_boundary_gap": 1.3053417205810547e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 5.960464477539062e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 49402,
+      "compiled_boundary_gap": 1.3053417205810547e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 10074,
+      "compiled_boundary_gap": 1.36643648147583e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 55856,
+      "compiled_boundary_gap": 1.376122236251831e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25716,
+      "compiled_boundary_gap": 1.3899058103561401e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 7494,
+      "compiled_boundary_gap": 1.4156103134155273e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 42469,
+      "compiled_boundary_gap": 1.4521181583404541e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25786,
+      "compiled_boundary_gap": 1.4521181583404541e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 54505,
+      "compiled_boundary_gap": 1.4645978808403015e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 6548,
+      "compiled_boundary_gap": 1.4711171388626099e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 7.152557373046875e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 60307,
+      "compiled_boundary_gap": 1.5236437320709229e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 412,
+      "compiled_boundary_gap": 1.5661120414733887e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 45562,
+      "compiled_boundary_gap": 1.582503318786621e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 17931,
+      "compiled_boundary_gap": 1.6119331121444702e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 6612,
+      "compiled_boundary_gap": 1.6264617443084717e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 5.066394805908203e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 44469,
+      "compiled_boundary_gap": 1.6763806343078613e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 15515,
+      "compiled_boundary_gap": 1.7449259757995605e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 30516,
+      "compiled_boundary_gap": 1.74790620803833e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 1.430511474609375e-06,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 9063,
+      "compiled_boundary_gap": 1.7657876014709473e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 35852,
+      "compiled_boundary_gap": 1.8287450075149536e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 44540,
+      "compiled_boundary_gap": 1.850724220275879e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 48614,
+      "compiled_boundary_gap": 1.8581748008728027e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 20487,
+      "compiled_boundary_gap": 1.8715858459472656e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 55819,
+      "compiled_boundary_gap": 1.9181519746780396e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 44781,
+      "compiled_boundary_gap": 1.9215047359466553e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 33974,
+      "compiled_boundary_gap": 1.926720142364502e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 2460,
+      "compiled_boundary_gap": 1.9490718841552734e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 41910,
+      "compiled_boundary_gap": 1.9531697034835815e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 19498,
+      "compiled_boundary_gap": 2.0205974578857422e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 54224,
+      "compiled_boundary_gap": 2.0254403352737427e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 30440,
+      "compiled_boundary_gap": 2.093985676765442e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 58484,
+      "compiled_boundary_gap": 2.1589919924736023e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 47690,
+      "compiled_boundary_gap": 2.1634623408317566e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 51315,
+      "compiled_boundary_gap": 2.2001564502716064e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 20687,
+      "compiled_boundary_gap": 2.247840166091919e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 1892,
+      "compiled_boundary_gap": 2.2493302822113037e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 48931,
+      "compiled_boundary_gap": 2.2605061531066895e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 34776,
+      "compiled_boundary_gap": 2.2627413272857666e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 55108,
+      "compiled_boundary_gap": 2.3871660232543945e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 16775,
+      "compiled_boundary_gap": 2.429261803627014e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 9380,
+      "compiled_boundary_gap": 2.4646520614624023e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 46894,
+      "compiled_boundary_gap": 2.499110996723175e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 41370,
+      "compiled_boundary_gap": 2.5197863578796387e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 6775,
+      "compiled_boundary_gap": 2.52649188041687e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 16584,
+      "compiled_boundary_gap": 2.549588680267334e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 7097,
+      "compiled_boundary_gap": 2.6598572731018066e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 44943,
+      "compiled_boundary_gap": 2.6784837245941162e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 7.748603820800781e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 51597,
+      "compiled_boundary_gap": 2.720579504966736e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 49567,
+      "compiled_boundary_gap": 2.744048833847046e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 55935,
+      "compiled_boundary_gap": 2.8133392333984375e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 30831,
+      "compiled_boundary_gap": 2.814456820487976e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 28999,
+      "compiled_boundary_gap": 2.84537672996521e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 49703,
+      "compiled_boundary_gap": 2.8640031814575195e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 32289,
+      "compiled_boundary_gap": 2.9012560844421387e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 2067,
+      "compiled_boundary_gap": 2.9478222131729126e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 7.152557373046875e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 54825,
+      "compiled_boundary_gap": 2.950429916381836e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 13797,
+      "compiled_boundary_gap": 2.973899245262146e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 58434,
+      "compiled_boundary_gap": 3.0376017093658447e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 4884,
+      "compiled_boundary_gap": 3.05958092212677e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 26155,
+      "compiled_boundary_gap": 3.097951412200928e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 3859,
+      "compiled_boundary_gap": 3.113970160484314e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 14158,
+      "compiled_boundary_gap": 3.147497773170471e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 20310,
+      "compiled_boundary_gap": 3.1556934118270874e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 38928,
+      "compiled_boundary_gap": 3.1910836696624756e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 23583,
+      "compiled_boundary_gap": 3.1966716051101685e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25779,
+      "compiled_boundary_gap": 3.235042095184326e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 28375,
+      "compiled_boundary_gap": 3.236532211303711e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 25988,
+      "compiled_boundary_gap": 3.270059823989868e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 49110,
+      "compiled_boundary_gap": 3.300607204437256e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 2688,
+      "compiled_boundary_gap": 3.345869481563568e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 1385,
+      "compiled_boundary_gap": 3.3468008041381836e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 7.152557373046875e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 34059,
+      "compiled_boundary_gap": 3.357231616973877e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 12376,
+      "compiled_boundary_gap": 3.371387720108032e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 52964,
+      "compiled_boundary_gap": 3.4008175134658813e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 42221,
+      "compiled_boundary_gap": 3.419816493988037e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 18906,
+      "compiled_boundary_gap": 3.5177916288375854e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 33858,
+      "compiled_boundary_gap": 3.612414002418518e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 13444,
+      "compiled_boundary_gap": 3.6213546991348267e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 4117,
+      "compiled_boundary_gap": 3.626197576522827e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 16619,
+      "compiled_boundary_gap": 3.6364421248435974e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 305,
+      "compiled_boundary_gap": 3.647804260253906e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 18749,
+      "compiled_boundary_gap": 3.676116466522217e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 13577,
+      "compiled_boundary_gap": 3.684312105178833e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 2.384185791015625e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 19443,
+      "compiled_boundary_gap": 3.693997859954834e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 1.1920928955078125e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    },
+    {
+      "gene_id": 14433,
+      "compiled_boundary_gap": 3.7550926208496094e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 44647,
+      "compiled_boundary_gap": 3.800541162490845e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 4.76837158203125e-07,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 0.0,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": true
+      }
+    },
+    {
+      "gene_id": 15136,
+      "compiled_boundary_gap": 3.801286220550537e-05,
+      "selected_expert_difference": 0,
+      "embedding": {
+        "max_abs": 1.0132789611816406e-06,
+        "mismatches": 0,
+        "elements": 512,
+        "bitwise": false
+      },
+      "balance": {
+        "max_abs": 3.5762786865234375e-07,
+        "mismatches": 0,
+        "elements": 1,
+        "bitwise": false
+      }
+    }
+  ],
+  "targeted_singleton_passed": false,
+  "shared_affine_sum": {
+    "values_before": 2560,
+    "values_after": 512,
+    "validation": [
+      {
+        "absolute_input_bound": 1.0,
+        "max_abs": 5.960464477539063e-08,
+        "mismatches": 0,
+        "elements": 2097664,
+        "bitwise": false
+      },
+      {
+        "absolute_input_bound": 10.0,
+        "max_abs": 9.5367431640625e-07,
+        "mismatches": 0,
+        "elements": 2097664,
+        "bitwise": false
+      },
+      {
+        "absolute_input_bound": 100.0,
+        "max_abs": 7.62939453125e-06,
+        "mismatches": 0,
+        "elements": 2097664,
+        "bitwise": false
+      },
+      {
+        "absolute_input_bound": 1000000.0,
+        "max_abs": 0.0625,
+        "mismatches": 2990,
+        "elements": 2097664,
+        "bitwise": false
+      }
+    ],
+    "scope": "Real-arithmetic affine identity; changed FP32 sum order; error scales with continuous expression magnitude"
+  }
+}

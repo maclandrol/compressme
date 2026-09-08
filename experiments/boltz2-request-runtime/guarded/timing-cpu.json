@@ -1,0 +1,279 @@
+{
+  "args": {
+    "device": "cpu",
+    "mode": "timing",
+    "artifact": "/private/tmp/compressme-models/boltz2/compiled-bundle",
+    "native_dir": "/private/tmp/compressme-agent-boltz-runtime",
+    "output": "/private/tmp/compressme-agent-boltz-runtime/compute/timing-cpu.json",
+    "accepted_gate": "/private/tmp/compressme-agent-boltz-runtime/compute/gate-cpu.json",
+    "rounds": 5,
+    "warmups": 2
+  },
+  "torch": "2.14.0",
+  "prototype_sha256": "0b48242b6a0062ad652912a094e08035fd256a489b7d3b0c98ce7eaae26985de",
+  "input_scope": "Same 20-aa protein+ethanol fixture, exact native feature tensors reused within each comparison; fresh diffusion seed each timing round",
+  "timing_scope": "Native predict_step, including request preparation and cache cleanup; excludes unchanged input featurization and model load",
+  "schedules": {
+    "confidence": {
+      "sampling_steps": 200,
+      "recycling_steps": 3,
+      "diffusion_samples": 1
+    },
+    "affinity": {
+      "sampling_steps": 200,
+      "recycling_steps": 5,
+      "diffusion_samples": 3
+    }
+  },
+  "models": {
+    "confidence": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 11.317897666973295,
+            "candidate": 15.58304075000342
+          },
+          "speedup": 0.7262958397237593,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 16.718227959005162,
+            "original": 17.19445712500601
+          },
+          "speedup": 1.0284856246229332,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 18.22943083298742,
+            "candidate": 16.637405041983584
+          },
+          "speedup": 1.0956895493609997,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 15.698166665999452,
+            "original": 16.209405000001425
+          },
+          "speedup": 1.032566754123541,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 15.707469540997408,
+            "candidate": 15.14759233398945
+          },
+          "speedup": 1.0369614652060353,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        }
+      ],
+      "median_seconds": {
+        "original": 16.209405000001425,
+        "candidate": 15.698166665999452
+      },
+      "ratio_of_medians": 1.032566754123541,
+      "module_and_parameter_identities_restored": true,
+      "accepted_bitwise": true
+    },
+    "affinity": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 30.36595483298879,
+            "candidate": 30.26075612497516
+          },
+          "speedup": 1.0034764071188165,
+          "bitwise_equal": true,
+          "source": "Recovered exactly from completed process console output; harness wrote final model report only after all requested rounds."
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "original": 27.7111452499812,
+            "candidate": 30.029455167008564
+          },
+          "speedup": 0.9227988019051927,
+          "bitwise_equal": true,
+          "source": "Recovered exactly from completed process console output; harness wrote final model report only after all requested rounds."
+        }
+      ],
+      "completed": false,
+      "accepted_bitwise": false,
+      "completed_rounds_byte_equal": true
+    }
+  },
+  "completed": false,
+  "accepted_bitwise": false,
+  "stopped_reason": "Stopped after five confidence and two affinity pairs because measured gain was neutral/noisy; all completed comparisons passed byte equality. Affinity aggregates are incomplete."
+}

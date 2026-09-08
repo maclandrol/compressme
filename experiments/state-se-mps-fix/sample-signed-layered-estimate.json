@@ -1,0 +1,87 @@
+{
+  "raw": {
+    "routes": [
+      {
+        "key": "raw_1",
+        "nonzero_high": 1166,
+        "max_per_row": 97,
+        "large_high": 5,
+        "max_large_per_row": 1,
+        "padded_bytes": 21136,
+        "csr_bytes": 20048
+      },
+      {
+        "key": "raw_10",
+        "nonzero_high": 1248,
+        "max_per_row": 107,
+        "large_high": 7,
+        "max_large_per_row": 2,
+        "padded_bytes": 21712,
+        "csr_bytes": 20306
+      },
+      {
+        "key": "raw_13",
+        "nonzero_high": 1267,
+        "max_per_row": 103,
+        "large_high": 8,
+        "max_large_per_row": 2,
+        "padded_bytes": 21520,
+        "csr_bytes": 20369
+      },
+      {
+        "key": "raw_25",
+        "nonzero_high": 1075,
+        "max_per_row": 90,
+        "large_high": 9,
+        "max_large_per_row": 2,
+        "padded_bytes": 20896,
+        "csr_bytes": 19799
+      }
+    ],
+    "padded_sample_bytes": 150800,
+    "naive_full_bytes": 186520750
+  },
+  "normalized": {
+    "routes": [
+      {
+        "key": "normalized_2",
+        "nonzero_high": 865,
+        "max_per_row": 66,
+        "large_high": 4,
+        "max_large_per_row": 1,
+        "padded_bytes": 19648,
+        "csr_bytes": 19139
+      },
+      {
+        "key": "normalized_10",
+        "nonzero_high": 913,
+        "max_per_row": 69,
+        "large_high": 4,
+        "max_large_per_row": 1,
+        "padded_bytes": 19792,
+        "csr_bytes": 19283
+      },
+      {
+        "key": "normalized_13",
+        "nonzero_high": 892,
+        "max_per_row": 67,
+        "large_high": 2,
+        "max_large_per_row": 1,
+        "padded_bytes": 19696,
+        "csr_bytes": 19208
+      },
+      {
+        "key": "normalized_25",
+        "nonzero_high": 817,
+        "max_per_row": 60,
+        "large_high": 1,
+        "max_large_per_row": 1,
+        "padded_bytes": 19360,
+        "csr_bytes": 18977
+      }
+    ],
+    "padded_sample_bytes": 144032,
+    "naive_full_bytes": 178149580
+  },
+  "naive_full_bytes": 364670330
+}

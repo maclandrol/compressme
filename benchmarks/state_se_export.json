@@ -1,0 +1,1271 @@
+{
+  "device": "cpu",
+  "dtype": "float32",
+  "all_outputs_atol": 1e-05,
+  "all_outputs_rtol": 1e-05,
+  "actual_pretrained_weights": true,
+  "input_kind": "Synthetic numerical gene-ID/count probes",
+  "biological_quality_benchmark": false,
+  "lookup_report": {
+    "method": "two_generic_finite_lookups",
+    "raw": {
+      "method": "exact_finite_row_lookup",
+      "input_contract": "token_indices_only",
+      "domain_size": 19790,
+      "output_width": 1024,
+      "parameters_before": 106570752,
+      "evaluation_device": "cpu",
+      "torch_version": "2.14.0",
+      "tensor_bytes_before": 426283008,
+      "enumeration_chunk_size": 1024,
+      "validation_chunk_size": 257,
+      "guarantee": "Exact partial-evaluation identity in ideal arithmetic; stored lookup is validated numerically on the entire token domain; inference only",
+      "floating_point_scope": "Every token checked in the recorded chunk layouts and shape probes; future batch/device rounding is not universally bounded",
+      "ownership_scope": "Standalone source block only; no enclosing model was inspected",
+      "parameters_after": 20264960,
+      "tensor_bytes_after": 81059840,
+      "stored_rows": 19790,
+      "constant_output_rows": false,
+      "constant_basis": null,
+      "output_dtype": "float32",
+      "validation": {
+        "accepted": true,
+        "tokens_checked": 19790,
+        "shape_probes": 6,
+        "max_abs": 9.298324584960938e-06,
+        "relative_l2": 3.111456376143477e-08,
+        "bitwise_identical": false,
+        "absolute_tolerance": 1e-05,
+        "relative_tolerance": 1e-05
+      },
+      "status": "accepted_on_full_domain_validation"
+    },
+    "normalized": {
+      "method": "exact_finite_row_lookup",
+      "input_contract": "token_indices_only",
+      "domain_size": 19790,
+      "output_width": 1024,
+      "parameters_before": 106570752,
+      "evaluation_device": "cpu",
+      "torch_version": "2.14.0",
+      "tensor_bytes_before": 426283008,
+      "enumeration_chunk_size": 1024,
+      "validation_chunk_size": 257,
+      "guarantee": "Exact partial-evaluation identity in ideal arithmetic; stored lookup is validated numerically on the entire token domain; inference only",
+      "floating_point_scope": "Every token checked in the recorded chunk layouts and shape probes; future batch/device rounding is not universally bounded",
+      "ownership_scope": "Standalone source block only; no enclosing model was inspected",
+      "parameters_after": 20264960,
+      "tensor_bytes_after": 81059840,
+      "stored_rows": 19790,
+      "constant_output_rows": false,
+      "constant_basis": null,
+      "output_dtype": "float32",
+      "validation": {
+        "accepted": true,
+        "tokens_checked": 19790,
+        "shape_probes": 6,
+        "max_abs": 4.351139068603516e-06,
+        "relative_l2": 2.945093188220884e-08,
+        "bitwise_identical": false,
+        "absolute_tolerance": 1e-05,
+        "relative_tolerance": 1e-05
+      },
+      "status": "accepted_on_full_domain_validation"
+    }
+  },
+  "parameters_before": 212038824,
+  "parameters_after": 151243944,
+  "cases": [
+    {
+      "cells": 1,
+      "sentence_length": 1,
+      "task_genes": 3,
+      "counts": false,
+      "batch_outputs": [
+        {
+          "shape": [
+            1,
+            3,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            3
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            3
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            1,
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          1,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          1,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          1,
+          3,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            1,
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          1,
+          2,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 1,
+      "sentence_length": 8,
+      "task_genes": 7,
+      "counts": true,
+      "batch_outputs": [
+        {
+          "shape": [
+            1,
+            7,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            7
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            7
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            1,
+            9,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          1,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          1,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          1,
+          7,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            1,
+            9,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          1,
+          9,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 4,
+      "sentence_length": 32,
+      "task_genes": 13,
+      "counts": true,
+      "batch_outputs": [
+        {
+          "shape": [
+            4,
+            13,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            13
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            13
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            4,
+            33,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          4,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          4,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          4,
+          13,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            4,
+            33,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            4,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          4,
+          33,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 2,
+      "sentence_length": 128,
+      "task_genes": 31,
+      "counts": false,
+      "batch_outputs": [
+        {
+          "shape": [
+            2,
+            31,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            2,
+            129,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          2,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          2,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          2,
+          31,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            2,
+            129,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          2,
+          129,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 1,
+      "sentence_length": 2,
+      "task_genes": 1,
+      "counts": true,
+      "batch_outputs": [
+        {
+          "shape": [
+            1,
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 6.67572021484375e-06,
+          "relative_l2_error": 1.8906006224168909e-06
+        },
+        {
+          "shape": [
+            1,
+            1
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            1,
+            3,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          1,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          1,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          1,
+          1,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 2.738088369369507e-07,
+        "relative_l2_error": 0.00017520169051753626
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            1,
+            3,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          1,
+          3,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 2,
+      "sentence_length": 512,
+      "task_genes": 31,
+      "counts": true,
+      "batch_outputs": [
+        {
+          "shape": [
+            2,
+            31,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            2,
+            513,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          2,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          2,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          2,
+          31,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            2,
+            513,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            2,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          2,
+          513,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    },
+    {
+      "cells": 1,
+      "sentence_length": 2048,
+      "task_genes": 31,
+      "counts": true,
+      "batch_outputs": [
+        {
+          "shape": [
+            1,
+            31,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            31
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "all_token_cell_dataset_outputs": [
+        {
+          "shape": [
+            1,
+            2049,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "dataset_class_logits": {
+        "shape": [
+          1,
+          14418
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "dataset_latents": {
+        "shape": [
+          1,
+          10
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "gene_decoder_logits": {
+        "shape": [
+          1,
+          31,
+          1
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      },
+      "arbitrary_raw_vector_outputs": [
+        {
+          "shape": [
+            1,
+            2049,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        },
+        {
+          "shape": [
+            1,
+            1024
+          ],
+          "gate_1e5_passed": true,
+          "gate_1e5_mismatches": 0,
+          "maximum_absolute_error": 0.0,
+          "relative_l2_error": 0.0
+        }
+      ],
+      "arbitrary_raw_gene_encoder": {
+        "shape": [
+          1,
+          2049,
+          1024
+        ],
+        "gate_1e5_passed": true,
+        "gate_1e5_mismatches": 0,
+        "maximum_absolute_error": 0.0,
+        "relative_l2_error": 0.0
+      }
+    }
+  ],
+  "target": "State SE-100M",
+  "validated_devices": [
+    "cpu"
+  ],
+  "validated_dtype": "float32",
+  "source_commit": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+  "checkpoint_repository": "arcinstitute/SE-100M",
+  "checkpoint_revision": "bc72702320639217128df42673e94a9658f67d24",
+  "checkpoint_sha256": "7ee823583ad10c6a12befba6df12dfcd61ac0972deab57be3b4db24a0045af86",
+  "source_unique_parameter_bytes": 848155296,
+  "compiled_unique_parameter_bytes": 604975776,
+  "contract": "Original numerical gene-ID batch API and arbitrary raw-vector forward/raw gene_embedding_layer retained; inference only",
+  "gene_names": "19790 ordered known gene names; no invented unknown mapping or AnnData tokenizer claim",
+  "raw_protein_dictionary": "Optional external dictionary required for original model name helper and its raw sum()==0 guard; not stored in this artifact",
+  "mps_status": "Rejected at unchanged local or complete-output numerical gates; token route rejects MPS even after model.to('mps')",
+  "constant_folding": "Bounded shape-matched cache stores only parameter-derived CLS/dataset rows; no cell inputs or outputs cached",
+  "packed_weights_bytes": 511190195,
+  "portable_directory_bytes": 511675925,
+  "reload_fingerprints_bitwise_equal": true,
+  "reload_forbids_torch_load": true,
+  "output_comparisons": 105,
+  "known_gene_names": 19790
+}

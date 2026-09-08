@@ -1,0 +1,24 @@
+{
+  "reviewed_file": "/private/tmp/compressme-agent-stream-pack/packing_files.py",
+  "sha256": "b157e5a8deb02c49ee71d95954e20e1fc6e89e22c7d8aa57f6c6254c90e66d73",
+  "independent_adversarial_tests": 8,
+  "passed": 8,
+  "scope": "Small CPU file fixtures; no large checkpoint run",
+  "verified": [
+    "Current CMPRPACK-v1 header/shuffle compatibility",
+    "Raw and RLE Zstd frames verified independently by libzstd",
+    "No-checksum frames retain whole-file SHA verification",
+    "Truncated/reserved/trailing frame rejection",
+    "Declared-output mismatch rejects without replacing destination",
+    "Symlink alias refusal and safe symlink replacement",
+    "Observable input mutation rejects",
+    "Pre-publication fsync error preserves old destination"
+  ],
+  "open_commit_point_issue": {
+    "injected_operation": "temporary.unlink after os.link publication",
+    "raised": "PermissionError",
+    "destination_committed": true,
+    "temporary_hardlink_retained": true
+  },
+  "window_note": "Header preflight bounds the advertised Zstd window for an immutable input; decoder-level cap would additionally harden against a concurrent header change."
+}

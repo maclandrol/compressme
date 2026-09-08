@@ -1,0 +1,165 @@
+{
+  "scope": "Only16 sampled real genes; not full-vocabulary or full-model validation",
+  "branches": {
+    "raw": {
+      "tables": [
+        "raw_1",
+        "raw_10",
+        "raw_13",
+        "raw_25",
+        "raw_50"
+      ],
+      "dense_bytes": 327680,
+      "encoded_bytes": 197440,
+      "routes": [
+        "16",
+        "16",
+        "16",
+        "16",
+        "same"
+      ],
+      "shapes": {
+        "raw_1": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            3
+          ],
+          "high": [
+            16,
+            3
+          ]
+        },
+        "raw_10": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            4
+          ],
+          "high": [
+            16,
+            4
+          ]
+        },
+        "raw_13": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            3
+          ],
+          "high": [
+            16,
+            3
+          ]
+        },
+        "raw_25": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            3
+          ],
+          "high": [
+            16,
+            3
+          ]
+        },
+        "raw_50": {}
+      },
+      "cpu_all_route_bytes_equal": true,
+      "naive_full_vocabulary_extrapolation_bytes": 244208600
+    },
+    "normalized": {
+      "tables": [
+        "normalized_2",
+        "normalized_10",
+        "normalized_13",
+        "normalized_25",
+        "normalized_50"
+      ],
+      "dense_bytes": 327680,
+      "encoded_bytes": 179456,
+      "routes": [
+        "8",
+        "8",
+        "8",
+        "8",
+        "same"
+      ],
+      "shapes": {
+        "normalized_2": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            125
+          ],
+          "high": [
+            16,
+            125
+          ]
+        },
+        "normalized_10": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            127
+          ],
+          "high": [
+            16,
+            127
+          ]
+        },
+        "normalized_13": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            130
+          ],
+          "high": [
+            16,
+            130
+          ]
+        },
+        "normalized_25": {
+          "low": [
+            16,
+            1024
+          ],
+          "columns": [
+            16,
+            122
+          ],
+          "high": [
+            16,
+            122
+          ]
+        },
+        "normalized_50": {}
+      },
+      "cpu_all_route_bytes_equal": true,
+      "naive_full_vocabulary_extrapolation_bytes": 221964640
+    }
+  },
+  "original_gene_table_bytes": 405299200,
+  "sample_extrapolated_total_encoded_bytes": 466173240
+}

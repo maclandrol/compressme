@@ -1,0 +1,9 @@
+{
+  "lightning": "2.5.0",
+  "torch": "2.14.0",
+  "mps_available": true,
+  "generic_gpu_resolves_to": "mps",
+  "source_sha256": "a166cbfc452b221a19c77841492a20e72c683d78eb2af9fb280a924bab84be4f",
+  "source_url": "https://github.com/Lightning-AI/pytorch-lightning/blob/2.5.0/src/pytorch_lightning/trainer/connectors/accelerator_connector.py",
+  "scope": "Accelerator resolution only, not a complete Boltz CLI invocation."
+}

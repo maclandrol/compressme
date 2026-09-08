@@ -1,0 +1,14 @@
+{
+  "reviewed_file": "/private/tmp/compressme-agent-boltz-compute/boltz2_runtime.py",
+  "sha256": "5a2ee9a0ad7738217ddd0cff9c5be7a2fb39e1110dcd5df6c6ae85e2e85fc26a",
+  "independent_tests": 5,
+  "tests_passed": 5,
+  "scope": "Small routing/cleanup tests; native full-output and timing gates owned by runtime agent",
+  "tested": [
+    "fallback executes changed conditioning values",
+    "autocast fallback preserves values and restores layout dispatch",
+    "partial decoder wrapper installation cleanup",
+    "failed/unsupported input does not poison next request",
+    "between-request nested module change is refused"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Historical original-native API smoke; reports copied byte-for-byte, not produced by this portable refactor",
+  "reports": {
+    "native-cpu-eager.json": "7d71bdfaba878fa4dfb47bd1a17537c682d425690c15a3a8dfab3dea4c063c95",
+    "native-cpu-sdpa.json": "d0598aa5af1d398757afc2ad420cf890edf397a216b4d1779f04a153c0d5b33b",
+    "native-mps-eager.json": "dd0a442fb2edd1579c176c9c64e8290ce1b4b6607bc1c76e24d95bd959404b82",
+    "native-mps-sdpa.json": "4e296e198c9b5b631d6526b1de590d44f66048985f6e6f54d627a75dac019591"
+  }
+}

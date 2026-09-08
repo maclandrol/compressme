@@ -1,0 +1,50 @@
+{
+  "scope": "20-residue protein plus ethanol, native FP32 complete prediction schedules, immutable exclusive frozen request",
+  "prototype_sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+  "rows": [
+    {
+      "backend": "cpu",
+      "model": "confidence",
+      "tensor_leaves": 21,
+      "output_bytes": 313204,
+      "all_output_bytes_equal": true,
+      "self_repeat_bytes_equal": true,
+      "restoration_bytes_equal": true,
+      "cached_bytes": 3019776,
+      "score_calls": 200
+    },
+    {
+      "backend": "cpu",
+      "model": "affinity",
+      "tensor_leaves": 27,
+      "output_bytes": 325820,
+      "all_output_bytes_equal": true,
+      "self_repeat_bytes_equal": true,
+      "restoration_bytes_equal": true,
+      "cached_bytes": 9059328,
+      "score_calls": 200
+    },
+    {
+      "backend": "mps",
+      "model": "confidence",
+      "tensor_leaves": 21,
+      "output_bytes": 313204,
+      "all_output_bytes_equal": true,
+      "self_repeat_bytes_equal": true,
+      "restoration_bytes_equal": true,
+      "cached_bytes": 3019776,
+      "score_calls": 200
+    },
+    {
+      "backend": "mps",
+      "model": "affinity",
+      "tensor_leaves": 27,
+      "output_bytes": 325820,
+      "all_output_bytes_equal": true,
+      "self_repeat_bytes_equal": true,
+      "restoration_bytes_equal": true,
+      "cached_bytes": 9059328,
+      "score_calls": 200
+    }
+  ]
+}

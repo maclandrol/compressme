@@ -1,0 +1,73 @@
+{
+  "device": "cpu",
+  "dtype": "float32",
+  "threads": 4,
+  "timing_scope": "Original complete numerical batch API; interleaved order; fresh gene/count inputs; excludes imports/model loading/compilation",
+  "first_call_scope": "First call at an uncached shape after library/model warmup; constant cache stores parameters only, never cell outputs",
+  "cases": [
+    {
+      "cells": 1,
+      "tokens": 32,
+      "rounds": 5,
+      "first_shape_call_ms": {
+        "original": 15.74795797932893,
+        "compiled": 10.53912501083687
+      },
+      "median_ms": {
+        "original": 15.576083998894319,
+        "compiled": 11.200959008419886
+      },
+      "speed_ratio": 1.3906027142127386,
+      "samples_ms": {
+        "original": [
+          15.580624982248992,
+          15.855208010179922,
+          15.576083998894319,
+          13.528791983844712,
+          12.958166014868766
+        ],
+        "compiled": [
+          12.045582989230752,
+          11.923542013391852,
+          11.200959008419886,
+          9.544416010612622,
+          9.422542003449053
+        ]
+      },
+      "constant_cache_hits": 7,
+      "constant_cache_misses": 1
+    },
+    {
+      "cells": 1,
+      "tokens": 2048,
+      "rounds": 5,
+      "first_shape_call_ms": {
+        "original": 468.4678749763407,
+        "compiled": 382.6034170051571
+      },
+      "median_ms": {
+        "original": 412.3089170025196,
+        "compiled": 372.4012919992674
+      },
+      "speed_ratio": 1.1071629606573188,
+      "samples_ms": {
+        "original": [
+          432.95883300015703,
+          428.25974998413585,
+          409.9035420222208,
+          412.3089170025196,
+          399.6843329805415
+        ],
+        "compiled": [
+          372.4012919992674,
+          370.4071670072153,
+          371.28808299894445,
+          374.15354198310524,
+          375.18729199655354
+        ]
+      },
+      "constant_cache_hits": 7,
+      "constant_cache_misses": 1
+    }
+  ]
+}

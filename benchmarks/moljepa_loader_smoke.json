@@ -1,0 +1,477 @@
+{
+  "mps_available": true,
+  "devices": {
+    "cpu": {
+      "class": "FastSmilesMolJEPA",
+      "metal_enabled": false,
+      "parameters": 19763160,
+      "cases": [
+        {
+          "smiles": [
+            "[He]"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['cls']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['embeddings']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 2.078143526921758e-07,
+              "max_abs": 1.0728836059570312e-06,
+              "rmse": 1.724074446269741e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.4145973664294415e-07,
+              "max_abs": 1.4901161193847656e-07,
+              "rmse": 4.682414695704022e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.576498768568296e-07,
+              "max_abs": 5.140900611877441e-07,
+              "rmse": 8.28997978130367e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 9.315381055353377e-08,
+              "max_abs": 2.384185791015625e-07,
+              "rmse": 2.4137113032467986e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 1.7611059098300808e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 4.3257735451050935e-08,
+              "exact": false
+            }
+          }
+        },
+        {
+          "smiles": [
+            "CCO"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['cls']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['embeddings']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            }
+          }
+        },
+        {
+          "smiles": [
+            "CCO"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 2.3139712892154753e-07,
+              "max_abs": 1.1920928955078125e-06,
+              "rmse": 1.9985544096788278e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.444747867834961e-07,
+              "max_abs": 2.086162567138672e-07,
+              "rmse": 4.821224987066744e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.5832663917910643e-07,
+              "max_abs": 6.854534149169922e-07,
+              "rmse": 8.254159117538356e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 1.0560663262627861e-07,
+              "max_abs": 2.384185791015625e-07,
+              "rmse": 2.7553832110615726e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.602591453944162e-07,
+              "max_abs": 7.152557373046875e-07,
+              "rmse": 6.282290011776181e-08,
+              "exact": false
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]",
+            "CCO",
+            "C1CCCCC1"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 1.2932932022509435e-07,
+              "max_abs": 1.1920928955078125e-06,
+              "rmse": 1.0893687206230374e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.322087745100671e-07,
+              "max_abs": 2.682209014892578e-07,
+              "rmse": 4.585267976303507e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]",
+            "CCO",
+            "C1CCCCC1"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 3.1209498218670904e-07,
+              "max_abs": 1.6689300537109375e-06,
+              "rmse": 2.628843237075638e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.167885550611517e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 7.132905912530236e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 2.9578256788107294e-07,
+              "max_abs": 4.470348358154297e-07,
+              "rmse": 6.885515994015796e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 4.1970839087598934e-08,
+              "max_abs": 5.960464477539063e-08,
+              "rmse": 1.0884826929059226e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 1.5221350637156296e-07,
+              "max_abs": 4.172325134277344e-07,
+              "rmse": 3.7027546453937655e-08,
+              "exact": false
+            }
+          }
+        }
+      ],
+      "deepcopy": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      },
+      "runtime_export_rejected": "Save the portable model before runtime acceleration; reload it with load_moljepa(..., accelerate=True). Runtime layouts are applied after loading."
+    },
+    "mps": {
+      "class": "FastSmilesMolJEPA",
+      "metal_enabled": true,
+      "parameters": 19763160,
+      "cases": [
+        {
+          "smiles": [
+            "[He]"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['cls']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['embeddings']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['cls']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['embeddings']": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true
+            }
+          }
+        },
+        {
+          "smiles": [
+            "CCO"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 1.4752505200016797e-07,
+              "max_abs": 7.152557373046875e-07,
+              "rmse": 1.274159442959752e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 2.1065802910012526e-07,
+              "max_abs": 1.1920928955078125e-07,
+              "rmse": 2.948342999580288e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 2.287001896782031e-07,
+              "max_abs": 2.8312206268310547e-07,
+              "rmse": 5.268175922383302e-08,
+              "exact": false
+            }
+          }
+        },
+        {
+          "smiles": [
+            "CCO"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 1.5241975349455974e-07,
+              "max_abs": 8.344650268554688e-07,
+              "rmse": 1.3164344930595889e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 2.224495290068043e-07,
+              "max_abs": 8.940696716308594e-08,
+              "rmse": 3.113375376532568e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 2.099140723923894e-07,
+              "max_abs": 2.384185791015625e-07,
+              "rmse": 4.8354321459085456e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 8.146731386601737e-08,
+              "max_abs": 2.980232238769531e-07,
+              "rmse": 2.1255641172585418e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.2280495825805385e-07,
+              "max_abs": 4.172325134277344e-07,
+              "rmse": 5.378198736836319e-08,
+              "exact": false
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]",
+            "CCO",
+            "C1CCCCC1"
+          ],
+          "return_attn": false,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 1.6240166982976085e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 1.3679442223328963e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 2.862551442632722e-07,
+              "max_abs": 1.4901161193847656e-07,
+              "rmse": 3.950999076363235e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 2.614232114270014e-07,
+              "max_abs": 4.172325134277344e-07,
+              "rmse": 6.085665223038545e-08,
+              "exact": false
+            }
+          }
+        },
+        {
+          "smiles": [
+            "[He]",
+            "CCO",
+            "C1CCCCC1"
+          ],
+          "return_attn": true,
+          "errors": {
+            "output['predictions']": {
+              "relative_l2": 1.5347407605872366e-07,
+              "max_abs": 8.344650268554688e-07,
+              "rmse": 1.2927451912592789e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 2.7901403508249686e-07,
+              "max_abs": 1.341104507446289e-07,
+              "rmse": 3.851054507153481e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 2.645313122432222e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 6.158018780501036e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 4.9532649107981105e-08,
+              "max_abs": 2.384185791015625e-07,
+              "rmse": 1.2845926622085507e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 1.899685580282276e-07,
+              "max_abs": 6.556510925292969e-07,
+              "rmse": 4.621186172292873e-08,
+              "exact": false
+            }
+          }
+        }
+      ],
+      "deepcopy": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      },
+      "runtime_export_rejected": "Save the portable model before runtime acceleration; reload it with load_moljepa(..., accelerate=True). Runtime layouts are applied after loading."
+    }
+  }
+}

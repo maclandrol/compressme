@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "source_file": "model.safetensors",
+  "source_bytes": 2062669224,
+  "expected_source_sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434",
+  "codec_file": "packing_files.py",
+  "codec_sha256": "5fd6525b8546ac317d32ff89e3ff772b94de0a013d39509f7c2f4189cfeb4db5",
+  "scope": "lossless disk/transport bytes; no tensor interpretation, resident-model reduction or inference-speed claim",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "numpy": "2.5.3",
+    "zstandard": "0.25.0",
+    "zstandard_backend": "cext"
+  },
+  "timing_scope": "diagnostic wall times; other model validation may run concurrently",
+  "stages": {
+    "source_verification": {
+      "seconds": 0.8162713330239058,
+      "sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434"
+    },
+    "packing": {
+      "raw_bytes": 2062669224,
+      "packed_bytes": 1759531547,
+      "sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434",
+      "format": "CMPRPACK-v1",
+      "block_bytes": 1048576,
+      "seconds": 12.13645670900587,
+      "cumulative_peak_rss_bytes": 54394880
+    },
+    "unpacking": {
+      "raw_bytes": 2062669224,
+      "packed_bytes": 1759531547,
+      "sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434",
+      "format": "CMPRPACK-v1",
+      "block_bytes": 1048576,
+      "zstd_window_bytes": 4194304,
+      "seconds": 3.697359291021712,
+      "cumulative_peak_rss_bytes": 54427648
+    },
+    "full_byte_comparison": {
+      "seconds": 1.6682473750261124,
+      "all_bytes_equal": true,
+      "bytes_compared": 2062669224,
+      "source_sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434",
+      "restored_sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434",
+      "source_stat_unchanged": true
+    },
+    "packed_hash": {
+      "seconds": 0.6607846250117291,
+      "sha256": "fe19430c29b952aa39c131ff70f2b194cacf62e206c8e1b1dc50dc7ef39a1674"
+    }
+  },
+  "packing_level": 9,
+  "packed_fraction_of_source": 0.8530362146907177,
+  "disk_bytes_saved": 303137677,
+  "disk_percent_saved": 14.696378530928234,
+  "peak_process_rss_bytes": 56360960,
+  "rss_measurement": "resource.getrusage(RUSAGE_SELF).ru_maxrss; bytes on macOS, KiB converted to bytes elsewhere; fresh standalone process; includes imports and codec workspace",
+  "total_diagnostic_seconds": 18.979234624974197,
+  "torch_imported": false,
+  "outputs": {
+    "packed": {
+      "file": "model.cmprpack",
+      "bytes": 1759531547,
+      "sha256": "fe19430c29b952aa39c131ff70f2b194cacf62e206c8e1b1dc50dc7ef39a1674"
+    },
+    "restored": {
+      "file": "model.restored.safetensors",
+      "bytes": 2062669224,
+      "sha256": "1e6904266eccc8826225e828159eaea252888cdd6ea787fac79611f4e013d434"
+    }
+  }
+}

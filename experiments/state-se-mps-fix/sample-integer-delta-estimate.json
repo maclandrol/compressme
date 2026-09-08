@@ -1,0 +1,188 @@
+{
+  "scope": "16 real genes; extrapolation only",
+  "branches": {
+    "raw": {
+      "base": "raw_50",
+      "routes": [
+        {
+          "key": "raw_1",
+          "min": -64626,
+          "max": 145109,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 1166,
+              "slots": 97,
+              "padded_bytes": 25696,
+              "csr_bytes": 23448
+            },
+            {
+              "bits": 16,
+              "exceptions": 5,
+              "slots": 1,
+              "padded_bytes": 32864,
+              "csr_bytes": 32866
+            }
+          ]
+        },
+        {
+          "key": "raw_10",
+          "min": -58866,
+          "max": 175577,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 1248,
+              "slots": 107,
+              "padded_bytes": 26656,
+              "csr_bytes": 23940
+            },
+            {
+              "bits": 16,
+              "exceptions": 7,
+              "slots": 2,
+              "padded_bytes": 32960,
+              "csr_bytes": 32878
+            }
+          ]
+        },
+        {
+          "key": "raw_13",
+          "min": -77808,
+          "max": 114704,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 1267,
+              "slots": 103,
+              "padded_bytes": 26272,
+              "csr_bytes": 24054
+            },
+            {
+              "bits": 16,
+              "exceptions": 9,
+              "slots": 2,
+              "padded_bytes": 32960,
+              "csr_bytes": 32890
+            }
+          ]
+        },
+        {
+          "key": "raw_25",
+          "min": -124786,
+          "max": 111184,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 1075,
+              "slots": 90,
+              "padded_bytes": 25024,
+              "csr_bytes": 22902
+            },
+            {
+              "bits": 16,
+              "exceptions": 9,
+              "slots": 2,
+              "padded_bytes": 32960,
+              "csr_bytes": 32890
+            }
+          ]
+        }
+      ],
+      "padded_total_bytes": 169184,
+      "naive_full_bytes": 209259460
+    },
+    "normalized": {
+      "base": "normalized_50",
+      "routes": [
+        {
+          "key": "normalized_2",
+          "min": -44157,
+          "max": 74617,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 865,
+              "slots": 66,
+              "padded_bytes": 22720,
+              "csr_bytes": 21642
+            },
+            {
+              "bits": 16,
+              "exceptions": 4,
+              "slots": 1,
+              "padded_bytes": 32864,
+              "csr_bytes": 32860
+            }
+          ]
+        },
+        {
+          "key": "normalized_10",
+          "min": -75272,
+          "max": 38651,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 913,
+              "slots": 69,
+              "padded_bytes": 23008,
+              "csr_bytes": 21930
+            },
+            {
+              "bits": 16,
+              "exceptions": 4,
+              "slots": 1,
+              "padded_bytes": 32864,
+              "csr_bytes": 32860
+            }
+          ]
+        },
+        {
+          "key": "normalized_13",
+          "min": -83448,
+          "max": 57722,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 892,
+              "slots": 67,
+              "padded_bytes": 22816,
+              "csr_bytes": 21804
+            },
+            {
+              "bits": 16,
+              "exceptions": 2,
+              "slots": 1,
+              "padded_bytes": 32864,
+              "csr_bytes": 32848
+            }
+          ]
+        },
+        {
+          "key": "normalized_25",
+          "min": -23764,
+          "max": 59767,
+          "options": [
+            {
+              "bits": 8,
+              "exceptions": 817,
+              "slots": 60,
+              "padded_bytes": 22144,
+              "csr_bytes": 21354
+            },
+            {
+              "bits": 16,
+              "exceptions": 1,
+              "slots": 1,
+              "padded_bytes": 32864,
+              "csr_bytes": 32842
+            }
+          ]
+        }
+      ],
+      "padded_total_bytes": 156224,
+      "naive_full_bytes": 193229560
+    }
+  },
+  "naive_full_bytes": 402489020
+}

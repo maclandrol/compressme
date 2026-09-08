@@ -1,0 +1,45 @@
+{
+  "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "files": [
+    {
+      "name": "boltz2_conf.ckpt",
+      "metadata": {
+        "rfilename": "boltz2_conf.ckpt",
+        "blobId": "1b5e3eeb8e8ace389133320c3a45eefd1ee7e7d8",
+        "size": 2286561469,
+        "lfs": {
+          "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+          "size": 2286561469,
+          "pointerSize": 135
+        }
+      },
+      "prefix_bytes": 4194304,
+      "first_zip_name": "boltz2_conf/data.pkl",
+      "first_zip_payload_offset": 64,
+      "compression_method": 0,
+      "flags": 2056,
+      "header_compressed_size": 0,
+      "header_uncompressed_size": 0
+    },
+    {
+      "name": "boltz2_aff.ckpt",
+      "metadata": {
+        "rfilename": "boltz2_aff.ckpt",
+        "blobId": "25a519f867a57d440bb7897b63522cc87aeb3d05",
+        "size": 2062139170,
+        "lfs": {
+          "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+          "size": 2062139170,
+          "pointerSize": 135
+        }
+      },
+      "prefix_bytes": 4194304,
+      "first_zip_name": "ensemble_mix/data.pkl",
+      "first_zip_payload_offset": 64,
+      "compression_method": 0,
+      "flags": 2056,
+      "header_compressed_size": 0,
+      "header_uncompressed_size": 0
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+
+PINNED_BOLTZ_REVISION = 'b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc'
+PINNED_SOURCE_SHA256 = {
+    'boltz.model.modules.diffusionv2': 'e68643da577decddaef25e97313fa0d014d5653752d0a97282ec1a78665d697a',
+    'boltz.model.modules.encodersv2': '2938af17252607d056106fc04a3afa0ea96b145fa7485764ebf33d646c99e0d4',
+    'boltz.model.modules.transformersv2': '4fbecbe835ec2d7286d5a46e408cb9134b2378bce8dd443df58b80392736f982',
+}
+
+
+def _verify_source_and_hierarchy(diffusion):
+    """Validate the source-dependent proof boundaries before preparing any values.
+
+    Exact source classes are required; monkeypatching class methods or replacing
+    their globals is outside the explicitly unmodified-source contract.
+    """
+    import hashlib
+    import importlib
+    from pathlib import Path
+    modules = {}
+    for name, digest in PINNED_SOURCE_SHA256.items():
+        source = importlib.import_module(name)
+        if hashlib.sha256(Path(source.__file__).read_bytes()).hexdigest() != digest:
+            raise ValueError(f'Unaudited Boltz source: {name}')
+        modules[name] = source
+    d = modules['boltz.model.modules.diffusionv2']
+    e = modules['boltz.model.modules.encodersv2']
+    t = modules['boltz.model.modules.transformersv2']
+
+    def exact(obj, cls, path):
+        if type(obj) is not cls:
+            raise ValueError(f'Expected unmodified exact {cls.__name__} at {path}')
+
+    exact(diffusion, d.AtomDiffusion, 'structure_module')
+    score = diffusion.score_model
+    exact(score, d.DiffusionModule, 'score_model')
+    exact(score.single_conditioner, e.SingleConditioning, 'single_conditioner')
+    for name in ('norm_single', 'norm_fourier'):
+        exact(getattr(score.single_conditioner, name), nn.LayerNorm, 'single_conditioner.' + name)
+    exact(score.single_conditioner.single_embed, nn.Linear, 'single_conditioner.single_embed')
+    for outer_name, inner_name, outer_cls in (
+        ('atom_attention_encoder', 'atom_encoder', e.AtomAttentionEncoder),
+        ('atom_attention_decoder', 'atom_decoder', e.AtomAttentionDecoder),
+    ):
+        outer = getattr(score, outer_name)
+        exact(outer, outer_cls, outer_name)
+        atom = getattr(outer, inner_name)
+        exact(atom, t.AtomTransformer, outer_name + '.' + inner_name)
+        block = atom.diffusion_transformer
+        exact(block, t.DiffusionTransformer, 'diffusion_transformer')
+        exact(block.layers, nn.ModuleList, 'diffusion_transformer.layers')
+        for layer in block.layers:
+            exact(layer, t.DiffusionTransformerLayer, 'diffusion_transformer.layer')
+            exact(layer.transition, t.ConditionedTransitionBlock, 'transition')
+            for owner in (layer, layer.transition):
+                exact(owner.adaln, t.AdaLN, 'adaln')
+                for attr in ('a_norm', 's_norm'):
+                    exact(getattr(owner.adaln, attr), nn.LayerNorm, 'adaln.' + attr)
+                for attr in ('s_scale', 's_bias'):
+                    exact(getattr(owner.adaln, attr), nn.Linear, 'adaln.' + attr)
+                exact(owner.output_projection, nn.Sequential, 'output_projection')
+                if len(owner.output_projection) != 2:
+                    raise ValueError('Modified condition output projection')
+                exact(owner.output_projection[0], nn.Linear, 'output_projection.0')
+                exact(owner.output_projection[1], nn.Sigmoid, 'output_projection.1')
+    return score
+
+
+def _boundary_signature(module):
+    """Resolve current bindings, rather than only tracking formerly bound tensors."""
+    rows = []
+    for name, child in module.named_modules():
+        config = tuple((key, value) for key, value in child.__dict__.items()
+                       if not key.startswith('_') and isinstance(value, (bool, int, float, str, type(None))))
+        bindings = tuple((key, state_token(value) if value is not None else None)
+                         for key, value in list(child._parameters.items()) + list(child._buffers.items()))
+        rows.append((name, id(child), type(child), child.training, config, bindings))
+    return tuple(rows)
+
+
+@contextmanager
+def boltz2_invariant_sampling(model, *, immutable_request=True):
+    """Reuse declared-invariant conditioning only within each Boltz sampling call.
+
+    This opt-in adapter accepts a model returned by ``load_boltz2(...).structure``
+    or ``.affinity``, or its native AtomDiffusion. It requires the pinned source,
+    exact affected classes, frozen eval descendants, no hooks/instance overrides,
+    no-grad execution and exclusive ownership of the model for the entire scope.
+
+    ``immutable_request=True`` is an explicit contract: model state, settings,
+    source methods and conditioning data may not mutate during native sampling.
+    Original weight/module bindings and versions are checked at each request's
+    entry and exit; a detected mutation rejects the request before a normal
+    return. Static tensor identity, layout and tracked versions are also checked
+    per score call. Unsafe writes bypassing tensor versions and temporary changes
+    reversed before the boundary remain prohibited, rather than claimed detected.
+    Autocast-enabled or unsupported score layouts run the original path.
+
+    Prepared wrappers stay installed for consecutive score calls with the same
+    actual multiplicity and are restored on a layout switch or request exit.
+    Cached tensors contain only request conditioning computations, never model
+    predictions; all are discarded in ``finally``. Parameters and the original
+    dynamic operations, tensor shapes, RNG sequence and sampling schedule remain.
+    Concurrent/reentrant requests and training are unsupported.
+    """
+    if immutable_request is not True:
+        raise ValueError('This adapter requires the explicit immutable-request contract')
+    diffusion = model.structure_module if hasattr(model, 'structure_module') else model
+    score = _verify_source_and_hierarchy(diffusion)
+    require_frozen_plain(diffusion)
+    if 'sample' in diffusion.__dict__:
+        raise ValueError('Existing sample overrides are unsupported')
+    original_sample = diffusion.sample
+    original_forward = score.forward
+    original_single = score.single_conditioner
+    active = False
+    statistics = {'requests': [], 'source_revision': PINNED_BOLTZ_REVISION,
+                  'contract': 'exclusive_immutable_native_request'}
+
+    def sample_with_constants(*sample_args, **sample_kwargs):
+        nonlocal active
+        if active:
+            raise RuntimeError('Concurrent/reentrant sampling is unsupported')
+        require_frozen_plain(score)
+        if score.single_conditioner is not original_single:
+            raise ValueError('Model hierarchy changed during the outer scope')
+        before = _boundary_signature(score)
+        active = True
+        memo = {}
+        installed = ExitStack()
+        installed_mult = None
+        report = {'score_calls': 0, 'optimized_score_calls': 0, 'fallback_score_calls': 0,
+                  'prepared_layouts': [], 'cached_bytes': 0, 'cache_cleared': False,
+                  'boundary_state_unchanged': False, 'wrapper_installations': 0}
+        conditioning = sample_kwargs.get('diffusion_conditioning')
+        trunk = sample_kwargs.get('s_trunk')
+        inputs = sample_kwargs.get('s_inputs')
+        eligible = (isinstance(conditioning, dict) and isinstance(conditioning.get('c'), torch.Tensor)
+                    and isinstance(trunk, torch.Tensor) and isinstance(inputs, torch.Tensor))
+        c = conditioning['c'] if eligible else None
+        if eligible and any(t.requires_grad for t in (c, trunk, inputs)):
+            eligible = False
+        initial_inputs = tuple(state_token(t) for t in (c, trunk, inputs)) if eligible else None
+
+        def restore_prepared():
+            nonlocal installed, installed_mult
+            score.single_conditioner = original_single
+            installed.close()
+            installed = ExitStack()
+            installed_mult = None
+
+        def score_with_constants(*score_args, **score_kwargs):
+            nonlocal installed_mult
+            report['score_calls'] += 1
+            mult = score_kwargs.get('multiplicity', 1)
+            same = (eligible and not score_args and type(mult) is int and mult > 0
+                    and score_kwargs.get('diffusion_conditioning') is conditioning
+                    and conditioning.get('c') is c and score_kwargs.get('s_trunk') is trunk
+                    and score_kwargs.get('s_inputs') is inputs)
+            if same and initial_inputs != tuple(state_token(t) for t in (c, trunk, inputs)):
+                raise RuntimeError('Immutable conditioning changed during sampling')
+            same = same and not torch.is_grad_enabled() and not autocast_state(c)[0]
+            if not same:
+                restore_prepared()
+                report['fallback_score_calls'] += 1
+                return original_forward(*score_args, **score_kwargs)
+            if mult != installed_mult:
+                restore_prepared()
+                if mult not in memo:
+                    repeated_c = c.float().repeat_interleave(mult, 0)
+                    encoder = PreparedAtomConditioning(score.atom_attention_encoder.atom_encoder, repeated_c)
+                    decoder = PreparedAtomConditioning(score.atom_attention_decoder.atom_decoder, repeated_c)
+                    single = PreparedSingleConditioningPrefix(original_single, trunk.repeat_interleave(mult, 0), inputs.repeat_interleave(mult, 0))
+                    memo[mult] = encoder, decoder, single
+                    memory = encoder.bytes + decoder.bytes + single.prefix.numel() * single.prefix.element_size()
+                    report['prepared_layouts'].append({'multiplicity': mult, 'c_shape': list(repeated_c.shape),
+                                                      'prefix_shape': list(single.prefix.shape), 'cached_bytes': memory})
+                    report['cached_bytes'] += memory
+                encoder, decoder, single = memo[mult]
+                installed.enter_context(encoder.activate())
+                installed.enter_context(decoder.activate())
+                score.single_conditioner = single
+                installed_mult = mult
+                report['wrapper_installations'] += 1
+            report['optimized_score_calls'] += 1
+            return original_forward(*score_args, **score_kwargs)
+
+        score.forward = score_with_constants
+        try:
+            return original_sample(*sample_args, **sample_kwargs)
+        finally:
+            restore_prepared()
+            del score.forward
+            memo.clear()
+            report['cache_cleared'] = True
+            report['boundary_state_unchanged'] = before == _boundary_signature(score)
+            statistics['requests'].append(report)
+            active = False
+            require_frozen_plain(score)
+            if not report['boundary_state_unchanged']:
+                raise RuntimeError('Immutable model state changed during sampling; request rejected')
+    diffusion.sample = sample_with_constants
+    try:
+        yield statistics
+    finally:
+        del diffusion.sample
+        if 'forward' in score.__dict__:
+            del score.forward
+
+
+# Compatibility for the independent native verification harness.
+constant_conditioning_sampling_scope = boltz2_invariant_sampling

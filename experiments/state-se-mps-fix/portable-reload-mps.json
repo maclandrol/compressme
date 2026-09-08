@@ -1,0 +1,6115 @@
+{
+  "device": "mps",
+  "hardware": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "cuda_build_version": null,
+    "cuda_available": false,
+    "cuda_devices": [],
+    "mps_built": true,
+    "mps_available": true,
+    "nvidia_smi_found": false
+  },
+  "status": "passed",
+  "accepted": true,
+  "accepted_tolerance": true,
+  "bitwise_identical": true,
+  "atol": 1e-05,
+  "relative_l2_tolerance": 1e-05,
+  "require_bitwise": true,
+  "rule": "Every floating leaf: max_abs <= atol AND relative_l2 <= rtol; discrete/non-tensor outputs exact. Source self-repeat must also pass.",
+  "scope": "Complete outputs returned by the trusted cases, on this backend; not biological accuracy, cross-device equivalence, or a speed benchmark.",
+  "source_hashes": {
+    "/private/tmp/compressme-private-staging/examples/validate_backends.py": "278eea9cad6419430b3f96a9199b4ef5182bc29c17cef82d5a26237048fd8709",
+    "/private/tmp/compressme-private-staging/src/compressme/validation.py": "cf98a3ca009489689cb916e39c5293eee56cd844d6991e70ed114aba523d8dfb",
+    "/private/tmp/compressme-private-staging/examples/state_se/lossless_backend.py": "bdd948c2f8b69e813c4213f0c16d81ca5b0885c05347a8a16068d4de5925b010",
+    "/private/tmp/compressme-private-staging/examples/state_se/original.py": "59d89c9e7ee67dc5181216259677aaca705580c7628f89ada10cb3be5570d8cf",
+    "/private/tmp/compressme-private-staging/examples/state_se/lossless_checks.py": "406c8d15114493b3c9834f6e62162a10a790e7c9153612e1b4a2c2cb0ef37d22",
+    "/private/tmp/compressme-private-staging/work/artifacts/state-se-100m-lossless/manifest.json": "a8e7df129c8b77e74172b0d62345324eeeb6f182f0c5b1d0cfc4070e72c7620e",
+    "/private/tmp/compressme-private-staging/work/artifacts/state-se-100m-lossless/architecture/SOURCE.json": "e5907a3f92be1b31c8649154f079d77653b3a64ad3602bf7d754490139b5cbf5",
+    "/private/tmp/compressme-private-staging/src/compressme/packed_embedding.py": "d64325c810ea9d17631be19a6bf9c397e3a6c773449b7f265c8a38b50b9d49b3",
+    "/private/tmp/compressme-private-staging/src/compressme/state_se_io.py": "ffd96650d33f1b0dc05ebbf01c4ffc157b88db3118f2a258e8366d9856443c60"
+  },
+  "cases": [
+    {
+      "name": "full-00-B1-T1-Q1",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 110972,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 110972,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-01-B1-T8-Q7",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 221636,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 221636,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-02-B4-T32-Q13",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 2164784,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 2164784,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-03-B2-T128-Q31",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 2016712,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 2016712,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-04-B2-T512-Q31",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 5162440,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 5162440,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-05-B1-T2048-Q31",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 8872676,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 8872676,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-06-B1-T9-Q9",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 242140,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 242140,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-07-B1-T10-Q10",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 258536,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 258536,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-08-B1-T11-Q11",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 274932,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 274932,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-09-B1-T12-Q12",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 291328,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 291328,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-10-B1-T13-Q13",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 307724,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 307724,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-11-B1-T14-Q14",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 324120,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 324120,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-12-B1-T15-Q15",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 340516,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 340516,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-13-B1-T16-Q16",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 356912,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 356912,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-14-B1-T23-Q23",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 471684,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 471684,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-15-B1-T24-Q24",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 488080,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 488080,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-16-B1-T25-Q25",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 504476,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 504476,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-17-B1-T48-Q48",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 750512,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 750512,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-18-B1-T49-Q49",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 758716,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 758716,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-19-B1-T50-Q50",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 766920,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 766920,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-20-B2-T6-Q6",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 385904,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 385904,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-21-B3-T4-Q4",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 480480,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 480480,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-22-B2-T7-Q7",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 418696,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 418696,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-23-B2-T8-Q8",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 451488,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 451488,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "full-24-B4-T4-Q4",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 640640,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 15,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 640640,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['computed'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][3]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['computed'][4]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['full'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_classifier']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['dataset_latents']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['gene_decoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_forward'][2]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['raw_encoder']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "original-name-helper",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 1,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 20480,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output['output']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 1,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 20480,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output['output']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "complete-original-weight-snapshot",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 1,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 405299200,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output['output']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 1,
+        "non_tensor_leaves": 0,
+        "logical_tensor_bytes": 405299200,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output['output']": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "cublas_workspace_config": null,
+    "mps_fallback_environment": null,
+    "mps_fast_math_environment": null,
+    "cpu_threads": 4,
+    "execution": "torch.inference_mode; autocast explicitly disabled"
+  },
+  "model": {
+    "target": "State SE-100M lossless original embedding",
+    "checkpoint_sha256": "7ee823583ad10c6a12befba6df12dfcd61ac0972deab57be3b4db24a0045af86",
+    "scope": "25 complete model cases; arbitrary raw5120 vectors; all decoder/dataset heads; original gene-name helper; all19790x5120 weight bytes",
+    "artifact": "/private/tmp/compressme-private-staging/work/artifacts/state-se-100m-lossless",
+    "no_precision_change": true,
+    "no_shape_profiles": true
+  },
+  "reference": {
+    "class": "compressme_audited_state_se_4da61f113b1a78d2.nn.model.StateEmbeddingModel",
+    "parameters": 212038824,
+    "dtypes": [
+      "torch.float32"
+    ],
+    "registered_storage_bytes_all_devices": 848155296,
+    "permitted_cpu_codec_buffers": []
+  },
+  "candidate": {
+    "class": "compressme_local_state_se_30bfff70c38e6eb6.nn.model.StateEmbeddingModel",
+    "parameters": 110714024,
+    "dtypes": [
+      "torch.float32"
+    ],
+    "registered_storage_bytes_all_devices": 794613047,
+    "permitted_cpu_codec_buffers": [
+      "pe_embedding.offsets",
+      "pe_embedding.payload"
+    ]
+  },
+  "candidate_tensor_comparisons": 377
+}

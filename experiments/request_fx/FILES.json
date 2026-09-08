@@ -1,0 +1,9 @@
+{
+  "files": {
+    "request_fx.py": "d014e4105015e58ed349a8923a3090453c5d0ee118556294ed540aaa6def427a",
+    "test_request_fx.py": "e68f8793f245401b676e57216112a16518598600131acd75742d939825a2bcca",
+    "probe_boltz_adaln.py": "dfde5c322bddb3e2d2914e0866f01fd63cff76b0352271b6d76a51b337e6c9ee",
+    "boltz-adaln-cpu.json": "7f52822ab9007fb11c73581f40bb5084d33f37fe809af495aad26bc98b7962ff",
+    "README.md": "0400aceffab17dac8dfdb1298d8c55554daac95ea0f3e241df6d7b913ec3d724"
+  }
+}

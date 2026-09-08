@@ -1,0 +1,453 @@
+{
+  "args": {
+    "device": "mps",
+    "mode": "timing",
+    "artifact": "/private/tmp/compressme-models/boltz2/compiled-bundle",
+    "native_dir": "/private/tmp/compressme-agent-boltz-runtime",
+    "output": "/private/tmp/compressme-agent-boltz-runtime/compute/timing-mps.json",
+    "accepted_gate": "/private/tmp/compressme-agent-boltz-runtime/compute/gate-mps.json",
+    "rounds": 5,
+    "warmups": 2
+  },
+  "torch": "2.14.0",
+  "prototype_sha256": "0b48242b6a0062ad652912a094e08035fd256a489b7d3b0c98ce7eaae26985de",
+  "input_scope": "Same 20-aa protein+ethanol fixture, exact native feature tensors reused within each comparison; fresh diffusion seed each timing round",
+  "timing_scope": "Native predict_step, including request preparation and cache cleanup; excludes unchanged input featurization and model load",
+  "schedules": {
+    "confidence": {
+      "sampling_steps": 200,
+      "recycling_steps": 3,
+      "diffusion_samples": 1
+    },
+    "affinity": {
+      "sampling_steps": 200,
+      "recycling_steps": 5,
+      "diffusion_samples": 3
+    }
+  },
+  "models": {
+    "confidence": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 11.691516709019197,
+            "candidate": 13.199223542003892
+          },
+          "speedup": 0.8857730662575174,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 12.622354666993488,
+            "original": 8.556990832992597
+          },
+          "speedup": 0.6779234983286032,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 11.196010958025,
+            "candidate": 9.952975125022931
+          },
+          "speedup": 1.124890881107191,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 9.220425167004578,
+            "original": 15.267675165989203
+          },
+          "speedup": 1.6558537040813255,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 8.096356333000585,
+            "candidate": 7.748023166001076
+          },
+          "speedup": 1.0449576826935705,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true
+              }
+            ]
+          }
+        }
+      ],
+      "median_seconds": {
+        "original": 11.196010958025,
+        "candidate": 9.952975125022931
+      },
+      "ratio_of_medians": 1.124890881107191,
+      "module_and_parameter_identities_restored": true,
+      "accepted_bitwise": true
+    },
+    "affinity": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 11.131474041001638,
+            "candidate": 10.83577854098985
+          },
+          "speedup": 1.0272888098343118,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 11.593173875007778,
+            "original": 11.071538749994943
+          },
+          "speedup": 0.955004977011743,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 10.850841208011843,
+            "candidate": 10.973128042009193
+          },
+          "speedup": 0.9888557908438513,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 10.743839791975915,
+            "original": 11.307302458008053
+          },
+          "speedup": 1.0524451850494794,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true
+              }
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 10.929407999996329,
+            "candidate": 10.71724270802224
+          },
+          "speedup": 1.0197966303231403,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true
+              }
+            ]
+          }
+        }
+      ],
+      "median_seconds": {
+        "original": 11.071538749994943,
+        "candidate": 10.83577854098985
+      },
+      "ratio_of_medians": 1.021757569898024,
+      "module_and_parameter_identities_restored": true,
+      "accepted_bitwise": true
+    }
+  },
+  "accepted_bitwise": true
+}

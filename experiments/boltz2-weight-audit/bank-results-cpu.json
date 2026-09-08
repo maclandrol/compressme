@@ -1,0 +1,2562 @@
+{
+  "scope": "actual pretrained component weights on synthetic pair features, no full structure/confidence/affinity outputs validated",
+  "tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "torch": "2.14.0",
+  "banks": [
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "branches": 24,
+      "dim": 128,
+      "out_per_branch": 16,
+      "source_values": 55296,
+      "folded_values": 49536,
+      "saved_values": 5760,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "branches": 3,
+      "dim": 16,
+      "out_per_branch": 4,
+      "source_values": 288,
+      "folded_values": 204,
+      "saved_values": 84,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "branches": 3,
+      "dim": 16,
+      "out_per_branch": 4,
+      "source_values": 288,
+      "folded_values": 204,
+      "saved_values": 84,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "branches": 24,
+      "dim": 128,
+      "out_per_branch": 16,
+      "source_values": 55296,
+      "folded_values": 49536,
+      "saved_values": 5760,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "branches": 3,
+      "dim": 16,
+      "out_per_branch": 4,
+      "source_values": 288,
+      "folded_values": 204,
+      "saved_values": 84,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "branches": 3,
+      "dim": 16,
+      "out_per_branch": 4,
+      "source_values": 288,
+      "folded_values": 204,
+      "saved_values": 84,
+      "identical_norm_parameters": false,
+      "embedding_audit": {
+        "input_embedder.method_conditioning_init.weight": {
+          "numel": 4608,
+          "zeros": 1920,
+          "constant_rows": false,
+          "max_abs": 0.5776855945587158
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.7763568394002505e-14,
+        "relative_l2": 5.00754918311119e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.509903313490213e-14,
+        "relative_l2": 4.983369868482706e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.4210854715202004e-14,
+        "relative_l2": 4.992204841521226e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 5.773159728050814e-15,
+        "relative_l2": 5.693252150592857e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 2.3071516615326195e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.1102230246251565e-15,
+        "relative_l2": 1.6897799944644e-16,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 7.62939453125e-06,
+        "relative_l2": 2.979502085054264e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 8.58306884765625e-06,
+        "relative_l2": 2.9843988613720285e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 7.62939453125e-06,
+        "relative_l2": 2.9985341143401456e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 2.86102294921875e-06,
+        "relative_l2": 2.9455915750986605e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.7961501441732253e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.0728836059570312e-06,
+        "relative_l2": 1.3633427897730144e-07,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7558705614988958e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7541214738685598e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7303867995101355e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 4.440892098500626e-16,
+        "relative_l2": 2.4036597066654737e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 8.881784197001252e-16,
+        "relative_l2": 1.8384318279641553e-16,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.430511474609375e-06,
+        "relative_l2": 1.1367300345455078e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.9073486328125e-06,
+        "relative_l2": 1.14979123111425e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.9073486328125e-06,
+        "relative_l2": 1.1383320952518261e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.7881393432617188e-07,
+        "relative_l2": 1.1273451860915884e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.9802322387695312e-08,
+        "relative_l2": 5.8864866758767675e-08,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 5.066394805908203e-07,
+        "relative_l2": 8.678317442445405e-08,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 1.624512554781282e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 1.6064246645074802e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 8.881784197001252e-16,
+        "relative_l2": 1.6456046938005107e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 3.3306690738754696e-16,
+        "relative_l2": 2.0749603478915382e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 4.440892098500626e-16,
+        "relative_l2": 1.6186958819962366e-16,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.0590616739136749e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.068846771090648e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.0944130224288529e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.384185791015625e-07,
+        "relative_l2": 1.1165619184794195e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 5.960464477539063e-08,
+        "relative_l2": 8.406423290807652e-08,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_conf.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.1920928955078125e-07,
+        "relative_l2": 7.322737616277664e-08,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.7763568394002505e-14,
+        "relative_l2": 5.00754918311119e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.509903313490213e-14,
+        "relative_l2": 4.983369868482706e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.4210854715202004e-14,
+        "relative_l2": 4.992204841521226e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 5.773159728050814e-15,
+        "relative_l2": 5.693252150592857e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 2.3071516615326195e-16,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.1102230246251565e-15,
+        "relative_l2": 1.6897799944644e-16,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 7.62939453125e-06,
+        "relative_l2": 2.979502085054264e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 8.58306884765625e-06,
+        "relative_l2": 2.9843988613720285e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 7.62939453125e-06,
+        "relative_l2": 2.9985341143401456e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 2.86102294921875e-06,
+        "relative_l2": 2.9455915750986605e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.7961501441732253e-07,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 221952,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        128
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "token_trans_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        128
+      ],
+      "folded": {
+        "max_abs": 1.0728836059570312e-06,
+        "relative_l2": 1.3633427897730144e-07,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 384,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7558705614988958e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7541214738685598e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.6645352591003757e-15,
+        "relative_l2": 1.7303867995101355e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 4.440892098500626e-16,
+        "relative_l2": 2.4036597066654737e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 8.881784197001252e-16,
+        "relative_l2": 1.8384318279641553e-16,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.430511474609375e-06,
+        "relative_l2": 1.1367300345455078e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.9073486328125e-06,
+        "relative_l2": 1.14979123111425e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.9073486328125e-06,
+        "relative_l2": 1.1383320952518261e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.7881393432617188e-07,
+        "relative_l2": 1.1273451860915884e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.9802322387695312e-08,
+        "relative_l2": 5.8864866758767675e-08,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_enc_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 5.066394805908203e-07,
+        "relative_l2": 8.678317442445405e-08,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 1.624512554781282e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.3322676295501878e-15,
+        "relative_l2": 1.6064246645074802e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 8.881784197001252e-16,
+        "relative_l2": 1.6456046938005107e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 3.3306690738754696e-16,
+        "relative_l2": 2.0749603478915382e-16,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float64",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 4.440892098500626e-16,
+        "relative_l2": 1.6186958819962366e-16,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "normal",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.0590616739136749e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_scale",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.068846771090648e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "large_offset",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 9.5367431640625e-07,
+        "relative_l2": 1.0944130224288529e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "near_constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 2.384185791015625e-07,
+        "relative_l2": 1.1165619184794195e-07,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "constant",
+      "shape": [
+        2,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 5.960464477539063e-08,
+        "relative_l2": 8.406423290807652e-08,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 6936,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "empty",
+      "shape": [
+        0,
+        17,
+        17,
+        16
+      ],
+      "folded": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 0,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    },
+    {
+      "checkpoint": "boltz2_aff.ckpt",
+      "bank": "atom_dec_proj_z",
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "case": "singleton",
+      "shape": [
+        1,
+        1,
+        1,
+        16
+      ],
+      "folded": {
+        "max_abs": 1.1920928955078125e-07,
+        "relative_l2": 7.322737616277664e-08,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": false,
+        "finite": true
+      },
+      "shared_statistics_only": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "failed_elements": 0,
+        "numel": 12,
+        "bitwise_equal": true,
+        "finite": true
+      }
+    }
+  ]
+}

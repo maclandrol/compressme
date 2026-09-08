@@ -1,0 +1,26 @@
+{
+  "copied_on": "2026-09-08",
+  "files": [
+    {
+      "source_repository_path": "vendor/novomolgen_audit/sources/TRANSFORMERS_LICENSE",
+      "attachment": "transformers-license.txt",
+      "bytes": 11418,
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "scope": "Small text attachment only; no tensor data"
+    },
+    {
+      "source_repository_path": "vendor/novomolgen_audit/sources/TRANSFORMERS_LICENSE_PROVENANCE.json",
+      "attachment": "transformers-license-provenance.json",
+      "bytes": 323,
+      "sha256": "e2761202b3c3544a348525083e1623de24cf7977f5f04abef54ccf0fee4030a4",
+      "scope": "Small text attachment only; no tensor data"
+    },
+    {
+      "source_repository_path": "artifacts/boltz2-shared-transport/README.md",
+      "attachment": "boltz2-transport-readme.txt",
+      "bytes": 1686,
+      "sha256": "addb788dda752b1013baf5e1752b4ef53270a28518a88682f4a1b10651d79e91",
+      "scope": "Small text attachment only; no tensor data"
+    }
+  ]
+}

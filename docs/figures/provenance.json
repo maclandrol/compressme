@@ -1,0 +1,17 @@
+{
+  "runtime_source": "benchmarks/moljepa_runtime_macos.json",
+  "runtime_source_sha256": "2a766cf57e2365440c500b66b03e82a9ab15e40908c7faf60f284a19073eb72f",
+  "parameter_waterfall": {
+    "original": 45406721,
+    "inactive_inputs_removed": 15462401,
+    "affine_removed": 5504000,
+    "attention_removed": 4677160,
+    "final": 19763160
+  },
+  "runtime_statistic": "medians; p10/p90 empirical run intervals, not confidence intervals",
+  "hardware": "Apple M5 MPS, 16 GB unified memory; no NVIDIA validation",
+  "figures": [
+    "moljepa-rewrites.svg",
+    "moljepa-results.svg"
+  ]
+}

@@ -1,0 +1,662 @@
+{
+  "scope": "Complete original atom-transformer submodules and complete SingleConditioning on actual checkpoint weights; request-constant partial evaluation only. No full Boltz prediction comparison here.",
+  "device": "cpu",
+  "torch": "2.14.0",
+  "all_bitwise_equal": true,
+  "checks": [
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 0,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 1,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 2,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "restored_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 1,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 0,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 1,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 2,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "restored_atom_transformer",
+      "family": "encoder",
+      "multiplicity": 3,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 0,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 1,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 1,
+      "dynamic_query_case": 2,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "restored_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 1,
+      "shape": [
+        1,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 0,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 1,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 3,
+      "dynamic_query_case": 2,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "restored_atom_transformer",
+      "family": "decoder",
+      "multiplicity": 3,
+      "shape": [
+        3,
+        160,
+        128
+      ],
+      "bitwise_equal": true,
+      "mixed_gate": true,
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": -5.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": -1.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": 0.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": 1.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": 2.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 1,
+      "time": 5.0,
+      "outputs": [
+        {
+          "shape": [
+            1,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            1,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": -5.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": -1.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": 0.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": 1.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": 2.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    },
+    {
+      "component": "full_single_conditioner",
+      "multiplicity": 3,
+      "time": 5.0,
+      "outputs": [
+        {
+          "shape": [
+            3,
+            23,
+            768
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        {
+          "shape": [
+            3,
+            256
+          ],
+          "bitwise_equal": true,
+          "mixed_gate": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      ]
+    }
+  ],
+  "operation_and_memory_counts": [
+    {
+      "family": "encoder",
+      "multiplicity": 1,
+      "prepared_values": 368640,
+      "prepared_bytes": 1474560,
+      "layers": 3,
+      "source_condition_shape": [
+        5,
+        32,
+        128
+      ],
+      "condition_linear_calls_per_original_forward": 18,
+      "condition_layernorm_calls_per_original_forward": 6,
+      "condition_sigmoid_calls_per_original_forward": 12
+    },
+    {
+      "family": "encoder",
+      "multiplicity": 3,
+      "prepared_values": 1105920,
+      "prepared_bytes": 4423680,
+      "layers": 3,
+      "source_condition_shape": [
+        15,
+        32,
+        128
+      ],
+      "condition_linear_calls_per_original_forward": 18,
+      "condition_layernorm_calls_per_original_forward": 6,
+      "condition_sigmoid_calls_per_original_forward": 12
+    },
+    {
+      "family": "decoder",
+      "multiplicity": 1,
+      "prepared_values": 368640,
+      "prepared_bytes": 1474560,
+      "layers": 3,
+      "source_condition_shape": [
+        5,
+        32,
+        128
+      ],
+      "condition_linear_calls_per_original_forward": 18,
+      "condition_layernorm_calls_per_original_forward": 6,
+      "condition_sigmoid_calls_per_original_forward": 12
+    },
+    {
+      "family": "decoder",
+      "multiplicity": 3,
+      "prepared_values": 1105920,
+      "prepared_bytes": 4423680,
+      "layers": 3,
+      "source_condition_shape": [
+        15,
+        32,
+        128
+      ],
+      "condition_linear_calls_per_original_forward": 18,
+      "condition_layernorm_calls_per_original_forward": 6,
+      "condition_sigmoid_calls_per_original_forward": 12
+    },
+    {
+      "family": "single_conditioner_prefix",
+      "multiplicity": 1,
+      "prepared_values": 17664,
+      "prepared_bytes": 70656,
+      "condition_linear_calls_per_original_forward": 1,
+      "condition_layernorm_calls_per_original_forward": 1
+    },
+    {
+      "family": "single_conditioner_prefix",
+      "multiplicity": 3,
+      "prepared_values": 52992,
+      "prepared_bytes": 211968,
+      "condition_linear_calls_per_original_forward": 1,
+      "condition_layernorm_calls_per_original_forward": 1
+    }
+  ],
+  "gates": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  }
+}

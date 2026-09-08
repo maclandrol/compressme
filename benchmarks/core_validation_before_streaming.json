@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-07",
+  "suite": "tests/ + experiments/tests/",
+  "result": "passed",
+  "passed": 480,
+  "duration_seconds": 6.94,
+  "environment": ".venv",
+  "execution": "Host execution with real MPS access",
+  "scope": "Core and experimental regressions, including frozen-table byte reconstruction, parameter identity and enumeration preservation, registered-storage accounting, alias replay, malformed payload rejection and existing model/compiler tests. Actual biology checkpoint and AnnData comparisons are recorded separately. Public Boltz loader source/data integrity, lazy import, constructor RNG and post-device storage replay tests included."
+}

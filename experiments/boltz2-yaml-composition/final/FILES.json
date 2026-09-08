@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "path": "boltz2_example_tested.py",
+      "bytes": 6838,
+      "sha256": "8a0b566af7c27d99744ba4b07ce0b566e8f155513ed0a805a20f9401102f9610"
+    },
+    {
+      "path": "boltz2_runtime_tested.py",
+      "bytes": 19412,
+      "sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02"
+    },
+    {
+      "path": "mps/affinity-tensors.safetensors",
+      "bytes": 327972,
+      "sha256": "ad2afe374b8b6d42220c350205fe24ca612b4fba4701042753d24076666c9583"
+    },
+    {
+      "path": "mps/compressme.json",
+      "bytes": 3247,
+      "sha256": "d3cb72a6fecaae20101aa9b35af16477b0e2056c1172ae60001ec96ad78d3fa2"
+    },
+    {
+      "path": "mps/confidence-tensors.safetensors",
+      "bytes": 314820,
+      "sha256": "3d54e63d9ef2eed9f65962779b575ad02936183fe515077d933597696bf54d8c"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/affinity_tiny_complex.json",
+      "bytes": 322,
+      "sha256": "255b431c317ac9e136c9ed2c46e69ead3456e30995f8a48f761917c983b8ca0a"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/confidence_tiny_complex_model_0.json",
+      "bytes": 657,
+      "sha256": "c886b6972b632a373ba10a49de476fcf9992ac4448c4306295ee4afcd7084e57"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/pae_tiny_complex_model_0.npz",
+      "bytes": 2130,
+      "sha256": "20cc2d484212218236a886fe36cb8d0c90c0aefee4d23160c1d72de170a4ad6d"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/pde_tiny_complex_model_0.npz",
+      "bytes": 1614,
+      "sha256": "7685ce752a8d6299c6efa05212d5d9bc293967ec1d96190a2cb4c0be4c3079d9"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/plddt_tiny_complex_model_0.npz",
+      "bytes": 298,
+      "sha256": "de015531e163eabbb30e9265553cc887bea9cfb161c2cc639d7f75cb4b70b137"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/pre_affinity_tiny_complex.npz",
+      "bytes": 6526,
+      "sha256": "16c7b3acd677cc7eba0e4294f0a411359d4ef21b4fcb5f0323a8e6ef2c3e7478"
+    },
+    {
+      "path": "mps/predictions/tiny_complex/tiny_complex_model_0.cif",
+      "bytes": 16742,
+      "sha256": "0e19911dfa7e958d3ce217697b6f6a9ade219b6432ae583977045e5c49100337"
+    },
+    {
+      "path": "mps/processed/constraints/tiny_complex.npz",
+      "bytes": 1600,
+      "sha256": "77e2f39ebf7d13562bd699669450b5fc694ba0caa25e8b9ad48d741a80766461"
+    },
+    {
+      "path": "mps/processed/manifest.json",
+      "bytes": 661,
+      "sha256": "22bac168fe500185f1a1084bdbc09637e5360c105702bd8319aec8326253fdd6"
+    },
+    {
+      "path": "mps/processed/mols/tiny_complex.pkl",
+      "bytes": 331,
+      "sha256": "1a2be822651e2d2daa73c08c2aa0ac649b7a3f8c4bc6be45ae83fd692e7a6358"
+    },
+    {
+      "path": "mps/processed/records/tiny_complex.json",
+      "bytes": 646,
+      "sha256": "063aa5492dd0ca169561ef7dbce1bacbe5cb4793ab50515f26503d92d5266020"
+    },
+    {
+      "path": "mps/processed/structures/tiny_complex.npz",
+      "bytes": 2758,
+      "sha256": "3b33e9962820f5592d4cc61602f8890c77dea3e76116f6ce591496b81e87a930"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 3937,
+      "sha256": "d0b35268c03b16e0f2eb7400d9b6f0c5e30d78366469947c3281ae58d64fa1e0"
+    }
+  ]
+}

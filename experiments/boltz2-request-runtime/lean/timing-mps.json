@@ -1,0 +1,328 @@
+{
+  "args": {
+    "device": "mps",
+    "mode": "timing",
+    "artifact": "/private/tmp/compressme-models/boltz2/compiled-bundle",
+    "native_dir": "/private/tmp/compressme-agent-boltz-runtime",
+    "output": "/private/tmp/compressme-agent-boltz-runtime/compute-lean/timing-mps.json",
+    "accepted_gate": "/private/tmp/compressme-agent-boltz-runtime/compute-lean/gate-mps.json",
+    "rounds": 3,
+    "warmups": 2
+  },
+  "torch": "2.14.0",
+  "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "cpu_threads": 4,
+  "precision": "original float32, highest matmul precision; no autocast",
+  "prototype_sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+  "harness_sha256": "9b23e0e5222701ce74a2e4d3cdd7627f6c92b23bbbb4f1ea64531924f9b85a23",
+  "input_scope": "Same 20-aa protein+ethanol fixture, exact native feature tensors reused within each comparison; fresh diffusion seed each timing round",
+  "timing_scope": "Native predict_step, including request preparation and cache cleanup; excludes unchanged input featurization and model load",
+  "schedules": {
+    "confidence": {
+      "sampling_steps": 200,
+      "recycling_steps": 3,
+      "diffusion_samples": 1
+    },
+    "affinity": {
+      "sampling_steps": 200,
+      "recycling_steps": 5,
+      "diffusion_samples": 3
+    }
+  },
+  "models": {
+    "confidence": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 7.122587082994869,
+            "candidate": 8.58100670800195
+          },
+          "speedup": 0.8300409643489641,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 8.340168166003423,
+            "original": 9.122247457999038
+          },
+          "speedup": 1.09377260463207,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        },
+        {
+          "round": 2,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 8.176907832996221,
+            "candidate": 7.663174625020474
+          },
+          "speedup": 1.0670392145702114,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 1,
+                    "c_shape": [
+                      1,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      1,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 3019776
+                  }
+                ],
+                "cached_bytes": 3019776,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        }
+      ],
+      "median_seconds": {
+        "original": 8.176907832996221,
+        "candidate": 8.340168166003423
+      },
+      "ratio_of_medians": 0.9804248152126367,
+      "module_and_parameter_identities_restored": true,
+      "accepted_bitwise": true
+    },
+    "affinity": {
+      "rounds": [
+        {
+          "round": 0,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 11.069622291019186,
+            "candidate": 10.995628916978603
+          },
+          "speedup": 1.006729344414882,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        },
+        {
+          "round": 1,
+          "order": [
+            "candidate",
+            "original"
+          ],
+          "seconds": {
+            "candidate": 10.96450425000512,
+            "original": 10.880359041999327
+          },
+          "speedup": 0.9923256714496915,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        },
+        {
+          "round": 2,
+          "order": [
+            "original",
+            "candidate"
+          ],
+          "seconds": {
+            "original": 10.857162333006272,
+            "candidate": 10.856546833005268
+          },
+          "speedup": 1.0000566939018891,
+          "bitwise_equal": true,
+          "request_statistics": {
+            "requests": [
+              {
+                "score_calls": 200,
+                "optimized_score_calls": 200,
+                "fallback_score_calls": 0,
+                "prepared_layouts": [
+                  {
+                    "multiplicity": 3,
+                    "c_shape": [
+                      3,
+                      160,
+                      128
+                    ],
+                    "prefix_shape": [
+                      3,
+                      23,
+                      768
+                    ],
+                    "cached_bytes": 9059328
+                  }
+                ],
+                "cached_bytes": 9059328,
+                "cache_cleared": true,
+                "boundary_state_unchanged": true,
+                "wrapper_installations": 1,
+                "memo_cleared": true
+              }
+            ],
+            "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+            "contract": "exclusive_immutable_native_request"
+          }
+        }
+      ],
+      "median_seconds": {
+        "original": 10.880359041999327,
+        "candidate": 10.96450425000512
+      },
+      "ratio_of_medians": 0.9923256714496915,
+      "module_and_parameter_identities_restored": true,
+      "accepted_bitwise": true
+    }
+  },
+  "accepted_bitwise": true
+}

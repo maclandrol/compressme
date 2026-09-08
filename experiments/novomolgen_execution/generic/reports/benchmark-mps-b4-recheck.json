@@ -1,0 +1,142 @@
+{
+  "scope": "Same-backend, same-cache token-ID native model API latency; input transfer and tokenizer excluded",
+  "device": "mps",
+  "variant": "generic",
+  "backend": "eager",
+  "python": "3.12.14",
+  "torch": "2.14.0",
+  "transformers": "4.46.2",
+  "cpu_threads": 4,
+  "warmup_pairs": 10,
+  "rounds": 25,
+  "synchronized_mps": true,
+  "randomized_interleaved_order": true,
+  "checkpoint_sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+  "config_sha256": "f3cc487205aa417f4786f50d49a4120097baaffd80a9510ccfe5c37aa4ed3a34",
+  "model_source_sha256": "733e7625fec5abcfa416ab9b866cb91875d41007f2e31c3e90d2ae0111ae98f7",
+  "parameters_before": 31556096,
+  "parameters_after": 31156224,
+  "buffers_before": 416,
+  "buffers_after": 416,
+  "tables": {
+    "_first_qkv_lookup.tables.group_0": 129024,
+    "_first_qkv_lookup.tables.group_1": 129024,
+    "_first_qkv_lookup.tables.group_2": 129024
+  },
+  "records": [
+    {
+      "case": "prefill_1x32_all_outputs_False",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "prefill_1x32_all_outputs_True",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "prefill_4x32_all_outputs_False",
+      "gate": {
+        "accepted": true,
+        "worst_max_abs": 0.0,
+        "tensor_outputs": 25,
+        "failures": {}
+      },
+      "timed": true,
+      "reference": {
+        "median_ms": 5.98612500471063,
+        "mean_ms": 5.950695037608966,
+        "sample_sd_ms": 0.13648219718250645,
+        "min_ms": 5.723416979890317,
+        "max_ms": 6.126416992628947,
+        "samples_ms": [
+          5.723416979890317,
+          5.731208017095923,
+          5.724874994484708,
+          5.740166991017759,
+          5.73616600013338,
+          5.7384589745197445,
+          5.916791997151449,
+          5.960292008239776,
+          5.923042015638202,
+          5.98612500471063,
+          5.968624987872317,
+          6.043542001862079,
+          6.02104197605513,
+          5.998500011628494,
+          5.985124997096136,
+          6.000332999974489,
+          6.077375001041219,
+          6.021125009283423,
+          6.072374992072582,
+          6.106415996327996,
+          6.114417017670348,
+          6.082874984713271,
+          5.996082996716723,
+          6.126416992628947,
+          5.972582992399111
+        ]
+      },
+      "candidate": {
+        "median_ms": 5.977332999464124,
+        "mean_ms": 5.951888401759788,
+        "sample_sd_ms": 0.10061774106321984,
+        "min_ms": 5.783542001154274,
+        "max_ms": 6.116790988016874,
+        "samples_ms": [
+          5.938333983067423,
+          5.793916003312916,
+          5.783542001154274,
+          5.789957998786122,
+          5.822042003273964,
+          5.86237502284348,
+          5.836666008690372,
+          5.873209011042491,
+          5.899500014493242,
+          5.9795419801957905,
+          5.924541997956112,
+          5.993250000756234,
+          5.969166988506913,
+          6.0188339848537,
+          6.003375019645318,
+          5.992499995045364,
+          5.9878749889321625,
+          6.026083021424711,
+          5.977332999464124,
+          6.116790988016874,
+          5.979417008347809,
+          5.923749995417893,
+          6.087667017709464,
+          6.113000010373071,
+          6.104542000684887
+        ]
+      },
+      "speedup": 1.0014708909888899
+    },
+    {
+      "case": "prefill_1x512_all_outputs_False",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "decode_b1_prefix32_all_outputs_False",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "decode_b1_prefix32_all_outputs_True",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "greedy_b1_max12_all_outputs_False",
+      "timed": false,
+      "skipped_by_filter": true
+    },
+    {
+      "case": "greedy_b1_max12_all_outputs_True",
+      "timed": false,
+      "skipped_by_filter": true
+    }
+  ]
+}

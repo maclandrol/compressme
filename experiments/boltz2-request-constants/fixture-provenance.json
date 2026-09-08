@@ -1,0 +1,22 @@
+{
+  "scope": "Actual 20-residue protein plus ethanol native input. Saved native MPS trunk s/z are input values; small original embedder/conditioning modules evaluated on CPU to produce local request-conditioning fixtures. This is not an end-to-end regenerated prediction.",
+  "native_trunk_sha256": "3d54e63d9ef2eed9f65962779b575ad02936183fe515077d933597696bf54d8c",
+  "shapes": {
+    "c": [
+      1,
+      160,
+      128
+    ],
+    "s_inputs": [
+      1,
+      23,
+      384
+    ],
+    "s_trunk": [
+      1,
+      23,
+      384
+    ]
+  },
+  "all_finite": true
+}

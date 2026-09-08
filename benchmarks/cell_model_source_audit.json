@@ -1,0 +1,1346 @@
+{
+  "audit_date": "2026-09-07",
+  "method": "read-only AST and pinned public metadata; no weights downloaded",
+  "targets": {
+    "xcell": {
+      "commit": "7195c647b8316234ddaf51565701cfdaa939b443",
+      "source_inventory": [
+        {
+          "file": "src/xcell/model.py",
+          "sha256": "8e8b5bac74d9ee28ae1d5dc49b9936c6f7ecbca0d1d13ce812bc7f0546e3a6a1",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 56,
+              "name": "from_pretrained",
+              "arguments": "cls, model_id: str='Xaira-Therapeutics/X-Cell', variant: str='mini', device: str | None=None, cache_dir: PathLike | None=None"
+            },
+            {
+              "line": 95,
+              "name": "predict",
+              "arguments": "self, data: DataInput, perturbation: str, n_cells: int=64, n_diffusion_steps: int=4, batch_size: int=8"
+            }
+          ],
+          "not_implemented": [
+            {
+              "line": 90,
+              "raise": "NotImplementedError('Model loading is not yet implemented in this release. Full inference code is coming soon \u2014 watch the repository for updates.')"
+            },
+            {
+              "line": 142,
+              "raise": "NotImplementedError('Inference is not yet implemented in this release.')"
+            }
+          ]
+        }
+      ]
+    },
+    "state": {
+      "commit": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+      "source_inventory": [
+        {
+          "file": "src/state/emb/finetune_decoder.py",
+          "sha256": "6f3c804dbdd29c926d524c612d7c45986cee6a98ab67cd03685e3296784c2082",
+          "operators": [
+            {
+              "line": 204,
+              "call": "nn.Embedding(n_missing, gene_embed_dim)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 62,
+              "name": "load_model",
+              "arguments": "self, checkpoint: str"
+            },
+            {
+              "line": 216,
+              "name": "get_gene_embedding",
+              "arguments": "self, genes: List[str]"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/emb/inference.py",
+          "sha256": "d3a9848183237beff4de9d5f606439f174e2fef5a0ea8044b65c9323e297ea70",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 93,
+              "name": "load_model",
+              "arguments": "self, checkpoint"
+            },
+            {
+              "line": 165,
+              "name": "get_gene_embedding",
+              "arguments": "self, genes"
+            },
+            {
+              "line": 172,
+              "name": "encode",
+              "arguments": "self, dataloader, rda=None"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/emb/nn/eval_utils.py",
+          "sha256": "9ae44c27f977d7df3771df1477a8fe11718367d7f268b63b735880973b725a6d",
+          "operators": [
+            {
+              "line": 105,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 107,
+              "call": "nn.Linear(hidden_dim, n_classes)"
+            },
+            {
+              "line": 96,
+              "call": "nn.Linear(in_dim, hidden_dim)"
+            },
+            {
+              "line": 97,
+              "call": "nn.LayerNorm(hidden_dim)"
+            },
+            {
+              "line": 100,
+              "call": "nn.Linear(hidden_dim, hidden_dim)"
+            },
+            {
+              "line": 101,
+              "call": "nn.LayerNorm(hidden_dim)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 109,
+              "name": "forward",
+              "arguments": "self, x"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/emb/nn/flash_transformer.py",
+          "sha256": "0246e3a28de11f6578f83ebdb5612cd30c618061a1ae6497533a2ab41fcb9330",
+          "operators": [
+            {
+              "line": 29,
+              "call": "nn.Linear(d_model, d_model * 3)"
+            },
+            {
+              "line": 30,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 32,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 33,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 37,
+              "call": "nn.Linear(d_model, dim_feedforward)"
+            },
+            {
+              "line": 38,
+              "call": "nn.Linear(dim_feedforward, d_model)"
+            },
+            {
+              "line": 67,
+              "call": "F.scaled_dot_product_attention(q, k, v, dropout_p=self.dropout, is_causal=False)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 40,
+              "name": "forward",
+              "arguments": "self, src, src_mask=None, src_key_padding_mask=None"
+            },
+            {
+              "line": 90,
+              "name": "forward",
+              "arguments": "self, src, src_mask=None, src_key_padding_mask=None"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/emb/nn/loss.py",
+          "sha256": "81b0f552e9f7395a28f04c21a940de2ec7e047815b716e89f6c5c673e47a7f3b",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 23,
+              "name": "forward",
+              "arguments": "self, p, q"
+            },
+            {
+              "line": 69,
+              "name": "forward",
+              "arguments": "self, p, q"
+            },
+            {
+              "line": 92,
+              "name": "forward",
+              "arguments": "self, input, target"
+            },
+            {
+              "line": 109,
+              "name": "forward",
+              "arguments": "self, input, target"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/emb/nn/model.py",
+          "sha256": "1e9be08a4f7bdabe27dbf529353f71ab53381e030d2492e7c0fda9e93215a9f9",
+          "operators": [
+            {
+              "line": 43,
+              "call": "nn.Linear(in_features, in_features * 2, bias=True)"
+            },
+            {
+              "line": 44,
+              "call": "nn.Linear(in_features * 2, in_features, bias=True)"
+            },
+            {
+              "line": 45,
+              "call": "nn.ReLU()"
+            },
+            {
+              "line": 46,
+              "call": "nn.LayerNorm(in_features)"
+            },
+            {
+              "line": 94,
+              "call": "nn.Linear(token_dim, d_model, bias=True)"
+            },
+            {
+              "line": 95,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 96,
+              "call": "nn.SiLU()"
+            },
+            {
+              "line": 111,
+              "call": "nn.Linear(d_model, output_dim, bias=True)"
+            },
+            {
+              "line": 124,
+              "call": "nn.Linear(output_dim + d_model + self.z_dim, 1, bias=True)"
+            },
+            {
+              "line": 128,
+              "call": "nn.Embedding(10, d_model)"
+            },
+            {
+              "line": 157,
+              "call": "nn.Linear(output_dim, self.z_dim_ds)"
+            },
+            {
+              "line": 130,
+              "call": "nn.Linear(1, 512, bias=True)"
+            },
+            {
+              "line": 131,
+              "call": "nn.LeakyReLU()"
+            },
+            {
+              "line": 132,
+              "call": "nn.Linear(512, 10)"
+            },
+            {
+              "line": 162,
+              "call": "nn.Linear(output_dim, d_model)"
+            },
+            {
+              "line": 163,
+              "call": "nn.SiLU()"
+            },
+            {
+              "line": 164,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 166,
+              "call": "nn.Linear(d_model, num_dataset)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 48,
+              "name": "forward",
+              "arguments": "self, x"
+            },
+            {
+              "line": 248,
+              "name": "get_gene_embedding",
+              "arguments": "self, genes"
+            },
+            {
+              "line": 288,
+              "name": "forward",
+              "arguments": "self, src: Tensor, mask: Tensor, counts=None, dataset_nums=None"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/base.py",
+          "sha256": "cfc68762c7e70d6e0da381adb9ca037795e835afa535ab602c6e327f13459ebd",
+          "operators": [
+            {
+              "line": 58,
+              "call": "nn.Linear(input_dim, gene_dim)"
+            },
+            {
+              "line": 58,
+              "call": "nn.ReLU()"
+            },
+            {
+              "line": 72,
+              "call": "nn.Linear(input_dim, gene_dim)"
+            },
+            {
+              "line": 74,
+              "call": "nn.ReLU()"
+            },
+            {
+              "line": 52,
+              "call": "nn.Linear(input_dim, hidden_dim)"
+            },
+            {
+              "line": 52,
+              "call": "nn.LayerNorm(hidden_dim)"
+            },
+            {
+              "line": 52,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 65,
+              "call": "nn.Linear(input_dim, hidden_dim)"
+            },
+            {
+              "line": 66,
+              "call": "nn.LayerNorm(hidden_dim)"
+            },
+            {
+              "line": 67,
+              "call": "nn.GELU()"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 88,
+              "name": "forward",
+              "arguments": "self, x: torch.Tensor"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/context_mean.py",
+          "sha256": "d058ec363c550b16623d0061d5dde92f72b89ce514fba08d417825e367ece8ef",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 159,
+              "name": "forward",
+              "arguments": "self, batch: dict"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/cpa/_base_modules.py",
+          "sha256": "99b5afc11654790b3380295bd80156a5bf2e0d5aa03998d6a51a08cd7a1b86f1",
+          "operators": [
+            {
+              "line": 170,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 171,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 255,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 258,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 250,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 94,
+              "call": "nn.Linear(n_in, n_out)"
+            },
+            {
+              "line": 103,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 98,
+              "call": "nn.LayerNorm(n_out)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 46,
+              "name": "forward",
+              "arguments": "self, y_pred: torch.Tensor, y_true: torch.Tensor"
+            },
+            {
+              "line": 107,
+              "name": "forward",
+              "arguments": "self, x"
+            },
+            {
+              "line": 139,
+              "name": "forward",
+              "arguments": "self, x"
+            },
+            {
+              "line": 176,
+              "name": "forward",
+              "arguments": "self, x: torch.Tensor, *cat_list: int"
+            },
+            {
+              "line": 260,
+              "name": "forward",
+              "arguments": "self, dispersion: Literal['gene', 'gene-batch', 'gene-label', 'gene-cell'], z: torch.Tensor, library: torch.Tensor"
+            },
+            {
+              "line": 326,
+              "name": "forward",
+              "arguments": "self, x, y"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/cpa/_model.py",
+          "sha256": "677f56756ac7e2604862cd6acc0c5ae9b09d5bed54c5768f83032420f27f5ebb",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 215,
+              "name": "forward",
+              "arguments": "self, batch: Dict[str, torch.Tensor]"
+            }
+          ],
+          "not_implemented": [
+            {
+              "line": 202,
+              "raise": "NotImplementedError('Perturbation encoding not supported for CPA model')"
+            },
+            {
+              "line": 206,
+              "raise": "NotImplementedError('Basal expression encoding not supported for CPA model')"
+            },
+            {
+              "line": 213,
+              "raise": "NotImplementedError('Perturbation not supported for CPA model')"
+            },
+            {
+              "line": 128,
+              "raise": "NotImplementedError('Focal loss not implemented for CPA model yet')"
+            }
+          ]
+        },
+        {
+          "file": "src/state/tx/models/cpa/_module.py",
+          "sha256": "958ec5919fc4fd55fdc8a198272cf24a8ee90369801df3be7fc04d69becaa455",
+          "operators": [
+            {
+              "line": 193,
+              "call": "nn.Embedding(n_cell_types, n_latent)"
+            },
+            {
+              "line": 188,
+              "call": "nn.Embedding(n_perts, n_latent)"
+            },
+            {
+              "line": 191,
+              "call": "nn.Embedding(n_batches, n_latent)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 237,
+              "name": "forward",
+              "arguments": "self, x_basal, perts, cell_types, batch_ids, pert_dosages=None, n_samples: int=1"
+            }
+          ],
+          "not_implemented": [
+            {
+              "line": 470,
+              "raise": "NotImplementedError('Expression is not implemented')"
+            }
+          ]
+        },
+        {
+          "file": "src/state/tx/models/decoder_only.py",
+          "sha256": "5c08c3d9eb8cb4e1dae7de7a8f7bb8e7937551b477032be0fe536f02da0766d1",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 58,
+              "name": "forward",
+              "arguments": "self, batch: dict"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/decoders.py",
+          "sha256": "b4b55f3a47b806f1fd73eada34c6ae3faa65e5f9219184453cc38ecddd92b470",
+          "operators": [
+            {
+              "line": 56,
+              "call": "nn.Linear(latent_dim, hidden_dim)"
+            },
+            {
+              "line": 57,
+              "call": "nn.LayerNorm(hidden_dim)"
+            },
+            {
+              "line": 58,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 60,
+              "call": "nn.Linear(hidden_dim, hidden_dim)"
+            },
+            {
+              "line": 61,
+              "call": "nn.LayerNorm(hidden_dim)"
+            },
+            {
+              "line": 62,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 64,
+              "call": "nn.Linear(hidden_dim, len(self.genes))"
+            },
+            {
+              "line": 68,
+              "call": "nn.Linear(len(self.genes), 128)"
+            },
+            {
+              "line": 69,
+              "call": "nn.LayerNorm(128)"
+            },
+            {
+              "line": 70,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 71,
+              "call": "nn.Linear(128, 128)"
+            },
+            {
+              "line": 72,
+              "call": "nn.LayerNorm(128)"
+            },
+            {
+              "line": 73,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 75,
+              "call": "nn.Linear(128, len(self.genes))"
+            },
+            {
+              "line": 105,
+              "call": "nn.Embedding(len(self.missing_positions), gene_embed_dim)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 129,
+              "name": "forward",
+              "arguments": "self, x: torch.Tensor"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/embed_sum.py",
+          "sha256": "906196c21934ca6bcc2ba2bfbb0bbd31f46dd2c52b9e5d04a8d528b4d07c1ebb",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 118,
+              "name": "forward",
+              "arguments": "self, batch: Dict[str, torch.Tensor]"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/old_neural_ot.py",
+          "sha256": "057cab2c5c65847ad721a91340de68752ecae6182b2587663da5cd977d7f4559",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 140,
+              "name": "forward",
+              "arguments": "self, batch: dict"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/perturb_mean.py",
+          "sha256": "37d245d226be3f7a7319f7d434e84de0159d154667e5a911b7d72437b5007a7e",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 179,
+              "name": "forward",
+              "arguments": "self, batch: dict"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/pseudobulk.py",
+          "sha256": "7da65da4048408aeb40460ea412620bca52673a5a2607da0fcb0711d52ef9001",
+          "operators": [
+            {
+              "line": 105,
+              "call": "torch.nn.ReLU()"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 243,
+              "name": "forward",
+              "arguments": "self, batch: dict, padded=True"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scgpt/dsbn.py",
+          "sha256": "43c59fe9b673ca5103d65853e0aa67a59772c35c2b3696fdce08466f1d64f5bd",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 50,
+              "name": "forward",
+              "arguments": "self, x: torch.Tensor, domain_label: int"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scgpt/generation_model.py",
+          "sha256": "29a7c47919240291a2ce7d86df095b383e2a67797008d49da5074a66ff68b3b9",
+          "operators": [
+            {
+              "line": 34,
+              "call": "nn.Embedding(num_embeddings, embedding_dim, padding_idx=padding_idx)"
+            },
+            {
+              "line": 35,
+              "call": "nn.LayerNorm(embedding_dim)"
+            },
+            {
+              "line": 97,
+              "call": "nn.Linear(d_model, n_cls)"
+            },
+            {
+              "line": 112,
+              "call": "nn.Embedding(n_drug_tokens, d_model)"
+            },
+            {
+              "line": 113,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 161,
+              "call": "nn.Embedding(3, d_model, padding_idx=pert_pad_id)"
+            },
+            {
+              "line": 453,
+              "call": "nn.Embedding(3, d_model, padding_idx=pert_pad_id)"
+            },
+            {
+              "line": 180,
+              "call": "TransformerEncoderLayer(d_model, nhead, d_hid, dropout, batch_first=True)"
+            },
+            {
+              "line": 472,
+              "call": "TransformerEncoderLayer(d_model, nhead, d_hid, dropout, batch_first=True)"
+            },
+            {
+              "line": 94,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 96,
+              "call": "nn.LayerNorm(d_model)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 37,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 55,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 74,
+              "name": "forward",
+              "arguments": "self, x, y"
+            },
+            {
+              "line": 99,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 115,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 246,
+              "name": "forward",
+              "arguments": "self, src: Tensor, pert_ids: Tensor, values: Tensor, input_pert_flags: Tensor, src_key_padding_mask: Tensor, CLS: bool=False, CCE: bool=False, MVC: bool=False, ECS: bool=False, do_sample: bool=False"
+            },
+            {
+              "line": 540,
+              "name": "forward",
+              "arguments": "self, src: Tensor, drug_ids: Tensor, values: Tensor, input_pert_flags: Tensor, src_key_padding_mask: Tensor, CLS: bool=False, CCE: bool=False, MVC: bool=False, ECS: bool=False, do_sample: bool=False"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scgpt/grad_reverse.py",
+          "sha256": "506b0adb351b1dc50f5778434b6c4a553cd18d23a6100add62fdbf2791764ad6",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 7,
+              "name": "forward",
+              "arguments": "ctx, x: torch.Tensor, lambd: float"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scgpt/lightning_model.py",
+          "sha256": "dc58152765748e9fa1db2c182f7bda3409fff0e0a13d222a1e9f75d097c8bd4c",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 299,
+              "name": "predict",
+              "arguments": "self, batch"
+            }
+          ],
+          "not_implemented": [
+            {
+              "line": 143,
+              "raise": "NotImplementedError('Perturbation encoding not supported for scGPT model')"
+            },
+            {
+              "line": 147,
+              "raise": "NotImplementedError('Basal expression encoding not supported for scGPT model')"
+            },
+            {
+              "line": 154,
+              "raise": "NotImplementedError('Perturb function not supported for scGPT model')"
+            }
+          ]
+        },
+        {
+          "file": "src/state/tx/models/scgpt/model.py",
+          "sha256": "0ff98f96f8868e2d48d82e50ae89e727b2cff9f63e62ed9c5d40e58b2e85f96d",
+          "operators": [
+            {
+              "line": 591,
+              "call": "nn.Linear(d_model, dim_feedforward, **factory_kwargs)"
+            },
+            {
+              "line": 593,
+              "call": "nn.Linear(dim_feedforward, d_model, **factory_kwargs)"
+            },
+            {
+              "line": 595,
+              "call": "nn.LayerNorm(d_model, eps=layer_norm_eps, **factory_kwargs)"
+            },
+            {
+              "line": 596,
+              "call": "nn.LayerNorm(d_model, eps=layer_norm_eps, **factory_kwargs)"
+            },
+            {
+              "line": 674,
+              "call": "nn.Embedding(num_embeddings, embedding_dim, padding_idx=padding_idx)"
+            },
+            {
+              "line": 675,
+              "call": "nn.LayerNorm(embedding_dim)"
+            },
+            {
+              "line": 712,
+              "call": "nn.Linear(1, d_model)"
+            },
+            {
+              "line": 713,
+              "call": "nn.ReLU()"
+            },
+            {
+              "line": 714,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 715,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 742,
+              "call": "nn.Embedding(num_embeddings, embedding_dim, padding_idx=padding_idx)"
+            },
+            {
+              "line": 743,
+              "call": "nn.LayerNorm(embedding_dim)"
+            },
+            {
+              "line": 760,
+              "call": "nn.Embedding(num_embeddings, embedding_dim, padding_idx=padding_idx)"
+            },
+            {
+              "line": 761,
+              "call": "nn.LayerNorm(embedding_dim)"
+            },
+            {
+              "line": 844,
+              "call": "nn.Linear(d_model, n_cls)"
+            },
+            {
+              "line": 964,
+              "call": "nn.Linear(d_model, n_cls)"
+            },
+            {
+              "line": 110,
+              "call": "TransformerEncoderLayer(d_model, nhead, d_hid, dropout, batch_first=True)"
+            },
+            {
+              "line": 793,
+              "call": "nn.Linear(d_in, d_model)"
+            },
+            {
+              "line": 794,
+              "call": "nn.LeakyReLU()"
+            },
+            {
+              "line": 795,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 796,
+              "call": "nn.LeakyReLU()"
+            },
+            {
+              "line": 797,
+              "call": "nn.Linear(d_model, 1)"
+            },
+            {
+              "line": 883,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 885,
+              "call": "nn.Linear(d_model, d_in, bias=False)"
+            },
+            {
+              "line": 802,
+              "call": "nn.Linear(d_in, d_model)"
+            },
+            {
+              "line": 803,
+              "call": "nn.LeakyReLU()"
+            },
+            {
+              "line": 804,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 805,
+              "call": "nn.LeakyReLU()"
+            },
+            {
+              "line": 806,
+              "call": "nn.Linear(d_model, 1)"
+            },
+            {
+              "line": 841,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 843,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 887,
+              "call": "nn.Linear(d_model, d_in)"
+            },
+            {
+              "line": 889,
+              "call": "nn.Linear(d_model, 64)"
+            },
+            {
+              "line": 891,
+              "call": "nn.Linear(d_model + 64, 64)"
+            },
+            {
+              "line": 893,
+              "call": "nn.Linear(64, 1)"
+            },
+            {
+              "line": 961,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 963,
+              "call": "nn.LayerNorm(d_model)"
+            },
+            {
+              "line": 895,
+              "call": "nn.Linear(d_model, d_model)"
+            },
+            {
+              "line": 897,
+              "call": "nn.Linear(d_model, 64)"
+            },
+            {
+              "line": 899,
+              "call": "nn.Linear(64, 1)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 282,
+              "name": "forward",
+              "arguments": "self, src: Tensor, values: Tensor, src_key_padding_mask: Tensor, batch_labels: Optional[Tensor]=None, CLS: bool=False, CCE: bool=False, MVC: bool=False, ECS: bool=False, do_sample: bool=False"
+            },
+            {
+              "line": 512,
+              "name": "forward",
+              "arguments": "self, src: Tensor, src_key_padding_mask: torch.BoolTensor"
+            },
+            {
+              "line": 619,
+              "name": "forward",
+              "arguments": "self, src: Tensor, src_mask: Optional[Tensor]=None, src_key_padding_mask: Optional[Tensor]=None, **kwargs"
+            },
+            {
+              "line": 677,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 695,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 718,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 745,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 763,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 779,
+              "name": "forward",
+              "arguments": "self, x, y"
+            },
+            {
+              "line": 809,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 846,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            },
+            {
+              "line": 907,
+              "name": "forward",
+              "arguments": "self, cell_emb: Tensor, gene_embs: Tensor"
+            },
+            {
+              "line": 967,
+              "name": "forward",
+              "arguments": "self, x: Tensor"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scvi/_base_modules.py",
+          "sha256": "f4b050731533024ffccd623f47132d56a4e5b09335e77c3f67641c4acbf90d1e",
+          "operators": [
+            {
+              "line": 170,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 171,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 255,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 258,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 250,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 94,
+              "call": "nn.Linear(n_in, n_out)"
+            },
+            {
+              "line": 103,
+              "call": "nn.Linear(n_hidden, n_output)"
+            },
+            {
+              "line": 98,
+              "call": "nn.LayerNorm(n_out)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 46,
+              "name": "forward",
+              "arguments": "self, y_pred: torch.Tensor, y_true: torch.Tensor"
+            },
+            {
+              "line": 107,
+              "name": "forward",
+              "arguments": "self, x"
+            },
+            {
+              "line": 139,
+              "name": "forward",
+              "arguments": "self, x"
+            },
+            {
+              "line": 176,
+              "name": "forward",
+              "arguments": "self, x: torch.Tensor, *cat_list: int"
+            },
+            {
+              "line": 260,
+              "name": "forward",
+              "arguments": "self, dispersion: Literal['gene', 'gene-batch', 'gene-label', 'gene-cell'], z: torch.Tensor, library: torch.Tensor"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/scvi/_model.py",
+          "sha256": "bda9bb7b47c57577ecc22b6fae66f5ed972c920268536b077f24c0e0d90041f5",
+          "operators": [],
+          "public_methods": [
+            {
+              "line": 178,
+              "name": "forward",
+              "arguments": "self, batch: Dict[str, torch.Tensor]"
+            }
+          ],
+          "not_implemented": [
+            {
+              "line": 122,
+              "raise": "NotImplementedError('Perturbation encoding not supported for scVI model')"
+            },
+            {
+              "line": 126,
+              "raise": "NotImplementedError('Basal expression encoding not supported for scVI model')"
+            },
+            {
+              "line": 133,
+              "raise": "NotImplementedError('Perturbation not supported for scVI model')"
+            }
+          ]
+        },
+        {
+          "file": "src/state/tx/models/scvi/_module.py",
+          "sha256": "cbec41e48b26efdb199b3c8efe80aabd573fc9e2319d66fe0f53e3b566aea7d0",
+          "operators": [
+            {
+              "line": 174,
+              "call": "nn.Embedding(n_cell_types, n_cell_type_latent)"
+            },
+            {
+              "line": 169,
+              "call": "nn.Embedding(n_perts, n_pert_latent)"
+            },
+            {
+              "line": 172,
+              "call": "nn.Embedding(n_batches, n_batch_latent)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 182,
+              "name": "forward",
+              "arguments": "self, x_basal, perts, cell_types, batch_ids, n_samples: int=1"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/state_transition.py",
+          "sha256": "45828e6f5ec4da52d1980fd54881e095ad1e8aaece4689c303fe10a671a57b63",
+          "operators": [
+            {
+              "line": 50,
+              "call": "nn.Linear(hidden_dim, hidden_dim // 2)"
+            },
+            {
+              "line": 51,
+              "call": "nn.LayerNorm(hidden_dim // 2)"
+            },
+            {
+              "line": 52,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 54,
+              "call": "nn.Linear(hidden_dim // 2, hidden_dim // 4)"
+            },
+            {
+              "line": 55,
+              "call": "nn.LayerNorm(hidden_dim // 4)"
+            },
+            {
+              "line": 56,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 58,
+              "call": "nn.Linear(hidden_dim // 4, 1)"
+            },
+            {
+              "line": 59,
+              "call": "nn.ReLU()"
+            },
+            {
+              "line": 193,
+              "call": "nn.Embedding(num_embeddings=batch_dim, embedding_dim=hidden_dim)"
+            },
+            {
+              "line": 241,
+              "call": "torch.nn.ReLU()"
+            },
+            {
+              "line": 354,
+              "call": "nn.Linear(self.input_dim, self.hidden_dim)"
+            },
+            {
+              "line": 383,
+              "call": "nn.Linear(self.output_dim, self.output_dim // 8)"
+            },
+            {
+              "line": 384,
+              "call": "nn.GELU()"
+            },
+            {
+              "line": 385,
+              "call": "nn.Linear(self.output_dim // 8, self.output_dim)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 31,
+              "name": "forward",
+              "arguments": "self, pred, target"
+            },
+            {
+              "line": 396,
+              "name": "forward",
+              "arguments": "self, batch: dict, padded=True"
+            }
+          ],
+          "not_implemented": []
+        },
+        {
+          "file": "src/state/tx/models/utils.py",
+          "sha256": "30dc320813e326516d22fc47162d5ec571511a25345af3f0e0fc1cef94ffd715",
+          "operators": [
+            {
+              "line": 105,
+              "call": "GPT2Config(**kwargs)"
+            },
+            {
+              "line": 33,
+              "call": "nn.Linear(in_dim, out_dim)"
+            },
+            {
+              "line": 36,
+              "call": "nn.Linear(in_dim, hidden_dim)"
+            },
+            {
+              "line": 47,
+              "call": "nn.Linear(hidden_dim, out_dim)"
+            },
+            {
+              "line": 118,
+              "call": "LlamaConfig(**kwargs)"
+            },
+            {
+              "line": 42,
+              "call": "nn.Linear(hidden_dim, hidden_dim)"
+            }
+          ],
+          "public_methods": [
+            {
+              "line": 101,
+              "name": "get_transformer_backbone",
+              "arguments": "key, kwargs"
+            },
+            {
+              "line": 206,
+              "name": "forward",
+              "arguments": "self, hidden_states: torch.Tensor, position_ids: torch.LongTensor"
+            },
+            {
+              "line": 250,
+              "name": "forward",
+              "arguments": "self, input_ids: torch.LongTensor=None, attention_mask: torch.Tensor | None=None, position_ids: torch.LongTensor=None, past_key_values=None, inputs_embeds: torch.FloatTensor=None, use_cache: bool=None, output_attentions: bool=None, output_hidden_states: bool=None, cache_position: torch.LongTensor=None, **flash_attn_kwargs"
+            },
+            {
+              "line": 320,
+              "name": "forward",
+              "arguments": "self, input_ids=None, past_key_values=None, cache_position=None, attention_mask=None, token_type_ids=None, position_ids=None, head_mask=None, inputs_embeds=None, encoder_hidden_states=None, encoder_attention_mask=None, use_cache=None, output_attentions=None, output_hidden_states=None, return_dict=None, **kwargs"
+            }
+          ],
+          "not_implemented": []
+        }
+      ]
+    }
+  },
+  "huggingface": {
+    "Xaira-Therapeutics/X-Cell": {
+      "revision": "07737b494a3ea06c6a579d389fda0216ba61bf02",
+      "files": [
+        {
+          "name": ".gitattributes",
+          "bytes": 1575
+        },
+        {
+          "name": "README.md",
+          "bytes": 3629
+        },
+        {
+          "name": "x-cell-overview.png",
+          "bytes": 272925
+        }
+      ]
+    },
+    "arcinstitute/ST-HVG-Replogle": {
+      "revision": "bb6a9562cbbf1fd152df14cc53b4cc7517c77175",
+      "files": [
+        {
+          "name": "fewshot/k562/batch_onehot_map.pkl",
+          "bytes": 721431
+        },
+        {
+          "name": "fewshot/k562/checkpoints/final.ckpt",
+          "bytes": 471695263
+        },
+        {
+          "name": "fewshot/k562/config.yaml",
+          "bytes": 2752
+        },
+        {
+          "name": "fewshot/k562/pert_onehot_map.pt",
+          "bytes": 16746593
+        },
+        {
+          "name": "fewshot/k562/var_dims.pkl",
+          "bytes": 155642
+        }
+      ]
+    },
+    "arcinstitute/SE-100M": {
+      "revision": "bc72702320639217128df42673e94a9658f67d24",
+      "files": [
+        {
+          "name": "config.yaml",
+          "bytes": 4569
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 869154536
+        },
+        {
+          "name": "protein_embeddings.pt",
+          "bytes": 411105891
+        }
+      ]
+    }
+  },
+  "fixture": {
+    "kind": "untrained_upstream_module_fixture",
+    "source": "/private/tmp/compressme-audit-state/src/state/emb/nn/flash_transformer.py",
+    "device": "cpu",
+    "dtype": "float32",
+    "input_shape": [
+      2,
+      7,
+      32
+    ],
+    "maximum_absolute_error": 0.0,
+    "compiler_report": {
+      "method": "exact_affine_fx",
+      "status": "compiled",
+      "parameters_before": 8544,
+      "parameters_after": 8544,
+      "tensor_bytes_before": 34176,
+      "tensor_bytes_after": 34176,
+      "rewrites": [],
+      "guarantee": "same mathematical forward in real arithmetic; floating-point order changes",
+      "validation": null
+    },
+    "scope": "Actual published SE FlashTransformerEncoderLayer; random weights, dropout=0; no pretrained biology/MPS claim"
+  }
+}

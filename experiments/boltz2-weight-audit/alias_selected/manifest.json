@@ -1,0 +1,89 @@
+{
+  "checkpoint": "boltz2_conf.ckpt",
+  "storages": [
+    {
+      "name": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.weight",
+      "dtype": "float32",
+      "shape": [
+        128,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 16384,
+      "storage_key": "23",
+      "storage_numel": 16384,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "local_name": "output_projection_linear.weight",
+      "file": "23.bin",
+      "sha256": "84bbaef63707ef82d6dd0a2f08b4847475cd69cdcdfd62556d40fdbb9eb53235",
+      "zip_crc": 2271715890
+    },
+    {
+      "name": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection_linear.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "24",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "local_name": "output_projection_linear.bias",
+      "file": "24.bin",
+      "sha256": "f1efb95a35dec38ce5c4ffc912be684ff28a616eb1b303a4e9073eb3fdc1b4a8",
+      "zip_crc": 2197145709
+    },
+    {
+      "name": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 16384,
+      "storage_key": "25",
+      "storage_numel": 16384,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "local_name": "output_projection.0.weight",
+      "file": "25.bin",
+      "sha256": "84bbaef63707ef82d6dd0a2f08b4847475cd69cdcdfd62556d40fdbb9eb53235",
+      "zip_crc": 2271715890
+    },
+    {
+      "name": "input_embedder.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.output_projection.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "26",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "local_name": "output_projection.0.bias",
+      "file": "26.bin",
+      "sha256": "f1efb95a35dec38ce5c4ffc912be684ff28a616eb1b303a4e9073eb3fdc1b4a8",
+      "zip_crc": 2197145709
+    }
+  ]
+}

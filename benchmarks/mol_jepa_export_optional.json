@@ -1,0 +1,344 @@
+{
+  "accepted": true,
+  "examples": 10,
+  "relative_tolerance": 1e-05,
+  "absolute_tolerance": 1e-05,
+  "metrics": [
+    {
+      "output['predictions']": {
+        "relative_l2": 3.423111037984496e-07,
+        "max_abs": 2.2649765014648438e-06,
+        "rmse": 2.9299392736709543e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.39760277900854e-07,
+        "max_abs": 3.5762786865234375e-07,
+        "rmse": 7.634118982653131e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.6928225278912924e-07,
+        "max_abs": 6.705522537231445e-07,
+        "rmse": 8.681355195856438e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 9.996767448206657e-08,
+        "max_abs": 5.066394805908203e-07,
+        "rmse": 2.603678831850063e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.183511009122764e-07,
+        "max_abs": 7.748603820800781e-07,
+        "rmse": 5.318975978407807e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.4855526072954615e-07,
+        "max_abs": 2.384185791015625e-06,
+        "rmse": 2.887949199462151e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.293150061756686e-07,
+        "max_abs": 4.470348358154297e-07,
+        "rmse": 7.216295788202974e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.7892134983109166e-07,
+        "max_abs": 5.066394805908203e-07,
+        "rmse": 8.880820329804063e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.1686174475266695e-07,
+        "max_abs": 4.470348358154297e-07,
+        "rmse": 3.019972820677423e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.9303769954979315e-07,
+        "max_abs": 8.940696716308594e-07,
+        "rmse": 7.071588996623365e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.2924838153329937e-07,
+        "max_abs": 1.9073486328125e-06,
+        "rmse": 2.837898903062698e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.19756138182435e-07,
+        "max_abs": 3.427267074584961e-07,
+        "rmse": 7.244550458183573e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.5880477765700696e-07,
+        "max_abs": 5.066394805908203e-07,
+        "rmse": 8.318387114557298e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.1211676349815993e-07,
+        "max_abs": 4.76837158203125e-07,
+        "rmse": 2.924888825507374e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.6127851593205847e-07,
+        "max_abs": 7.152557373046875e-07,
+        "rmse": 6.365908280445608e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.4342295097171905e-07,
+        "max_abs": 2.1457672119140625e-06,
+        "rmse": 2.8576519689537787e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.16471680231333e-07,
+        "max_abs": 2.980232238769531e-07,
+        "rmse": 7.047129761703132e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.6279120389063445e-07,
+        "max_abs": 5.960464477539062e-07,
+        "rmse": 8.168486928693137e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.0097276497628928e-07,
+        "max_abs": 4.76837158203125e-07,
+        "rmse": 2.643930218638734e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.9052883868411015e-07,
+        "max_abs": 8.344650268554688e-07,
+        "rmse": 6.914046915441999e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.155999754851269e-07,
+        "max_abs": 2.2649765014648438e-06,
+        "rmse": 2.711613763291849e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.260202335057282e-07,
+        "max_abs": 4.470348358154297e-07,
+        "rmse": 7.258665983164726e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.57346230790439e-07,
+        "max_abs": 7.152557373046875e-07,
+        "rmse": 7.962226965087979e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.2758880206996618e-07,
+        "max_abs": 6.556510925292969e-07,
+        "rmse": 3.3355683017584185e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 3.1422878178809073e-07,
+        "max_abs": 1.1920928955078125e-06,
+        "rmse": 7.418259083762596e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.35807563715991e-07,
+        "max_abs": 2.384185791015625e-06,
+        "rmse": 2.928795285216944e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.106262250915306e-07,
+        "max_abs": 3.2782554626464844e-07,
+        "rmse": 7.373483210782756e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.7420806201654517e-07,
+        "max_abs": 5.066394805908203e-07,
+        "rmse": 8.57856707161366e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.0787994066196835e-07,
+        "max_abs": 5.960464477539062e-07,
+        "rmse": 2.8113427732619723e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 3.452315258812339e-07,
+        "max_abs": 1.3113021850585938e-06,
+        "rmse": 8.105921799383639e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.6181604645930843e-07,
+        "max_abs": 2.86102294921875e-06,
+        "rmse": 3.025882842291858e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.684547365621201e-07,
+        "max_abs": 3.427267074584961e-07,
+        "rmse": 7.696431492333333e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 4.086259251050494e-07,
+        "max_abs": 7.152557373046875e-07,
+        "rmse": 9.014108376628119e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.4556706306437494e-07,
+        "max_abs": 8.046627044677734e-07,
+        "rmse": 3.803653665590931e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 3.910065001587028e-07,
+        "max_abs": 1.0132789611816406e-06,
+        "rmse": 9.26008052254689e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.517595342828076e-07,
+        "max_abs": 3.1888484954833984e-06,
+        "rmse": 3.0142071653570536e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.71072090330219e-07,
+        "max_abs": 3.5762786865234375e-07,
+        "rmse": 7.75164955191616e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 4.0335164885671577e-07,
+        "max_abs": 7.599592208862305e-07,
+        "rmse": 8.975961381380062e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 7.761647981472105e-08,
+        "max_abs": 3.2782554626464844e-07,
+        "rmse": 2.028410244346335e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 3.3669569492224475e-07,
+        "max_abs": 1.2218952178955078e-06,
+        "rmse": 7.997157805502869e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.7461869230425124e-07,
+        "max_abs": 2.384185791015625e-06,
+        "rmse": 2.9695339639640597e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.392022120394266e-07,
+        "max_abs": 2.980232238769531e-07,
+        "rmse": 7.287058573340155e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 4.0033419545177514e-07,
+        "max_abs": 5.960464477539062e-07,
+        "rmse": 9.037575579172351e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 9.787738216418052e-08,
+        "max_abs": 3.427267074584961e-07,
+        "rmse": 2.4563280735220015e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.745429272902799e-07,
+        "max_abs": 7.152557373046875e-07,
+        "rmse": 6.108103741028135e-08,
+        "exact": false
+      }
+    },
+    {
+      "output['predictions']": {
+        "relative_l2": 3.5726161249114754e-07,
+        "max_abs": 1.9371509552001953e-06,
+        "rmse": 3.097943324377733e-07,
+        "exact": false
+      },
+      "output['cls']": {
+        "relative_l2": 5.268645183642571e-07,
+        "max_abs": 3.2782554626464844e-07,
+        "rmse": 7.463596275164007e-08,
+        "exact": false
+      },
+      "output['embeddings']": {
+        "relative_l2": 3.7804746114900657e-07,
+        "max_abs": 6.854534149169922e-07,
+        "rmse": 8.610151964802462e-08,
+        "exact": false
+      },
+      "output['attentions'][0]": {
+        "relative_l2": 1.1190773873320351e-07,
+        "max_abs": 2.980232238769531e-07,
+        "rmse": 2.9147462942729014e-08,
+        "exact": false
+      },
+      "output['attentions'][1]": {
+        "relative_l2": 2.5680566437029197e-07,
+        "max_abs": 4.76837158203125e-07,
+        "rmse": 5.7216266581182855e-08,
+        "exact": false
+      }
+    }
+  ],
+  "scope": "empirical agreement on these examples only; not biological accuracy or distributional equivalence",
+  "device": "cpu",
+  "dtype": "float32",
+  "tested_optional_modalities": [
+    "ecfp",
+    "uma",
+    "boltz",
+    "boltz_preds",
+    "moe",
+    "bioxmol",
+    "chembl_targets",
+    "tdc_targets",
+    "pcba_targets",
+    "nabla_targets",
+    "xtb_targets"
+  ]
+}

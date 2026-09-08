@@ -1,0 +1,193 @@
+{
+  "source_repository": "https://github.com/jwohlwend/boltz",
+  "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+  "hf_repository": "boltz-community/boltz-2",
+  "hf_revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "scope": "Exact checkpoint byte audit and local real-weight components. Original Python CPU/MPS model runs succeeded on a tiny fixture; complete frozen-sharing parity belongs to the separate native runtime audit. No broad all-input or biological-quality guarantee.",
+  "sources": {
+    "pyproject.toml": {
+      "sha256": "2cd9d9f737b1143719f2bdb980325750bfd043e5b71ce19648e4c9c3fadeb9b3",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/pyproject.toml"
+    },
+    "src/boltz/main.py": {
+      "sha256": "b5ded4dac1552af2e079c335d56e64ea580b4d5ca0202a9542385ce3e318c3b3",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/main.py"
+    },
+    "src/boltz/model/layers/attentionv2.py": {
+      "sha256": "ae9bbc1eeb56c8dcd403d49693c84cd616ffd6772226364214ffd61d328cd8da",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/layers/attentionv2.py"
+    },
+    "src/boltz/model/layers/transition.py": {
+      "sha256": "cc50a51a6aa669455420549de16e29558d7b96f8a7d8da6f69930ab9e738cf37",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/layers/transition.py"
+    },
+    "src/boltz/model/layers/triangular_mult.py": {
+      "sha256": "458319d62723c19a672fa650b11a601feaff8ee195179e37e6a43b34a92b3a94",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/layers/triangular_mult.py"
+    },
+    "src/boltz/model/models/boltz2.py": {
+      "sha256": "f05169e66488910fc11c6a56b56d19a58e3f43649586218df75573eeff7a9945",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/models/boltz2.py"
+    },
+    "src/boltz/model/modules/affinity.py": {
+      "sha256": "164b48db0ae40eab2318724ebafcd5ad92bbf0c38f8d4eb940dd25eac07540f4",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/affinity.py"
+    },
+    "src/boltz/model/modules/diffusion_conditioning.py": {
+      "sha256": "6500f3bd894c27d072581810be5548250eba18f1e400af637d554aebc20ce719",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/diffusion_conditioning.py"
+    },
+    "src/boltz/model/modules/diffusionv2.py": {
+      "sha256": "e68643da577decddaef25e97313fa0d014d5653752d0a97282ec1a78665d697a",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/diffusionv2.py"
+    },
+    "src/boltz/model/modules/encodersv2.py": {
+      "sha256": "2938af17252607d056106fc04a3afa0ea96b145fa7485764ebf33d646c99e0d4",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/encodersv2.py"
+    },
+    "src/boltz/model/modules/transformersv2.py": {
+      "sha256": "4fbecbe835ec2d7286d5a46e408cb9134b2378bce8dd443df58b80392736f982",
+      "url": "https://github.com/jwohlwend/boltz/blob/b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc/src/boltz/model/modules/transformersv2.py"
+    }
+  },
+  "candidates": [
+    {
+      "id": "joint_checkpoint_byte_deduplication",
+      "status": "all_common_named_tensor_bytes_equal_full_publisher_hash_verified",
+      "scope": "Both official inference state dictionaries retained; equal raw tensor bytes stored once. Distinct heads and configurations retained.",
+      "next_test": "Validate all shared blobs bytewise and construct both original classes through strict state loading.",
+      "benefit": "Potential distribution size reduction; no arithmetic reduction and no resident-memory-sharing claim.",
+      "result": {
+        "common_names": 5019,
+        "all_equal": true,
+        "saving_over_independently_deduplicated_inference_percent": 49.5520786865625,
+        "saved_values": 506313407,
+        "joint_unique_values": 515466951
+      }
+    },
+    {
+      "id": "conditioning_norm_fanout",
+      "status": "real_weight_component_cpu_mps_passed",
+      "source": "src/boltz/model/modules/diffusion_conditioning.py",
+      "lines": [
+        58,
+        120
+      ],
+      "proof": "For u=LN_nonaffine(x), W_i LN_gamma_i,beta_i(x)=(W_i diag(gamma_i))u+W_i beta_i. Concatenate the folded projections.",
+      "banks": [
+        {
+          "branches": 24,
+          "input": 128,
+          "output_each": 16,
+          "saved_values": 5760
+        },
+        {
+          "branches": 6,
+          "input": 16,
+          "output_each": 4,
+          "saved_values": 168
+        }
+      ],
+      "contract": "Same eps1e-5, frozen inference weights, preserve branch ordering, split atom encoder/decoder output concatenations.",
+      "limitations": [
+        "Floating-point rounding changes for folded projections; local 1e-5 mixed gates pass, no whole-model gate.",
+        "Computed once before sample(), not once per denoising step.",
+        "Shared-statistics-only retains all weights and was bitwise equal in local CPU/MPS probes."
+      ]
+    },
+    {
+      "id": "score_condition_norm_fanout",
+      "status": "source_only_candidate",
+      "source": "src/boltz/model/modules/transformersv2.py",
+      "lines": [
+        17,
+        207
+      ],
+      "proof": "24 token layers share the same time-conditioned s. Each attention and transition AdaLN normalizes that same s with the same eps; nonaffine statistics can be hoisted.",
+      "benefit": "48 condition norms per score-model call can share statistics; nonlinear gates still evaluated.",
+      "limitations": [
+        "Requires a composite transformer adapter and actual-weight/output validation.",
+        "Do not collapse gates or activation norms; only condition-input statistics are common.",
+        "Time conditioning changes each denoising step, so no arbitrary cross-step output cache."
+      ]
+    },
+    {
+      "id": "categorical_plus_continuous_atom_projection",
+      "status": "source_only_candidate",
+      "source": "src/boltz/model/modules/encodersv2.py",
+      "lines": [
+        248,
+        355
+      ],
+      "proof": "388 atom features are ref_pos3+charge1+element128 one-hot+4 atom-character64 one-hots. A linear splits into a 4D continuous projection plus five categorical column gathers.",
+      "benefit": "Avoid dense one-hot input allocation and arithmetic; keeps essentially the same weight values.",
+      "limitations": [
+        "Coordinates/charge are continuous: whole-input finite lookup is invalid.",
+        "Must preserve atom feature ordering, padding/masks and all supported element/name categories.",
+        "Gathers/sums change float32 addition ordering; full gate required."
+      ]
+    },
+    {
+      "id": "relative_position_gather_sum",
+      "status": "source_only_candidate",
+      "source": "src/boltz/model/modules/encodersv2.py",
+      "lines": [
+        37,
+        123
+      ],
+      "proof": "The139-wide input is three categorical one-hot groups plus one boolean; bias-free linear can gather each active column and sum.",
+      "benefit": "Avoid O(B*N*N*139) one-hot intermediates. Weight count essentially unchanged.",
+      "limitations": [
+        "Must preserve fix_sym_check, cyclic and clipping semantics.",
+        "Keep arbitrary supported chain/residue/symmetry identifiers."
+      ]
+    },
+    {
+      "id": "inference_checkpoint_cleanup",
+      "status": "full_byte_comparison_and_one_actual_alias_component_validated",
+      "source": "src/boltz/model/models/boltz2.py",
+      "lines": [
+        1219,
+        1256
+      ],
+      "training_only_values": 50052584,
+      "potential_source_alias_duplicate_values": 14322816,
+      "contract": "CLI loads ema=False. on_load_checkpoint only updates training config/optimizer scheduler settings. Source registers output_projection_linear twice; ordinary strict PyTorch loading child alias wins if checkpoint names differ.",
+      "limitations": [
+        "Full byte comparison confirmed equality of all66 source gate alias pairs. A single actual gate also validated strict-load precedence; native model output checks belong to the separate runtime audit.",
+        "Affinity ZIP already stores these aliases once.",
+        "Dropping training state changes training-resume capability; label inference export."
+      ]
+    },
+    {
+      "id": "unsafe_child_rewrites",
+      "status": "must_refuse_without_composite_adapter",
+      "source": "src/boltz/model/layers/transition.py",
+      "lines": [
+        69,
+        75
+      ],
+      "reason": "Chunked forward directly slices fc1/fc2/fc3.weight; replacing only their child forwards is bypassed."
+    },
+    {
+      "id": "cuda_kernel_weight_reads",
+      "status": "must_refuse_or_disable_kernels",
+      "source": "src/boltz/model/layers/triangular_mult.py",
+      "lines": [
+        14,
+        108
+      ],
+      "reason": "Optional fused CUDA triangle path reads norm/projection weight attributes directly. Forward-only child replacements do not affect that path."
+    },
+    {
+      "id": "attention_hidden_subspace",
+      "status": "unprofitable_from_source_dimensions",
+      "source": "src/boltz/model/layers/attentionv2.py",
+      "lines": [
+        1,
+        120
+      ],
+      "reason": "Token attention uses 768/16=48 features per head; atom attention128/4=32. No Mol-JEPA-like512-wide head fed by82-dimensional features. AdaLN and sigmoid/SiLU gates obstruct simple full-block affine contraction."
+    }
+  ]
+}

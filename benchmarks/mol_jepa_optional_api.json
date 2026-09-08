@@ -1,0 +1,206 @@
+{
+  "source": "local vendored unmodified source",
+  "device": "cpu",
+  "dtype": "float32",
+  "threshold": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "full_contract_report": {
+    "operation": "bilinear_graph_attention",
+    "parameters_before": 39902721,
+    "parameters_after": 35225561,
+    "aggregate_before_value": false,
+    "skip_single_neighbors": false,
+    "guarantee": "real-arithmetic equality including softmax row-shift invariance"
+  },
+  "specialization_report": {
+    "operation": "specialize_moljepa_smiles",
+    "removed_encoders": [
+      "ecfp",
+      "uma",
+      "boltz",
+      "boltz_preds",
+      "moe",
+      "bioxmol",
+      "chembl_targets",
+      "tdc_targets",
+      "pcba_targets",
+      "nabla_targets",
+      "xtb_targets"
+    ],
+    "parameters_before": 35225561,
+    "parameters_after": 19763160,
+    "contract": "embeddings_data=None",
+    "guarantee": "unreachable-module removal"
+  },
+  "input_count": 64,
+  "heldout_64_full_api": {
+    "predictions": {
+      "max_abs": 3.1888484954833984e-06,
+      "relative_l2": 3.410632727871194e-07,
+      "rms": 2.900791756587593e-07,
+      "shape": [
+        64,
+        12,
+        512
+      ]
+    },
+    "cls": {
+      "max_abs": 4.470348358154297e-07,
+      "relative_l2": 5.350840154946776e-07,
+      "rms": 7.406752508440701e-08,
+      "shape": [
+        64,
+        512
+      ]
+    },
+    "embeddings": {
+      "max_abs": 7.599592208862305e-07,
+      "relative_l2": 3.767111680430763e-07,
+      "rms": 8.580250174456744e-08,
+      "shape": [
+        64,
+        13,
+        512
+      ]
+    },
+    "attentions": [
+      {
+        "max_abs": 8.046627044677734e-07,
+        "shape": [
+          64,
+          4,
+          13,
+          13
+        ]
+      },
+      {
+        "max_abs": 1.3113021850585938e-06,
+        "shape": [
+          64,
+          4,
+          13,
+          13
+        ]
+      }
+    ]
+  },
+  "heldout_64_specialized": {
+    "predictions": {
+      "max_abs": 3.1888484954833984e-06,
+      "relative_l2": 3.410632727871194e-07,
+      "rms": 2.900791756587593e-07,
+      "shape": [
+        64,
+        12,
+        512
+      ]
+    },
+    "cls": {
+      "max_abs": 4.470348358154297e-07,
+      "relative_l2": 5.350840154946776e-07,
+      "rms": 7.406752508440701e-08,
+      "shape": [
+        64,
+        512
+      ]
+    },
+    "embeddings": {
+      "max_abs": 7.599592208862305e-07,
+      "relative_l2": 3.767111680430763e-07,
+      "rms": 8.580250174456744e-08,
+      "shape": [
+        64,
+        13,
+        512
+      ]
+    },
+    "attentions": [
+      {
+        "max_abs": 8.046627044677734e-07,
+        "shape": [
+          64,
+          4,
+          13,
+          13
+        ]
+      },
+      {
+        "max_abs": 1.3113021850585938e-06,
+        "shape": [
+          64,
+          4,
+          13,
+          13
+        ]
+      }
+    ]
+  },
+  "tested_optional_modalities": [
+    "ecfp",
+    "uma",
+    "boltz",
+    "boltz_preds",
+    "moe",
+    "bioxmol",
+    "chembl_targets",
+    "tdc_targets",
+    "pcba_targets",
+    "nabla_targets",
+    "xtb_targets"
+  ],
+  "all_11_extra_modalities": {
+    "predictions": {
+      "max_abs": 2.384185791015625e-06,
+      "relative_l2": 3.7461869230425124e-07,
+      "rms": 2.9695339639640597e-07,
+      "shape": [
+        11,
+        12,
+        512
+      ]
+    },
+    "cls": {
+      "max_abs": 2.980232238769531e-07,
+      "relative_l2": 5.392022120394266e-07,
+      "rms": 7.287058573340155e-08,
+      "shape": [
+        11,
+        512
+      ]
+    },
+    "embeddings": {
+      "max_abs": 5.960464477539062e-07,
+      "relative_l2": 4.0033419545177514e-07,
+      "rms": 9.037575579172351e-08,
+      "shape": [
+        11,
+        13,
+        512
+      ]
+    },
+    "attentions": [
+      {
+        "max_abs": 3.427267074584961e-07,
+        "shape": [
+          11,
+          4,
+          13,
+          13
+        ]
+      },
+      {
+        "max_abs": 7.152557373046875e-07,
+        "shape": [
+          11,
+          4,
+          13,
+          13
+        ]
+      }
+    ]
+  },
+  "specialization_rejects_extra_modalities": true,
+  "passed": true
+}

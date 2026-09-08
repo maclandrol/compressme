@@ -1,0 +1,182 @@
+{
+  "original_real_checkpoint": true,
+  "cases": [
+    {
+      "cells": 0,
+      "tokens": 1,
+      "counts": false,
+      "batch_shapes": [
+        [
+          0,
+          3,
+          1024
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "full_shapes": [
+        [
+          0,
+          2,
+          1024
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "cells": 0,
+      "tokens": 1,
+      "counts": true,
+      "batch_shapes": [
+        [
+          0,
+          3,
+          1024
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "full_shapes": [
+        [
+          0,
+          2,
+          1024
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "cells": 0,
+      "tokens": 8,
+      "counts": false,
+      "batch_shapes": [
+        [
+          0,
+          3,
+          1024
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "full_shapes": [
+        [
+          0,
+          9,
+          1024
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "cells": 0,
+      "tokens": 8,
+      "counts": true,
+      "batch_shapes": [
+        [
+          0,
+          3,
+          1024
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "full_shapes": [
+        [
+          0,
+          9,
+          1024
+        ],
+        [
+          0,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "bitwise_equal": true
+    }
+  ],
+  "constant_cache_unused": true
+}

@@ -1,0 +1,134 @@
+{
+  "url": "https://huggingface.co/boltz-community/boltz-2/resolve/6fdef46d763fee7fbb83ca5501ccceff43b85607/mols.tar",
+  "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "archive_sha256": "39e076d96dbec6b4e86982bbda16f3a53a2a60c9bdc17828d88f6f9a0c7d1fd7",
+  "archive_bytes": 1855662080,
+  "assets": [
+    {
+      "name": "mols/GLU.pkl",
+      "bytes": 10689,
+      "sha256": "5ffee2c2a291e7dd9537e47da745086a2806e0054a08e7d8a4e6de6876d9321c",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/ASN.pkl",
+      "bytes": 9798,
+      "sha256": "842794255f93b21292d4bbb2b0da8ef9f00470b754c10a4b1f3a97da175ede54",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/GLN.pkl",
+      "bytes": 10689,
+      "sha256": "6d3f7b214783f4618e882e9ad5eac823065d4b783d15c8d2e396dd6bf1c01605",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/HIS.pkl",
+      "bytes": 11685,
+      "sha256": "b41c77e00e94cd23058f9c77866f4ea9cb83537012717530cee9a40b8d6475df",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/VAL.pkl",
+      "bytes": 9095,
+      "sha256": "4f25210694b98a64cbcef225b036d8ef1a1e8d66054359eceeb3562ffc02bc85",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/SER.pkl",
+      "bytes": 8266,
+      "sha256": "14195904d6e2daff524fb57c4919b8eb4ea407178458189ea896f2d39746c5b5",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/ARG.pkl",
+      "bytes": 12646,
+      "sha256": "f5b6709c78c45aded92301387af6a47a5b41ebf99ba0b7e3ca6fac10875b483a",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/ALA.pkl",
+      "bytes": 7605,
+      "sha256": "00c247b6c8e5e3c2d248ab59560219bb35fe801ba8a8b52a5d76dc198a8d984b",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/LYS.pkl",
+      "bytes": 10780,
+      "sha256": "1dcd1968a1e9288ded8cd28ad5395ce01d7b46169a7114a22303690a1daf0e75",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/PRO.pkl",
+      "bytes": 9062,
+      "sha256": "2629e05d5381616322bc7c5ec4f05eea882398fd236873e4c79d19a6d69baebb",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/LEU.pkl",
+      "bytes": 9934,
+      "sha256": "b56d50e78cd2edce0850472d7af9e45a9eac87f5a5897b3ad2574194ee843f88",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/ASP.pkl",
+      "bytes": 9798,
+      "sha256": "366917880f9a8fb0f510790f49d1c123eae566c4d212253d0722c7be59202415",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/UNK.pkl",
+      "bytes": 8298,
+      "sha256": "c8ab424930c66da4635ec039a3b27da042754f9477e7868f235997bbb991c60f",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/GLY.pkl",
+      "bytes": 6754,
+      "sha256": "6b301ceb14bc07fcda588364a190805473258a67819e0a6fe7b92b00c515b8f2",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/PHE.pkl",
+      "bytes": 12752,
+      "sha256": "d308f4d9a70c156a95bd0e8361b1fa2181bbdb22d32c55753cc528a8b8fce6f3",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/TYR.pkl",
+      "bytes": 13819,
+      "sha256": "93dcb841be8edb3cc25b00baa6fdac66df58a2436912eee079900b7f675655a9",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/MET.pkl",
+      "bytes": 9855,
+      "sha256": "99140e3ba316e237891731deea085ac8bb16d91a2720cc4e5d0420c0242d0df6",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/THR.pkl",
+      "bytes": 9112,
+      "sha256": "53fe1335ca71705d8095fb62a4ef7b63b7af975325fecfe364f2feb4da5713e5",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/TRP.pkl",
+      "bytes": 16097,
+      "sha256": "03e700fd6cdc4809000e23679b90c7b5f0269dd5dad7b53591ce1c9f6cf4e0c0",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/ILE.pkl",
+      "bytes": 9981,
+      "sha256": "613fd4278b8a09ee821bdbc9d6fb81dce9b7346915fe268c4d3c01e2cd8cce2a",
+      "pickle_globals": []
+    },
+    {
+      "name": "mols/CYS.pkl",
+      "bytes": 8266,
+      "sha256": "3f69156437a2ad239121ed999cd3271f66fb641e5db1ad63a635ea430c97da8e",
+      "pickle_globals": []
+    }
+  ]
+}

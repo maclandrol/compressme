@@ -1,0 +1,1213 @@
+{
+  "artifact": "/Users/manu/Code/compressme/artifacts/moljepa-smiles",
+  "weights_sha256": "964ea0ff1156da81123f06f90343a2474b30bcd347b330b894ede83321ddc1b9",
+  "parameters_before": 19763160,
+  "parameters_after": 19763160,
+  "copied_weights_bitwise_equal": true,
+  "torch": "2.14.0",
+  "cpu_threads": 4,
+  "verification_smiles": [
+    "C",
+    "CC",
+    "CCC",
+    "CCCC",
+    "CCCCC",
+    "CCCCCC",
+    "CC(C)C",
+    "CC(C)(C)C",
+    "C1CCCCC1",
+    "C1CCCC1",
+    "C1CCC1",
+    "C1CC1",
+    "CC1CCCCC1",
+    "C1CCC2CCCCC2C1",
+    "C1CCC2(CC1)CCCC2",
+    "C1COCCN1",
+    "CO",
+    "CCCO",
+    "CC(C)O",
+    "CC(C)(C)O",
+    "OCCO",
+    "OCCCO",
+    "CCOCC",
+    "COCCOC",
+    "CN",
+    "CCN",
+    "CCCN",
+    "CNC",
+    "CN(C)C",
+    "NCCN",
+    "NCCO",
+    "N1CCCCC1",
+    "CC=O",
+    "CCC=O",
+    "CC(=O)C",
+    "CCC(=O)C",
+    "CC(=O)O",
+    "CCC(=O)O",
+    "CC(=O)OC",
+    "CCOC(=O)C",
+    "c1ccncc1",
+    "c1ccoc1",
+    "c1ccsc1",
+    "c1ncc[nH]1",
+    "c1cn[nH]c1",
+    "c1ccc2ccccc2c1",
+    "c1ccc2[nH]ccc2c1",
+    "c1cnc2ccccc2n1",
+    "CCS",
+    "CSSC",
+    "CS(=O)C",
+    "CS(=O)(=O)C",
+    "NC(=O)N",
+    "NCC(=O)O",
+    "N[C@@H](CO)C(=O)O",
+    "N[C@@H](CC(=O)O)C(=O)O",
+    "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O",
+    "FC(F)(F)c1ccccc1",
+    "Clc1ccc(Br)cc1",
+    "N#Cc1ccccc1",
+    "C[N+](C)(C)C",
+    "CC(=O)[O-]",
+    "[Na+].[Cl-]",
+    "O=P(O)(O)O"
+  ],
+  "cls_predictor": false,
+  "timing_method": "5 warmups each then20shuffled paired rounds; complete public SMILES API with synchronization",
+  "devices": {
+    "cpu": {
+      "validation": {
+        "accepted": true,
+        "examples": 16,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-05,
+        "metrics": [
+          {
+            "output['predictions']": {
+              "relative_l2": 3.447294778551202e-07,
+              "max_abs": 2.86102294921875e-06,
+              "rmse": 2.9506388392323844e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.313730733405626e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 7.515494134267902e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.8801214936128883e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 9.121671199468642e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.775473396675513e-07,
+              "max_abs": 2.2649765014648438e-06,
+              "rmse": 3.128162709955338e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.299005950085296e-07,
+              "max_abs": 4.172325134277344e-07,
+              "rmse": 7.224279289169134e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.350920728688808e-07,
+              "max_abs": 7.301568984985352e-07,
+              "rmse": 1.0197299677766289e-07,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.6932681027120693e-07,
+              "max_abs": 2.6226043701171875e-06,
+              "rmse": 3.183347955639584e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.666016448346592e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 7.89750016450993e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.2677868182776225e-07,
+              "max_abs": 8.642673492431641e-07,
+              "rmse": 9.894267163514747e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.8118075568989263e-07,
+              "max_abs": 2.384185791015625e-06,
+              "rmse": 3.1718378958617514e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 6.034304911990992e-07,
+              "max_abs": 3.8743019104003906e-07,
+              "rmse": 8.233661820044919e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.4140224135990737e-07,
+              "max_abs": 8.307397365570068e-07,
+              "rmse": 9.938467049382457e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.279853960591754e-07,
+              "max_abs": 2.384185791015625e-06,
+              "rmse": 2.818028434495792e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.306728756761528e-07,
+              "max_abs": 3.2782554626464844e-07,
+              "rmse": 7.322868730846251e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.8293499652732393e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 8.532384190593203e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.4017929218037735e-07,
+              "max_abs": 1.9073486328125e-06,
+              "rmse": 2.9669239541757395e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.468744907935312e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 7.896911287186848e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.072505888503186e-07,
+              "max_abs": 8.344650268554688e-07,
+              "rmse": 9.336053553172334e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.5309716247580814e-07,
+              "max_abs": 2.86102294921875e-06,
+              "rmse": 2.952966507545001e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.492780548037094e-07,
+              "max_abs": 3.129243850708008e-07,
+              "rmse": 7.436794323274238e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.103504508895186e-07,
+              "max_abs": 6.556510925292969e-07,
+              "rmse": 9.052150662227927e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.5420765511272527e-07,
+              "max_abs": 2.2649765014648438e-06,
+              "rmse": 3.0351849358975955e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.914204045397677e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 8.027854699070908e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.3037689655470884e-07,
+              "max_abs": 7.450580596923828e-07,
+              "rmse": 9.577365922877369e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.4150367908622683e-07,
+              "max_abs": 2.5033950805664062e-06,
+              "rmse": 2.9230282997874766e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.352433304960637e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 7.570233088339553e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.837039213266314e-07,
+              "max_abs": 5.364418029785156e-07,
+              "rmse": 9.020390221528496e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.907922233844544e-07,
+              "max_abs": 1.3709068298339844e-06,
+              "rmse": 7.573743836065298e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.1000097882216453e-07,
+              "max_abs": 9.5367431640625e-07,
+              "rmse": 7.551543214880148e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.704063403107364e-07,
+              "max_abs": 2.1457672119140625e-06,
+              "rmse": 3.068996031463944e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.460362618196634e-07,
+              "max_abs": 3.2782554626464844e-07,
+              "rmse": 7.444261295990702e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.26766134228757e-07,
+              "max_abs": 7.152557373046875e-07,
+              "rmse": 1.0002163697436746e-07,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 3.1205620436932685e-07,
+              "max_abs": 1.1622905731201172e-06,
+              "rmse": 8.064240827499588e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.7196369157204836e-07,
+              "max_abs": 8.642673492431641e-07,
+              "rmse": 8.976231974076365e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.681874637198626e-07,
+              "max_abs": 2.384185791015625e-06,
+              "rmse": 3.1735275343627623e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.722284266062721e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 7.975928310226799e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.2509069826092124e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 9.855133630426417e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 3.142747226238828e-07,
+              "max_abs": 1.3113021850585938e-06,
+              "rmse": 8.198761682453744e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.172789894561003e-07,
+              "max_abs": 9.5367431640625e-07,
+              "rmse": 7.730329123155328e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.9172909216970127e-07,
+              "max_abs": 2.6226043701171875e-06,
+              "rmse": 3.259611508795502e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.982685335834931e-07,
+              "max_abs": 4.172325134277344e-07,
+              "rmse": 8.163228286142433e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.496814928891058e-07,
+              "max_abs": 9.08970832824707e-07,
+              "rmse": 1.0124880021773187e-07,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.528680364758045e-07,
+              "max_abs": 1.1324882507324219e-06,
+              "rmse": 6.621245295011288e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 4.6970310993837685e-07,
+              "max_abs": 2.086162567138672e-06,
+              "rmse": 1.1178061961321748e-07,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.2669521832477853e-07,
+              "max_abs": 2.1457672119140625e-06,
+              "rmse": 2.8069432927945326e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.325222329389874e-07,
+              "max_abs": 3.2782554626464844e-07,
+              "rmse": 7.348388472690549e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.837228444959661e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 8.549938648110897e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 3.0328477358380783e-07,
+              "max_abs": 1.0132789611816406e-06,
+              "rmse": 7.928807675979017e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 4.0428492776004975e-07,
+              "max_abs": 1.0728836059570312e-06,
+              "rmse": 9.544289108485506e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.429985061851387e-07,
+              "max_abs": 2.2649765014648438e-06,
+              "rmse": 2.9915121310153287e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.63973470712153e-07,
+              "max_abs": 4.3213367462158203e-07,
+              "rmse": 8.143821933953463e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.0878467351357344e-07,
+              "max_abs": 7.152557373046875e-07,
+              "rmse": 9.371221776126883e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.9858309130244524e-07,
+              "max_abs": 1.341104507446289e-06,
+              "rmse": 7.781051863872156e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 4.327743388928526e-07,
+              "max_abs": 1.2516975402832031e-06,
+              "rmse": 1.0161397986788386e-07,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.6297569167202236e-07,
+              "max_abs": 2.86102294921875e-06,
+              "rmse": 3.0355810957163815e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 5.684391465924818e-07,
+              "max_abs": 3.2782554626464844e-07,
+              "rmse": 7.696220497776167e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.16974653458983e-07,
+              "max_abs": 6.705522537231445e-07,
+              "rmse": 9.198277721260728e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.644282123381795e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 6.909484326962447e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 4.195371729361038e-07,
+              "max_abs": 1.2218952178955078e-06,
+              "rmse": 9.935763265065049e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 3.537561425803152e-07,
+              "max_abs": 2.5033950805664062e-06,
+              "rmse": 3.0313159267305184e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 6.053670054619518e-07,
+              "max_abs": 3.5762786865234375e-07,
+              "rmse": 8.217163907363054e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.2875850727796394e-07,
+              "max_abs": 6.854534149169922e-07,
+              "rmse": 9.541351171686812e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.6327685555528525e-07,
+              "max_abs": 9.238719940185547e-07,
+              "rmse": 6.880413431902824e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 4.100010687654209e-07,
+              "max_abs": 1.3113021850585938e-06,
+              "rmse": 9.738298752528268e-08,
+              "exact": false
+            }
+          }
+        ],
+        "scope": "empirical agreement on these examples only; not biological accuracy or distributional equivalence"
+      },
+      "calls_after_validation": [
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.0.self_attn",
+          "fast": 16,
+          "fallback": 0
+        },
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.1.self_attn",
+          "fast": 16,
+          "fallback": 0
+        }
+      ],
+      "timings": {
+        "4": {
+          "baseline": {
+            "milliseconds": [
+              7.102333998773247,
+              6.916417012689635,
+              6.943792017409578,
+              7.130208978196606,
+              7.243541011121124,
+              7.071750005707145,
+              7.088584010489285,
+              7.0632910064887255,
+              6.981332990108058,
+              7.262083003297448,
+              7.143499999074265,
+              7.09716702112928,
+              7.422916009090841,
+              7.3067919875029474,
+              7.365166995441541,
+              7.397666020551696,
+              7.207000016933307,
+              7.313250011065975,
+              7.203957997262478,
+              7.173541991505772
+            ],
+            "median_ms": 7.158520995290019,
+            "min_ms": 6.916417012689635,
+            "max_ms": 7.422916009090841
+          },
+          "few_active_keys": {
+            "milliseconds": [
+              6.971084018005058,
+              7.059041992761195,
+              7.0020829734858125,
+              6.766250007785857,
+              7.136208994779736,
+              6.990124995354563,
+              7.133000006433576,
+              6.906666996655986,
+              7.155833998695016,
+              7.100708986399695,
+              7.051249995129183,
+              7.216040976345539,
+              7.032374996924773,
+              7.4135829927399755,
+              7.589709013700485,
+              7.398957997793332,
+              7.249582995427772,
+              7.062124990625307,
+              7.041083998046815,
+              7.119167014025152
+            ],
+            "median_ms": 7.081416988512501,
+            "min_ms": 6.766250007785857,
+            "max_ms": 7.589709013700485
+          },
+          "speedup": 1.0108882172738303
+        },
+        "32": {
+          "baseline": {
+            "milliseconds": [
+              35.42491598636843,
+              35.91120897908695,
+              36.475000000791624,
+              35.80012498423457,
+              36.16945800604299,
+              36.012500000651926,
+              36.51120900758542,
+              36.504582996713,
+              36.31845902418718,
+              36.22208398883231,
+              36.11899999668822,
+              35.97287501906976,
+              35.71204098989256,
+              36.531457997625694,
+              36.15804100991227,
+              36.281334003433585,
+              36.03754102368839,
+              36.090249981498346,
+              35.705292015336454,
+              35.40854199673049
+            ],
+            "median_ms": 36.10462498909328,
+            "min_ms": 35.40854199673049,
+            "max_ms": 36.531457997625694
+          },
+          "few_active_keys": {
+            "milliseconds": [
+              33.49004199844785,
+              33.09066599467769,
+              34.09954099333845,
+              34.20387499500066,
+              33.612416009418666,
+              33.99016600451432,
+              34.44395901169628,
+              34.731166990241036,
+              34.25662501831539,
+              34.3707499851007,
+              33.88208398246206,
+              34.44629200384952,
+              34.01441697496921,
+              34.37145799398422,
+              34.44170800503343,
+              34.436625021044165,
+              33.84520800318569,
+              33.830667001893744,
+              33.98229199228808,
+              33.220125013031065
+            ],
+            "median_ms": 34.05697898415383,
+            "min_ms": 33.09066599467769,
+            "max_ms": 34.731166990241036
+          },
+          "speedup": 1.0601241233373104
+        }
+      },
+      "calls_final": [
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.0.self_attn",
+          "fast": 66,
+          "fallback": 0
+        },
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.1.self_attn",
+          "fast": 66,
+          "fallback": 0
+        }
+      ]
+    },
+    "mps": {
+      "validation": {
+        "accepted": true,
+        "examples": 16,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-05,
+        "metrics": [
+          {
+            "output['predictions']": {
+              "relative_l2": 2.2198159189637215e-07,
+              "max_abs": 1.1920928955078125e-06,
+              "rmse": 1.9000043420237872e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.672238525611412e-07,
+              "max_abs": 2.086162567138672e-07,
+              "rmse": 5.193843767171684e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.850632083714416e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 9.05234529491712e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.454383479482856e-07,
+              "max_abs": 1.430511474609375e-06,
+              "rmse": 2.0335756325410085e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.7457095290417105e-07,
+              "max_abs": 1.862645149230957e-07,
+              "rmse": 5.1066278321753464e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.1249223815511034e-07,
+              "max_abs": 7.748603820800781e-07,
+              "rmse": 9.66762459197322e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.412762481322916e-07,
+              "max_abs": 1.5497207641601562e-06,
+              "rmse": 2.0796385135180085e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.7302534891802374e-07,
+              "max_abs": 2.2351741790771484e-07,
+              "rmse": 5.1993633180935285e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.8695381716899026e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 8.970983345234597e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.456977523496381e-07,
+              "max_abs": 1.4454126358032227e-06,
+              "rmse": 2.0444721501817446e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 4.0858220046125487e-07,
+              "max_abs": 2.086162567138672e-07,
+              "rmse": 5.575004334553814e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.996274438682487e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 8.997879470419072e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.2099521452973762e-07,
+              "max_abs": 1.5497207641601562e-06,
+              "rmse": 1.898776004635139e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.5802811544823165e-07,
+              "max_abs": 2.0116567611694336e-07,
+              "rmse": 4.940506807025561e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.791543941445684e-07,
+              "max_abs": 5.364418029785156e-07,
+              "rmse": 8.448146523512144e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.2321527672461056e-07,
+              "max_abs": 1.430511474609375e-06,
+              "rmse": 1.94680503048858e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.478927459805379e-07,
+              "max_abs": 1.9371509552001953e-07,
+              "rmse": 5.023598930777289e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.799487637810612e-07,
+              "max_abs": 7.152557373046875e-07,
+              "rmse": 8.710170474556624e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.528158269169021e-07,
+              "max_abs": 2.384185791015625e-06,
+              "rmse": 2.1143094638017594e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.790824070440237e-07,
+              "max_abs": 2.2351741790771484e-07,
+              "rmse": 5.1324786548056266e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.9877224169446335e-07,
+              "max_abs": 6.556510925292969e-07,
+              "rmse": 8.796740413474349e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.3239526983803312e-07,
+              "max_abs": 1.3709068298339844e-06,
+              "rmse": 1.9913816211039746e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 4.1176323907635915e-07,
+              "max_abs": 2.1979212760925293e-07,
+              "rmse": 5.5892144677181435e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.04725712877348e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 9.006538776367055e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.3153562034659486e-07,
+              "max_abs": 1.6689300537109375e-06,
+              "rmse": 1.9817800564812267e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.764214880434064e-07,
+              "max_abs": 2.682209014892578e-07,
+              "rmse": 5.323930899304066e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.860568395667587e-07,
+              "max_abs": 6.258487701416016e-07,
+              "rmse": 9.075704309374482e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.658409475781238e-07,
+              "max_abs": 1.3113021850585938e-06,
+              "rmse": 6.92388275741583e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.609310242701551e-07,
+              "max_abs": 7.748603820800781e-07,
+              "rmse": 6.356211738143985e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.334409019158796e-07,
+              "max_abs": 1.0728836059570312e-06,
+              "rmse": 1.9341710076810275e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.776454288267069e-07,
+              "max_abs": 2.0489096641540527e-07,
+              "rmse": 5.148543081421748e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.9440786439464417e-07,
+              "max_abs": 5.662441253662109e-07,
+              "rmse": 9.243779358681359e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.4874282097283444e-07,
+              "max_abs": 8.344650268554688e-07,
+              "rmse": 6.428079332136284e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.790268916139094e-07,
+              "max_abs": 1.0132789611816406e-06,
+              "rmse": 6.733480038543374e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.67026964777882e-07,
+              "max_abs": 2.4139881134033203e-06,
+              "rmse": 2.3015922776740758e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.921121424053415e-07,
+              "max_abs": 2.682209014892578e-07,
+              "rmse": 5.46540185295816e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 4.0691374234742666e-07,
+              "max_abs": 7.748603820800781e-07,
+              "rmse": 9.433726237255355e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.4223256512276536e-07,
+              "max_abs": 1.0132789611816406e-06,
+              "rmse": 6.319334501821098e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.746256673585373e-07,
+              "max_abs": 9.5367431640625e-07,
+              "rmse": 6.691104084915835e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.3374368236245547e-07,
+              "max_abs": 1.1920928955078125e-06,
+              "rmse": 1.9450013116271154e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.5304684901644674e-07,
+              "max_abs": 1.7881393432617188e-07,
+              "rmse": 4.8172380685079465e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.828737412971242e-07,
+              "max_abs": 6.183981895446777e-07,
+              "rmse": 8.620658737554935e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.3219570857996057e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 6.079948946662746e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.3515919842545506e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 7.976166292257317e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.0701887572264018e-07,
+              "max_abs": 1.1324882507324219e-06,
+              "rmse": 1.7786922474978256e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.5530418890047883e-07,
+              "max_abs": 1.9371509552001953e-07,
+              "rmse": 4.9029188174997744e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.621307678894009e-07,
+              "max_abs": 4.76837158203125e-07,
+              "rmse": 8.068833825999005e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.585982288500555e-07,
+              "max_abs": 1.2516975402832031e-06,
+              "rmse": 6.760562428141435e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.175387975894676e-07,
+              "max_abs": 8.940696716308594e-07,
+              "rmse": 7.496401248215995e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.2073762647263768e-07,
+              "max_abs": 1.430511474609375e-06,
+              "rmse": 1.9251958485500425e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.54279911707057e-07,
+              "max_abs": 2.0116567611694336e-07,
+              "rmse": 5.115830057565201e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.7731206281183523e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 8.649725266242765e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.3825799072873443e-07,
+              "max_abs": 9.834766387939453e-07,
+              "rmse": 6.208984535132433e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.5365197165414867e-07,
+              "max_abs": 1.1324882507324219e-06,
+              "rmse": 8.303630889487254e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.1778854116806226e-07,
+              "max_abs": 1.6689300537109375e-06,
+              "rmse": 1.8213747844344345e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.715191571986175e-07,
+              "max_abs": 1.9371509552001953e-07,
+              "rmse": 5.0300782584484026e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.7303857743880974e-07,
+              "max_abs": 6.556510925292969e-07,
+              "rmse": 8.22906711174823e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.3937615573712094e-07,
+              "max_abs": 7.748603820800781e-07,
+              "rmse": 6.2548764507143e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 3.102256119873628e-07,
+              "max_abs": 8.046627044677734e-07,
+              "rmse": 7.34697274108664e-08,
+              "exact": false
+            }
+          },
+          {
+            "output['predictions']": {
+              "relative_l2": 2.250551456259717e-07,
+              "max_abs": 1.3113021850585938e-06,
+              "rmse": 1.928484495772824e-07,
+              "exact": false
+            },
+            "output['cls']": {
+              "relative_l2": 3.741687211636472e-07,
+              "max_abs": 1.862645149230957e-07,
+              "rmse": 5.078911946283829e-08,
+              "exact": false
+            },
+            "output['embeddings']": {
+              "relative_l2": 3.834691117566592e-07,
+              "max_abs": 5.960464477539062e-07,
+              "rmse": 8.533506258089963e-08,
+              "exact": false
+            },
+            "output['attentions'][0]": {
+              "relative_l2": 2.1919252679855693e-07,
+              "max_abs": 9.238719940185547e-07,
+              "rmse": 5.728324316237195e-08,
+              "exact": false
+            },
+            "output['attentions'][1]": {
+              "relative_l2": 2.9909170760139976e-07,
+              "max_abs": 8.344650268554688e-07,
+              "rmse": 7.103992078948719e-08,
+              "exact": false
+            }
+          }
+        ],
+        "scope": "empirical agreement on these examples only; not biological accuracy or distributional equivalence"
+      },
+      "calls_after_validation": [
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.0.self_attn",
+          "fast": 82,
+          "fallback": 0
+        },
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.1.self_attn",
+          "fast": 82,
+          "fallback": 0
+        }
+      ],
+      "timings": {
+        "4": {
+          "baseline": {
+            "milliseconds": [
+              8.180082979379222,
+              7.2293340053875,
+              8.1912080058828,
+              7.082374999299645,
+              7.335874979617074,
+              8.87516702641733,
+              7.852083974285051,
+              7.269582973094657,
+              7.503125001676381,
+              7.357208000030369,
+              7.389458973193541,
+              7.6394590141717345,
+              7.327499974053353,
+              7.314499991480261,
+              7.128458004444838,
+              7.227333000628278,
+              7.9203750065062195,
+              7.291541987797245,
+              7.3343749972991645,
+              7.08800001302734
+            ],
+            "median_ms": 7.335124988458119,
+            "min_ms": 7.082374999299645,
+            "max_ms": 8.87516702641733
+          },
+          "few_active_keys": {
+            "milliseconds": [
+              8.505416015395895,
+              9.759917011251673,
+              8.677249978063628,
+              9.116290981182829,
+              8.69008302106522,
+              10.05854201503098,
+              9.263334010029212,
+              8.898708008928224,
+              9.146500000497326,
+              9.391750005306676,
+              8.694250020198524,
+              8.408124995185062,
+              8.542374998796731,
+              8.92037502489984,
+              9.283874998800457,
+              8.877708984073251,
+              8.544582989998162,
+              9.035750001203269,
+              8.950165996793658,
+              8.748541993554682
+            ],
+            "median_ms": 8.909541516914032,
+            "min_ms": 8.408124995185062,
+            "max_ms": 10.05854201503098
+          },
+          "speedup": 0.823288715197408
+        },
+        "32": {
+          "baseline": {
+            "milliseconds": [
+              31.91499999957159,
+              30.878666992066428,
+              31.93658299278468,
+              31.666416994994506,
+              31.979249994037673,
+              31.27112501533702,
+              31.221832992741838,
+              30.38458398077637,
+              30.77837501768954,
+              31.27404098631814,
+              31.29808299127035,
+              31.819083000300452,
+              30.587792018195614,
+              30.54741700179875,
+              31.557417009025812,
+              31.387958995765075,
+              31.30583302117884,
+              31.25162501237355,
+              30.079791002208367,
+              31.137250014580786
+            ],
+            "median_ms": 31.27258300082758,
+            "min_ms": 30.079791002208367,
+            "max_ms": 31.979249994037673
+          },
+          "few_active_keys": {
+            "milliseconds": [
+              31.88520800904371,
+              31.460291997063905,
+              32.16420899843797,
+              31.917791988234967,
+              32.90383401326835,
+              33.259957999689505,
+              33.34858297603205,
+              31.708791997516528,
+              32.23937499569729,
+              32.06787499948405,
+              33.04245800245553,
+              32.575624994933605,
+              32.11270799511112,
+              31.75958400242962,
+              31.09137501451187,
+              32.67491701990366,
+              31.976082973415032,
+              31.235250004101545,
+              32.066334009869024,
+              31.55424998840317
+            ],
+            "median_ms": 32.067104504676536,
+            "min_ms": 31.09137501451187,
+            "max_ms": 33.34858297603205
+          },
+          "speedup": 0.9752231604280616
+        }
+      },
+      "calls_final": [
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.0.self_attn",
+          "fast": 132,
+          "fallback": 0
+        },
+        {
+          "path": "backbone.model.transformer_head.transformer.layers.1.self_attn",
+          "fast": 132,
+          "fallback": 0
+        }
+      ]
+    }
+  }
+}

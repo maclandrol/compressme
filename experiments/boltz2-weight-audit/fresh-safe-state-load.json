@@ -1,0 +1,18 @@
+{
+  "boltz2_conf.ckpt": {
+    "tensor_names": 5102,
+    "all_shapes_dtypes_match": true,
+    "selected_tensor_hashes_match": 91,
+    "output_gate_alias_pairs_share_storage": 66,
+    "hyper_parameters_loaded": 80,
+    "torch_load_forbidden": true
+  },
+  "boltz2_aff.ckpt": {
+    "tensor_names": 5539,
+    "all_shapes_dtypes_match": true,
+    "selected_tensor_hashes_match": 91,
+    "output_gate_alias_pairs_share_storage": 66,
+    "hyper_parameters_loaded": 75,
+    "torch_load_forbidden": true
+  }
+}

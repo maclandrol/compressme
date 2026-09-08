@@ -1,0 +1,156 @@
+{
+  "affinity_module1": {
+    "conf_named_tensors": 0,
+    "aff_named_tensors": 334,
+    "common_named_tensors": 0,
+    "equal_named_tensors": 0,
+    "equal_named_values": 0
+  },
+  "affinity_module2": {
+    "conf_named_tensors": 0,
+    "aff_named_tensors": 186,
+    "common_named_tensors": 0,
+    "equal_named_tensors": 0,
+    "equal_named_values": 0
+  },
+  "bfactor_module": {
+    "conf_named_tensors": 2,
+    "aff_named_tensors": 0,
+    "common_named_tensors": 0,
+    "equal_named_tensors": 0,
+    "equal_named_values": 0
+  },
+  "confidence_module": {
+    "conf_named_tensors": 453,
+    "aff_named_tensors": 453,
+    "common_named_tensors": 453,
+    "equal_named_tensors": 453,
+    "equal_named_values": 25026367
+  },
+  "contact_conditioning": {
+    "conf_named_tensors": 6,
+    "aff_named_tensors": 6,
+    "common_named_tensors": 6,
+    "equal_named_tensors": 6,
+    "equal_named_values": 17536
+  },
+  "diffusion_conditioning": {
+    "conf_named_tensors": 119,
+    "aff_named_tensors": 119,
+    "common_named_tensors": 119,
+    "equal_named_tensors": 119,
+    "equal_named_values": 393232
+  },
+  "distogram_module": {
+    "conf_named_tensors": 2,
+    "aff_named_tensors": 2,
+    "common_named_tensors": 2,
+    "equal_named_tensors": 2,
+    "equal_named_values": 8256
+  },
+  "input_embedder": {
+    "conf_named_tensors": 89,
+    "aff_named_tensors": 89,
+    "common_named_tensors": 89,
+    "equal_named_tensors": 89,
+    "equal_named_values": 1123248
+  },
+  "msa_module": {
+    "conf_named_tensors": 226,
+    "aff_named_tensors": 226,
+    "common_named_tensors": 226,
+    "equal_named_tensors": 226,
+    "equal_named_values": 3207424
+  },
+  "pairformer_module": {
+    "conf_named_tensors": 3392,
+    "aff_named_tensors": 3392,
+    "common_named_tensors": 3392,
+    "equal_named_tensors": 3392,
+    "equal_named_values": 196534272
+  },
+  "rel_pos": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 17792
+  },
+  "s_init": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 147456
+  },
+  "s_norm": {
+    "conf_named_tensors": 2,
+    "aff_named_tensors": 2,
+    "common_named_tensors": 2,
+    "equal_named_tensors": 2,
+    "equal_named_values": 768
+  },
+  "s_recycle": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 147456
+  },
+  "structure_module": {
+    "conf_named_tensors": 720,
+    "aff_named_tensors": 720,
+    "common_named_tensors": 720,
+    "equal_named_tensors": 720,
+    "equal_named_values": 293896448
+  },
+  "template_module": {
+    "conf_named_tensors": 81,
+    "aff_named_tensors": 0,
+    "common_named_tensors": 0,
+    "equal_named_tensors": 0,
+    "equal_named_values": 0
+  },
+  "token_bonds": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 128
+  },
+  "token_bonds_type": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 896
+  },
+  "z_init_1": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 49152
+  },
+  "z_init_2": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 49152
+  },
+  "z_norm": {
+    "conf_named_tensors": 2,
+    "aff_named_tensors": 2,
+    "common_named_tensors": 2,
+    "equal_named_tensors": 2,
+    "equal_named_values": 256
+  },
+  "z_recycle": {
+    "conf_named_tensors": 1,
+    "aff_named_tensors": 1,
+    "common_named_tensors": 1,
+    "equal_named_tensors": 1,
+    "equal_named_values": 16384
+  }
+}

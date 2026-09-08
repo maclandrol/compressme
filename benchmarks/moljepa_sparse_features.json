@@ -1,0 +1,1083 @@
+{
+  "inputs": [
+    {
+      "input": "C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCCC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCCCC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCCCCC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(C)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(C)(C)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCCCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC1CCCCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCC2CCCCC2C1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCC2(CC1)CCCC2",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1COCCN1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CO",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCCO",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(C)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(C)(C)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "OCCO",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "OCCCO",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCOCC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "COCCOC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CN",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCN",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCCN",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CNC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CN(C)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "NCCN",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "NCCO",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N1CCCCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC=O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCC=O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(=O)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCC(=O)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCC(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(=O)OC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCOC(=O)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ccncc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ccoc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ccsc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ncc[nH]1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1cn[nH]c1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ccc2ccccc2c1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1ccc2[nH]ccc2c1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "c1cnc2ccccc2n1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCS",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CSSC",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CS(=O)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CS(=O)(=O)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "NC(=O)N",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "NCC(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N[C@@H](CO)C(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N[C@@H](CC(=O)O)C(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "FC(F)(F)c1ccccc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "Clc1ccc(Br)cc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N#Cc1ccccc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C[N+](C)(C)C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CC(=O)[O-]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[Na+].[Cl-]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "O=P(O)(O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[He]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[Ne]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[H][H]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[2H]O[2H]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[13CH4]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[C]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[O]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[CH3]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[NH4+]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[Fe+2]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[K+].[OH-]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[C-]#[O+]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[nH+]1ccccc1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "F/C=C/F",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "F/C=C\\F",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N[C@](C)(O)C(=O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[C@@H:2](F)(Cl)Br",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C12C3C4C1C5C2C3C45",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CC2CCC1C2",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CC2(C1)CCC2",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1=CC=C2C(=C1)C=CC3=CC=CC=C23",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C1CCCCCCCCCCCCCCC1",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[SiH4]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "B(O)(O)O",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[BH4-]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[Xe]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[U]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "N->[Cu+2]<-N",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "C~C",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CCO ethanol",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "CO |$foo;bar$|",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[H+].[Cl-]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "[H-].[Na+]",
+      "original_error": null,
+      "optimized_error": null,
+      "equal": {
+        "edge_index": true,
+        "x": true,
+        "edge_attr": true
+      }
+    },
+    {
+      "input": "",
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": "this is invalid",
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": "C1CC",
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": "C(C)(C)(C)(C)C",
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": null,
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": 123,
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    },
+    {
+      "input": "[Og+]bad",
+      "original_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "optimized_error": [
+        "ValueError",
+        "Cannot transform molecule at index 0. Please check logs (set verbose to True) to see errors!"
+      ],
+      "equal": true
+    }
+  ],
+  "batches": [
+    {
+      "size": 1,
+      "all_fields_bitwise_equal": true,
+      "reconstruction_equal": true
+    },
+    {
+      "size": 4,
+      "all_fields_bitwise_equal": true,
+      "reconstruction_equal": true
+    },
+    {
+      "size": 32,
+      "all_fields_bitwise_equal": true,
+      "reconstruction_equal": true
+    },
+    {
+      "size": 97,
+      "all_fields_bitwise_equal": true,
+      "reconstruction_equal": true
+    }
+  ],
+  "fallback_count": 7,
+  "valid_count": 97,
+  "invalid_count": 7
+}

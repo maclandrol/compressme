@@ -1,0 +1,101 @@
+{
+  "method": "exact_frozen_constant_embedding_rows",
+  "parameters_before": 49396728,
+  "parameters_after": 38901056,
+  "layers": [
+    {
+      "path": "transformer_backbone.embed_tokens",
+      "status": "deduplicated",
+      "parameters_before": 10496000,
+      "parameters_after": 328,
+      "recipe": {
+        "kind": "ConstantRowEmbedding",
+        "num_embeddings": 32000,
+        "embedding_dim": 328,
+        "padding_idx": 0,
+        "norm_type": 2.0,
+        "scale_grad_by_freq": false,
+        "dtype": "float32",
+        "training": false
+      }
+    },
+    {
+      "path": "batch_encoder",
+      "status": "retained",
+      "reason": "Embedding must already be frozen"
+    }
+  ],
+  "guarantee": "Identical stored row bits and unchanged F.embedding token-index lookup; frozen weights only",
+  "performance": "Reduces stored weight bytes; full-weight contiguous consumers can materialize the original shape",
+  "target": "State ST-HVG-Replogle K562",
+  "checkpoint_repository": "arcinstitute/ST-HVG-Replogle",
+  "checkpoint_revision": "bb6a9562cbbf1fd152df14cc53b4cc7517c77175",
+  "checkpoint_file": "fewshot/k562/checkpoints/final.ckpt",
+  "checkpoint_sha256": "121ff54db0e6f9f53b2777bbf45139757367ed827a111824213e6bf3777b2618",
+  "source_commit": "9bbfe78a434a55205e4de834e1ea99f85f7a3add",
+  "source_inference_tensor_bytes": 197586912,
+  "compressed_inference_tensor_bytes": 155604224,
+  "input_contract": "Original State HVG predict_step and token embedding IDs preserved; frozen weights",
+  "validation_scope": "Synthetic numerical API checks on actual pretrained weights; no biological benchmark",
+  "performance_scope": "Stored/resident weight reduction; this table is bypassed by predict_step so no active-FLOP saving claimed",
+  "validation_dtype": "float32",
+  "validation_device": "cpu",
+  "cases": [
+    {
+      "cells": 1,
+      "padded": false,
+      "batch_labels_onehot": false,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      },
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 7,
+      "padded": false,
+      "batch_labels_onehot": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      },
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 64,
+      "padded": true,
+      "batch_labels_onehot": false,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      },
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 128,
+      "padded": true,
+      "batch_labels_onehot": true,
+      "maximum_absolute_errors": {
+        "preds": 0.0,
+        "batch": 0.0,
+        "ctrl_cell_emb": 0.0,
+        "pert_cell_counts_preds": 0.0
+      },
+      "all_outputs_bitwise_equal": true
+    }
+  ],
+  "baseline_packed_weights_bytes": 132137704,
+  "reload_all_outputs_bitwise_equal": true,
+  "reload_forbids_torch_load": true,
+  "token_index_api_preserved": true,
+  "packed_weights_bytes": 132148096,
+  "portable_directory_bytes": 132373807,
+  "validation_references": "/private/tmp/compressme-state-reload-references.safetensors",
+  "portable_directory": "/private/tmp/compressme-state-artifact"
+}

@@ -1,0 +1,66 @@
+{
+  "workloads": {
+    "1": [
+      "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"
+    ],
+    "4": [
+      "CCCCCC",
+      "CN(C)C",
+      "c1ccc2[nH]ccc2c1",
+      "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"
+    ],
+    "32": [
+      "C",
+      "CCC",
+      "CCCCC",
+      "CC(C)C",
+      "C1CCCCC1",
+      "C1CCC1",
+      "CC1CCCCC1",
+      "C1CCC2(CC1)CCCC2",
+      "CO",
+      "CC(C)O",
+      "OCCO",
+      "CCOCC",
+      "CN",
+      "CCCN",
+      "CN(C)C",
+      "NCCO",
+      "CC=O",
+      "CC(=O)C",
+      "CC(=O)O",
+      "CC(=O)OC",
+      "c1ccncc1",
+      "c1ccsc1",
+      "c1cn[nH]c1",
+      "c1ccc2[nH]ccc2c1",
+      "CCS",
+      "CS(=O)C",
+      "NC(=O)N",
+      "N[C@@H](CO)C(=O)O",
+      "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O",
+      "Clc1ccc(Br)cc1",
+      "C[N+](C)(C)C",
+      "[Na+].[Cl-]"
+    ]
+  },
+  "return_attn": false,
+  "warmups": 10,
+  "rounds": 20,
+  "shuffle_seed_base": 4561,
+  "variants": [
+    "original",
+    "compressed",
+    "fast",
+    "production"
+  ],
+  "source_report": "benchmarks/moljepa_runtime_macos.json",
+  "source_report_sha256": "2a766cf57e2365440c500b66b03e82a9ab15e40908c7faf60f284a19073eb72f",
+  "cpu_threads": 4,
+  "dtype": "float32",
+  "gate_batch_size": 4,
+  "gate_return_attn": [
+    false,
+    true
+  ]
+}

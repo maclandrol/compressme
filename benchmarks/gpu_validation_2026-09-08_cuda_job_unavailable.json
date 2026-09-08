@@ -1,0 +1,29 @@
+{
+  "device": "cuda:0",
+  "hardware": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "cuda_build_version": null,
+    "cuda_available": false,
+    "cuda_devices": [],
+    "mps_built": true,
+    "mps_available": true,
+    "nvidia_smi_found": false
+  },
+  "status": "unavailable",
+  "accepted": false,
+  "accepted_tolerance": false,
+  "bitwise_identical": false,
+  "atol": 1e-05,
+  "relative_l2_tolerance": 1e-05,
+  "require_bitwise": false,
+  "rule": "Every floating leaf: max_abs <= atol AND relative_l2 <= rtol; discrete/non-tensor outputs exact. Source self-repeat must also pass.",
+  "scope": "Complete outputs returned by the trusted cases, on this backend; not biological accuracy, cross-device equivalence, or a speed benchmark.",
+  "source_hashes": {
+    "/private/tmp/compressme-release-staging/examples/validate_backends.py": "d6661b42681fc4af91418bcaec0dca8b5e9f6e05f327d9d7bcb24dfb037d615b"
+  },
+  "cases": [],
+  "reason": "cuda:0 is not available; no model validation ran"
+}

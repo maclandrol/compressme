@@ -1,0 +1,33 @@
+{
+  "device": "mps",
+  "artifact": "/private/tmp/compressme-state-artifact",
+  "torch_load_forbidden_during_artifact_load": true,
+  "input_examples": "Constructed numerical API checks using actual trained weights; not a biological benchmark",
+  "parameters": 38901056,
+  "cases": [
+    {
+      "cells": 1,
+      "padded": false,
+      "onehot": false,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 7,
+      "padded": false,
+      "onehot": true,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 64,
+      "padded": true,
+      "onehot": false,
+      "all_outputs_bitwise_equal": true
+    },
+    {
+      "cells": 128,
+      "padded": true,
+      "onehot": true,
+      "all_outputs_bitwise_equal": true
+    }
+  ]
+}

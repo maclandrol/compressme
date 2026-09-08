@@ -1,0 +1,131 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1060,
+      "sha256": "7283a61263ec1ea66039005d5871a9ba0d30d4363de8303685fc9aef96f11aff"
+    },
+    {
+      "path": "construct.py",
+      "bytes": 3090,
+      "sha256": "4c241adfb929c8304f9f51cc55f4bc4d6685572ea1d0fb8a2b09df71aeaed3b4"
+    },
+    {
+      "path": "guarded/README.md",
+      "bytes": 3439,
+      "sha256": "4a53d4257df3aa67d3104d3c1734ab42c86ae8810435fb13d60147916eb2c981"
+    },
+    {
+      "path": "guarded/evaluate.py",
+      "bytes": 8227,
+      "sha256": "658ff436177b7748eab0501b5e2a3d0cf3fb4fc819e2c00672947bb315fba2ea"
+    },
+    {
+      "path": "guarded/gate-cpu-provisional.json",
+      "bytes": 53513,
+      "sha256": "f5ef5ed979059a42f8daf318a6acc1f951aa335ddb62c893af15ba83d4846169"
+    },
+    {
+      "path": "guarded/gate-cpu.json",
+      "bytes": 53513,
+      "sha256": "348ea6ce1c3eba26c328a9396a26dddb70ed5fb46d74e11cd8a4748213bc3b73"
+    },
+    {
+      "path": "guarded/gate-mps.json",
+      "bytes": 53513,
+      "sha256": "a0a47b7e01597fdd852f14e08831aaff53b73498da586246e376a38d15ac1fba"
+    },
+    {
+      "path": "guarded/host-observation.json",
+      "bytes": 1325,
+      "sha256": "d08189b0778e36485bad1ac969a63c3f29010bbbf6724ba2febc5dd299cc09b5"
+    },
+    {
+      "path": "guarded/observe_host.py",
+      "bytes": 838,
+      "sha256": "b1110bb874f36119736a810f0da0d12cd53016dfeffe2b16dcde9b8c0f6e63b1"
+    },
+    {
+      "path": "guarded/request_constants-provisional.py",
+      "bytes": 12737,
+      "sha256": "752d67540f530346d2b795842dce177a321541eb87c7bd5eb4910ee0331512c1"
+    },
+    {
+      "path": "guarded/request_constants.py",
+      "bytes": 14701,
+      "sha256": "0b48242b6a0062ad652912a094e08035fd256a489b7d3b0c98ce7eaae26985de"
+    },
+    {
+      "path": "guarded/timing-cpu.json",
+      "bytes": 8200,
+      "sha256": "a67e9e5be17dbbedf79b6f424906c7befb7c538319f387bb7f2025dbde435fe7"
+    },
+    {
+      "path": "guarded/timing-mps.json",
+      "bytes": 12663,
+      "sha256": "9f3651ed45e40101b554ccdcccd080a055383b07e88d2ef8a8d0fe32101d6d5a"
+    },
+    {
+      "path": "lean/README.md",
+      "bytes": 6431,
+      "sha256": "b014b59c9d54efa066a09ca5394b420634f26a39bd07a7b06eae23a10f189426"
+    },
+    {
+      "path": "lean/evaluate.py",
+      "bytes": 8702,
+      "sha256": "9b23e0e5222701ce74a2e4d3cdd7627f6c92b23bbbb4f1ea64531924f9b85a23"
+    },
+    {
+      "path": "lean/gate-cpu.json",
+      "bytes": 54313,
+      "sha256": "7efc8018f8a56b91b15fe1d8c838ca8b6ca4b2ecbbe1662537462d27a856bc27"
+    },
+    {
+      "path": "lean/gate-mps.json",
+      "bytes": 54313,
+      "sha256": "51d5ead61ed086cbe462fc52b62757f6234aeacb81e2957bc755f6d194b959df"
+    },
+    {
+      "path": "lean/gate-summary.json",
+      "bytes": 1410,
+      "sha256": "f53d3cb23c7c5f28d3e80dca7c6ecffb6db2b641a7f5c2728f903abfcdae18da"
+    },
+    {
+      "path": "lean/request_constants-pre-cleanup-hardening.py",
+      "bytes": 18130,
+      "sha256": "5a2ee9a0ad7738217ddd0cff9c5be7a2fb39e1110dcd5df6c6ae85e2e85fc26a"
+    },
+    {
+      "path": "lean/request_constants.py",
+      "bytes": 19412,
+      "sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02"
+    },
+    {
+      "path": "lean/timing-cpu.json",
+      "bytes": 10211,
+      "sha256": "da839e1d6763a42dc436284e3519c9785b282c7a69ecff9b39f4abc4e1058275"
+    },
+    {
+      "path": "lean/timing-mps.json",
+      "bytes": 10201,
+      "sha256": "87efffdeb5a0ea7cb5e4f0d954fdd9230e02406f9dcf9e0201f0079b2259df5a"
+    },
+    {
+      "path": "lean/timing-summary.json",
+      "bytes": 1933,
+      "sha256": "ad02350ad7fe3b5d36b84e9c419ae8cb3328ead0802b57ed176b7f84d66d349e"
+    },
+    {
+      "path": "native_smoke.py",
+      "bytes": 7230,
+      "sha256": "5fdb31376ba8ec4d03e4d095976fecf88ee81d3afbd2e1aa970dd03e26451b31"
+    },
+    {
+      "path": "sharing_probe.py",
+      "bytes": 6507,
+      "sha256": "bf11815736f2155e7930ed148bcd7012327d23427683df7bd071dd0ac0c7a600"
+    }
+  ],
+  "file_count": 25,
+  "total_bytes": 425612
+}

@@ -1,0 +1,30 @@
+{
+  "portable_cpu_eager_all_stages_completed": true,
+  "stage_count": 12,
+  "all_stage_reports_identical_to_historical_cpu_eager": true,
+  "stages_identical": {
+    "all_forward_outputs": true,
+    "return_dict_false": true,
+    "inputs_embeds": true,
+    "legacy_cache": true,
+    "dynamic_cache": true,
+    "static_cache": true,
+    "num_logits_to_keep": true,
+    "plain_generation": true,
+    "generation_from_embeds": true,
+    "greedy_generation": true,
+    "beam_generation": true,
+    "sampled_generation": true
+  },
+  "wrong_transformers_version_refused": {
+    "observed_version": "4.52.3",
+    "exit_code": 2
+  },
+  "input_hash_only_check_passed": true,
+  "scope": "One fresh CPU-eager run validates the portability refactor; other three combinations remain historical evidence.",
+  "wrong_config_hash_guard": {
+    "refused": true,
+    "error_type": "ValueError",
+    "runtime_imported": false
+  }
+}

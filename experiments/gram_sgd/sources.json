@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Implicit Regularization in Matrix Factorization",
+    "authors": "Gunasekar, Woodworth, Bhojanapalli, Neyshabur, Srebro",
+    "year": 2017,
+    "url": "https://papers.nips.cc/paper_files/paper/2017/file/58191d2a914c6dae66371c9dcdc91b41-Paper.pdf",
+    "relevance": "Primary prior art: rectangular-to-PSD block lifting and factor-independent gradient-flow dynamics; not a claim of identical discrete SGD implementation."
+  },
+  {
+    "title": "On the Optimization of Deep Networks: Implicit Acceleration by Overparameterization",
+    "authors": "Arora, Cohen, Hazan",
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1802.06509",
+    "relevance": "Primary prior art for end-to-end effective preconditioning in deep linear models; principal derivation uses balanced initialization and gradient flow."
+  },
+  {
+    "title": "Understanding the Dynamics of Gradient Flow in Overparameterized Linear Models",
+    "authors": "Tarmoun, França, Haeffele, Vidal",
+    "year": 2021,
+    "url": "https://proceedings.mlr.press/v139/tarmoun21a.html",
+    "relevance": "Primary prior art for Gramian conservation and Riccati-type continuous-time dynamics."
+  },
+  {
+    "title": "PyTorch SGD implementation, v2.14.0",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.14.0/torch/optim/sgd.py",
+    "relevance": "Versioned primary source for tested optimizer momentum initialization and coupled weight-decay semantics."
+  }
+]

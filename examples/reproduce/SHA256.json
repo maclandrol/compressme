@@ -1,0 +1,24 @@
+{
+  "format": "reproduction-helper-files-sha256-v1",
+  "files": {
+    "MOLJEPA_LICENSE.txt": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+    "README.md": "d8d3a37485fc5a7311deb90a007fe08ee9a0801438e216c1f511ecc6cca4fb79",
+    "boltz-macos-tested.txt": "693e0f4ce9479db03ef5a7373c13ffa7b38a6a4fbc151e1f9d951cbdb6239e75",
+    "boltz2.py": "80964a55e4ed621d0c76952e028c5ca749a42bb01be51a64191141a25bc1fe35",
+    "common.py": "4372b1d9d4b71dd635285fb3351b0cfaedefb124122b4e36c8b91cbc46687cf0",
+    "download_checkpoints.py": "849f049d08ede035d0ccdd6b8361ad475247eaee5bb618a8c55ff45dcd2afdde",
+    "export_shared_tensors.py": "51f2de7205c249e9f38b1f2c7eb4f8899ac30768bb0ddfffcd553215b3cd0839",
+    "fetch.py": "2c4ce4476e092dbf198a61e9a352761eb91cdbe711ff8c7974927f94209462ba",
+    "moljepa-benchmark.json": "e875fde46438c3bc6a7309b282b82d65bfa9bccb59a209c2c9bdc7883e70b13a",
+    "moljepa-init.txt": "790a096e3c1a9e401629848d66aac2ce34c2e09e91f8cbc5da46fba89563fa02",
+    "moljepa-macos-tested.txt": "97eb98fc8d4ff3d4746d571a5b59244a5b64713b745f50646e7d7cf2283ff2df",
+    "moljepa-source.json": "6a194c059298875eb3320bc1cab98eb23af5ca6371e0f1f6c01ed752bda484d2",
+    "moljepa.py": "e833c98d7617e45b5bf7b673ab5843daeb57c2b81c06bb8308fda1b74f7c3566",
+    "reproduction-smoke.json": "ec2d226c012a95ce9e7c14286b55eead42efbb19cc9162b81c07a569dc458c41",
+    "safe_state.py": "af89c241cdd5d27d70cceafd664ac048b76e76759046e4e7b82c230c6a4de5f2",
+    "static_metadata.py": "e4cea3d92c70cff42350412fc61e8a44d31ee6892cebbfe363c6d9955120b4f0",
+    "test_helpers.py": "eb20f03c3e2b878e1eeee8d9ae5099519e5feb0636c4d605a386e643bb9ab195",
+    "tiny_complex.yaml": "62315f7ce758bfae92c0de6c29fa01f8892c5947b052150a1c6e0293b631da62",
+    "verification_smiles.json": "1d63069d11311a796de12f95e3a224611e546242182674cb1f65359598303271"
+  }
+}

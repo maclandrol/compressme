@@ -1,0 +1,140 @@
+{
+  "scope": "One original checkpoint AdaLN; no full sampler or model claim",
+  "torch": "2.14.0",
+  "checkpoint_revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "source_prefix": "structure_module.score_model.atom_attention_encoder.atom_encoder.diffusion_transformer.layers.0.adaln.",
+  "request_fx_sha256": "d014e4105015e58ed349a8923a3090453c5d0ee118556294ed540aaa6def427a",
+  "boltz_transformersv2_sha256": "4fbecbe835ec2d7286d5a46e408cb9134b2378bce8dd443df58b80392736f982",
+  "all_bitwise_equal": true,
+  "checks": [
+    {
+      "multiplicity": 1,
+      "seed": 0,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 1,
+      "seed": 1,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 1,
+      "seed": 2,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 1,
+      "seed": 3,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 3,
+      "seed": 0,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 3,
+      "seed": 1,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 3,
+      "seed": 2,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "multiplicity": 3,
+      "seed": 3,
+      "bitwise_equal": true,
+      "max_abs": 0.0
+    }
+  ],
+  "budgets": [
+    {
+      "method": "declared_static_fx_partial_evaluation",
+      "static_inputs": [
+        "s"
+      ],
+      "dynamic_inputs": [
+        "a"
+      ],
+      "evaluated_nodes": [
+        "s_norm",
+        "s_scale",
+        "sigmoid",
+        "s_bias"
+      ],
+      "boundary_nodes": [
+        "sigmoid",
+        "s_bias"
+      ],
+      "source_parameter_values": 33024,
+      "retained_parameter_values": 33024,
+      "source_registered_storage_bytes": 132096,
+      "bound_input_storage_bytes": 81920,
+      "boundary_storage_bytes": 163840,
+      "retained_registered_storage_bytes": 377856,
+      "preparation_live_tensor_storage_bytes": 541696,
+      "preparation_memory_scope": "Source and all retained static intermediates at end of preparation; excludes allocator/kernel workspaces",
+      "allow_unversioned_tensors": false,
+      "closed": false,
+      "guarantee_scope": "Same real-arithmetic pure graph under immutable static inputs/state; floating bit equality requires backend/shape validation"
+    },
+    {
+      "method": "declared_static_fx_partial_evaluation",
+      "static_inputs": [
+        "s"
+      ],
+      "dynamic_inputs": [
+        "a"
+      ],
+      "evaluated_nodes": [
+        "s_norm",
+        "s_scale",
+        "sigmoid",
+        "s_bias"
+      ],
+      "boundary_nodes": [
+        "sigmoid",
+        "s_bias"
+      ],
+      "source_parameter_values": 33024,
+      "retained_parameter_values": 33024,
+      "source_registered_storage_bytes": 132096,
+      "bound_input_storage_bytes": 245760,
+      "boundary_storage_bytes": 491520,
+      "retained_registered_storage_bytes": 869376,
+      "preparation_live_tensor_storage_bytes": 1360896,
+      "preparation_memory_scope": "Source and all retained static intermediates at end of preparation; excludes allocator/kernel workspaces",
+      "allow_unversioned_tensors": false,
+      "closed": false,
+      "guarantee_scope": "Same real-arithmetic pure graph under immutable static inputs/state; floating bit equality requires backend/shape validation"
+    }
+  ],
+  "timings": [
+    {
+      "multiplicity": 1,
+      "unit": "microseconds",
+      "original_median": 66.875,
+      "guarded_prepared_median": 82.208,
+      "unguarded_dynamic_graph_diagnostic_median": 24.958,
+      "timing_scope": "Small CPU operator microbenchmark; unguarded graph is diagnostic, not a public safe execution route"
+    },
+    {
+      "multiplicity": 3,
+      "unit": "microseconds",
+      "original_median": 147.167,
+      "guarded_prepared_median": 106.916,
+      "unguarded_dynamic_graph_diagnostic_median": 46.583,
+      "timing_scope": "Small CPU operator microbenchmark; unguarded graph is diagnostic, not a public safe execution route"
+    }
+  ],
+  "input_state_trust": "Reads only selected tensors from the already separately verified joint safetensors audit file"
+}

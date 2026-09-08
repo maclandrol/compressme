@@ -1,0 +1,33 @@
+{
+  "owned_files": {
+    "pyproject.toml": "cf5f8814a36518775509d26d0cbb2c33829e00e39fcd9ac1dc134c52c22f1588",
+    "src/compressme/__init__.py": "581828da46bf5d49eede8f09ee9b44ca3da781248565d56b3c4525bc784dace1",
+    "src/compressme/hub.py": "e889a4645cc5ecd8aabd8809fb80ed6a258de0909e53e1977494c4584a457763",
+    "tests/test_optional_dependencies.py": "831e5e6f4d38c2f4d9f41f1ded213f13c90c3066c5d529eb81c28c3956e390b2",
+    "docs/installation.md": "337ddeca363b80b2c0624dc0194020bb594b91e0dbb964e67a71346158af70cd",
+    "MANIFEST.in": "8861899e5bbc161f290743f30decfa13eca7b276866f5b5fe351f91dda836050",
+    ".gitignore": "79e18ffe8abf220ffce4377aa16661417f84126106a7512860e4d86c92204c19"
+  },
+  "preserved_public_export_count": 54,
+  "focused_release_tests_passed": 86,
+  "sdist_optional_and_runner_tests_passed": 26,
+  "prior_import_hub_packing_storage_tests_passed": 135,
+  "algorithm_files_modified": false,
+  "production_installation": false,
+  "wheel_source_matches_current": true,
+  "notes": [
+    "Fresh no-runtime-dependency wheel venv passed base import/targets.",
+    "After installing only NumPy and Zstandard, installed CLI inspected local safetensors and packed/unpacked exact bytes.",
+    "Offline packing dependency files came from existing installed distributions; no biology dependencies or weights were downloaded.",
+    "NumPy included in torch extra because safetensors 0.8.0 serializes through NumPy.",
+    "Source archive excludes vendor-dependent test_sparse_graph.py; it remains in repository.",
+    "Latest CLI patch and docs were rebuilt; installed bare and codec-only environments reran metadata/source-inventory/pack checks. Prior wheel/report snapshot retained under previous-snapshot."
+  ],
+  "final_cli_venv_fix_verified_installed": true,
+  "final_cli_documentation_in_sdist": true,
+  "base_installed_without_dependency_bypass": true,
+  "final_distribution_sha256": {
+    "compressme-0.1.0-py3-none-any.whl": "29068583b1456c83fe76afc7bf19c84122b0f45a9d838f4741863e819f6aed0f",
+    "compressme-0.1.0.tar.gz": "41f7f847fedfb6751972a5df8c43717b0d18da76661331c2ce561d78cfc8335b"
+  }
+}

@@ -1,0 +1,8 @@
+torch==2.14.0
+numpy==2.5.3
+transformers==5.16.1
+torch-geometric==2.8.0.post1
+rdkit==2026.3.6
+molfeat==0.11.0
+safetensors==0.8.0
+zstandard==0.25.0

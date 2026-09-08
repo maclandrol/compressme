@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "bioptimus/H-optimus-0",
+    "status": 403,
+    "access_granted": false,
+    "error_code": "GatedRepo",
+    "checked_endpoint": "model.safetensors",
+    "credentials_stored": false
+  },
+  {
+    "repository": "bioptimus/H-optimus-1",
+    "status": 403,
+    "access_granted": false,
+    "error_code": "GatedRepo",
+    "checked_endpoint": "model.safetensors",
+    "credentials_stored": false
+  }
+]

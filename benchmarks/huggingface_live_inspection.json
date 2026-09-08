@@ -1,0 +1,1113 @@
+[
+  {
+    "repo_id": "Flogrammer/Mol-JEPA",
+    "requested_revision": "main",
+    "revision": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+    "files": [
+      {
+        "filename": ".gitattributes",
+        "size": 1568,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "README.md",
+        "size": 3869,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "collator.py",
+        "size": 9293,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "config.json",
+        "size": 3600,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "configuration_moljepa.py",
+        "size": 2077,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "data.py",
+        "size": 2180,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "model.safetensors",
+        "size": 181651424,
+        "lfs_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14"
+      },
+      {
+        "filename": "modeling_moljepa.py",
+        "size": 28299,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "overview.png",
+        "size": 1281090,
+        "lfs_sha256": "a819f495f90bbffd0c79a5daf242a280a227ba766fa1089a0e5e5fd163d359e7"
+      }
+    ],
+    "candidates": [
+      "model.safetensors"
+    ],
+    "selected": "model.safetensors",
+    "weight_files": [
+      "model.safetensors"
+    ],
+    "weight_bytes": 181651424,
+    "weight_map": null,
+    "index_files": [],
+    "remote_code_executed": false,
+    "scope": "File metadata does not establish model architecture or compressibility"
+  },
+  {
+    "repo_id": "Xaira-Therapeutics/X-Cell",
+    "requested_revision": "main",
+    "revision": "07737b494a3ea06c6a579d389fda0216ba61bf02",
+    "files": [
+      {
+        "filename": ".gitattributes",
+        "size": 1575,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "README.md",
+        "size": 3629,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "x-cell-overview.png",
+        "size": 272925,
+        "lfs_sha256": "094851946e94c9d8b08582c4cead82d5231c0ea03f44a69ae582295bb17b82d1"
+      }
+    ],
+    "candidates": [],
+    "selected": null,
+    "weight_files": [],
+    "weight_bytes": null,
+    "weight_map": null,
+    "index_files": [],
+    "remote_code_executed": false,
+    "scope": "File metadata does not establish model architecture or compressibility"
+  },
+  {
+    "repo_id": "arcinstitute/ST-HVG-Replogle",
+    "requested_revision": "main",
+    "revision": "bb6a9562cbbf1fd152df14cc53b4cc7517c77175",
+    "files": [
+      {
+        "filename": ".gitattributes",
+        "size": 1519,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "MODEL_ACCEPTABLE_USE_POLICY.md",
+        "size": 5130,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "MODEL_LICENSE.md",
+        "size": 9864,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/hepg2/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "72e7131047f9720fbbb1edd802bfa67b47c54e48729da29af62db0968ee92c58"
+      },
+      {
+        "filename": "fewshot/hepg2/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "cc3e2396670cadeeb63b70a38adb3149ce5d5037a577b8263b99c2960c2cb0f8"
+      },
+      {
+        "filename": "fewshot/hepg2/checkpoints/best.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "865ef2b03757414801f769227335ce793c02d9ec526d7f7692dae8a8f76ba873"
+      },
+      {
+        "filename": "fewshot/hepg2/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "9b387a5268f9432b9dd7ad2b1d193b97314835b0d10f50b9b2e7c979cd85b35c"
+      },
+      {
+        "filename": "fewshot/hepg2/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "865ef2b03757414801f769227335ce793c02d9ec526d7f7692dae8a8f76ba873"
+      },
+      {
+        "filename": "fewshot/hepg2/config.yaml",
+        "size": 2754,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/hepg2/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/adata_pred.h5ad",
+        "size": 572722220,
+        "lfs_sha256": "b2079326709661b683d0e8cf2d70c6e473b39aaf6fbebf5fea7f936c43820a64"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/adata_real.h5ad",
+        "size": 572722220,
+        "lfs_sha256": "8a1259cc15331448f01ed64aa8b346dbb7aa4892c6f3aca5c6a4ade728604d81"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/hepg2_agg_results.csv",
+        "size": 3414,
+        "lfs_sha256": "e242b7a0e124a6476fb4fdd6c8223b1586ceb930b768498f235141853ca0ef9a"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/hepg2_pred_de.csv",
+        "size": 218473452,
+        "lfs_sha256": "e2503e4ed1c288a0c8af955ea00ceea7b3ddf281cd223d3cc593d71ca98967ee"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/hepg2_real_de.csv",
+        "size": 234027350,
+        "lfs_sha256": "3782766558cf7d2f8dcdfb160baf114116fd87d25e8caaa7343528267bc0016f"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_best.ckpt/hepg2_results.csv",
+        "size": 360951,
+        "lfs_sha256": "42dd8ef412843c9e0782c72d669ef352d40af63fbe7f1d11ab26b9d0f188a5e3"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/adata_pred.h5ad",
+        "size": 572722220,
+        "lfs_sha256": "b2079326709661b683d0e8cf2d70c6e473b39aaf6fbebf5fea7f936c43820a64"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/adata_real.h5ad",
+        "size": 572722220,
+        "lfs_sha256": "8a1259cc15331448f01ed64aa8b346dbb7aa4892c6f3aca5c6a4ade728604d81"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/hepg2_agg_results.csv",
+        "size": 3415,
+        "lfs_sha256": "f3aa8d2e595a6a6a9f9fc1e7648ef3c05734d33cc9d6f4e843d0b1bb5f8fe584"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/hepg2_pred_de.csv",
+        "size": 218473452,
+        "lfs_sha256": "e2503e4ed1c288a0c8af955ea00ceea7b3ddf281cd223d3cc593d71ca98967ee"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/hepg2_real_de.csv",
+        "size": 234027350,
+        "lfs_sha256": "3782766558cf7d2f8dcdfb160baf114116fd87d25e8caaa7343528267bc0016f"
+      },
+      {
+        "filename": "fewshot/hepg2/eval_last.ckpt/hepg2_results.csv",
+        "size": 360951,
+        "lfs_sha256": "36a5e0431f7ff983f512e4630b78312abe4aa07464476582fadcc327e7fba173"
+      },
+      {
+        "filename": "fewshot/hepg2/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "fewshot/hepg2/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "fewshot/hepg2/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/hepg2/version_0/metrics.csv",
+        "size": 388032,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/hepg2/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/jurkat/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "26a314101bae3c2481b28f113bf5e211510adf110d3e314ae851428e06019ee4"
+      },
+      {
+        "filename": "fewshot/jurkat/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "e59c1c401bafd86eb5a3fc6767d01b45860c9d6d99855e5b99ad513dbf82ab62"
+      },
+      {
+        "filename": "fewshot/jurkat/checkpoints/best.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "fbfaec4a4cb550599efc416274b3b7d5af3e763f4cb65ca9ab421a9a4cced9f5"
+      },
+      {
+        "filename": "fewshot/jurkat/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "10cfcf01aff649e7f868ed6cf70e763cfbae91d7ba94e2887324a58fbcf5ede5"
+      },
+      {
+        "filename": "fewshot/jurkat/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "e4f43a8e0fe0c108bcb1b1781653189c2388d10f51c0fd6f8bda2172b62d245c"
+      },
+      {
+        "filename": "fewshot/jurkat/config.yaml",
+        "size": 2756,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/jurkat/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1119564728,
+        "lfs_sha256": "dc00d422af60ba2b33470972a3a031a665045585f4651f0d3673625be04ad764"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/adata_real.h5ad",
+        "size": 1119564728,
+        "lfs_sha256": "3d40fd818d280921e33fc6222dcaeed593ca8ce698be04d38c9d3f7612437d5e"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/jurkat_agg_results.csv",
+        "size": 3500,
+        "lfs_sha256": "7c8d4cbbf15a37338d917a9449bab7c9e40d69372e09b27438d292a113446384"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/jurkat_pred_de.csv",
+        "size": 245178927,
+        "lfs_sha256": "1f815369d7ea547b129e86601213e41a2bab75e3d66b631b8e28b7913a51a512"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/jurkat_real_de.csv",
+        "size": 268688957,
+        "lfs_sha256": "d6c2fcee1e35295fd8e0ffb376b5168fa2f41acfe97941da4f328a181ddfca48"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_best.ckpt/jurkat_results.csv",
+        "size": 423657,
+        "lfs_sha256": "fff2d8598e61229052483d2215809b267a9be5b28187147ea8eaa078a115280d"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1119564728,
+        "lfs_sha256": "8c932ecaba97a75d672814773a9b22e3739d77c78abceb615ce5349a0a5a08bd"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/adata_real.h5ad",
+        "size": 1119564728,
+        "lfs_sha256": "3d40fd818d280921e33fc6222dcaeed593ca8ce698be04d38c9d3f7612437d5e"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/jurkat_agg_results.csv",
+        "size": 3461,
+        "lfs_sha256": "b262f7b2c7724c1f04e55ad74dec0284d13546525bf40f0f7a0a191563fcda5f"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/jurkat_pred_de.csv",
+        "size": 249716480,
+        "lfs_sha256": "f6b4c4848c4a9026cdc244c2c30cbd7d2dc64d094acf1b944c692562777adbc7"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/jurkat_real_de.csv",
+        "size": 268688957,
+        "lfs_sha256": "d6c2fcee1e35295fd8e0ffb376b5168fa2f41acfe97941da4f328a181ddfca48"
+      },
+      {
+        "filename": "fewshot/jurkat/eval_last.ckpt/jurkat_results.csv",
+        "size": 424719,
+        "lfs_sha256": "ca472d8bd41a8423c5e54e0668886c11472f787c58ed3fa7a60e6a17e707fafe"
+      },
+      {
+        "filename": "fewshot/jurkat/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "fewshot/jurkat/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "fewshot/jurkat/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/jurkat/version_0/metrics.csv",
+        "size": 381337,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/jurkat/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/k562/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "3460dc1f8a7795e5316d7210f59662fe45e266e5775b6bf93cf8cb81e11b3938"
+      },
+      {
+        "filename": "fewshot/k562/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "5ab34fd5d8a121a15f305160bda383158fcc5633b8bcb89fb3595bc65ffc3c85"
+      },
+      {
+        "filename": "fewshot/k562/checkpoints/best.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "c2958735362cbef308ba1de407ba02c1e771c729a96e106cbde75ed3ddde4f41"
+      },
+      {
+        "filename": "fewshot/k562/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "121ff54db0e6f9f53b2777bbf45139757367ed827a111824213e6bf3777b2618"
+      },
+      {
+        "filename": "fewshot/k562/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "6077de2eb4303d4abf4f9eb84252a66735c1490bd57b6212871dca2500f9df70"
+      },
+      {
+        "filename": "fewshot/k562/config.yaml",
+        "size": 2752,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/k562/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1091179586,
+        "lfs_sha256": "572779bd21d8ae2d1c19f11d0c96b62103f415000603f205f57d635921764237"
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/adata_real.h5ad",
+        "size": 1091179586,
+        "lfs_sha256": "3d079939c1da1b5addde17d9d8dd816aabe5d287da5b281b26deec3af6bb90f4"
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/k562_agg_results.csv",
+        "size": 3405,
+        "lfs_sha256": "2281fd28e9b69354cf3504d77724dc96f89fe790cd7d7e1052b30214e0b7cb18"
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/k562_pred_de.csv",
+        "size": 218778037,
+        "lfs_sha256": "28d828bc52efe416c7d5a89fab57ac38568c7c9084e796e122933fe0cf829d58"
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/k562_real_de.csv",
+        "size": 240422885,
+        "lfs_sha256": "e2419a226a314d3d41283779118d2a260829719c5d333c1bfabc05044b77bf7e"
+      },
+      {
+        "filename": "fewshot/k562/eval_best.ckpt/k562_results.csv",
+        "size": 368088,
+        "lfs_sha256": "c518efe5a6492b62dd3aea985e6f50ca5a8b2e9df742134041e313d2e6605ba6"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1091179586,
+        "lfs_sha256": "1042f1ba9b914ae91ca56b0cb419aa4521cf3e146894fa3cf48427eb91780334"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/adata_real.h5ad",
+        "size": 1091179586,
+        "lfs_sha256": "3d079939c1da1b5addde17d9d8dd816aabe5d287da5b281b26deec3af6bb90f4"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/k562_agg_results.csv",
+        "size": 3509,
+        "lfs_sha256": "7e28157dc0191cc054c9366414b4cf9e6bf86eea22069bf25cbc39ff781c2edc"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/k562_pred_de.csv",
+        "size": 220042094,
+        "lfs_sha256": "ec507862831971f01399d1056014c9e96eb0fbdf5a83995a0a0d0c30666d3eb2"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/k562_real_de.csv",
+        "size": 240422885,
+        "lfs_sha256": "e2419a226a314d3d41283779118d2a260829719c5d333c1bfabc05044b77bf7e"
+      },
+      {
+        "filename": "fewshot/k562/eval_last.ckpt/k562_results.csv",
+        "size": 371120,
+        "lfs_sha256": "5af10b288def25395625b852377bbb6540f0c0a028351445da909783b6ba4de7"
+      },
+      {
+        "filename": "fewshot/k562/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "fewshot/k562/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "fewshot/k562/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/k562/version_0/metrics.csv",
+        "size": 381735,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/k562/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/rpe1/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "b3810b260ff3a893571db2ada4a0b6bfc892f28e0a2f8df67126a567044690ae"
+      },
+      {
+        "filename": "fewshot/rpe1/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "e8aaf8c2fa5b6ee8a15e6267b209fef64eac12e7f7befebf1a73481f8017999e"
+      },
+      {
+        "filename": "fewshot/rpe1/checkpoints/best.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "1ee7162de3449ad133b23cb2b72f664529c37acc367929e2d3473fb5033f1aa4"
+      },
+      {
+        "filename": "fewshot/rpe1/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "02603032590f51fbcca890e9f201ad07f1c457dbc72580baa97e5aae9b5a3814"
+      },
+      {
+        "filename": "fewshot/rpe1/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "53017747fbff64e95346c4c29f9b26d76ca0e1fb87bd434967be13a0872f4f47"
+      },
+      {
+        "filename": "fewshot/rpe1/config.yaml",
+        "size": 2752,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/rpe1/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1054319856,
+        "lfs_sha256": "e1935bde9b0f91bdad7b93a70c18687601f2b61e0f5a6800cdfa2ac3060d7c1d"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/adata_real.h5ad",
+        "size": 1054319856,
+        "lfs_sha256": "1e8a0d3aaab6d35a863784ccc91b001ee1922179e9cd7db20ee71219be3fe571"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/rpe1_agg_results.csv",
+        "size": 3579,
+        "lfs_sha256": "3e4958b2fdb4f033ec1e094e3bd362152ed13bdb8ce58d0fe1ba2dc771290bb3"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/rpe1_pred_de.csv",
+        "size": 246811660,
+        "lfs_sha256": "c5ab6ab797426d6ff8ac5f562a821501d458dda7f5e6e01c9e10b561bb5f5954"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/rpe1_real_de.csv",
+        "size": 264204574,
+        "lfs_sha256": "d1cb9238ab01d63f76008a72e1a0ee8cb6b2290cac5f3d216b74cc6e5695c4a9"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_best.ckpt/rpe1_results.csv",
+        "size": 406063,
+        "lfs_sha256": "397533d40a2efba9d75a54fca855fc39db1562ff50c765408e9afdea61826803"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1054319856,
+        "lfs_sha256": "581961eac45d513836a326267db98938d98a239ab61f1dda03f611b8a524e40a"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/adata_real.h5ad",
+        "size": 1054319856,
+        "lfs_sha256": "1e8a0d3aaab6d35a863784ccc91b001ee1922179e9cd7db20ee71219be3fe571"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/rpe1_agg_results.csv",
+        "size": 3586,
+        "lfs_sha256": "854a3713669f6f2248391aead19a7b59ffaa871dada4a283a62b744a4c5c571e"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/rpe1_pred_de.csv",
+        "size": 264146871,
+        "lfs_sha256": "510561a3d6d49678f5d2f097b4b2aacb724304202bb3a542da9b303a7644c189"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/rpe1_real_de.csv",
+        "size": 264204574,
+        "lfs_sha256": "d1cb9238ab01d63f76008a72e1a0ee8cb6b2290cac5f3d216b74cc6e5695c4a9"
+      },
+      {
+        "filename": "fewshot/rpe1/eval_last.ckpt/rpe1_results.csv",
+        "size": 415088,
+        "lfs_sha256": "e0621ccfd1591d1bad6672c40738466562e00da6d6742377b7624f9c1794f2d4"
+      },
+      {
+        "filename": "fewshot/rpe1/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "fewshot/rpe1/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "fewshot/rpe1/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/rpe1/version_0/metrics.csv",
+        "size": 381867,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "fewshot/rpe1/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/hepg2/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "f38d46df0a6edf81b293d3bb9071de3d37aac58db514ffb556e03acdc3b48077"
+      },
+      {
+        "filename": "zeroshot/hepg2/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "681acf2fde9b56571818bbbd9218d153ed1e079867eaf819b5a3a3eae9e5fb57"
+      },
+      {
+        "filename": "zeroshot/hepg2/checkpoints/best.ckpt",
+        "size": 471699039,
+        "lfs_sha256": "fe6d7fc71948509117cf6ed2207a9c4136023b54ad05803dda507b87d7468c42"
+      },
+      {
+        "filename": "zeroshot/hepg2/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "207b9b8ed58d3db70a0671bd69d87b6ce4f2ddf0bda998fdc78d995189dfb766"
+      },
+      {
+        "filename": "zeroshot/hepg2/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "0a568b0b635c6dce13fa4949ebede004fbeec45b632b25d5695b9d5456d95150"
+      },
+      {
+        "filename": "zeroshot/hepg2/config.yaml",
+        "size": 2764,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/hepg2/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/adata_pred.h5ad",
+        "size": 782383816,
+        "lfs_sha256": "3c03d841b7cc5c0b79bd024b56249c943bddc9348d8c9fcd1f8f08d78b834e97"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/adata_real.h5ad",
+        "size": 782383816,
+        "lfs_sha256": "04c67d73099117e3934a36e9703f60b857cba55da66c43790a679f5e8c174903"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/hepg2_agg_results.csv",
+        "size": 3531,
+        "lfs_sha256": "6671f1994fd0852fb14b9fe1e39d7ec37c6e461718d0b57c0cd784ad16e12757"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/hepg2_pred_de.csv",
+        "size": 299683790,
+        "lfs_sha256": "138ee80b5ecd3bec4badd4e91466e74467e55c6e3247643e33bf65378c8079f1"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/hepg2_real_de.csv",
+        "size": 331857105,
+        "lfs_sha256": "c0a9582aeec67230424e4d95fd26f5c2a6d9e841c13f804d46de1b74aaeddff7"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_best.ckpt/hepg2_results.csv",
+        "size": 506756,
+        "lfs_sha256": "0c930ad038b56c6f43d25896a15cd68e121d8902e5457718b4dfc9f163f10604"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/adata_pred.h5ad",
+        "size": 782383816,
+        "lfs_sha256": "0f363319aacafcbfa50495299346818d0f52a4d179ea65e8f8144fcea527329e"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/adata_real.h5ad",
+        "size": 782383816,
+        "lfs_sha256": "04c67d73099117e3934a36e9703f60b857cba55da66c43790a679f5e8c174903"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/hepg2_agg_results.csv",
+        "size": 3554,
+        "lfs_sha256": "ca68013e0b6d56a85ef1ec9d59ab2543047150feb45f165d2f1a1903f953603e"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/hepg2_pred_de.csv",
+        "size": 323221347,
+        "lfs_sha256": "1b2b3367de809dba75cf4be86dd13272af7666dee9d3ac1a25687ece74eab35e"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/hepg2_real_de.csv",
+        "size": 331857105,
+        "lfs_sha256": "c0a9582aeec67230424e4d95fd26f5c2a6d9e841c13f804d46de1b74aaeddff7"
+      },
+      {
+        "filename": "zeroshot/hepg2/eval_last.ckpt/hepg2_results.csv",
+        "size": 511344,
+        "lfs_sha256": "467302d652f70cd0d19abd239a2757be8e132e413cc0d4be2dcf085d45f61ba1"
+      },
+      {
+        "filename": "zeroshot/hepg2/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "zeroshot/hepg2/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "zeroshot/hepg2/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/hepg2/version_0/metrics.csv",
+        "size": 384166,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/hepg2/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/jurkat/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "6b22b5f3f19d4752f078543661ba3a3f5ff29f9babcb74e750234950cdad95ff"
+      },
+      {
+        "filename": "zeroshot/jurkat/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "339dfc03d242cc2f9bef6b051e95722e908035957219c5b2bc862bce70450a92"
+      },
+      {
+        "filename": "zeroshot/jurkat/checkpoints/best.ckpt",
+        "size": 471699039,
+        "lfs_sha256": "6fa4fe9a1c8a267d88d519d335e367b80594db64d2005abf1407260afccbfa6b"
+      },
+      {
+        "filename": "zeroshot/jurkat/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "42c92de7ce0504889773d43e95657df6fdef8ec31cce7c9273067da5a24cfbd0"
+      },
+      {
+        "filename": "zeroshot/jurkat/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "a63f5a9350590a8ab09795593f3cb267a782d679d4d09b179e24376eadf81da4"
+      },
+      {
+        "filename": "zeroshot/jurkat/config.yaml",
+        "size": 2766,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/jurkat/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1493707420,
+        "lfs_sha256": "7dc6478b2888c275877d338bd950d630680391b1123130ac53c14953ed095d09"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/adata_real.h5ad",
+        "size": 1493707420,
+        "lfs_sha256": "34011c2e155ccb899ca2f9d262071be5c95c9b9d5a402b661789a4688838b33e"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/jurkat_agg_results.csv",
+        "size": 3396,
+        "lfs_sha256": "54974978cd9aa346bec2fe8e46bbc208ddb0c734a075d394288222c7f5f46052"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/jurkat_pred_de.csv",
+        "size": 344695065,
+        "lfs_sha256": "a99a847e2bc783a73a64ea2c34ae065198b33ffc855b01d7d56d3fc5b31e694e"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/jurkat_real_de.csv",
+        "size": 380988038,
+        "lfs_sha256": "68fcb087841310e0e435b1bf63f1dbd69fc73c849d31a288f01d9d7ce40982ff"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_best.ckpt/jurkat_results.csv",
+        "size": 582103,
+        "lfs_sha256": "3efc817549bbf24edd6e427fb99466f58de8fadb3a4b4335523f5cfac1bc8098"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1493707420,
+        "lfs_sha256": "6a8f01676e6ac6653ef3e9192f4548fa8f50b6df3f947543b5d84b773242b4d7"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/adata_real.h5ad",
+        "size": 1493707420,
+        "lfs_sha256": "34011c2e155ccb899ca2f9d262071be5c95c9b9d5a402b661789a4688838b33e"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/jurkat_agg_results.csv",
+        "size": 3493,
+        "lfs_sha256": "e42a7bab05357b7f8b117710f469032e459bb55b11c7783d55c838ef26976043"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/jurkat_pred_de.csv",
+        "size": 358658847,
+        "lfs_sha256": "ea4e206c8e77bf54d9e0f309c425d54d198ad3ac52a4695ca193c4efa494580e"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/jurkat_real_de.csv",
+        "size": 380988038,
+        "lfs_sha256": "68fcb087841310e0e435b1bf63f1dbd69fc73c849d31a288f01d9d7ce40982ff"
+      },
+      {
+        "filename": "zeroshot/jurkat/eval_last.ckpt/jurkat_results.csv",
+        "size": 590637,
+        "lfs_sha256": "8d041ff0b139f1dbde0126e6ee21c7455756ba1f3985546ca79156d4225c86b9"
+      },
+      {
+        "filename": "zeroshot/jurkat/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "zeroshot/jurkat/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "zeroshot/jurkat/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/jurkat/version_0/metrics.csv",
+        "size": 374058,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/jurkat/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/k562/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "070ce5dbac74e075cb5c0caa64db93ef373d3a89b250b8db0ff273afbaac624c"
+      },
+      {
+        "filename": "zeroshot/k562/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "33310f8b75e3011a02aaecc66e254026616113724f3fb35cdfb33e19068696f6"
+      },
+      {
+        "filename": "zeroshot/k562/checkpoints/best.ckpt",
+        "size": 471699039,
+        "lfs_sha256": "ca790099b46a87999bd030af24805cd48f8601b3d5eb17724ea4335dad3d7d60"
+      },
+      {
+        "filename": "zeroshot/k562/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "84db4407cdf274303b02c119367403e2a70d80731ce47e93a1e1dfc8700bd556"
+      },
+      {
+        "filename": "zeroshot/k562/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "3d566b1a78f8141b27ee2ed760a35f34374bcbd662e74bc6a3150910b0c930d7"
+      },
+      {
+        "filename": "zeroshot/k562/config.yaml",
+        "size": 2762,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/k562/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1527032508,
+        "lfs_sha256": "630ee6a1bf53c218706725efc822583d7262b88b31944df9b516f59421d61f94"
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/adata_real.h5ad",
+        "size": 1527032508,
+        "lfs_sha256": "d150cdd890c8c9434bed169697fd6a31059bedfc4bdd714b11f1c6a4ab3a7adf"
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/k562_agg_results.csv",
+        "size": 3523,
+        "lfs_sha256": "8d1eec749ead4f4e7986941735d90de0319236a7c6a70f799182760a2093ed15"
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/k562_pred_de.csv",
+        "size": 321344933,
+        "lfs_sha256": "89b5d659f021eb9d64c41e282994453c3a7e968370cf62cef09ca3b3f7408a56"
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/k562_real_de.csv",
+        "size": 343530568,
+        "lfs_sha256": "a367d89432c430f6bef3d3efd23c0a543144c1c55bb94e64c818c97de2cbd1dd"
+      },
+      {
+        "filename": "zeroshot/k562/eval_best.ckpt/k562_results.csv",
+        "size": 538095,
+        "lfs_sha256": "8bd145c4667e03c9e367079dcfb38126e4e1f06b562f8a3fa6d1eaa1d0ba5821"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1527032508,
+        "lfs_sha256": "3d7f4190470ed5881a411b9319d16f6019d63d0657d4c9a450df54750216f27d"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/adata_real.h5ad",
+        "size": 1527032508,
+        "lfs_sha256": "d150cdd890c8c9434bed169697fd6a31059bedfc4bdd714b11f1c6a4ab3a7adf"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/k562_agg_results.csv",
+        "size": 3485,
+        "lfs_sha256": "645954d3eb39c45758b255d38df8899d84bd52222b66e72c744383829cb04800"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/k562_pred_de.csv",
+        "size": 318165266,
+        "lfs_sha256": "bbd2669233c87068c81c808924445251998657d8fcdd528e431f1441a95ef3b4"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/k562_real_de.csv",
+        "size": 343530568,
+        "lfs_sha256": "a367d89432c430f6bef3d3efd23c0a543144c1c55bb94e64c818c97de2cbd1dd"
+      },
+      {
+        "filename": "zeroshot/k562/eval_last.ckpt/k562_results.csv",
+        "size": 517165,
+        "lfs_sha256": "64a1bcdf7b3875543c9fb23bfe3e94400ed581fccc5ce306a7a161b7415e72fe"
+      },
+      {
+        "filename": "zeroshot/k562/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "zeroshot/k562/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "zeroshot/k562/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/k562/version_0/metrics.csv",
+        "size": 372511,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/k562/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/rpe1/batch_onehot_map.pkl",
+        "size": 721431,
+        "lfs_sha256": "1b4d1e60aa0e38d98287234822d3cd76969e48d4f04a5bfd2c7f85df4bcbd081"
+      },
+      {
+        "filename": "zeroshot/rpe1/cell_type_onehot_map.pkl",
+        "size": 1799,
+        "lfs_sha256": "fed459d23eea7814f13d1c1a7246b60125e5bf43becb5c0bc4e2bdde043d9718"
+      },
+      {
+        "filename": "zeroshot/rpe1/checkpoints/best.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "ead21aa8c508364d876e86a31d1ea1ab1a9402466edb5403e4f45481aa22b251"
+      },
+      {
+        "filename": "zeroshot/rpe1/checkpoints/final.ckpt",
+        "size": 471695263,
+        "lfs_sha256": "f4d27826d297db01aa6f3263cc2c7ba86d81cf4ee2810698cc28fd2a3084cb6f"
+      },
+      {
+        "filename": "zeroshot/rpe1/checkpoints/last.ckpt",
+        "size": 471699103,
+        "lfs_sha256": "0b5fa00f40cd2766544a6cf3003230c4522f36e8fdb283b086bc69f41818415b"
+      },
+      {
+        "filename": "zeroshot/rpe1/config.yaml",
+        "size": 2762,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/rpe1/data_module.torch",
+        "size": 1901,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/adata_pred.h5ad",
+        "size": 1406822238,
+        "lfs_sha256": "35c487974f6483dd9e0dc7dda836b5ed63188adbbd6067d92cf7f33098aa3021"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/adata_real.h5ad",
+        "size": 1406822238,
+        "lfs_sha256": "720ce58faabbed153a5a2ae00abeb08dfee944cf066bedca8bae8bb0372874dc"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/rpe1_agg_results.csv",
+        "size": 3584,
+        "lfs_sha256": "7af84e833df7209d54eb858c4b3bd0d3c4de6999fb3293d7490d643750caf5ab"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/rpe1_pred_de.csv",
+        "size": 347045906,
+        "lfs_sha256": "ae1a84742a3230e35414e38e2f289d5f7d3abd1b2f14a10683b16c134657aecc"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/rpe1_real_de.csv",
+        "size": 373246770,
+        "lfs_sha256": "8656cf2495e712f1d05110e702c70cbba7aa281c93075b814be0078cd53eb308"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_best.ckpt/rpe1_results.csv",
+        "size": 575323,
+        "lfs_sha256": "c187b3a026c8381a84acbe5035efa30947a6774c82a6519749b1b37e85fdd14d"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/adata_pred.h5ad",
+        "size": 1406822238,
+        "lfs_sha256": "ee856550d02ba1b9a784762d561bed689e3a99c88c3b9042f5d885ed2aa7255b"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/adata_real.h5ad",
+        "size": 1406822238,
+        "lfs_sha256": "720ce58faabbed153a5a2ae00abeb08dfee944cf066bedca8bae8bb0372874dc"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/rpe1_agg_results.csv",
+        "size": 3603,
+        "lfs_sha256": "9ce4645413a86c90e48ccc6eece608fc08ff7a4e8e22eb4bf0500ba00d62521b"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/rpe1_pred_de.csv",
+        "size": 355221916,
+        "lfs_sha256": "975ea699d2826133cf0394b464b21cbed88f55b37f89d450dde88e32911deb05"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/rpe1_real_de.csv",
+        "size": 373246770,
+        "lfs_sha256": "8656cf2495e712f1d05110e702c70cbba7aa281c93075b814be0078cd53eb308"
+      },
+      {
+        "filename": "zeroshot/rpe1/eval_last.ckpt/rpe1_results.csv",
+        "size": 571713,
+        "lfs_sha256": "24d8813c80f3b1ffed24ec038f890c11f8c66740fe919a1964eaadcc888dcd99"
+      },
+      {
+        "filename": "zeroshot/rpe1/pert_onehot_map.pt",
+        "size": 16746593,
+        "lfs_sha256": "f5621cab243a5135014af3867f63f8bf75cff19aee06d0f29a1bdecd2dbf47d0"
+      },
+      {
+        "filename": "zeroshot/rpe1/var_dims.pkl",
+        "size": 155642,
+        "lfs_sha256": "e37e133d276aca89ee193356a546a26376cd6757ddb02e068b1f09429918a269"
+      },
+      {
+        "filename": "zeroshot/rpe1/version_0/hparams.yaml",
+        "size": 18468,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/rpe1/version_0/metrics.csv",
+        "size": 374824,
+        "lfs_sha256": null
+      },
+      {
+        "filename": "zeroshot/rpe1/wandb_path.txt",
+        "size": 26,
+        "lfs_sha256": null
+      }
+    ],
+    "candidates": [
+      "fewshot/hepg2/checkpoints/best.ckpt",
+      "fewshot/hepg2/checkpoints/final.ckpt",
+      "fewshot/hepg2/checkpoints/last.ckpt",
+      "fewshot/jurkat/checkpoints/best.ckpt",
+      "fewshot/jurkat/checkpoints/final.ckpt",
+      "fewshot/jurkat/checkpoints/last.ckpt",
+      "fewshot/k562/checkpoints/best.ckpt",
+      "fewshot/k562/checkpoints/final.ckpt",
+      "fewshot/k562/checkpoints/last.ckpt",
+      "fewshot/rpe1/checkpoints/best.ckpt",
+      "fewshot/rpe1/checkpoints/final.ckpt",
+      "fewshot/rpe1/checkpoints/last.ckpt",
+      "zeroshot/hepg2/checkpoints/best.ckpt",
+      "zeroshot/hepg2/checkpoints/final.ckpt",
+      "zeroshot/hepg2/checkpoints/last.ckpt",
+      "zeroshot/jurkat/checkpoints/best.ckpt",
+      "zeroshot/jurkat/checkpoints/final.ckpt",
+      "zeroshot/jurkat/checkpoints/last.ckpt",
+      "zeroshot/k562/checkpoints/best.ckpt",
+      "zeroshot/k562/checkpoints/final.ckpt",
+      "zeroshot/k562/checkpoints/last.ckpt",
+      "zeroshot/rpe1/checkpoints/best.ckpt",
+      "zeroshot/rpe1/checkpoints/final.ckpt",
+      "zeroshot/rpe1/checkpoints/last.ckpt"
+    ],
+    "selected": "fewshot/k562/checkpoints/final.ckpt",
+    "weight_files": [
+      "fewshot/k562/checkpoints/final.ckpt"
+    ],
+    "weight_bytes": 471695263,
+    "weight_map": null,
+    "index_files": [],
+    "remote_code_executed": false,
+    "scope": "File metadata does not establish model architecture or compressibility"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "status": "installed_and_verified",
+  "date": "2026-09-07",
+  "project": "/Users/manu/Code/compressme",
+  "source_and_evidence_files_verified": 723,
+  "core_suite": {
+    "passed": 519,
+    "seconds": 6.81,
+    "real_mps_access": true,
+    "report": "core_validation.json"
+  },
+  "boltz2": {
+    "ready_environment": ".venv-boltz",
+    "source_python_files_verified": 107,
+    "original_api": "complete native confidence and affinity batches; one-complex YAML/FASTA example",
+    "joint_registered_storage_before_bytes": 4087121944,
+    "joint_registered_storage_after_bytes": 2061868568,
+    "logical_parameters_unchanged": true,
+    "plain_tensor_bytes": 2062669224,
+    "packed_tensor_bytes": 1759531547,
+    "output_gate": {
+      "leaves": 48,
+      "backends": [
+        "cpu",
+        "mps"
+      ],
+      "byte_equal": true,
+      "scope": "20-residue protein plus ethanol, FP32, same backend and separately seeded preprocessing/diffusion"
+    },
+    "final_yaml_report": "boltz2_yaml_mps_final.json",
+    "runtime_default_enabled": false,
+    "runtime_reason": "No reliable MPS gain; CPU confidence inconsistent; small CPU affinity signal over three pairs",
+    "runtime_timing_report": "boltz2_request_timing.json",
+    "packing_report": "boltz2_streaming_pack.json"
+  },
+  "general_apis": [
+    "share_frozen_parameters",
+    "pack_file",
+    "unpack_file"
+  ],
+  "research": "experiments/request_fx; generic static-branch discovery, not default whole-model acceleration",
+  "remaining_scope_limits": [
+    "No biological quality or large-complex benchmark",
+    "No universal compression ratio or floating-point certificate",
+    "Cold constructors may peak above final weight memory",
+    "Native chemistry/MSA assets remain necessary"
+  ],
+  "inactive": [
+    "xcell",
+    "omnicell",
+    "stformer",
+    "bioptimus"
+  ],
+  "bioptimus": "Authenticated weight access returned GatedRepo; deferred per user instruction",
+  "prepared_environment_packing_tests": {
+    "passed": 25,
+    "seconds": 0.059,
+    "environment": ".venv-boltz",
+    "numpy": "1.26.4",
+    "zstandard": "0.25.0"
+  }
+}

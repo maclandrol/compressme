@@ -1,0 +1,11 @@
+{
+  "fresh_process": true,
+  "torch_load_forbidden_in_parent_and_workers": true,
+  "original_state_package_not_imported": true,
+  "bitwise_equal": true,
+  "output_shape": [
+    3,
+    1034
+  ],
+  "source": "portable model artifact plus hash-verified tokenizer source only"
+}

@@ -1,0 +1,296 @@
+{
+  "pickle_end": 844990,
+  "ops": {
+    "PROTO": 1,
+    "EMPTY_DICT": 376,
+    "BINPUT": 256,
+    "MARK": 11341,
+    "BINUNICODE": 11242,
+    "GLOBAL": 10,
+    "BININT2": 7025,
+    "TUPLE": 11078,
+    "BINPERSID": 5539,
+    "BININT1": 20702,
+    "TUPLE2": 6714,
+    "NEWFALSE": 5695,
+    "EMPTY_TUPLE": 5773,
+    "REDUCE": 11195,
+    "BINGET": 27692,
+    "TUPLE1": 4481,
+    "LONG_BINPUT": 45074,
+    "BININT": 1235,
+    "LONG_BINGET": 2084,
+    "SETITEMS": 263,
+    "NEWOBJ": 234,
+    "NEWTRUE": 170,
+    "NONE": 127,
+    "SETITEM": 13,
+    "BUILD": 234,
+    "BINFLOAT": 42,
+    "STOP": 1
+  },
+  "globals": [
+    "__builtin__ dict",
+    "collections OrderedDict",
+    "collections defaultdict",
+    "omegaconf.base ContainerMetadata",
+    "omegaconf.base Metadata",
+    "omegaconf.dictconfig DictConfig",
+    "omegaconf.nodes AnyNode",
+    "torch FloatStorage",
+    "torch._utils _rebuild_tensor_v2",
+    "typing Any"
+  ],
+  "head": [
+    [
+      "PROTO",
+      2,
+      0
+    ],
+    [
+      "EMPTY_DICT",
+      null,
+      2
+    ],
+    [
+      "BINPUT",
+      0,
+      3
+    ],
+    [
+      "MARK",
+      null,
+      5
+    ],
+    [
+      "BINUNICODE",
+      "pytorch-lightning_version",
+      6
+    ],
+    [
+      "BINPUT",
+      1,
+      36
+    ],
+    [
+      "BINUNICODE",
+      "2.5.0.post0",
+      38
+    ],
+    [
+      "BINPUT",
+      2,
+      54
+    ],
+    [
+      "BINUNICODE",
+      "state_dict",
+      56
+    ],
+    [
+      "BINPUT",
+      3,
+      71
+    ],
+    [
+      "EMPTY_DICT",
+      null,
+      73
+    ],
+    [
+      "BINPUT",
+      4,
+      74
+    ],
+    [
+      "MARK",
+      null,
+      76
+    ],
+    [
+      "BINUNICODE",
+      "input_embedder.atom_encoder.embed_atom_features.weight",
+      77
+    ],
+    [
+      "BINPUT",
+      5,
+      136
+    ],
+    [
+      "GLOBAL",
+      "torch._utils _rebuild_tensor_v2",
+      138
+    ],
+    [
+      "BINPUT",
+      6,
+      171
+    ],
+    [
+      "MARK",
+      null,
+      173
+    ],
+    [
+      "MARK",
+      null,
+      174
+    ],
+    [
+      "BINUNICODE",
+      "storage",
+      175
+    ],
+    [
+      "BINPUT",
+      7,
+      187
+    ],
+    [
+      "GLOBAL",
+      "torch FloatStorage",
+      189
+    ],
+    [
+      "BINPUT",
+      8,
+      209
+    ],
+    [
+      "BINUNICODE",
+      "0",
+      211
+    ],
+    [
+      "BINPUT",
+      9,
+      217
+    ],
+    [
+      "BINUNICODE",
+      "cpu",
+      219
+    ],
+    [
+      "BINPUT",
+      10,
+      227
+    ],
+    [
+      "BININT2",
+      49664,
+      229
+    ],
+    [
+      "TUPLE",
+      null,
+      232
+    ],
+    [
+      "BINPUT",
+      11,
+      233
+    ],
+    [
+      "BINPERSID",
+      null,
+      235
+    ],
+    [
+      "BININT1",
+      0,
+      236
+    ],
+    [
+      "BININT1",
+      128,
+      238
+    ],
+    [
+      "BININT2",
+      388,
+      240
+    ],
+    [
+      "TUPLE2",
+      null,
+      243
+    ],
+    [
+      "BINPUT",
+      12,
+      244
+    ],
+    [
+      "BININT2",
+      388,
+      246
+    ],
+    [
+      "BININT1",
+      1,
+      249
+    ],
+    [
+      "TUPLE2",
+      null,
+      251
+    ],
+    [
+      "BINPUT",
+      13,
+      252
+    ],
+    [
+      "NEWFALSE",
+      null,
+      254
+    ],
+    [
+      "GLOBAL",
+      "collections OrderedDict",
+      255
+    ],
+    [
+      "BINPUT",
+      14,
+      280
+    ],
+    [
+      "EMPTY_TUPLE",
+      null,
+      282
+    ],
+    [
+      "REDUCE",
+      null,
+      283
+    ],
+    [
+      "BINPUT",
+      15,
+      284
+    ],
+    [
+      "TUPLE",
+      null,
+      286
+    ],
+    [
+      "BINPUT",
+      16,
+      287
+    ],
+    [
+      "REDUCE",
+      null,
+      289
+    ],
+    [
+      "BINPUT",
+      17,
+      290
+    ]
+  ]
+}

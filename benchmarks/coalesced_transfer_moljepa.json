@@ -1,0 +1,2924 @@
+{
+  "method": "One model/weights/shader cache shared by all paths.40 shuffled interleaved rounds. Fresh SMILES on every fullAPI call; component timing uses prepared same-value inputs only to diagnose transport layout overhead.",
+  "gates": [
+    {
+      "offset": 0,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 0,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 4,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 8,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 12,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 16,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 20,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 24,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 28,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 32,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 36,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 40,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 44,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 48,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 52,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 56,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "attn": false,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "attn": false,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "attn": true,
+      "name": "bytes",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    },
+    {
+      "offset": 60,
+      "attn": true,
+      "name": "dtype",
+      "errors": {
+        "output['predictions']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['cls']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['embeddings']": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][0]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        },
+        "output['attentions'][1]": {
+          "relative_l2": 0.0,
+          "max_abs": 0.0,
+          "rmse": 0.0,
+          "exact": true
+        }
+      }
+    }
+  ],
+  "batches": {
+    "1": {
+      "full_api": {
+        "production": {
+          "median_ms": 9.685916505986825,
+          "p10": 7.854249997762963,
+          "p90": 15.820792003069073,
+          "ms": [
+            10.45779199921526,
+            13.383249985054135,
+            9.157332999166101,
+            19.524999981513247,
+            14.65975001337938,
+            7.570957997813821,
+            9.086958016268909,
+            8.957334008300677,
+            9.948416001861915,
+            8.667459012940526,
+            8.76037499983795,
+            9.31120800669305,
+            7.854249997762963,
+            7.663459022296593,
+            7.499542000005022,
+            9.14154201745987,
+            6.621000007726252,
+            16.049833997385576,
+            21.565915987594053,
+            12.588792014867067,
+            8.538750000298023,
+            8.541374991182238,
+            8.338249986991286,
+            14.921041001798585,
+            10.350124997785315,
+            8.47887501004152,
+            12.356666993582621,
+            8.3446670032572,
+            15.42516698827967,
+            9.404958982486278,
+            9.752415993716568,
+            14.36833298066631,
+            24.8602089995984,
+            13.576375000411645,
+            10.267416975693777,
+            9.619417018257082,
+            10.169917019084096,
+            15.820792003069073,
+            14.407332986593246,
+            9.236749989213422
+          ]
+        },
+        "bytes": {
+          "median_ms": 8.33687548583839,
+          "p10": 6.938500009709969,
+          "p90": 13.449666992528364,
+          "ms": [
+            9.923167002853006,
+            7.719540997641161,
+            6.793959008064121,
+            7.797458005370572,
+            16.829250002047047,
+            7.375249988399446,
+            7.125957985408604,
+            6.477707996964455,
+            7.112833991413936,
+            9.190582990413532,
+            8.266791002824903,
+            7.110292004654184,
+            13.449666992528364,
+            8.289166988106444,
+            15.041542006656528,
+            7.0730409934185445,
+            8.960750012192875,
+            8.708667010068893,
+            15.433541993843392,
+            7.757790997857228,
+            8.255416993051767,
+            11.793875019066036,
+            12.050374993123114,
+            7.831458991859108,
+            9.185875009279698,
+            8.668750000651926,
+            7.937292015412822,
+            8.849833015119657,
+            8.38525002473034,
+            7.204916997579858,
+            6.897083978401497,
+            13.54420799179934,
+            7.718042004853487,
+            8.810041006654501,
+            6.938500009709969,
+            6.906083988724276,
+            8.384583983570337,
+            11.266707995673642,
+            8.556082990253344,
+            8.712957991519943
+          ]
+        },
+        "dtype": {
+          "median_ms": 8.806875484879129,
+          "p10": 6.99904200155288,
+          "p90": 16.721124993637204,
+          "ms": [
+            6.99904200155288,
+            9.924750018399209,
+            8.503082994138822,
+            8.089042006758973,
+            8.482957986416295,
+            9.31120800669305,
+            8.816333982395008,
+            11.708208010531962,
+            8.875291008735076,
+            20.449165982427076,
+            8.419374993536621,
+            7.921167009044439,
+            8.544874988729134,
+            13.356457988265902,
+            17.54483301192522,
+            10.067166993394494,
+            8.17995800753124,
+            8.337334002135321,
+            10.676000005332753,
+            7.892749999882653,
+            8.896916988305748,
+            7.270041998708621,
+            19.73333299974911,
+            6.969624984776601,
+            8.406667009694502,
+            6.810291990404949,
+            6.657374993665144,
+            6.946042005438358,
+            16.721124993637204,
+            9.590416011633351,
+            8.797416987363249,
+            7.132792001357302,
+            16.193042014492676,
+            10.477999981958419,
+            9.179582993965596,
+            7.79962501837872,
+            14.232290996005759,
+            21.457166003528982,
+            9.003791987197474,
+            8.002540998859331
+          ]
+        }
+      },
+      "prepare": {
+        "production": {
+          "median_ms": 3.8517915090778843,
+          "p10": 3.383457980817184,
+          "p90": 5.221458006417379,
+          "ms": [
+            4.350917006377131,
+            5.221458006417379,
+            3.613334003603086,
+            4.440583987161517,
+            9.22750000609085,
+            3.7385420000646263,
+            3.812833019765094,
+            3.3669580006971955,
+            2.9165000014472753,
+            6.670833012321964,
+            3.528417000779882,
+            3.566791012417525,
+            4.9978749884758145,
+            4.144707985688001,
+            3.7615830078721046,
+            3.9252910064533353,
+            3.8907499983906746,
+            3.6881669948343188,
+            3.973290993599221,
+            3.383457980817184
+          ]
+        },
+        "bytes": {
+          "median_ms": 2.6881670055445284,
+          "p10": 2.452334010740742,
+          "p90": 2.8715840016957372,
+          "ms": [
+            2.903583983425051,
+            2.6339169999118894,
+            2.6527500012889504,
+            2.8715840016957372,
+            2.7235840098001063,
+            2.6112500054296106,
+            2.5117920013144612,
+            2.457042020978406,
+            2.649458998348564,
+            2.022333996137604,
+            2.09349999204278,
+            2.452334010740742,
+            2.7550419908948243,
+            3.221207996830344,
+            2.858041989384219,
+            2.848290983820334,
+            2.7351659955456853,
+            2.8519580082502216,
+            2.751916996203363,
+            2.6285829953849316
+          ]
+        },
+        "dtype": {
+          "median_ms": 3.585437501897104,
+          "p10": 3.211709001334384,
+          "p90": 4.76141698891297,
+          "ms": [
+            4.76141698891297,
+            3.2458339992444962,
+            4.8897090018726885,
+            3.7990830023773015,
+            3.356000001076609,
+            3.301542019471526,
+            3.7895840068813413,
+            7.329916988965124,
+            3.5009169951081276,
+            3.6729579733218998,
+            3.6797919892705977,
+            3.3353329927194864,
+            2.961207996122539,
+            3.6699580086860806,
+            4.035749996546656,
+            3.211709001334384,
+            3.4412080131005496,
+            3.3595419954508543,
+            4.627582995453849,
+            2.953000017441809
+          ]
+        }
+      },
+      "compute": {
+        "production": {
+          "median_ms": 7.021333498414606,
+          "p10": 3.6802089889533818,
+          "p90": 8.7497080094181,
+          "ms": [
+            7.6391249895095825,
+            7.47958300053142,
+            4.2927920003421605,
+            2.993458998389542,
+            3.960999980336055,
+            8.349500014446676,
+            3.499249985907227,
+            3.6802089889533818,
+            5.13262499589473,
+            18.482582992874086,
+            12.109167000744492,
+            3.8188750040717423,
+            8.7497080094181,
+            8.153499977197498,
+            6.834291998529807,
+            8.451332978438586,
+            4.645834007533267,
+            8.419084013439715,
+            7.208374998299405,
+            5.712208017939702
+          ]
+        },
+        "bytes": {
+          "median_ms": 4.593916004523635,
+          "p10": 3.7562499928753823,
+          "p90": 11.751542013371363,
+          "ms": [
+            3.7562499928753823,
+            4.289707983843982,
+            19.27316701039672,
+            11.24583400087431,
+            4.209457983961329,
+            4.418541007908061,
+            4.04904197785072,
+            7.801125000696629,
+            11.751542013371363,
+            8.54524999158457,
+            4.769291001139209,
+            4.391583002870902,
+            4.159542004344985,
+            3.723000001627952,
+            11.006375018041581,
+            14.873749983962625,
+            7.297624979401007,
+            5.306084000039846,
+            3.403000009711832,
+            3.874166985042393
+          ]
+        },
+        "dtype": {
+          "median_ms": 4.528749996097758,
+          "p10": 3.4679999807849526,
+          "p90": 8.265458978712559,
+          "ms": [
+            13.072165980702266,
+            4.913249984383583,
+            6.779000017559156,
+            3.799416997935623,
+            8.049999974900857,
+            5.39508301881142,
+            8.265458978712559,
+            3.4679999807849526,
+            12.845874996855855,
+            4.515708977123722,
+            3.0371669854503125,
+            8.249292004620656,
+            3.9449160103686154,
+            4.2558749846648425,
+            3.6586249771062285,
+            3.966584015870467,
+            5.349291983293369,
+            4.323000001022592,
+            4.541791015071794,
+            2.9157920216675848
+          ]
+        }
+      }
+    },
+    "4": {
+      "full_api": {
+        "production": {
+          "median_ms": 16.55406248755753,
+          "p10": 13.536292011849582,
+          "p90": 22.498874983284622,
+          "ms": [
+            17.42204200127162,
+            16.625832999125123,
+            18.95216599223204,
+            21.200374991167337,
+            16.707583010429516,
+            17.501541005913168,
+            22.092208004323766,
+            17.04704199801199,
+            25.081166997551918,
+            15.460833994438872,
+            11.351207998814061,
+            13.685832993360236,
+            22.498874983284622,
+            16.55112497974187,
+            16.88004200696014,
+            16.223291982896626,
+            11.164084018673748,
+            13.84533298551105,
+            25.418292003450915,
+            11.872708011651412,
+            14.231915993150324,
+            22.466458001872525,
+            13.536292011849582,
+            15.089332999195904,
+            15.782416012370959,
+            17.11787501699291,
+            15.7291250070557,
+            30.061458004638553,
+            16.387500014388934,
+            14.763666986254975,
+            17.181416013045236,
+            16.332290979335085,
+            15.348665998317301,
+            18.295041983947158,
+            12.461125006666407,
+            25.679832993773744,
+            15.072166017489508,
+            16.55699999537319,
+            22.489750001113862,
+            15.545708010904491
+          ]
+        },
+        "bytes": {
+          "median_ms": 15.125312507734634,
+          "p10": 10.777082992717624,
+          "p90": 19.409291999181733,
+          "ms": [
+            11.406499979784712,
+            16.13750000251457,
+            10.777082992717624,
+            13.936417002696544,
+            16.28533299663104,
+            17.73070901981555,
+            15.158209018409252,
+            14.69770900439471,
+            14.528792002238333,
+            19.189791986718774,
+            13.360124983591959,
+            18.365416006417945,
+            15.36983298137784,
+            14.623333001509309,
+            9.408999991137534,
+            24.141958012478426,
+            10.00641699647531,
+            19.409291999181733,
+            10.62658298178576,
+            13.578332989709452,
+            13.790541997877881,
+            20.53275000071153,
+            15.603792009642348,
+            15.951958019286394,
+            17.135041009169072,
+            16.404249996412545,
+            14.899874979164451,
+            12.493334012106061,
+            17.526834009913728,
+            15.433124994160607,
+            30.77387501252815,
+            15.253207995556295,
+            19.954499992309138,
+            16.036125016398728,
+            9.985667013097554,
+            15.092415997060016,
+            11.408874997869134,
+            14.618042012443766,
+            15.014250006061047,
+            12.85370800178498
+          ]
+        },
+        "dtype": {
+          "median_ms": 15.780832996824756,
+          "p10": 10.328000003937632,
+          "p90": 19.483374984702095,
+          "ms": [
+            22.32366698444821,
+            16.050707985414192,
+            10.328000003937632,
+            15.474042011192068,
+            12.542416021460667,
+            14.351541001815349,
+            14.843791024759412,
+            16.65220901486464,
+            9.380499977851287,
+            16.263958008494228,
+            11.453624989371747,
+            14.61374998325482,
+            15.410541003802791,
+            12.921708985231817,
+            9.848499990766868,
+            16.02554100099951,
+            10.052084020571783,
+            12.841624993598089,
+            14.468542009126395,
+            10.258875001454726,
+            16.168625006685033,
+            14.50124999973923,
+            15.768957993714139,
+            21.543625014601275,
+            30.349542008480057,
+            17.561417014803737,
+            19.483374984702095,
+            10.892332997173071,
+            12.924416980240494,
+            19.37362499302253,
+            17.45587500045076,
+            17.78412499697879,
+            30.274374992586672,
+            15.792916994541883,
+            11.768583004595712,
+            18.97179099614732,
+            15.961208991939202,
+            15.792707999935374,
+            19.054333999520168,
+            16.75920799607411
+          ]
+        }
+      },
+      "prepare": {
+        "production": {
+          "median_ms": 7.73858348838985,
+          "p10": 6.62762499996461,
+          "p90": 9.158624976407737,
+          "ms": [
+            7.313667010748759,
+            7.385457982309163,
+            6.557749991770834,
+            9.724292001919821,
+            6.814749998738989,
+            6.62762499996461,
+            9.554832999128848,
+            6.952374998945743,
+            7.405665994156152,
+            7.820416998583823,
+            8.977040997706354,
+            8.787416008999571,
+            6.329875002847984,
+            7.656749978195876,
+            8.455792005406693,
+            9.135333995800465,
+            7.401915994705632,
+            9.158624976407737,
+            8.84658400900662,
+            9.112625004490837
+          ]
+        },
+        "bytes": {
+          "median_ms": 6.016187500790693,
+          "p10": 5.316041992045939,
+          "p90": 8.2192080153618,
+          "ms": [
+            5.891125008929521,
+            5.628583981888369,
+            5.440167005872354,
+            5.669167003361508,
+            5.316041992045939,
+            4.250917001627386,
+            8.65454101585783,
+            5.765374982729554,
+            5.759249994298443,
+            6.242792005650699,
+            7.545083994045854,
+            4.222707997541875,
+            6.141249992651865,
+            8.2192080153618,
+            6.91208298667334,
+            7.059458002913743,
+            5.506375018740073,
+            7.32554099522531,
+            7.239166006911546,
+            8.324583002831787
+          ]
+        },
+        "dtype": {
+          "median_ms": 6.830646001617424,
+          "p10": 5.0500420038588345,
+          "p90": 7.915833994047716,
+          "ms": [
+            6.904417008627206,
+            7.604915997944772,
+            6.502582982648164,
+            5.888959014555439,
+            6.013749982230365,
+            4.807666002307087,
+            5.785999994259328,
+            5.949457990936935,
+            6.756874994607642,
+            7.296833995496854,
+            7.888041000114754,
+            7.2202919982373714,
+            4.399458994157612,
+            7.71754200104624,
+            8.199375006370246,
+            5.391250015236437,
+            5.0500420038588345,
+            7.7560420031659305,
+            7.915833994047716,
+            8.746333012823015
+          ]
+        }
+      },
+      "compute": {
+        "production": {
+          "median_ms": 8.331999997608364,
+          "p10": 4.4541250099428,
+          "p90": 15.364457998657599,
+          "ms": [
+            3.955749998567626,
+            4.014166974229738,
+            6.07304199365899,
+            7.7792080119252205,
+            8.884791983291507,
+            5.165417009266093,
+            10.179083998082206,
+            4.4541250099428,
+            10.893208003835753,
+            15.96537500154227,
+            6.052040989743546,
+            5.633249995298684,
+            9.710665995953605,
+            5.123082984937355,
+            10.039042012067512,
+            21.76358297583647,
+            9.856374992523342,
+            10.146624990738928,
+            7.17095797881484,
+            15.364457998657599
+          ]
+        },
+        "bytes": {
+          "median_ms": 7.221521009341814,
+          "p10": 4.401375015731901,
+          "p90": 15.345958003308624,
+          "ms": [
+            5.118916014907882,
+            4.401375015731901,
+            14.74741700803861,
+            5.332250002538785,
+            3.9122500165831298,
+            9.156042011454701,
+            4.87524998607114,
+            9.467791998758912,
+            15.345958003308624,
+            20.40141701581888,
+            8.941166015574709,
+            7.6221250055823475,
+            7.366459001787007,
+            15.836541977478191,
+            7.07658301689662,
+            10.74229198275134,
+            5.098792025819421,
+            5.216708988882601,
+            4.524499992839992,
+            4.355291981482878
+          ]
+        },
+        "dtype": {
+          "median_ms": 7.96566650387831,
+          "p10": 5.252665985608473,
+          "p90": 14.916791988071054,
+          "ms": [
+            7.954750006319955,
+            8.085457986453548,
+            13.231916003860533,
+            18.527750013163313,
+            15.03466599388048,
+            4.9208330165129155,
+            5.3335840057116,
+            4.641792009351775,
+            14.29895800538361,
+            5.966374999843538,
+            9.117832989431918,
+            5.6827079970389605,
+            5.252665985608473,
+            8.69012501789257,
+            14.916791988071054,
+            9.09695797599852,
+            7.976583001436666,
+            6.384333013556898,
+            5.913417000556365,
+            7.422083988785744
+          ]
+        }
+      }
+    },
+    "32": {
+      "full_api": {
+        "production": {
+          "median_ms": 44.03187498974148,
+          "p10": 38.76662498805672,
+          "p90": 53.48995799431577,
+          "ms": [
+            41.85216699261218,
+            47.265333007089794,
+            47.27695899782702,
+            43.11600001528859,
+            37.727124989032745,
+            48.59500000020489,
+            42.4264160101302,
+            37.25900000426918,
+            46.97066600783728,
+            38.28833400621079,
+            49.64325000764802,
+            47.96779199386947,
+            58.991875004721805,
+            41.54754200135358,
+            49.822374974610284,
+            41.45874999812804,
+            46.541874995455146,
+            40.91029101982713,
+            38.76662498805672,
+            41.37799999443814,
+            39.153499994426966,
+            57.21566700958647,
+            44.22491599689238,
+            43.838833982590586,
+            40.11629198794253,
+            46.17462499300018,
+            38.82850002264604,
+            38.15012497943826,
+            48.077499988721684,
+            40.0104169966653,
+            53.48995799431577,
+            39.89720798563212,
+            45.45766700175591,
+            48.2169589959085,
+            63.75454200315289,
+            43.55970799224451,
+            51.92454200005159,
+            55.50633301027119,
+            43.31383400131017,
+            46.92891601007432
+          ]
+        },
+        "bytes": {
+          "median_ms": 42.84137499053031,
+          "p10": 35.67845901125111,
+          "p90": 55.04274999839254,
+          "ms": [
+            47.57041699485853,
+            40.206417004810646,
+            47.89329200866632,
+            34.96929199900478,
+            45.86574999848381,
+            33.72787500848062,
+            40.23604100802913,
+            37.082709022797644,
+            42.029667005408555,
+            34.970292006619275,
+            41.9371250027325,
+            40.02187500009313,
+            41.3973749964498,
+            46.211957989726216,
+            56.57662500743754,
+            47.89675000938587,
+            37.524000013945624,
+            53.337749995989725,
+            49.17062498861924,
+            61.35437500779517,
+            49.23841598792933,
+            38.00450000562705,
+            47.88908298360184,
+            51.24537501251325,
+            39.25616599735804,
+            39.15316698839888,
+            48.01600001519546,
+            40.98945899750106,
+            52.082084002904594,
+            42.79687500093132,
+            42.8858749801293,
+            35.26337500079535,
+            43.47799997776747,
+            55.04274999839254,
+            42.40204198868014,
+            59.52429200988263,
+            45.99216699716635,
+            57.65045798034407,
+            40.028707997407764,
+            35.67845901125111
+          ]
+        },
+        "dtype": {
+          "median_ms": 41.0178535094019,
+          "p10": 36.48220800096169,
+          "p90": 54.20641601085663,
+          "ms": [
+            52.32470901682973,
+            40.4800419928506,
+            36.63687501102686,
+            38.99675002321601,
+            33.85654202429578,
+            49.53295801533386,
+            36.48220800096169,
+            41.29941601422615,
+            40.15291598625481,
+            54.20641601085663,
+            35.93545898911543,
+            57.278708001831546,
+            45.09433300700039,
+            34.954166010720655,
+            36.7281670041848,
+            55.51458400441334,
+            40.34550001961179,
+            48.441040999023244,
+            57.014624995645136,
+            40.46466699219309,
+            52.73708299500868,
+            54.48062499635853,
+            42.19270800240338,
+            49.725874996511266,
+            42.47754201060161,
+            41.32412499166094,
+            41.89912500442006,
+            47.529750008834526,
+            35.570874984841794,
+            39.351790997898206,
+            40.01429199706763,
+            49.37120800605044,
+            39.76920901914127,
+            40.73629100457765,
+            51.8655409978237,
+            53.222083020955324,
+            38.88795798411593,
+            39.623624994419515,
+            39.1355830070097,
+            37.96462502214126
+          ]
+        }
+      },
+      "prepare": {
+        "production": {
+          "median_ms": 28.38349950616248,
+          "p10": 22.339999995892867,
+          "p90": 32.55779197206721,
+          "ms": [
+            22.085542004788294,
+            31.901833979645744,
+            30.2923749841284,
+            28.488083014963195,
+            20.815249998122454,
+            28.836959012551233,
+            22.339999995892867,
+            32.09533297922462,
+            27.817333000712097,
+            24.160250002751127,
+            28.219583007739857,
+            26.24583401484415,
+            27.736166986869648,
+            29.91741700679995,
+            32.55779197206721,
+            25.821582996286452,
+            31.40712497406639,
+            28.278915997361764,
+            32.99399997922592,
+            38.93587502534501
+          ]
+        },
+        "bytes": {
+          "median_ms": 28.621603996725753,
+          "p10": 23.447959014447406,
+          "p90": 32.69541700137779,
+          "ms": [
+            28.466874995501712,
+            24.043666024226695,
+            17.904209002153948,
+            30.529042007401586,
+            23.447959014447406,
+            28.776332997949794,
+            27.627792005660012,
+            20.11520799715072,
+            23.50924999336712,
+            27.831582992803305,
+            27.272916020592675,
+            26.666999998269603,
+            30.237750004744157,
+            33.70604201336391,
+            29.441332997521386,
+            31.77004199824296,
+            29.58358300384134,
+            34.2810419970192,
+            32.69541700137779,
+            28.884416999062523
+          ]
+        },
+        "dtype": {
+          "median_ms": 28.296000004047528,
+          "p10": 24.105666991090402,
+          "p90": 34.01370899518952,
+          "ms": [
+            29.299792018719018,
+            23.399916011840105,
+            27.939749998040497,
+            28.69008298148401,
+            30.109208018984646,
+            28.160540998214856,
+            28.523916989797726,
+            23.481917014578357,
+            27.06166697316803,
+            27.64120898791589,
+            27.47108298353851,
+            24.105666991090402,
+            27.488082996569574,
+            26.387124991742894,
+            32.16620799503289,
+            32.3903750104364,
+            28.4314590098802,
+            34.60916699259542,
+            34.01370899518952,
+            36.97466698940843
+          ]
+        }
+      },
+      "compute": {
+        "production": {
+          "median_ms": 19.587061993661337,
+          "p10": 17.411834007361904,
+          "p90": 30.801332992268726,
+          "ms": [
+            18.531000008806586,
+            19.57404098357074,
+            18.520290992455557,
+            32.97458399902098,
+            16.320417023962364,
+            17.562583001563326,
+            16.37379199382849,
+            29.808749997755513,
+            24.41708298283629,
+            22.07454200834036,
+            30.801332992268726,
+            43.237875011982396,
+            19.600083003751934,
+            22.719083994161338,
+            20.272458001272753,
+            18.309082981431857,
+            19.643208011984825,
+            19.465208024485037,
+            17.411834007361904,
+            18.57662500697188
+          ]
+        },
+        "bytes": {
+          "median_ms": 23.12577099655755,
+          "p10": 17.439500021282583,
+          "p90": 29.269374994328246,
+          "ms": [
+            29.9828750139568,
+            26.964958000462502,
+            20.16008400823921,
+            19.084458996076137,
+            15.81737500964664,
+            17.730958992615342,
+            16.186583001399413,
+            29.07112499815412,
+            37.534208997385576,
+            18.217625009128824,
+            26.091457984875888,
+            17.439500021282583,
+            29.269374994328246,
+            18.60654100892134,
+            26.92266702069901,
+            19.374583003809676,
+            27.777666982728988,
+            26.101041003130376,
+            19.04220800497569,
+            28.499042004114017
+          ]
+        },
+        "dtype": {
+          "median_ms": 20.016166497953236,
+          "p10": 17.820667009800673,
+          "p90": 30.334874987602234,
+          "ms": [
+            17.44779199361801,
+            29.822208016412333,
+            18.60224999836646,
+            20.228957990184426,
+            17.820667009800673,
+            29.82962501118891,
+            18.974792008521035,
+            19.803375005722046,
+            24.609540996607393,
+            17.95758298248984,
+            19.367792003322393,
+            30.334874987602234,
+            18.310165993170813,
+            25.668916990980506,
+            36.30537501885556,
+            18.878292001318187,
+            30.209666001610458,
+            36.49541598861106,
+            17.10575001197867,
+            24.655541026731953
+          ]
+        }
+      }
+    }
+  }
+}

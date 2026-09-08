@@ -1,0 +1,35 @@
+{
+  "scope": "Sampled State SE MPS diagnostics only; no full-domain model acceptance",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2974,
+      "sha256": "f379e924600c9246934426221e05c8cbdba87cce98f88694ad8d09f07c4d2dc7"
+    },
+    {
+      "path": "catalog-mps.json",
+      "bytes": 107867,
+      "sha256": "256e991cc80025d8e417b15e270b5c59a5258e4e469673fd3acd333151550850"
+    },
+    {
+      "path": "local-mps.json",
+      "bytes": 195775,
+      "sha256": "aae1721a21c9170f837376589b18bc75485eab1682c90cd34d9c3d18d28ee449"
+    },
+    {
+      "path": "local_profile_probe.py",
+      "bytes": 6481,
+      "sha256": "eb80801f03704065b7f1b9b4d4bb88d0c07bbc745b054cca61cbdcc40036d450"
+    },
+    {
+      "path": "regime_catalog.py",
+      "bytes": 4439,
+      "sha256": "4790de1d7c98ff7d2288f6ebd897ceadfe693cc25ded34f1a301e0042fc5ee37"
+    },
+    {
+      "path": "sampled-profile-tables.safetensors",
+      "bytes": 721960,
+      "sha256": "79b90215ed938b941867c717787f2b676696c5ad71a7af1d5b33453217a32b55"
+    }
+  ]
+}

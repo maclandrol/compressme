@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-08",
+  "hardware": "Apple M5 MacBook Air,16GB unified memory; Python3.12.14/PyTorch2.14.0/macOS26.6.1",
+  "runner_sha256": "d6661b42681fc4af91418bcaec0dca8b5e9f6e05f327d9d7bcb24dfb037d615b",
+  "new_actual_checkpoint_validations": [
+    {
+      "target": "moljepa_smiles",
+      "backend": "mps",
+      "status": "passed",
+      "cases": 33,
+      "candidate_tensor_comparisons": 133,
+      "max_abs": 2.1457672119140625e-06,
+      "source_self_repeat_max_abs": 1.5944242477416992e-06,
+      "source_self_repeat_byte_equal": false,
+      "accepted_tolerance": true,
+      "bitwise_identical": false,
+      "report": "gpu_validation_2026-09-08_moljepa_smiles_mps.json",
+      "sha256": "0937124286c0e09a319c5cce49b8b59b74384d5afdaa91784dae857bf6cdc571"
+    },
+    {
+      "target": "moljepa_full",
+      "backend": "mps",
+      "status": "passed",
+      "cases": 34,
+      "candidate_tensor_comparisons": 138,
+      "max_abs": 2.1457672119140625e-06,
+      "source_self_repeat_max_abs": 1.7881393432617188e-06,
+      "source_self_repeat_byte_equal": false,
+      "accepted_tolerance": true,
+      "bitwise_identical": false,
+      "report": "gpu_validation_2026-09-08_moljepa_full_mps.json",
+      "sha256": "7b974a4ad19aac2f7b8c89a17257a30ab61a0f8fcdf78a6933bb09b7a2107c4a"
+    },
+    {
+      "target": "state_st",
+      "backend": "mps",
+      "status": "passed",
+      "cases": 5,
+      "candidate_tensor_comparisons": 17,
+      "max_abs": 0.0,
+      "source_self_repeat_max_abs": 0.0,
+      "source_self_repeat_byte_equal": true,
+      "accepted_tolerance": true,
+      "bitwise_identical": true,
+      "report": "gpu_validation_2026-09-08_state_st_mps.json",
+      "sha256": "2b84f718a167fa6e292e766481d16583d4c087aa8506d1fef8ffcc0784d764e4"
+    },
+    {
+      "target": "boltz2",
+      "backend": "mps",
+      "status": "passed",
+      "cases": 2,
+      "candidate_tensor_comparisons": 48,
+      "max_abs": 0.0,
+      "source_self_repeat_max_abs": 0.0,
+      "source_self_repeat_byte_equal": true,
+      "accepted_tolerance": true,
+      "bitwise_identical": true,
+      "report": "gpu_validation_2026-09-08_boltz2_mps.json",
+      "sha256": "17ee6d30656853f973f8a02a608ae39d9b06817db38d3787d2d324d572696fdb"
+    }
+  ],
+  "cuda": {
+    "status": "unavailable",
+    "validated": false,
+    "reason": "No NVIDIA GPU was available; local PyTorch has no CUDA build. No CUDA inference ran.",
+    "report": "gpu_validation_2026-09-08_cuda_unavailable.json"
+  },
+  "state_se": {
+    "status": "mps_rejected_cpu_only",
+    "new_inference_ran": false,
+    "report": "gpu_validation_2026-09-08_state_se_mps_rejected.json"
+  },
+  "scope": "Same-backend source/candidate comparisons, complete returned outputs. No cross-backend equality, biological accuracy, throughput or general CUDA claim."
+}

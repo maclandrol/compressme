@@ -1,0 +1,799 @@
+{
+  "device": "mps",
+  "hardware": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "cuda_build_version": null,
+    "cuda_available": false,
+    "cuda_devices": [],
+    "mps_built": true,
+    "mps_available": true,
+    "nvidia_smi_found": false
+  },
+  "status": "passed",
+  "accepted": true,
+  "accepted_tolerance": true,
+  "bitwise_identical": true,
+  "atol": 1e-05,
+  "relative_l2_tolerance": 1e-05,
+  "require_bitwise": true,
+  "rule": "Every floating leaf: max_abs <= atol AND relative_l2 <= rtol; discrete/non-tensor outputs exact. Source self-repeat must also pass.",
+  "scope": "Complete outputs returned by the trusted cases, on this backend; not biological accuracy, cross-device equivalence, or a speed benchmark.",
+  "source_hashes": {
+    "/private/tmp/compressme-release-staging/examples/validate_backends.py": "d6661b42681fc4af91418bcaec0dca8b5e9f6e05f327d9d7bcb24dfb037d615b",
+    "/private/tmp/compressme-release-staging/src/compressme/validation.py": "cf98a3ca009489689cb916e39c5293eee56cd844d6991e70ed114aba523d8dfb",
+    "/Users/manu/Code/compressme/artifacts/boltz2-shared/manifest.json": "f821db980b82de81b8ed555cda9c7552535652afd0b223d85ff5d61d9acf816d",
+    "/private/tmp/compressme-release-staging/experiments/boltz2-runtime/sharing_probe.py": "bf11815736f2155e7930ed148bcd7012327d23427683df7bd071dd0ac0c7a600",
+    "/private/tmp/compressme-release-staging/experiments/boltz2-weight-audit/safe_state.py": "af89c241cdd5d27d70cceafd664ac048b76e76759046e4e7b82c230c6a4de5f2",
+    "/private/tmp/compressme-release-staging/src/compressme/boltz2_io.py": "05a4d815da023098eeb402a31ceb2ee44536038f2fbf1167a439ee45a7007592",
+    "/private/tmp/compressme-release-staging/src/compressme/sharing.py": "8a841828df3a7a7e5c3cbb62ffdd989993d8a8419fef46433461d84d0e2897ae"
+  },
+  "cases": [
+    {
+      "name": "confidence",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 21,
+        "non_tensor_leaves": 1,
+        "logical_tensor_bytes": 313204,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['token_masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['s']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['z']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['coords']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['confidence_score']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_iplddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_ipde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pae']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ligand_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['protein_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 21,
+        "non_tensor_leaves": 1,
+        "logical_tensor_bytes": 313204,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['token_masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['s']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['z']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['coords']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['confidence_score']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_iplddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_ipde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pae']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ligand_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['protein_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    },
+    {
+      "name": "affinity",
+      "seed": 1729,
+      "source_self_repeat": {
+        "tensor_leaves": 27,
+        "non_tensor_leaves": 1,
+        "logical_tensor_bytes": 325820,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['token_masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['s']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['z']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['coords']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['confidence_score']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_iplddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_ipde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pae']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ligand_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['protein_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value1']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary1']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value2']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary2']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      },
+      "candidate": {
+        "tensor_leaves": 27,
+        "non_tensor_leaves": 1,
+        "logical_tensor_bytes": 325820,
+        "accepted_tolerance": true,
+        "bitwise_identical": true,
+        "numeric_equal": true,
+        "max_abs": 0.0,
+        "max_relative_l2": 0.0,
+        "metrics": {
+          "output[\"output['masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['token_masks']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['s']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['z']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['coords']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['confidence_score']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_plddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_iplddt']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_pde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['complex_ipde']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pae']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['ligand_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['protein_iptm']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][0][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][0]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['pair_chains_iptm'][1][1]\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value1']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary1']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_pred_value2']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          },
+          "output[\"output['affinity_probability_binary2']\"]": {
+            "relative_l2": 0.0,
+            "max_abs": 0.0,
+            "rmse": 0.0,
+            "exact": true,
+            "bitwise": true
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "cublas_workspace_config": null,
+    "mps_fallback_environment": null,
+    "mps_fast_math_environment": null,
+    "cpu_threads": 4,
+    "execution": "torch.inference_mode; autocast explicitly disabled"
+  },
+  "model": {
+    "recipe": "boltz2",
+    "artifact": "/Users/manu/Code/compressme/artifacts/boltz2-shared",
+    "reference_weights": "/private/tmp/compressme-models/boltz2/shared-state",
+    "scope": "20-residue protein plus ethanol; native complete FP32 confidence and affinity default schedules",
+    "reference_manifest_sha256": "3c855681aa05d0d18ebeeb2335fe5850a66a03ba881eada1afcedfb60e13258c"
+  },
+  "reference": {
+    "class": "torch.nn.modules.container.ModuleDict",
+    "parameters": 1021780232,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "candidate": {
+    "class": "torch.nn.modules.container.ModuleDict",
+    "parameters": 1021780232,
+    "dtypes": [
+      "torch.float32"
+    ]
+  },
+  "candidate_tensor_comparisons": 48
+}

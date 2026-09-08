@@ -1,0 +1,1256 @@
+{
+  "arguments": {
+    "device": "cpu",
+    "kind": "aff",
+    "precision": "fp32",
+    "sampling_steps": 200,
+    "recycling_steps": 5,
+    "diffusion_samples": 3,
+    "input": "/private/tmp/compressme-agent-boltz-runtime/tiny_complex.yaml",
+    "work": "/private/tmp/compressme-agent-boltz-runtime/cpu-aff-fp32-default-sampling",
+    "structure_dir": "/private/tmp/compressme-agent-boltz-runtime/cpu-fp32-default-sampling/predictions",
+    "molecules": "/private/tmp/compressme-agent-boltz-runtime/mols",
+    "shared_state": "/private/tmp/compressme-models/boltz2/shared-state",
+    "safe_loader_dir": "/private/tmp/compressme-agent-boltz2-audit"
+  },
+  "stages": {
+    "preprocess": {
+      "seconds": 0.10758666699985042,
+      "tensor_shapes": {
+        "token_index": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "residue_index": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "asym_id": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "entity_id": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "sym_id": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "mol_type": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "res_type": {
+          "shape": [
+            1,
+            23,
+            33
+          ],
+          "dtype": "torch.int64"
+        },
+        "disto_center": {
+          "shape": [
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "token_bonds": {
+          "shape": [
+            1,
+            23,
+            23,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "type_bonds": {
+          "shape": [
+            1,
+            23,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "token_pad_mask": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "token_resolved_mask": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "token_disto_mask": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "contact_conditioning": {
+          "shape": [
+            1,
+            23,
+            23,
+            5
+          ],
+          "dtype": "torch.int64"
+        },
+        "contact_threshold": {
+          "shape": [
+            1,
+            23,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "method_feature": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "modified": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "cyclic_period": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "affinity_token_mask": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "ref_pos": {
+          "shape": [
+            1,
+            160,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "atom_resolved_mask": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.bool"
+        },
+        "ref_atom_name_chars": {
+          "shape": [
+            1,
+            160,
+            4,
+            64
+          ],
+          "dtype": "torch.int64"
+        },
+        "ref_element": {
+          "shape": [
+            1,
+            160,
+            128
+          ],
+          "dtype": "torch.int64"
+        },
+        "ref_charge": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.float32"
+        },
+        "ref_chirality": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.int64"
+        },
+        "atom_backbone_feat": {
+          "shape": [
+            1,
+            160,
+            17
+          ],
+          "dtype": "torch.int64"
+        },
+        "ref_space_uid": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.int64"
+        },
+        "coords": {
+          "shape": [
+            1,
+            1,
+            160,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "atom_pad_mask": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.float32"
+        },
+        "atom_to_token": {
+          "shape": [
+            1,
+            160,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "token_to_rep_atom": {
+          "shape": [
+            1,
+            23,
+            160
+          ],
+          "dtype": "torch.int64"
+        },
+        "r_set_to_rep_atom": {
+          "shape": [
+            1,
+            20,
+            160
+          ],
+          "dtype": "torch.int64"
+        },
+        "token_to_center_atom": {
+          "shape": [
+            1,
+            23,
+            160
+          ],
+          "dtype": "torch.int64"
+        },
+        "disto_target": {
+          "shape": [
+            1,
+            23,
+            23,
+            1,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "disto_coords_ensemble": {
+          "shape": [
+            1,
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "bfactor": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.float32"
+        },
+        "plddt": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.float32"
+        },
+        "frames_idx": {
+          "shape": [
+            1,
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.int64"
+        },
+        "frame_resolved_mask": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.bool"
+        },
+        "msa": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "msa_paired": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "deletion_value": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "has_deletion": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.bool"
+        },
+        "deletion_mean": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "profile": {
+          "shape": [
+            1,
+            23,
+            33
+          ],
+          "dtype": "torch.float32"
+        },
+        "msa_mask": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "deletion_mean_affinity": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "profile_affinity": {
+          "shape": [
+            1,
+            23,
+            33
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_restype": {
+          "shape": [
+            1,
+            1,
+            23,
+            33
+          ],
+          "dtype": "torch.int64"
+        },
+        "template_frame_rot": {
+          "shape": [
+            1,
+            1,
+            23,
+            3,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_frame_t": {
+          "shape": [
+            1,
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_cb": {
+          "shape": [
+            1,
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_ca": {
+          "shape": [
+            1,
+            1,
+            23,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_mask_cb": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_mask_frame": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "template_mask": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "query_to_template": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.int64"
+        },
+        "visibility_ids": {
+          "shape": [
+            1,
+            1,
+            23
+          ],
+          "dtype": "torch.float32"
+        },
+        "ensemble_ref_idxs": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.int64"
+        },
+        "rdkit_bounds_index": {
+          "shape": [
+            1,
+            2,
+            3
+          ],
+          "dtype": "torch.int64"
+        },
+        "rdkit_bounds_bond_mask": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "torch.bool"
+        },
+        "rdkit_bounds_angle_mask": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "torch.bool"
+        },
+        "rdkit_upper_bounds": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "rdkit_lower_bounds": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "torch.float32"
+        },
+        "chiral_atom_index": {
+          "shape": [
+            1,
+            4,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "chiral_reference_mask": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.bool"
+        },
+        "chiral_atom_orientations": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.bool"
+        },
+        "stereo_bond_index": {
+          "shape": [
+            1,
+            4,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "stereo_reference_mask": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.bool"
+        },
+        "stereo_bond_orientations": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.bool"
+        },
+        "planar_bond_index": {
+          "shape": [
+            1,
+            6,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "planar_ring_5_index": {
+          "shape": [
+            1,
+            5,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "planar_ring_6_index": {
+          "shape": [
+            1,
+            6,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "connected_chain_index": {
+          "shape": [
+            1,
+            2,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "connected_atom_index": {
+          "shape": [
+            1,
+            2,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "symmetric_chain_index": {
+          "shape": [
+            1,
+            2,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "contact_pair_index": {
+          "shape": [
+            1,
+            2,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "contact_union_index": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.int64"
+        },
+        "contact_negation_mask": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.bool"
+        },
+        "contact_thresholds": {
+          "shape": [
+            1,
+            0
+          ],
+          "dtype": "torch.float32"
+        }
+      }
+    },
+    "construct_load": {
+      "ignored_obsolete_hparams": [
+        "chain_sampling_args",
+        "compute_tistogram",
+        "confidence_imitate_trunk",
+        "confidence_regression",
+        "dynamic_args",
+        "guidance_args",
+        "ignore_ckpt_shape_mismatch",
+        "maximum_bond_distance",
+        "num_distograms",
+        "num_tistogram_axis",
+        "recycling_detach",
+        "relative_confidence_supervision_weight",
+        "representative_lddt",
+        "symmetry_correction_trunk",
+        "trunk_resolved_loss",
+        "use_miniformer",
+        "use_miniformer_plus"
+      ],
+      "inference_constructor_kwargs": {
+        "atom_s": 128,
+        "atom_z": 16,
+        "token_s": 384,
+        "token_z": 128,
+        "num_bins": 64,
+        "training_args": {
+          "recycling_steps": 5,
+          "sampling_steps": 200,
+          "diffusion_multiplicity": 16,
+          "diffusion_samples": 1,
+          "affinity_loss_weight": 1.0,
+          "confidence_loss_weight": 0.0001,
+          "diffusion_loss_weight": 4.0,
+          "distogram_loss_weight": 0.03,
+          "bfactor_loss_weight": 0.0,
+          "affinity_groups_weight": {
+            "0": 15.0,
+            "1": 1.0,
+            "2": 1.0,
+            "3": 1.0,
+            "4": 1.0
+          },
+          "adam_beta_1": 0.9,
+          "adam_beta_2": 0.95,
+          "adam_eps": 1e-08,
+          "lr_scheduler": "af3",
+          "base_lr": 1e-06,
+          "max_lr": 0.0001,
+          "lr_warmup_no_steps": 1000,
+          "lr_start_decay_after_n_steps": 50000,
+          "lr_decay_every_n_steps": 50000,
+          "lr_decay_factor": 0.95,
+          "weight_decay": 0.001,
+          "weight_decay_exclude": true,
+          "symmetry_correction": false
+        },
+        "validation_args": {
+          "recycling_steps": 5,
+          "sampling_steps": 200,
+          "diffusion_samples": 1,
+          "symmetry_correction": false
+        },
+        "embedder_args": {
+          "atom_encoder_depth": 3,
+          "atom_encoder_heads": 4,
+          "add_mol_type_feat": true,
+          "add_method_conditioning": true,
+          "add_modified_flag": true,
+          "add_cyclic_flag": true
+        },
+        "msa_args": {
+          "msa_s": 64,
+          "msa_blocks": 4,
+          "msa_dropout": 0.0,
+          "z_dropout": 0.0,
+          "use_paired_feature": true,
+          "pairwise_head_width": 32,
+          "pairwise_num_heads": 4,
+          "activation_checkpointing": false,
+          "offload_to_cpu": false,
+          "subsample_msa": false,
+          "num_subsampled_msa": 1024
+        },
+        "pairformer_args": {
+          "num_blocks": 64,
+          "num_heads": 16,
+          "dropout": 0.0,
+          "activation_checkpointing": false,
+          "offload_to_cpu": false,
+          "v2": true
+        },
+        "score_model_args": {
+          "sigma_data": 16,
+          "dim_fourier": 256,
+          "atom_encoder_depth": 3,
+          "atom_encoder_heads": 4,
+          "token_transformer_depth": 24,
+          "token_transformer_heads": 16,
+          "atom_decoder_depth": 3,
+          "atom_decoder_heads": 4,
+          "conditioning_transition_layers": 2,
+          "transformer_post_ln": false,
+          "activation_checkpointing": true
+        },
+        "diffusion_process_args": {
+          "gamma_0": 0.8,
+          "gamma_min": 1.0,
+          "noise_scale": 1.003,
+          "rho": 7,
+          "step_scale": 1.5,
+          "sigma_min": 0.0001,
+          "sigma_max": 160.0,
+          "sigma_data": 16.0,
+          "P_mean": -1.2,
+          "P_std": 1.5,
+          "coordinate_augmentation": true,
+          "alignment_reverse_diff": true,
+          "synchronize_sigmas": true
+        },
+        "diffusion_loss_args": {
+          "add_smooth_lddt_loss": true,
+          "add_bond_loss": false,
+          "nucleotide_loss_weight": 5.0,
+          "ligand_loss_weight": 10.0,
+          "filter_by_plddt": 0.0
+        },
+        "confidence_model_args": {
+          "use_gaussian": false,
+          "num_dist_bins": 64,
+          "max_dist": 22,
+          "use_miniformer": false,
+          "no_trunk_feats": false,
+          "add_s_to_z_prod": true,
+          "add_s_input_to_s": true,
+          "use_s_diffusion": false,
+          "add_z_input_to_z": true,
+          "pairformer_args": {
+            "num_blocks": 8,
+            "num_heads": 16,
+            "dropout": 0.25,
+            "v2": true
+          },
+          "confidence_args": {
+            "num_plddt_bins": 50,
+            "num_pde_bins": 64,
+            "num_pae_bins": 64,
+            "relative_confidence": "none",
+            "use_separate_heads": true
+          }
+        },
+        "num_val_datasets": 1,
+        "atom_feature_dim": 388,
+        "template_args": {
+          "template_dim": 64,
+          "template_blocks": 2,
+          "activation_checkpointing": false,
+          "use_trifast": true
+        },
+        "confidence_prediction": true,
+        "affinity_prediction": true,
+        "token_level_confidence": true,
+        "alpha_pae": 1.0,
+        "structure_prediction_training": false,
+        "skip_run_structure": false,
+        "run_trunk_and_structure": true,
+        "validate_structure": false,
+        "atoms_per_window_queries": 32,
+        "atoms_per_window_keys": 128,
+        "compile_pairformer": false,
+        "compile_structure": false,
+        "compile_confidence": false,
+        "compile_affinity": false,
+        "compile_msa": false,
+        "exclude_ions_from_lddt": true,
+        "ema": false,
+        "ema_decay": 0.995,
+        "min_dist": 2.0,
+        "max_dist": 22.0,
+        "predict_args": {
+          "recycling_steps": 5,
+          "sampling_steps": 200,
+          "diffusion_samples": 3,
+          "max_parallel_samples": 1,
+          "write_confidence_summary": false,
+          "write_full_pae": true,
+          "write_full_pde": true
+        },
+        "fix_sym_check": true,
+        "cyclic_pos_enc": true,
+        "aggregate_distogram": true,
+        "bond_type_feature": true,
+        "use_no_atom_char": false,
+        "no_random_recycling_training": true,
+        "use_atom_backbone_feat": false,
+        "use_residue_feats_atoms": false,
+        "conditioning_cutoff_min": 4.0,
+        "conditioning_cutoff_max": 20.0,
+        "use_templates": false,
+        "compile_templates": false,
+        "predict_bfactor": false,
+        "log_loss_every_steps": 50,
+        "checkpoint_diffusion_conditioning": true,
+        "use_templates_v2": false,
+        "affinity_ensemble": true,
+        "affinity_mw_correction": false,
+        "affinity_model_args1": {
+          "use_cross_transformer": false,
+          "num_dist_bins": 64,
+          "max_dist": 22,
+          "groups": {
+            "0": 1,
+            "1": 4,
+            "2": 6,
+            "3": 4,
+            "4": 1
+          },
+          "pairformer_args": {
+            "num_blocks": 8,
+            "dropout": 0.25,
+            "activation_checkpointing": true,
+            "use_trifast": true
+          },
+          "transformer_args": {
+            "num_blocks": 12,
+            "num_heads": 8,
+            "token_s": 384,
+            "activation_checkpointing": true
+          }
+        },
+        "affinity_model_args2": {
+          "use_cross_transformer": false,
+          "num_dist_bins": 64,
+          "max_dist": 22,
+          "groups": {
+            "0": 1,
+            "1": 4,
+            "2": 6,
+            "3": 4,
+            "4": 1
+          },
+          "pairformer_args": {
+            "num_blocks": 4,
+            "dropout": 0.25,
+            "activation_checkpointing": true,
+            "use_trifast": true
+          },
+          "transformer_args": {
+            "num_blocks": 12,
+            "num_heads": 8,
+            "token_s": 384,
+            "activation_checkpointing": true
+          }
+        },
+        "use_kernels": false,
+        "steering_args": {
+          "fk_steering": false,
+          "num_particles": 3,
+          "fk_lambda": 4.0,
+          "fk_resampling_interval": 3,
+          "physical_guidance_update": false,
+          "contact_guidance_update": false,
+          "num_gd_steps": 20
+        }
+      },
+      "parameters": 515055240,
+      "buffers": 190,
+      "construct_and_load_seconds": 6.531092749995878
+    },
+    "predict_step": {
+      "seconds": 17.394362874998478,
+      "outputs": {
+        "exception": false,
+        "masks": {
+          "shape": [
+            1,
+            160
+          ],
+          "dtype": "torch.float32",
+          "sha256": "2c9a3959cda51c89e7092758f5b1a2cd381c85926e2bddc5e4d12748ec4eea1a",
+          "numel": 160,
+          "finite": true,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "token_masks": {
+          "shape": [
+            1,
+            23
+          ],
+          "dtype": "torch.float32",
+          "sha256": "ea2cdb38f18bd23b566c7831694d2bd584985cc3aea1b6e8ee38b4c8a9a956e6",
+          "numel": 23,
+          "finite": true,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "s": {
+          "shape": [
+            1,
+            23,
+            384
+          ],
+          "dtype": "torch.float32",
+          "sha256": "2eedd68cdaee775848d3f8bf89ae1cb9d18dd18c1453366e13d07ce05c247eed",
+          "numel": 8832,
+          "finite": true,
+          "min": -1003.5098266601562,
+          "max": 353.2774658203125
+        },
+        "z": {
+          "shape": [
+            1,
+            23,
+            23,
+            128
+          ],
+          "dtype": "torch.float32",
+          "sha256": "649eb81cfbf0f3938a551e4558863efd28201325e86ed24c849e2fa332fc220c",
+          "numel": 67712,
+          "finite": true,
+          "min": -518.3495483398438,
+          "max": 390.6178894042969
+        },
+        "coords": {
+          "shape": [
+            3,
+            160,
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "5f893b5c8fcfaaa19caff24411808d01a0d7cec9d08ad7fbf8eb78f3cc3f78e6",
+          "numel": 1440,
+          "finite": true,
+          "min": -21.796062469482422,
+          "max": 17.642539978027344
+        },
+        "pde": {
+          "shape": [
+            3,
+            23,
+            23
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f97d07647a95af8daf6c4e0153398802dd74c8fc0019530ce010147b8998fcc7",
+          "numel": 1587,
+          "finite": true,
+          "min": 0.25,
+          "max": 2.8200204372406006
+        },
+        "plddt": {
+          "shape": [
+            3,
+            23
+          ],
+          "dtype": "torch.float32",
+          "sha256": "8fc5e661e20bdbab9f2aab7b3c675b996082f63853ac71a5dcd5282ee76635ff",
+          "numel": 69,
+          "finite": true,
+          "min": 0.46248310804367065,
+          "max": 0.9796276688575745
+        },
+        "confidence_score": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "5e749f523840223cf79abd602a951cf5b4562ffa70876f6a499258461212c6b5",
+          "numel": 3,
+          "finite": true,
+          "min": 0.7239473462104797,
+          "max": 0.7722210884094238
+        },
+        "complex_plddt": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "18d7668700ff5be3a55fa44abdd217ce3ee6cdda280d1ce3cfd5e5af34944916",
+          "numel": 3,
+          "finite": true,
+          "min": 0.8746421933174133,
+          "max": 0.9129191637039185
+        },
+        "complex_iplddt": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "9778892ba0f7c5786f52c3208bd4c20a6f86d96e21064bdaca31ce2bb447c0ce",
+          "numel": 3,
+          "finite": true,
+          "min": 0.6522501111030579,
+          "max": 0.7938107252120972
+        },
+        "complex_pde": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "9a249dafcc5888a45929a74688303cb609e2b94f45028ef5ba857c33c3a205e2",
+          "numel": 3,
+          "finite": true,
+          "min": 0.48246800899505615,
+          "max": 0.5370068550109863
+        },
+        "complex_ipde": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "eee30b7a56d2e988bc29c5892d591033ff0a34f0ba721533bc2990045a3a3b02",
+          "numel": 3,
+          "finite": true,
+          "min": 1.6644307374954224,
+          "max": 2.067333459854126
+        },
+        "pae": {
+          "shape": [
+            3,
+            23,
+            23
+          ],
+          "dtype": "torch.float32",
+          "sha256": "a1da5b0fa4722ddf06b631b85550c10e41accead9a39c7a7b935539951ac5439",
+          "numel": 1587,
+          "finite": true,
+          "min": 0.25,
+          "max": 19.028831481933594
+        },
+        "ptm": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "b7bd33f111cd60a8c6386879123e4143d7f80580a3d044435bd7f44cb83c84bd",
+          "numel": 3,
+          "finite": true,
+          "min": 0.67586350440979,
+          "max": 0.6970216631889343
+        },
+        "iptm": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "363c5c1425536c5e855606806eeae8f4f05eb644fb71bebac2b6e7a087951fad",
+          "numel": 3,
+          "finite": true,
+          "min": 0.1211678683757782,
+          "max": 0.24564296007156372
+        },
+        "ligand_iptm": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "363c5c1425536c5e855606806eeae8f4f05eb644fb71bebac2b6e7a087951fad",
+          "numel": 3,
+          "finite": true,
+          "min": 0.1211678683757782,
+          "max": 0.24564296007156372
+        },
+        "protein_iptm": {
+          "shape": [
+            3
+          ],
+          "dtype": "torch.float32",
+          "sha256": "15ec7bf0b50732b49f8228e07d24365338f9e3ab994b00af08e5a3bffe55fd8b",
+          "numel": 3,
+          "finite": true,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": {
+              "shape": [
+                3
+              ],
+              "dtype": "torch.float32",
+              "sha256": "e6c87e2a1f1ddf4d4d46fe31240a5c81ea390f1ebee806b8867b4e1478d310f3",
+              "numel": 3,
+              "finite": true,
+              "min": 0.7529668807983398,
+              "max": 0.7744027972221375
+            },
+            "1": {
+              "shape": [
+                3
+              ],
+              "dtype": "torch.float32",
+              "sha256": "0729083f1d11b841e2460ec807457dcdd1f78f9efc87f585dee56e9d90746a18",
+              "numel": 3,
+              "finite": true,
+              "min": 0.018358489498496056,
+              "max": 0.04163331910967827
+            }
+          },
+          "1": {
+            "0": {
+              "shape": [
+                3
+              ],
+              "dtype": "torch.float32",
+              "sha256": "363c5c1425536c5e855606806eeae8f4f05eb644fb71bebac2b6e7a087951fad",
+              "numel": 3,
+              "finite": true,
+              "min": 0.1211678683757782,
+              "max": 0.24564296007156372
+            },
+            "1": {
+              "shape": [
+                3
+              ],
+              "dtype": "torch.float32",
+              "sha256": "8edec2c146e5afa762c04aaf46675c81a058a93565c2566fdea39e02588f5b15",
+              "numel": 3,
+              "finite": true,
+              "min": 0.84816974401474,
+              "max": 0.8674932718276978
+            }
+          }
+        },
+        "affinity_pred_value": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "639cb3e16d9c652f2d426600cfbaecc4f3ff6ea026c56bc7e842d024d139647e",
+          "numel": 1,
+          "finite": true,
+          "min": -0.148633673787117,
+          "max": -0.148633673787117
+        },
+        "affinity_probability_binary": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "43d5de1f2e2701102fdcdcd57b7be16d61e06d4663560badaab54109f17c288b",
+          "numel": 1,
+          "finite": true,
+          "min": 0.14884386956691742,
+          "max": 0.14884386956691742
+        },
+        "affinity_pred_value1": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "18df54112024ffe2344268f28ffaec7066506bfbbb0070e608533a7d7dd80212",
+          "numel": 1,
+          "finite": true,
+          "min": -0.16595067083835602,
+          "max": -0.16595067083835602
+        },
+        "affinity_probability_binary1": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f45e730d5d168cbeb52586cbfb88ea85a614dc292634e36f34799c773e29907a",
+          "numel": 1,
+          "finite": true,
+          "min": 0.0007463318761438131,
+          "max": 0.0007463318761438131
+        },
+        "affinity_pred_value2": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "e29eb34245c351561c81629062b9a7ddcd40b2b38a510f8ce96df67ce15d6623",
+          "numel": 1,
+          "finite": true,
+          "min": -0.131316676735878,
+          "max": -0.131316676735878
+        },
+        "affinity_probability_binary2": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "f1db042aa6bba7b1d1253a7940d24754f4a59255c9f30d6822b8ab85f6192c65",
+          "numel": 1,
+          "finite": true,
+          "min": 0.2969413995742798,
+          "max": 0.2969413995742798
+        }
+      },
+      "finite_tensor_leaves": 27
+    },
+    "native_writer": {
+      "files": [
+        "predictions/tiny_complex/affinity_tiny_complex.json"
+      ]
+    }
+  },
+  "versions": {
+    "torch": "2.14.0",
+    "boltz": "2.2.1",
+    "numpy": "1.26.4",
+    "rdkit": "2026.3.6",
+    "pytorch-lightning": "2.5.0"
+  },
+  "mps_available": true,
+  "accepted": true
+}

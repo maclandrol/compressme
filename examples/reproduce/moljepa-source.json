@@ -1,0 +1,29 @@
+{
+  "source_repository": "https://huggingface.co/Flogrammer/Mol-JEPA",
+  "revision": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+  "license": "CC-BY-NC-4.0",
+  "upstream_code_files_unmodified": [
+    "modeling_moljepa.py",
+    "configuration_moljepa.py",
+    "collator.py",
+    "data.py",
+    "config.json",
+    "README.md"
+  ],
+  "local_additions": [
+    "__init__.py",
+    "SOURCE.json",
+    "LICENSE.txt"
+  ],
+  "checkpoint_included": false,
+  "sha256": {
+    "LICENSE.txt": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+    "README.md": "93192e45c97b928610e8040c3e1ca256646c5e13f7fdf33f9d6512888a76a63d",
+    "__init__.py": "790a096e3c1a9e401629848d66aac2ce34c2e09e91f8cbc5da46fba89563fa02",
+    "collator.py": "7fee36ea055ad42f5413f4f5785965c94572782297efc36536f59e36907b8d3b",
+    "config.json": "b325b094e4c2c7b7d41fb3880b2963cdc34d14af9846cdbeca4b26ed34716c3e",
+    "configuration_moljepa.py": "018dc87dabcdac7c4a5a41ea31cd9abdd69e4a62d0be561dfc213eaab2f98fde",
+    "data.py": "0a42442271324795549273ad3c43bd1a045f1fcae295c8df1bf93673e4447e21",
+    "modeling_moljepa.py": "89eed5f7ebd458b2d4e6a1e4ad90aed275b7b35bfaa88f4a85a59833e57a0d4d"
+  }
+}

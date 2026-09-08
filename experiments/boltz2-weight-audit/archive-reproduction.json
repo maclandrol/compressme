@@ -1,0 +1,5 @@
+{
+  "archive_probe_cpu_alias_report_matches_historical": true,
+  "archive_probe_cpu_bank_report_matches_historical": true,
+  "notes": "Portable copies use bundled tensor bytes and explicit new output paths. Only the alias probe explanatory scope sentence was then updated; its math and results are unchanged. CPU/MPS bank measurements remain component-only."
+}

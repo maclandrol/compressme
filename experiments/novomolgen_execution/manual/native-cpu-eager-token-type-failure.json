@@ -1,0 +1,612 @@
+{
+  "scope": "Original native Llama checkpoint API smoke only; no compression, timing or molecular-quality claim",
+  "python": "3.12.14",
+  "torch": "2.14.0",
+  "transformers": "4.46.2",
+  "tokenizers": "0.20.3",
+  "device": "cpu",
+  "dtype": "float32",
+  "attention_implementation": "eager",
+  "model_class": "LlamaForCausalLM",
+  "class_source": "/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/models/llama/modeling_llama.py",
+  "forward_signature": "(input_ids: torch.LongTensor = None, attention_mask: Optional[torch.Tensor] = None, position_ids: Optional[torch.LongTensor] = None, past_key_values: Union[transformers.cache_utils.Cache, List[torch.FloatTensor], NoneType] = None, inputs_embeds: Optional[torch.FloatTensor] = None, labels: Optional[torch.LongTensor] = None, use_cache: Optional[bool] = None, output_attentions: Optional[bool] = None, output_hidden_states: Optional[bool] = None, return_dict: Optional[bool] = None, cache_position: Optional[torch.LongTensor] = None, num_logits_to_keep: int = 0, **loss_kwargs) -> Union[Tuple, transformers.modeling_outputs.CausalLMOutputWithPast]",
+  "checkpoint_sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+  "unique_parameters": 31556096,
+  "stages": {
+    "all_forward_outputs": {
+      "keys": [
+        "loss",
+        "logits",
+        "past_key_values",
+        "hidden_states",
+        "attentions"
+      ],
+      "loss": 5.189338684082031,
+      "logits": {
+        "shape": [
+          2,
+          9,
+          84
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "finite": true
+      },
+      "hidden_states": [
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            9,
+            512
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        }
+      ],
+      "attentions": [
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        {
+          "shape": [
+            2,
+            8,
+            9,
+            9
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        }
+      ],
+      "cache": {
+        "type": "tuple",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      }
+    },
+    "return_dict_false": {
+      "tuple_length": 5,
+      "logits_match": true,
+      "cache": {
+        "type": "tuple",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      }
+    },
+    "inputs_embeds": {
+      "input_ids_vs_equivalent_embeds": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "bitwise": true,
+        "allclose_1e5": true
+      },
+      "arbitrary_continuous_embeds": {
+        "shape": [
+          2,
+          9,
+          84
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "finite": true
+      }
+    },
+    "legacy_cache": {
+      "prefill_cache": {
+        "type": "tuple",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      },
+      "step_cache": {
+        "type": "tuple",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            10,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            10,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      },
+      "last_logits_vs_uncached": {
+        "max_abs": 1.6570091247558594e-05,
+        "relative_l2": 5.381598415903564e-07,
+        "bitwise": false,
+        "allclose_1e5": true
+      },
+      "last_hidden_vs_uncached": {
+        "max_abs": 3.5762786865234375e-06,
+        "relative_l2": 6.992584489257203e-07,
+        "bitwise": false,
+        "allclose_1e5": true
+      },
+      "step_attention_shape": [
+        2,
+        8,
+        1,
+        10
+      ]
+    },
+    "dynamic_cache": {
+      "prefill_cache": {
+        "type": "DynamicCache",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            9,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      },
+      "step_cache": {
+        "type": "DynamicCache",
+        "layers": 12,
+        "first_key": {
+          "shape": [
+            2,
+            8,
+            10,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "first_value": {
+          "shape": [
+            2,
+            8,
+            10,
+            64
+          ],
+          "dtype": "torch.float32",
+          "device": "cpu",
+          "finite": true
+        },
+        "all_finite": true
+      },
+      "last_logits_vs_uncached": {
+        "max_abs": 1.6570091247558594e-05,
+        "relative_l2": 5.381598415903564e-07,
+        "bitwise": false,
+        "allclose_1e5": true
+      },
+      "last_hidden_vs_uncached": {
+        "max_abs": 3.5762786865234375e-06,
+        "relative_l2": 6.992584489257203e-07,
+        "bitwise": false,
+        "allclose_1e5": true
+      },
+      "step_attention_shape": [
+        2,
+        8,
+        1,
+        10
+      ]
+    },
+    "num_logits_to_keep": {
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bitwise": true,
+      "allclose_1e5": true
+    }
+  },
+  "failures": [
+    {
+      "stage": "greedy_generation",
+      "type": "ValueError",
+      "message": "The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)",
+      "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 69, in stage\n    report['stages'][name]=fn()\n                           ^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 157, in <lambda>\n    ('greedy_generation',lambda:generate('greedy')),('beam_generation',lambda:generate('beam')),\n                                ^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 140, in generate\n    output=model.generate(**encoded,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/manu/Code/compressme/.venv-state/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1972, in generate\n    self._validate_model_kwargs(model_kwargs.copy())\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1360, in _validate_model_kwargs\n    raise ValueError(\nValueError: The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)\n"
+    },
+    {
+      "stage": "beam_generation",
+      "type": "ValueError",
+      "message": "The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)",
+      "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 69, in stage\n    report['stages'][name]=fn()\n                           ^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 157, in <lambda>\n    ('greedy_generation',lambda:generate('greedy')),('beam_generation',lambda:generate('beam')),\n                                                                              ^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 140, in generate\n    output=model.generate(**encoded,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/manu/Code/compressme/.venv-state/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1972, in generate\n    self._validate_model_kwargs(model_kwargs.copy())\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1360, in _validate_model_kwargs\n    raise ValueError(\nValueError: The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)\n"
+    },
+    {
+      "stage": "sampled_generation",
+      "type": "ValueError",
+      "message": "The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)",
+      "traceback": "Traceback (most recent call last):\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 69, in stage\n    report['stages'][name]=fn()\n                           ^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 158, in <lambda>\n    ('sampled_generation',lambda:generate('sample'))]:stage(name,fn)\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/native_smoke.py\", line 140, in generate\n    output=model.generate(**encoded,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/manu/Code/compressme/.venv-state/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1972, in generate\n    self._validate_model_kwargs(model_kwargs.copy())\n  File \"/private/tmp/compressme-agent-novomolgen-runtime/deps/transformers/generation/utils.py\", line 1360, in _validate_model_kwargs\n    raise ValueError(\nValueError: The following `model_kwargs` are not used by the model: ['token_type_ids'] (note: typos in the generate arguments will also show up in this list)\n"
+    }
+  ],
+  "prompts": {
+    "strings": [
+      "<bos>CCO",
+      "<bos>c1ccccc1"
+    ],
+    "input_ids": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        4,
+        9
+      ],
+      [
+        2,
+        7,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8
+      ]
+    ],
+    "attention_mask": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "contains_unk": false
+  },
+  "all_stages_completed": false,
+  "python_warnings": [
+    "unclosed file <_io.BufferedReader name='/private/tmp/compressme-models/novomolgen32-atomwise/model.safetensors'>"
+  ]
+}

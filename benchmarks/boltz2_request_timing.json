@@ -1,0 +1,54 @@
+{
+  "prototype_sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+  "rows": [
+    {
+      "device": "cpu",
+      "model": "confidence",
+      "rounds": 3,
+      "original_median_s": 11.364707125001587,
+      "candidate_median_s": 10.887631292018341,
+      "ratio_of_medians": 1.0438181474177022,
+      "paired_ratio_median": 0.9798654109123035,
+      "paired_ratio_min": 0.9569365894742871,
+      "paired_ratio_max": 1.0438181474177022,
+      "all_timed_outputs_byte_equal": true
+    },
+    {
+      "device": "cpu",
+      "model": "affinity",
+      "rounds": 3,
+      "original_median_s": 21.741962249972858,
+      "candidate_median_s": 20.995279458002187,
+      "ratio_of_medians": 1.0355643178488905,
+      "paired_ratio_median": 1.031132357143592,
+      "paired_ratio_min": 1.0138347587666527,
+      "paired_ratio_max": 1.0635909313653318,
+      "all_timed_outputs_byte_equal": true
+    },
+    {
+      "device": "mps",
+      "model": "confidence",
+      "rounds": 3,
+      "original_median_s": 8.176907832996221,
+      "candidate_median_s": 8.340168166003423,
+      "ratio_of_medians": 0.9804248152126367,
+      "paired_ratio_median": 1.0670392145702114,
+      "paired_ratio_min": 0.8300409643489641,
+      "paired_ratio_max": 1.09377260463207,
+      "all_timed_outputs_byte_equal": true
+    },
+    {
+      "device": "mps",
+      "model": "affinity",
+      "rounds": 3,
+      "original_median_s": 10.880359041999327,
+      "candidate_median_s": 10.96450425000512,
+      "ratio_of_medians": 0.9923256714496915,
+      "paired_ratio_median": 1.0000566939018891,
+      "paired_ratio_min": 0.9923256714496915,
+      "paired_ratio_max": 1.006729344414882,
+      "all_timed_outputs_byte_equal": true
+    }
+  ],
+  "conclusion": "No GPU speed gain on this fixture. CPU affinity shows a small positive result in three pairs; confidence is inconsistent. Not evidence for a general or default acceleration claim."
+}

@@ -1,0 +1,36 @@
+{
+  "repository": "boltz-community/boltz-2",
+  "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "checkpoint_metadata_reader": "inert symbolic opcode interpreter, no unpickling",
+  "upstream": {
+    "boltz2_conf.ckpt": {
+      "file_bytes": 2286561469,
+      "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+      "publisher_hash_verified": true,
+      "state_dict_named_values": 521047871,
+      "state_dict_storage_values": 521047871,
+      "independently_byte_deduplicated_inference_values": 506725055
+    },
+    "boltz2_aff.ckpt": {
+      "file_bytes": 2062139170,
+      "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+      "publisher_hash_verified": true,
+      "state_dict_named_values": 529378245,
+      "state_dict_storage_values": 515055429,
+      "independently_byte_deduplicated_inference_values": 515055303
+    }
+  },
+  "equality_check": "SHA256 buckets followed by exact byte comparison of every reused blob",
+  "common_tensor_names": 5019,
+  "bitwise_equal_common_tensor_names": 5019,
+  "different_common_tensor_names": [],
+  "common_named_equal_values": 520636223,
+  "independent_deduplicated_inference_values": 1021780358,
+  "joint_unique_values": 515466951,
+  "joint_unique_blob_count": 5554,
+  "storage_scope": "Joint inference tensor distribution; no claim of less arithmetic or shared resident model parameters.",
+  "joint_saved_values_over_independent_deduplicated_inference": 506313407,
+  "joint_fraction_saved_over_independent_deduplicated_inference": 0.495520786865625,
+  "artifact_tensor_file_bytes": 2062620108,
+  "artifact_tensor_file_sha256": "8cf4b5a7766d58793111d15f258cc73256217db539ca9261b53ce1c10a16b214"
+}

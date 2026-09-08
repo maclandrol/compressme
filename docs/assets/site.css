@@ -1,0 +1,8 @@
+:root { --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.col-md-9 img { max-width: 100%; height: auto; }
+.col-md-9 { line-height: 1.65; }
+pre { padding: 1rem; border-radius: .35rem; }
+table { display: block; max-width: 100%; overflow-x: auto; }
+th, td { vertical-align: top; }
+h1, h2, h3 { letter-spacing: -.025em; }
+.admonition { border-left: 3px solid #466d8d; padding: .5rem 1rem; }

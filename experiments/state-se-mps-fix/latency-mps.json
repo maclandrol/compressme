@@ -1,0 +1,324 @@
+{
+  "device": "mps",
+  "torch": "2.14.0",
+  "cpu_threads": 4,
+  "rounds": 3,
+  "scope": "Warmed interleaved original complete numerical batch API, fresh gene/count values per pair; synchronization included at timing boundaries. Loading and external input construction excluded; internal decode/transfer included.",
+  "no_peak_request_memory_measurement": true,
+  "persistent_decoded_cache_bytes": 0,
+  "cases": [
+    {
+      "B": 1,
+      "T": 32,
+      "Q": 31,
+      "pairs": [
+        {
+          "order": [
+            "packed",
+            "original"
+          ],
+          "ms": {
+            "packed": 75.0662500213366,
+            "original": 11.829291004687548
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        },
+        {
+          "order": [
+            "packed",
+            "original"
+          ],
+          "ms": {
+            "packed": 77.38170801894739,
+            "original": 14.217250020010397
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        },
+        {
+          "order": [
+            "original",
+            "packed"
+          ],
+          "ms": {
+            "original": 14.49916698038578,
+            "packed": 84.70766700338572
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        }
+      ],
+      "original_median_ms": 14.217250020010397,
+      "packed_median_ms": 77.38170801894739,
+      "packed_over_original_latency": 5.442804192796407,
+      "original_over_packed_speed": 0.18372882150041472
+    },
+    {
+      "B": 1,
+      "T": 2048,
+      "Q": 31,
+      "pairs": [
+        {
+          "order": [
+            "original",
+            "packed"
+          ],
+          "ms": {
+            "original": 236.6357079881709,
+            "packed": 1147.5707920035347
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        },
+        {
+          "order": [
+            "original",
+            "packed"
+          ],
+          "ms": {
+            "original": 233.4149999951478,
+            "packed": 1137.211875000503
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        },
+        {
+          "order": [
+            "original",
+            "packed"
+          ],
+          "ms": {
+            "original": 215.26766699389555,
+            "packed": 1141.8889999913517
+          },
+          "byte_equal": true,
+          "metrics": {
+            "output[0]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[1]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[2]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[3]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            },
+            "output[4]": {
+              "relative_l2": 0.0,
+              "max_abs": 0.0,
+              "rmse": 0.0,
+              "exact": true,
+              "bitwise": true
+            }
+          }
+        }
+      ],
+      "original_median_ms": 233.4149999951478,
+      "packed_median_ms": 1141.8889999913517,
+      "packed_over_original_latency": 4.892097765846621,
+      "original_over_packed_speed": 0.2044112869087237
+    }
+  ],
+  "all_paired_outputs_byte_equal": true,
+  "source_sha256": "47a390a0a0350ee62d0ee8183d976dc2c5de02cc63f3b8e1d1de7d3f89443495",
+  "artifact_manifest_sha256": "a8e7df129c8b77e74172b0d62345324eeeb6f182f0c5b1d0cfc4070e72c7620e"
+}

@@ -1,0 +1,12 @@
+{
+  "device": "mps",
+  "mps_available": true,
+  "artifact": "/Users/manu/Code/compressme/artifacts/state-se-100m-cpu",
+  "model_inference_ran": false,
+  "accepted": false,
+  "test": "Current public loader guard only; no new numerical State SE GPU inference",
+  "loader_sha256": "c506b6e0d1b16c3af190f87b95dc24a04f6ed43b6e249d7714cee30d79c98889",
+  "manifest_sha256": "3c26c2c1e2fd1fcaae94870a0a55de03807f2f6d2ff0785202f8fb3d573ca7d7",
+  "status": "rejected_by_validated_device_guard",
+  "error": "State SE artifact is validated for ['cpu']; mps did not pass its numerical gate"
+}

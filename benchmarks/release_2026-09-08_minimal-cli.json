@@ -1,0 +1,194 @@
+{
+  "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+  "installed_distributions": [
+    [
+      "compressme",
+      "0.1.0"
+    ],
+    [
+      "numpy",
+      "2.5.3"
+    ],
+    [
+      "pip",
+      "25.0.1"
+    ],
+    [
+      "zstandard",
+      "0.25.0"
+    ]
+  ],
+  "physically_absent": [
+    "torch",
+    "safetensors",
+    "huggingface_hub",
+    "boltz",
+    "state",
+    "rdkit",
+    "torch_geometric",
+    "transformers",
+    "molfeat",
+    "anndata",
+    "lightning"
+  ],
+  "commands": [
+    {
+      "arguments": [
+        "targets",
+        "boltz2"
+      ],
+      "report": {
+        "id": "boltz2",
+        "audited_on": "2026-09-07",
+        "name": "Boltz-2",
+        "aliases": [
+          "boltz-2",
+          "boltz 2"
+        ],
+        "status": "pretrained_shared_bundle_byte_verified_cpu_mps",
+        "adapter_available": true,
+        "repository": "https://github.com/jwohlwend/boltz",
+        "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+        "hf_id": "boltz-community/boltz-2",
+        "hf_revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+        "contract": "Complete original confidence and affinity native batch APIs; immutable frozen FP32 parameters; all native tensor outputs retained",
+        "macos": "Native CPU and MPS full-schedule inference and fresh portable reload pass all 48 explicit output byte comparisons",
+        "blockers": [
+          "Large-complex activation memory and biological quality unbenchmarked",
+          "Cold load constructs both original architectures; pinned Boltz dependency and native chemistry assets remain required"
+        ],
+        "registered_storage_before_bytes": 4087121944,
+        "registered_storage_after_bytes": 2061868568,
+        "artifact": "artifacts/boltz2-shared",
+        "loader": "compressme.load_boltz2",
+        "priority": "Current main target; general storage sharing accepted; invariant computation byte-verified but optional because speed is inconsistent",
+        "tensor_file_bytes": 2062669224,
+        "lossless_packed_tensor_bytes": 1759531547,
+        "packing_note": "14.696% additional disk/transport saving from the already shared tensor file; complete restored bytes verified; no further resident weight or inference speed reduction",
+        "validation_scope": "One 20-residue protein plus ethanol fixture; FP32 native default sampling schedules. All 48 tensors byte-identical before/after sharing and fresh reload on each backend. 49.55% joint registered storage reduction, unchanged logical parameter count and arithmetic; no speedup or biological benchmark",
+        "in_scope": true
+      }
+    },
+    {
+      "arguments": [
+        "inspect",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.safetensors",
+        "--details",
+        "--sha256",
+        "--repo",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/repository",
+        "--report",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/inspection.json"
+      ],
+      "report": {
+        "source": "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.safetensors",
+        "kind": "safetensors",
+        "file_bytes": 80,
+        "header_bytes": 72,
+        "tensor_bytes": 8,
+        "tensor_count": 1,
+        "stored_elements": 2,
+        "dtype_counts": {
+          "F32": 1
+        },
+        "dtype_bytes": {
+          "F32": 8
+        },
+        "unverified_dtypes": [],
+        "metadata_keys": [],
+        "largest_tensors": [
+          {
+            "name": "x",
+            "dtype": "F32",
+            "shape": [
+              2
+            ],
+            "elements": 2,
+            "bytes": 8,
+            "data_offsets": [
+              0,
+              8
+            ]
+          }
+        ],
+        "tensor_values_read": false,
+        "code_executed": false,
+        "scope": "Storage metadata only; architecture, biological quality and rewrite eligibility are not inferred",
+        "tensors": [
+          {
+            "name": "x",
+            "dtype": "F32",
+            "shape": [
+              2
+            ],
+            "elements": 2,
+            "bytes": 8,
+            "data_offsets": [
+              0,
+              8
+            ]
+          }
+        ],
+        "sha256": "694430644ac84fee34459d0de165eca0a1fecab3ab0cc75f216e7ddf7b7c3c07",
+        "repository": {
+          "kind": "local_directory",
+          "path": "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/repository",
+          "python_files_inspected": 1,
+          "source_bytes_read": 59,
+          "counts": {
+            "classes": 1
+          },
+          "recognised_constructor_call_sites": {},
+          "truncated": false,
+          "code_executed": false,
+          "symlinks_followed": false,
+          "scope": "Bounded AST inventory, not a security audit or proof of rewrite eligibility"
+        }
+      }
+    },
+    {
+      "arguments": [
+        "pack",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.safetensors",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.cmprpack",
+        "--report",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/pack.json"
+      ],
+      "report": {
+        "raw_bytes": 80,
+        "packed_bytes": 143,
+        "sha256": "694430644ac84fee34459d0de165eca0a1fecab3ab0cc75f216e7ddf7b7c3c07",
+        "format": "CMPRPACK-v1",
+        "block_bytes": 1048576,
+        "status": "verified_lossless_file",
+        "output": "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.cmprpack",
+        "scope": "Disk/transport only; no resident-model memory or inference-speed reduction"
+      }
+    },
+    {
+      "arguments": [
+        "unpack",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/tiny.cmprpack",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/restored.safetensors",
+        "--max-output-bytes",
+        "80",
+        "--report",
+        "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/unpack.json"
+      ],
+      "report": {
+        "raw_bytes": 80,
+        "packed_bytes": 143,
+        "sha256": "694430644ac84fee34459d0de165eca0a1fecab3ab0cc75f216e7ddf7b7c3c07",
+        "format": "CMPRPACK-v1",
+        "block_bytes": 1048576,
+        "zstd_window_bytes": 80,
+        "status": "verified_lossless_file",
+        "output": "/private/tmp/compressme-release-package-audit/final/cli-x4xh0fm_/restored.safetensors",
+        "scope": "Disk/transport only; no resident-model memory or inference-speed reduction"
+      }
+    }
+  ],
+  "exact_reconstruction": true,
+  "semantic_help_without_torch": true,
+  "venv_source_inventory_exclusion": true
+}

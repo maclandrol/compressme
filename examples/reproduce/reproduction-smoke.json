@@ -1,0 +1,91 @@
+{
+  "format": "compressme-tutorial-reproduction-smoke-v1",
+  "date": "2026-09-08",
+  "scope": "Fresh actual-weight CPU builds/reloads and standalone helper checks; no biological benchmark or new timing claim",
+  "moljepa": {
+    "source_downloaded_from_pinned_HF": true,
+    "original_weights_cache_reused": true,
+    "source_revision": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+    "checkpoint_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14",
+    "parameters_before": 45406721,
+    "parameters_after": 19763160,
+    "packed_tensor_bytes": 67506691,
+    "build_and_constructor_reload_cases": 16,
+    "separate_accelerated_cpu_reload": true,
+    "separate_reload_examples": 16,
+    "max_abs": 4.0531158447265625e-06,
+    "scope": "64 distinct SMILES, both return_attn settings, all returned tensors"
+  },
+  "boltz2": {
+    "both_original_checkpoint_hashes_verified": true,
+    "large_downloads": false,
+    "converted_state_bytes": 2062620108,
+    "converted_state_sha256": "8cf4b5a7766d58793111d15f258cc73256217db539ca9261b53ce1c10a16b214",
+    "regenerated_mapping_manifest_sha256": "3c855681aa05d0d18ebeeb2335fe5850a66a03ba881eada1afcedfb60e13258c",
+    "canonical_chemistry_regenerated_from_verified_cached_archive": true,
+    "native_input_reparsed_each_run": true,
+    "new_artifact_tensor_bytes": 2062669224,
+    "registered_storage_before_bytes": 4087121944,
+    "registered_storage_after_bytes": 2061868568,
+    "new_artifact_build_byte_gate": true,
+    "fresh_process_new_artifact_reload_byte_gate": true,
+    "tensor_outputs_per_comparison": 48,
+    "schedules": {
+      "confidence": {
+        "recycling_steps": 3,
+        "sampling_steps": 200,
+        "diffusion_samples": 1,
+        "max_parallel_samples": 1,
+        "write_confidence_summary": true,
+        "write_full_pae": true,
+        "write_full_pde": true
+      },
+      "affinity": {
+        "recycling_steps": 5,
+        "sampling_steps": 200,
+        "diffusion_samples": 3,
+        "max_parallel_samples": 1,
+        "write_confidence_summary": false,
+        "write_full_pae": true,
+        "write_full_pde": true
+      }
+    },
+    "scope": "Complete native outputs for one freshly parsed protein+ligand fixture; same-device byte gate, no biological accuracy or speed claim"
+  },
+  "lightweight_tests": {
+    "passed": 8,
+    "command": "python -m pytest -q examples/reproduce/test_helpers.py"
+  },
+  "not_repeated_in_this_smoke": [
+    "MPS execution of these new tutorial entry points",
+    "Full20round historical wall-clock study"
+  ],
+  "historical_backend_evidence": "benchmarks/gpu_validation_2026-09-08_boltz2_mps.json and benchmarks/moljepa_runtime_macos.json",
+  "benchmark_cli_smoke": {
+    "accepted": true,
+    "device": "cpu",
+    "variants": [
+      "original",
+      "compressed",
+      "fast",
+      "production"
+    ],
+    "all_output_cases_per_variant": {
+      "original": 32,
+      "compressed": 32,
+      "fast": 32,
+      "production": 32
+    },
+    "workload_batch_sizes": [
+      1,
+      4,
+      32
+    ],
+    "return_attn_during_timing": false,
+    "warmups": 10,
+    "rounds": 1,
+    "recorded_round_count": false,
+    "scope": "Execution smoke for report-matching command; one round is not performance evidence",
+    "max_abs": 4.0531158447265625e-06
+  }
+}

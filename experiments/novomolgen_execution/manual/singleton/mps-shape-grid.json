@@ -1,0 +1,374 @@
+[
+  {
+    "batch": 1,
+    "length": 1,
+    "bulk": {
+      "equal": false,
+      "max_abs": 7.748603820800781e-07
+    },
+    "singleton": {
+      "equal": true,
+      "max_abs": 0.0
+    }
+  },
+  {
+    "batch": 1,
+    "length": 2,
+    "bulk": {
+      "equal": false,
+      "max_abs": 8.344650268554688e-07
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 3,
+    "bulk": {
+      "equal": false,
+      "max_abs": 3.337860107421875e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 4,
+    "bulk": {
+      "equal": false,
+      "max_abs": 3.337860107421875e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 6,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 8,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 9,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 12,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 1,
+    "length": 16,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 17,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 18,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 24,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 27,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 31,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 32,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 33,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 42,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 64,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 68,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 84,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 128,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 2,
+    "length": 1,
+    "bulk": {
+      "equal": false,
+      "max_abs": 8.344650268554688e-07
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 3,
+    "length": 1,
+    "bulk": {
+      "equal": false,
+      "max_abs": 3.337860107421875e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 4,
+    "length": 1,
+    "bulk": {
+      "equal": false,
+      "max_abs": 3.337860107421875e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 8,
+    "length": 1,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 2,
+    "length": 6,
+    "bulk": {
+      "equal": false,
+      "max_abs": 5.7220458984375e-06
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 1.7881393432617188e-07
+    }
+  },
+  {
+    "batch": 3,
+    "length": 9,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 4,
+    "length": 17,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 2,
+    "length": 42,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 32,
+    "length": 1,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  },
+  {
+    "batch": 1,
+    "length": 2048,
+    "bulk": {
+      "equal": true,
+      "max_abs": 0.0
+    },
+    "singleton": {
+      "equal": false,
+      "max_abs": 6.67572021484375e-06
+    }
+  }
+]

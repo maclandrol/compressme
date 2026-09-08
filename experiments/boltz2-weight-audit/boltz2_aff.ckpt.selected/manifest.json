@@ -1,0 +1,1869 @@
+{
+  "checkpoint": "boltz2_aff.ckpt",
+  "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "upstream_checkpoint_sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+  "full_checkpoint_hash_verified": false,
+  "validation": "pinned HTTP ranges and ZIP CRC, not a full-file SHA verification",
+  "storages": [
+    {
+      "name": "input_embedder.method_conditioning_init.weight",
+      "dtype": "float32",
+      "shape": [
+        12,
+        384
+      ],
+      "stride": [
+        384,
+        1
+      ],
+      "offset": 0,
+      "numel": 4608,
+      "storage_key": "79",
+      "storage_numel": 4608,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "79.bin",
+      "sha256": "a4f5613d040897a1f621bb8239448fd76ecfeb9d6276a1a2f000b394def72b4c",
+      "zip_crc": 3524258851
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.0.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3747",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3747.bin",
+      "sha256": "191240d3bf73ad5b70b51f1fb0c65c6dd887bc5def6b65a8921637bcaa89ccdc",
+      "zip_crc": 1809442525
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.0.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3748",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3748.bin",
+      "sha256": "153c98a513735f1366fa5eef54f93a1d45eba0b127a3eee4784e150c3779d57b",
+      "zip_crc": 2969259230
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.0.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3749",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3749.bin",
+      "sha256": "84739d070807ca200a4a5ac884797161fcd025b9204eee9e57e26cd6c6f1c5e2",
+      "zip_crc": 1070455017
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.1.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3750",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3750.bin",
+      "sha256": "deab1f51a7164ace39e8496cdfc6ad87d2acd97cbc2420f4e06cec9322582476",
+      "zip_crc": 1675119080
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.1.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3751",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3751.bin",
+      "sha256": "6d28b5657dbe5286eba38561896c982b2525a579a9591eb005f63c64f5c62594",
+      "zip_crc": 1212764917
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.1.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3752",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3752.bin",
+      "sha256": "5438481101f633f5fc00b88255825ae4b9c3c53eed26a12693d45531f64d3019",
+      "zip_crc": 1291863405
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.2.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3753",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3753.bin",
+      "sha256": "a0a97beaacfafe9ba6180f6fcba3e1192d7b204f57b900f62116eee0d52a1b2f",
+      "zip_crc": 3537653094
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.2.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3754",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3754.bin",
+      "sha256": "3dd2899c55f404607f42c4e7d62539b266a54b6b2565fca812a663b224edc0b7",
+      "zip_crc": 2481733089
+    },
+    {
+      "name": "diffusion_conditioning.atom_enc_proj_z.2.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3755",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3755.bin",
+      "sha256": "8ea8ebd45c0cd6e8f06fc9b66f73fed75de4846927356aaaa21236e722d0e662",
+      "zip_crc": 676452024
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.0.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3756",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3756.bin",
+      "sha256": "021b037213cc92767bc12892a35bf67bfe8e916bc35804e986923a02bb4b01ba",
+      "zip_crc": 25271423
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.0.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3757",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3757.bin",
+      "sha256": "2be91626c59cf1029993f53f2a7b6cc01e157cc40a6857695e3a0d7fde1755ce",
+      "zip_crc": 795567233
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.0.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3758",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3758.bin",
+      "sha256": "a368f73fb195ad0b61c085d8f5ea3938af46ba14f6672b503c9685b8521e516a",
+      "zip_crc": 3610780337
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.1.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3759",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3759.bin",
+      "sha256": "0b26c191746201272d73be57ff9de010a829102b53992e54106073cb5403e9c6",
+      "zip_crc": 3607381079
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.1.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3760",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3760.bin",
+      "sha256": "e284c04a150ca6db3984adee3b252e8b6f2f3e2ef11407db290d294bcb8acc46",
+      "zip_crc": 798912837
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.1.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3761",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3761.bin",
+      "sha256": "ae9537e906418a648d272eee66807fad94bb7163d6369a0ea963cf876c6e69c7",
+      "zip_crc": 4253450758
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.2.0.weight",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3762",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3762.bin",
+      "sha256": "8db0e57655ac603c010172f0c7ed4cd73222ac0cc7652c0c61d3489870b67bd4",
+      "zip_crc": 4068929406
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.2.0.bias",
+      "dtype": "float32",
+      "shape": [
+        16
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 16,
+      "storage_key": "3763",
+      "storage_numel": 16,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3763.bin",
+      "sha256": "f1f60a009bd537c85bbf81eaaac4969698163d26513de8e7f4560abc62f259cd",
+      "zip_crc": 908624858
+    },
+    {
+      "name": "diffusion_conditioning.atom_dec_proj_z.2.1.weight",
+      "dtype": "float32",
+      "shape": [
+        4,
+        16
+      ],
+      "stride": [
+        16,
+        1
+      ],
+      "offset": 0,
+      "numel": 64,
+      "storage_key": "3764",
+      "storage_numel": 64,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3764.bin",
+      "sha256": "7824e8eb3250ee237594e7c28f942d2a1e2b37eb9bb7d4095ff04af639296c47",
+      "zip_crc": 3191732018
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.0.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3765",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3765.bin",
+      "sha256": "522ca4030ff576961b1ac730f6d040043e15b0b0227e69ff1cb5c7897101921e",
+      "zip_crc": 1302533774
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.0.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3766",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3766.bin",
+      "sha256": "3f4d46ecfacd88f90ce64ee43033dc6c8a0fdcfc648d1b13ee9a0c667086c923",
+      "zip_crc": 409093980
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.0.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3767",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3767.bin",
+      "sha256": "264c2ef597c138f18795eb53ce38f63d873b2d0303caf1b6d3d13f4776cb02cb",
+      "zip_crc": 685005815
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.1.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3768",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3768.bin",
+      "sha256": "0561d2e61b22faa689d4e1e4ca2d0c1f6f1bbd33ad790436fda6895b37ca69a5",
+      "zip_crc": 1560778741
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.1.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3769",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3769.bin",
+      "sha256": "4159bf2398e4e45202d5802319c4d006b1a0831ad2dd124bb480422ffc1fb6f2",
+      "zip_crc": 4263815794
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.1.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3770",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3770.bin",
+      "sha256": "42554f1e8babab7a23b9870fc68907709b535815d67f526301e1166dc8ff1885",
+      "zip_crc": 3297549515
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.2.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3771",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3771.bin",
+      "sha256": "60f215ef85b6fe9a499fcb68a8fe6413db749d4a2064e424e49a59efe3deca51",
+      "zip_crc": 1398656489
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.2.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3772",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3772.bin",
+      "sha256": "112684c5420ac16da678d0a2f41c771afaa9e82baac47aaef2470a5b2dfc6e27",
+      "zip_crc": 1162953280
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.2.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3773",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3773.bin",
+      "sha256": "ad5106e9f1f33b3cbadbd34e690ddef3ea61872742cf9a29b31b5443a51e6ab0",
+      "zip_crc": 2226989688
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.3.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3774",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3774.bin",
+      "sha256": "3a225e13455683121fd5e771a92a7b2756ded6a1630a06b5aaf6b5bb619bee2c",
+      "zip_crc": 888808259
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.3.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3775",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3775.bin",
+      "sha256": "d5f93c3c21b98aed80e470af84a34f1c4483359539838f787eb1ea94b1a8cd50",
+      "zip_crc": 3877334834
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.3.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3776",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3776.bin",
+      "sha256": "1b37a8674f9c5c375847433605ea34f87cb005fb08b532be6cbb1c4ffb9f599d",
+      "zip_crc": 552564766
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.4.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3777",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3777.bin",
+      "sha256": "e19c721108bac4e72159c16b66f8317925345c222e01a06db4549576639fa2b2",
+      "zip_crc": 4261805741
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.4.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3778",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3778.bin",
+      "sha256": "0f9a7977ac8d130c18ce03a22c9848fb449013b97b3c00a76a21f8c7da0c0a47",
+      "zip_crc": 1134585502
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.4.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3779",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3779.bin",
+      "sha256": "4f901085e00fc4dc34389e9219651920c7636074234fcbe1af160b230c02cb77",
+      "zip_crc": 3436317191
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.5.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3780",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3780.bin",
+      "sha256": "dd38ee58f0e568dc671e637c60ee04deb24a985a363179bd6c68ccd880b3f07c",
+      "zip_crc": 2083892986
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.5.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3781",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3781.bin",
+      "sha256": "3e0d63930bbdbb6abd3e13c5d0e75099ee1c2b8d2d0c45546c2d335082750899",
+      "zip_crc": 1579617710
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.5.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3782",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3782.bin",
+      "sha256": "102fb6e8b89f2b766098bdc5a1f7fc1761e143f07440dc813a73c752935c98c9",
+      "zip_crc": 876159096
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.6.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3783",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3783.bin",
+      "sha256": "972104f43cf27964ad6bde1d6ea2803900324c17e030e478ca16a5292caaa863",
+      "zip_crc": 1034216420
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.6.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3784",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3784.bin",
+      "sha256": "24b79f5ab762ec81375a8be4b30a235b8a177855d2b964719bf130e6b9d239b3",
+      "zip_crc": 2074448555
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.6.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3785",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3785.bin",
+      "sha256": "7943bd92dbc1dc21a048b559f3a1149ff02f9fbd2cb8958b58166d90711f676b",
+      "zip_crc": 1689722937
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.7.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3786",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3786.bin",
+      "sha256": "ef8a8564b9afd6462fbce4ed484d368c6b5528f6c5ec2e31c821782644f2aefc",
+      "zip_crc": 2327326424
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.7.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3787",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3787.bin",
+      "sha256": "14482ee2eef2b46d552cd61de2e7d8fcea0882584203f5c28566781bc59b961a",
+      "zip_crc": 259800869
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.7.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3788",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3788.bin",
+      "sha256": "938ef56d20a4d7520f9ef94f39a5b04e855f81aa63aadb1d0c6a21ca0c4ebb23",
+      "zip_crc": 384814069
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.8.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3789",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3789.bin",
+      "sha256": "021ce68c362e667f71c7084f5ab170997aa1d154754526fa20db08e37c07da1b",
+      "zip_crc": 791620374
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.8.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3790",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3790.bin",
+      "sha256": "c572be2b5077fffc6943d51bcc5be115664f170f569be9155f1e1e7ff7355dee",
+      "zip_crc": 1381639270
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.8.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3791",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3791.bin",
+      "sha256": "4dfb0728646e252359ab612dcf6687862316004957f94a6c013d6cb157e28054",
+      "zip_crc": 2778001240
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.9.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3792",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3792.bin",
+      "sha256": "fecebd51f4b95214d9efa28c6ac513532b291fdea94b3a3f80d35f5d05328388",
+      "zip_crc": 2607291552
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.9.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3793",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3793.bin",
+      "sha256": "2cb74962473673b2caa5575d8326e7862da6daf49277cd5ca5ce5a6fff2b00df",
+      "zip_crc": 2826763671
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.9.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3794",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3794.bin",
+      "sha256": "44f1127ee92780e18b860e40543a71e726f67f4a1acb23c21319059406419779",
+      "zip_crc": 3808837247
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.10.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3795",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3795.bin",
+      "sha256": "3e2efd26bb5f7c13d5a3fbb6eb284cfeb53cc23c8142c26cd28ef890ddcebde8",
+      "zip_crc": 758990788
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.10.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3796",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3796.bin",
+      "sha256": "53478095b3a4381c5465614decfe994198a629115c2f848f6f1a3100ef83e4be",
+      "zip_crc": 3277944606
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.10.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3797",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3797.bin",
+      "sha256": "67ead2ee333720f610ddd4a829f22362a2672dbec9282874739bbbc8dd47a5c7",
+      "zip_crc": 1137438593
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.11.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3798",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3798.bin",
+      "sha256": "220c6369ce19771a86c6604bb241d5fe4e2a904d82e9521d80544a38e1664266",
+      "zip_crc": 4116279242
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.11.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3799",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3799.bin",
+      "sha256": "a7342d17d1e20ba69689b5a7d2d104fea31abbabcfc57f0fa9041131d2d80ff6",
+      "zip_crc": 2911870008
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.11.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3800",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3800.bin",
+      "sha256": "1fbfa9dfc0fb3c23c1f372a7f2b52575ad15674180aee1d29989beb6d8deca54",
+      "zip_crc": 2751935842
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.12.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3801",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3801.bin",
+      "sha256": "1c9335af7d6c8aaff6d7b8b7d419623b9e927e4ebcf31e2b7c5086996dc8c13e",
+      "zip_crc": 57841441
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.12.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3802",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3802.bin",
+      "sha256": "97461315adccce992ea7377448e3cc438389e5b85d71d55e46e9e6361eb52034",
+      "zip_crc": 2822236442
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.12.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3803",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3803.bin",
+      "sha256": "471592d876ebb2b6aba34760314df68f932446805fa82508c05166f7a973ed87",
+      "zip_crc": 2034745396
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.13.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3804",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3804.bin",
+      "sha256": "34459b18274dfface3d2732d8c79e04573224a8499fc654f65142c3f0ff87ba7",
+      "zip_crc": 3373246239
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.13.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3805",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3805.bin",
+      "sha256": "9965e265af1e9238e085b790a62f0efc2183e0bae2cbbce8d3188377e69878d0",
+      "zip_crc": 3604623123
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.13.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3806",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3806.bin",
+      "sha256": "da9b448163d530bdf0d194f7e76566b560a808eb6b188e273141378a88bfabd9",
+      "zip_crc": 149261887
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.14.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3807",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3807.bin",
+      "sha256": "e0d320e8d49400ecbfe12cd2edccba8aa7dcae8187a27620b099b3cb57fa687a",
+      "zip_crc": 1880308949
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.14.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3808",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3808.bin",
+      "sha256": "aab1123d42bf1ebb601357a1497c112c3e5c4b318e753494909aa69fc7c31468",
+      "zip_crc": 1383501663
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.14.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3809",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3809.bin",
+      "sha256": "3ac8d7d823492cac5c914280dfdf9998a70f7c5742f154e93eb0c5fbdab4647f",
+      "zip_crc": 419831729
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.15.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3810",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3810.bin",
+      "sha256": "20524a7ad19a89fb8946cfcd6ab5913dbf6089e76fb84e3d132a822cd7276d4e",
+      "zip_crc": 3092879258
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.15.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3811",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3811.bin",
+      "sha256": "07ea4a9e2a9b05e3181d80d5577a0055cfbfba3a3ba8c763a52912f92f857658",
+      "zip_crc": 967175208
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.15.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3812",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3812.bin",
+      "sha256": "c98bf3379f40b551db6aeb49a2865e107261e523c956896f37ddc1ac15a43661",
+      "zip_crc": 2421766370
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.16.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3813",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3813.bin",
+      "sha256": "ef4683415da1cae7f73ba20c456c641a5153364bc4c74a03100c5c86cebead68",
+      "zip_crc": 2568883089
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.16.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3814",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3814.bin",
+      "sha256": "1eba89752ddb70bd8c135349acbe214b2e1b9865e2d426cfe965f2860ecd74f1",
+      "zip_crc": 535105242
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.16.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3815",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3815.bin",
+      "sha256": "2e0e4d042660773a88d18c2d3052321ea9f0f7fb44daef47bc04d9e6d939fe7e",
+      "zip_crc": 3304876398
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.17.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3816",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3816.bin",
+      "sha256": "dd4d852acf66570e58fbda7651ad812c8a74ef3c376dc20f29133a9d16033f96",
+      "zip_crc": 3932623751
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.17.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3817",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3817.bin",
+      "sha256": "432f15af9d64b52bfc6a2f4e59b7f6af534e2ebd5731a4cc91011c6d001390e1",
+      "zip_crc": 2373148635
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.17.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3818",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3818.bin",
+      "sha256": "4fec5ec8af1b7a6af5af9a67225c07fad1695c2bed025279af6b4fbbd501bb0e",
+      "zip_crc": 1475331699
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.18.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3819",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3819.bin",
+      "sha256": "26802b660eaf09821298767381263b037969004e54a2d4c462c0152b7e1f4d37",
+      "zip_crc": 685000156
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.18.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3820",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3820.bin",
+      "sha256": "95aef36754347bd61ec267e7d2c31d327834f15a622f113464cec67b960589d9",
+      "zip_crc": 2625443920
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.18.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3821",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3821.bin",
+      "sha256": "ad0853130a9322c6c8a6ae22759d9da1dd79a82f08d7a65d20cd651504cb9c86",
+      "zip_crc": 3127055833
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.19.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3822",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3822.bin",
+      "sha256": "47f0fb02c9fdca3d35ee11a7bd73d6ae6ee43425a193f9af8b0f820918209fe3",
+      "zip_crc": 3899057285
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.19.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3823",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3823.bin",
+      "sha256": "47ad9f9014a034ac6bc2330d87265cafcebd47c91dd8a07c6deb0a72b09c452b",
+      "zip_crc": 2374752252
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.19.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3824",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3824.bin",
+      "sha256": "aa6a2d0d9f1db6f73de7dcf459509dc9a384c41e8f0256330919711f589d9a33",
+      "zip_crc": 2147126811
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.20.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3825",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3825.bin",
+      "sha256": "08a039a13b33beee8d30e1e9dd07053d91ffcde7559efb2edcfeeb0380b6a615",
+      "zip_crc": 3696842401
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.20.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3826",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3826.bin",
+      "sha256": "0dc52a6873aef50c8f985b58fe0fb7b01c2f347710726130570bd5922f184835",
+      "zip_crc": 3726785198
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.20.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3827",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3827.bin",
+      "sha256": "d07d0a81a74050a3e002364702dc9974cf18d5d1eee8cc067af5a496e1165fa3",
+      "zip_crc": 884855761
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.21.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3828",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3828.bin",
+      "sha256": "f328477363f4ef0d2c3926bead3fb036cf8cddd31dc1818e87ce94f3143168ab",
+      "zip_crc": 3526056845
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.21.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3829",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3829.bin",
+      "sha256": "cdc14e9527c52783bbff827ea0fd630370b53246dabfe3276b3be0b2c15ce84f",
+      "zip_crc": 2881787035
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.21.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3830",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3830.bin",
+      "sha256": "982fcb88c86a3c7270a8d82d842eeab99d92d68c425437587526be5c15935d2b",
+      "zip_crc": 2824179873
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.22.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3831",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3831.bin",
+      "sha256": "1bab14736c011711c6f8fc9be55dabbc5fb40d107d024306db53333bc855a27f",
+      "zip_crc": 4147680973
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.22.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3832",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3832.bin",
+      "sha256": "c5a1ef59f4b10ca7cc40d2e4254c9cc3f5ab81613081cf48e73fb9adaf7e395e",
+      "zip_crc": 2548838348
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.22.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3833",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3833.bin",
+      "sha256": "bf9c913f39a2165991b57832306ead6203c30b8439df32f6e9b9293130d14f3e",
+      "zip_crc": 1245163080
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.23.0.weight",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3834",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3834.bin",
+      "sha256": "2f91083d76d93a7b6c62e4e3606ab3230d4188e8188871d46a3e6092765aaa5a",
+      "zip_crc": 916143481
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.23.0.bias",
+      "dtype": "float32",
+      "shape": [
+        128
+      ],
+      "stride": [
+        1
+      ],
+      "offset": 0,
+      "numel": 128,
+      "storage_key": "3835",
+      "storage_numel": 128,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3835.bin",
+      "sha256": "cabc5ffe35a84ea2310068b42064285597ad0d773edbffe1ea5dab94fee232fb",
+      "zip_crc": 2098072198
+    },
+    {
+      "name": "diffusion_conditioning.token_trans_proj_z.23.1.weight",
+      "dtype": "float32",
+      "shape": [
+        16,
+        128
+      ],
+      "stride": [
+        128,
+        1
+      ],
+      "offset": 0,
+      "numel": 2048,
+      "storage_key": "3836",
+      "storage_numel": 2048,
+      "storage_device_label": "cpu",
+      "requires_grad_flag": false,
+      "file": "3836.bin",
+      "sha256": "434f08e1255ddffbd96f081fdc7ec318227be7ede0cfc61ff6127a72bcec2df2",
+      "zip_crc": 2628054253
+    }
+  ],
+  "new_network_bytes": 2735906,
+  "requests": [
+    {
+      "start": 2062024704,
+      "end_inclusive": 2062139169,
+      "bytes": 114466,
+      "sha256": "6c357d8f2abc4ad863e2c6248d743aee49359ec23937d24f6b44a17fb935cbe7"
+    },
+    {
+      "start": 2061762560,
+      "end_inclusive": 2062024703,
+      "bytes": 262144,
+      "sha256": "a18633836323d48885a07f38fcda9cc25091ae3043ebfe6a77d38976ecb2226a"
+    },
+    {
+      "start": 2010906624,
+      "end_inclusive": 2011168767,
+      "bytes": 262144,
+      "sha256": "278ba1dc59a2b77bedc90a2f592274deedfa5d1c93d22c05268c976728d3d743"
+    },
+    {
+      "start": 662962176,
+      "end_inclusive": 663224319,
+      "bytes": 262144,
+      "sha256": "56297641e1084483bdc6c62f62645faf2677c77778fcb92a9944aeb3d07303b3"
+    },
+    {
+      "start": 663224320,
+      "end_inclusive": 663486463,
+      "bytes": 262144,
+      "sha256": "0d8ca70bbc70be236ea20f8170e5317fc49ee30a119049d1f04d23c313c25304"
+    },
+    {
+      "start": 663486464,
+      "end_inclusive": 663748607,
+      "bytes": 262144,
+      "sha256": "3910630e163a7c3971793a51906300de9da541f26b9f505a442309a5034c0528"
+    },
+    {
+      "start": 663748608,
+      "end_inclusive": 664010751,
+      "bytes": 262144,
+      "sha256": "ab6d3beaab301a5538d1595311a3df8d2f9f5119ad4b64f0359061de75458aef"
+    },
+    {
+      "start": 664010752,
+      "end_inclusive": 664272895,
+      "bytes": 262144,
+      "sha256": "8f358de951589d7d5c59f88831a7a5799cb016e62859657002af8f941599f16f"
+    },
+    {
+      "start": 664535040,
+      "end_inclusive": 664797183,
+      "bytes": 262144,
+      "sha256": "566dcae667d818c72ffe2966b7f431945daf4f5da22ae81841d3c8b77cbf5dc5"
+    },
+    {
+      "start": 664797184,
+      "end_inclusive": 665059327,
+      "bytes": 262144,
+      "sha256": "33dc27571a9f7dd3a81ffe0e0e221d6db2c87319650cd469dc9995a2dba92040"
+    },
+    {
+      "start": 665321472,
+      "end_inclusive": 665583615,
+      "bytes": 262144,
+      "sha256": "1f556a300afd9e84898e42bd5ecf19ab4219ad630a5d6f96fdb0d22704410200"
+    }
+  ]
+}

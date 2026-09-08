@@ -1,0 +1,23 @@
+{
+  "reviewed_file": "/private/tmp/compressme-agent-boltz-compute/boltz2_runtime.py",
+  "sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+  "prior_review_preserved": "final-review.json",
+  "prior_sha256": "5a2ee9a0ad7738217ddd0cff9c5be7a2fb39e1110dcd5df6c6ae85e2e85fc26a",
+  "independent_tests": 5,
+  "tests_passed": 5,
+  "scope": "Small routing/cleanup tests; native full-output and timing gates owned by runtime agent",
+  "tested": [
+    "fallback executes changed conditioning values",
+    "autocast fallback preserves values and restores layout dispatch",
+    "partial decoder wrapper installation cleanup",
+    "failed/unsupported input does not poison next request",
+    "between-request nested module change is refused"
+  ],
+  "cleanup_review": [
+    "Each atom restoration attempts every original binding and retains the first restoration error.",
+    "Single-conditioner and atom restoration run through nested finally blocks so later restoration attempts still occur.",
+    "Forward override removal, memo release, ownership release and request report recording precede fallible final audits.",
+    "A primary sampling exception remains primary; an additional cleanup exception is recorded and added as a note."
+  ],
+  "conclusion": "No new blocking issue found within the declared immutable-request contract; normal operators and layout dispatch are unchanged."
+}

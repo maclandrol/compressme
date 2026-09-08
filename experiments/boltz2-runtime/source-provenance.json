@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "boltz_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+  "installed_sources": {
+    "/private/tmp/compressme-agent-boltz-runtime/venv/lib/python3.12/site-packages/boltz/model/models/boltz2.py": {
+      "sha256": "f05169e66488910fc11c6a56b56d19a58e3f43649586218df75573eeff7a9945"
+    },
+    "/private/tmp/compressme-agent-boltz-runtime/venv/lib/python3.12/site-packages/boltz/main.py": {
+      "sha256": "b5ded4dac1552af2e079c335d56e64ea580b4d5ca0202a9542385ce3e318c3b3"
+    }
+  }
+}

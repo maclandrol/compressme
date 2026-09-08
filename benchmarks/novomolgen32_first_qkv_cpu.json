@@ -1,0 +1,3114 @@
+{
+  "audit_date": "2026-09-07",
+  "repository": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+  "revision": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+  "checkpoint_sha256_verified": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+  "checkpoint_bytes": 126236496,
+  "checkpoint_tensor_count": 111,
+  "dtype_values": {
+    "torch.float32": 31556096
+  },
+  "normalization": "custom LlamaRMSNorm, not nn.RMSNorm",
+  "normalization_source": "https://github.com/huggingface/transformers/blob/ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e/src/transformers/models/llama/modeling_llama.py#L60",
+  "runtime": {
+    "torch": "2.14.0",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "device": "cpu",
+    "threads": 4
+  },
+  "scope": "First token-only embedding/RMSNorm/QKV span; no RoPE/attention/cache/full-model execution",
+  "contract": "Explicit two-dimensional token IDs; arbitrary inputs_embeds not supported by this local candidate",
+  "source_span_values": 829952,
+  "candidate_span_values": 172032,
+  "saved_values": 657920,
+  "saved_float32_bytes": 2631680,
+  "candidate_stores_original_residual_embeddings": true,
+  "candidate_keeps_original_projection_weights": false,
+  "source_total_values": 31556096,
+  "estimated_whole_model_values_if_integrated": 30898176,
+  "nominal_dense_qkv_multiply_accumulates_per_token_removed": 786432,
+  "speed_measured": false,
+  "timing_claim": null,
+  "numerical_gate": {
+    "absolute": 1e-05,
+    "relative_l2": 1e-05
+  },
+  "cases": [
+    {
+      "case": "all_tokens",
+      "shape": [
+        1,
+        84
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "all_tokens_reversed",
+      "shape": [
+        2,
+        42
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_0",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 6.556510925292969e-07,
+          "relative_l2": 4.14336344432953e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 3.837673706070956e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.069847671439139e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_1",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 3.824620461338097e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 4.149191126991296e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 4.6229006499543636e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_2",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.7890171163406393e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.626356521747106e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.31857345363808e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_3",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 4.3141248250074806e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.364418029785156e-07,
+          "relative_l2": 3.9618386360015855e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 7.748603820800781e-07,
+          "relative_l2": 4.212297694806115e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_4",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 2.745990194575775e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.087974275468956e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.5375034718405813e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_5",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 5.074354632609601e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 2.9090129760146855e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.665207951467873e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_6",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 3.5822006761206306e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.7630677259955375e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.741375752732832e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_7",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.2056938182252235e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.172322190892447e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.781664340023963e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_8",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.0531158447265625e-06,
+          "relative_l2": 4.0866598675567887e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.49314621093466e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.3960705496829023e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_9",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.7417003941313455e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.6507294505925595e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.1982379145799013e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_10",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 4.022535680395504e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.680578734416866e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.524096357322716e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_11",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.349031470555043e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-06,
+          "relative_l2": 3.923680080809121e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.102162968146756e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_12",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.303993512631995e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.234292489355738e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.6938468013530544e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_13",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 2.8053464762376735e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 4.229378539932938e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.127597057974758e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_14",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.470818605729693e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.499884571299182e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.678323313592048e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_15",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.592989635934348e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.5499597445081904e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.4780947790435696e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_16",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.273387467804969e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.0994415283203125e-06,
+          "relative_l2": 3.655040367675395e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 3.634013519640776e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_17",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.5760885377315474e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.2484347566323876e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.9000373535714707e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_18",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 4.225550519271676e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.220277506731795e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.826993110575652e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_19",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.9593547028530554e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.599249646007459e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 4.037255145147005e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_20",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.76837158203125e-06,
+          "relative_l2": 3.800918517727292e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.4081637107815183e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.5278901273510526e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_21",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 4.3402321629436363e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.6544373201216446e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 4.068053160434992e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_22",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.2256635470917327e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.0265579223632812e-06,
+          "relative_l2": 2.9538113885279567e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.063832110483397e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_23",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.7440722339444393e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.121410012020123e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.7881393432617188e-06,
+          "relative_l2": 3.5132098867538546e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_24",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.258637967109783e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.066522110475607e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.610681136246402e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_25",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.9346944805200867e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.291534423828125e-06,
+          "relative_l2": 3.9419282671355987e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.591445343062454e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_26",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.929586108716538e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.720896665683505e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.592845823301524e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_27",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.5514225026136636e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.812284458871396e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.563934543832486e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_28",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.752083379397411e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-06,
+          "relative_l2": 4.6416479890719027e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.534805952931047e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_29",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.1870373032356076e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.402615980691267e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.3113021850585938e-06,
+          "relative_l2": 3.1868218564325416e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_30",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.99490791871583e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.738175847017736e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.924062484312768e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_31",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.5774373616515557e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.28687392371927e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.1782991473630815e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_32",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.250009527000463e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.400173793448965e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.0994415283203125e-06,
+          "relative_l2": 4.1786849145804186e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_33",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.509630887328055e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.687324829037475e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.1911914386029884e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_34",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 4.164848924700521e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.692431751353944e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.7000687179367516e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_35",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.076365687741594e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.4701513862025267e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.8688105751447776e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_36",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.786193384060009e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.305725577248403e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.3948594980974227e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_37",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 4.0999744688458974e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 4.0888937323507023e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.753756831690085e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_38",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.945298759177541e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-06,
+          "relative_l2": 3.449733679603883e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.0627858510814235e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_39",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.386837923428473e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 3.819638343404392e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.9858665617054984e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_40",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.6362252294095896e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.6382644607742444e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 4.116958155119899e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_41",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 4.08829153060931e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 3.725994731565878e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.6327199024524734e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_42",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.539436724194109e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.12799657211027e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.628465122874955e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_43",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.403571956908817e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 2.9418192083916357e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.448238965056083e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_44",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.356783480039649e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 2.9874908399908866e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.7881393432617188e-06,
+          "relative_l2": 4.1219890888640744e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_45",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.2760351543228013e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 3.969073829800475e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.549942781080691e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_46",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.5340309101049915e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.713086387112603e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.790405163809114e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_47",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.6873399541327937e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.754967740440539e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.8283226659990675e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_48",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.0994415283203125e-06,
+          "relative_l2": 3.66674659928188e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 2.9447245319098483e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.6426182463415155e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_49",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.245208740234375e-06,
+          "relative_l2": 4.420655504024824e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.7220458984375e-06,
+          "relative_l2": 3.344953941687069e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.4050814921806903e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_50",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 3.413539204919003e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.483535596979869e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.3701823561744836e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_51",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.8872754352444193e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.8297202644863866e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 2.814193202902657e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_52",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.1694188972502103e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.6139760058361266e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.1443919047925333e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_53",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.3121437731619254e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.86102294921875e-06,
+          "relative_l2": 3.215976646223435e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 3.337860107421875e-06,
+          "relative_l2": 3.490982020824462e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_54",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.0432136018641747e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.384185791015625e-06,
+          "relative_l2": 3.7679157617223544e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.4943139587396055e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_55",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.0728836059570312e-06,
+          "relative_l2": 3.2921905195722175e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 3.0994415283203125e-06,
+          "relative_l2": 4.370931726855963e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.483050590042284e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_56",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 2.6226043701171875e-06,
+          "relative_l2": 3.264000177149442e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.367940050252565e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.1901129154842733e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_57",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.2091165111895835e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.4656942191708885e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.2551254813507215e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_58",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.814697265625e-06,
+          "relative_l2": 3.7975664117328134e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.4729736344045137e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 4.060227797125939e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_59",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.4115486151429237e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 2.1457672119140625e-06,
+          "relative_l2": 4.215589497083952e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.751340822522633e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_60",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 3.736303510934178e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.355227292372448e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 4.118108606725746e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_61",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.7551239587240255e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.3113021850585938e-06,
+          "relative_l2": 3.8006480812711863e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 4.008342690314505e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_62",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 3.4038146626671236e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 6.556510925292969e-07,
+          "relative_l2": 3.7245798780680814e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 4.3071338323766184e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_63",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 3.9951765602040427e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 4.272312027569003e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 7.748603820800781e-07,
+          "relative_l2": 4.053777824282421e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_64",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 3.322158545876034e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.6492958835235566e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.3113021850585938e-06,
+          "relative_l2": 4.3072210792534713e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_65",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.35253163088713e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.214543369687868e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.3722095453442444e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_66",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 4.235417276836201e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 6.258487701416016e-07,
+          "relative_l2": 3.3479601323123136e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 1.430511474609375e-06,
+          "relative_l2": 4.087339776770174e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_67",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 3.790469368702412e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 3.5340752022754634e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 4.1438381504220903e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_68",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.608972184157498e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.6689300537109375e-06,
+          "relative_l2": 3.319137587313377e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 9.5367431640625e-07,
+          "relative_l2": 3.866684794674938e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_69",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.172325134277344e-07,
+          "relative_l2": 4.302284039295108e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 3.5902702469470313e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.364418029785156e-07,
+          "relative_l2": 4.015512088931829e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_70",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.0132789611816406e-06,
+          "relative_l2": 4.2238542027847237e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.662441253662109e-07,
+          "relative_l2": 4.230003077103168e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 4.172325134277344e-07,
+          "relative_l2": 3.4134991585752274e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_71",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 4.0286470452837345e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 3.2309542812687777e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 3.6632747040036935e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_72",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 3.9195857768800473e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.364418029785156e-07,
+          "relative_l2": 3.550353568933305e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 6.556510925292969e-07,
+          "relative_l2": 3.916904903555934e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_73",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 3.203749656677246e-07,
+          "relative_l2": 4.270226064315939e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 4.611742467680144e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.317529958150697e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_74",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.0074811850081896e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 3.4457996792243774e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.2229676984165407e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_75",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 3.4241490989300743e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 3.3082611322951706e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 4.470348358154297e-07,
+          "relative_l2": 4.7205055662409255e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_76",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.0840686177837604e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.364418029785156e-07,
+          "relative_l2": 3.933721838589082e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 6.854534149169922e-07,
+          "relative_l2": 4.885547563970573e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_77",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.470348358154297e-07,
+          "relative_l2": 4.057013281592976e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.3085761697888216e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.066394805908203e-07,
+          "relative_l2": 4.2434166679311375e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_78",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 3.827624078049993e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 1.1920928955078125e-06,
+          "relative_l2": 4.244562622088545e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 3.854861726650207e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_79",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 8.642673492431641e-07,
+          "relative_l2": 4.4906394206408157e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 5.662441253662109e-07,
+          "relative_l2": 4.6544751043345603e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 6.556510925292969e-07,
+          "relative_l2": 3.801580741266958e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_80",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 7.152557373046875e-07,
+          "relative_l2": 4.7413679962492605e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 4.456469134945186e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 8.940696716308594e-07,
+          "relative_l2": 4.1602989600088747e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_81",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 4.76837158203125e-07,
+          "relative_l2": 4.5522593494208773e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 7.748603820800781e-07,
+          "relative_l2": 4.042601981137597e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 6.258487701416016e-07,
+          "relative_l2": 3.67942350542346e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_82",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 8.344650268554688e-07,
+          "relative_l2": 4.919091346334807e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 6.556510925292969e-07,
+          "relative_l2": 5.38022524153663e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.662441253662109e-07,
+          "relative_l2": 4.955339332102075e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "singleton_83",
+      "shape": [
+        1,
+        1
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 5.960464477539062e-07,
+          "relative_l2": 4.0612196158566103e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 4.470348358154297e-07,
+          "relative_l2": 3.624695517860444e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 5.066394805908203e-07,
+          "relative_l2": 3.883413000560312e-07,
+          "bitwise": false,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_1x2",
+      "shape": [
+        1,
+        2
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_4x17",
+      "shape": [
+        4,
+        17
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_4x64",
+      "shape": [
+        4,
+        64
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_1x512",
+      "shape": [
+        1,
+        512
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_2x2048",
+      "shape": [
+        2,
+        2048
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_0x5",
+      "shape": [
+        0,
+        5
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    },
+    {
+      "case": "random_3x0",
+      "shape": [
+        3,
+        0
+      ],
+      "outputs": {
+        "q": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "k": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "v": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        },
+        "residual": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "output_comparisons": 372,
+  "failed_comparisons": 0,
+  "max_abs": 5.7220458984375e-06,
+  "maximum_relative_l2": 5.38022524153663e-07,
+  "whole_model_validated": false,
+  "macos_mps_validated": false,
+  "compression_package_support": false
+}

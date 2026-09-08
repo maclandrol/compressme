@@ -1,0 +1,29 @@
+# The release contains the library and small public usage documentation only.
+# Research evidence, vendored architectures and model artifacts remain local.
+include pyproject.toml MANIFEST.in README.md
+include LICENSE LICENSE.* COPYING COPYING.*
+recursive-include src/compressme *.py
+include src/compressme/data/boltz2/*.json
+include src/compressme/data/boltz2/BOLTZ_LICENSE
+include docs/installation.md
+include docs/cli.md docs/gpu-validation.md
+recursive-include tests test_*.py
+# This fixture executes the separately archived upstream Mol-JEPA checkout.
+exclude tests/test_sparse_graph.py
+prune vendor
+prune experiments
+prune examples
+include examples/validate_backends.py
+prune artifacts
+prune archive
+prune archives
+prune docs/archive
+prune reports
+prune benchmarks
+prune results
+prune .venv
+prune .venv-state
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod] .DS_Store
+global-exclude *.ckpt *.pt *.pth *.safetensors *.cmppack *.cmprpack *.whl *.tar.gz *.zip

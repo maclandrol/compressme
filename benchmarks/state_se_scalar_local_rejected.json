@@ -1,0 +1,49 @@
+{
+  "method": "scalar_hinge_normal_form",
+  "source_parameters": 6154,
+  "candidate_parameters": 5652,
+  "removed_parameters": 502,
+  "hidden_units": 512,
+  "retained_hinges": 512,
+  "output_width": 10,
+  "dtype": "torch.float32",
+  "device": "cpu",
+  "mathematical_scope": "All real scalar inputs; exact unrounded coefficient identity",
+  "training": "Frozen inference; activation subgradients at knots can differ",
+  "interval_cache": "None; all model coefficient storage is counted",
+  "stored_coefficient_real_error_bound": {
+    "formula": "abs(error_i(x)) <= offset_i + growth_i * abs(x)",
+    "offset": [
+      5.021258097059552e-07,
+      3.947141717888408e-07,
+      6.446883104300019e-07,
+      6.348810885788978e-07,
+      6.117107792211381e-07,
+      5.688634675358598e-07,
+      3.403473188661038e-07,
+      6.234434010868381e-07,
+      6.383604626540697e-07,
+      3.566498063245994e-07
+    ],
+    "growth": [
+      4.09544359812175e-07,
+      4.4183187834363334e-07,
+      4.770931752570595e-07,
+      3.655953240784069e-07,
+      4.85560523782391e-07,
+      7.40486159566358e-07,
+      6.787136925145531e-07,
+      3.093269741481471e-07,
+      4.739546689006976e-07,
+      3.767364900889277e-07
+    ],
+    "excludes": "Floating-point execution rounding and overflow in either implementation"
+  },
+  "status": "rejected_numerical_probe",
+  "numerical_max_abs": 0.00067138671875,
+  "numerical_relative_l2": 5.049345222919438e-07,
+  "validation_cases": 4,
+  "absolute_tolerance": 1e-05,
+  "relative_tolerance": 1e-05,
+  "candidate_state_bytes": 22608
+}

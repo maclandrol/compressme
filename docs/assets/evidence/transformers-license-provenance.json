@@ -1,0 +1,7 @@
+{
+  "repository": "huggingface/transformers",
+  "revision": "ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e",
+  "url": "https://raw.githubusercontent.com/huggingface/transformers/ccbd57a8b665fbb5b1d566c0b800dc6ede509e8e/LICENSE",
+  "bytes": 11418,
+  "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+}

@@ -1,0 +1,1506 @@
+{
+  "status": "isolated_component_SGD_validation",
+  "whole_model_training_validated": false,
+  "novelty_claim": false,
+  "distillation": false,
+  "quantization": false,
+  "torch": "2.14.0",
+  "checkpoint": "/private/tmp/compressme-models/Mol-JEPA/model.safetensors",
+  "checkpoint_bytes": 181651424,
+  "source_sha256": "89eed5f7ebd458b2d4e6a1e4ad90aed275b7b35bfaa88f4a85a59833e57a0d4d",
+  "smiles": [
+    "CCO",
+    "c1ccccc1",
+    "C[C@H](N)C(=O)O",
+    "CC(=O)Oc1ccccc1C(=O)O"
+  ],
+  "trajectories": [
+    {
+      "dtype": "torch.float64",
+      "steps": 20,
+      "all_training_gates_pass": true,
+      "all_stress_gates_pass": true,
+      "absolute_tolerance": 1e-10,
+      "relative_tolerance": 1e-10,
+      "basis_audit": {
+        "input_width": 513,
+        "reduced_input_width": 83,
+        "head_width": 512,
+        "reduced_head_width": 183,
+        "orthonormal_U_max_abs": 1.3322676295501878e-15,
+        "orthonormal_R_max_abs": 1.7763568394002505e-15,
+        "input_reconstruction": {
+          "max_abs": 1.3877787807814457e-15,
+          "relative_l2": 8.846887305206264e-16,
+          "bitwise": false
+        },
+        "reachable_Q_reconstruction": {
+          "max_abs": 5.440092820663267e-15,
+          "relative_l2": 1.1505472419964555e-15,
+          "bitwise": false
+        },
+        "reachable_K_reconstruction": {
+          "max_abs": 3.3861802251067274e-15,
+          "relative_l2": 1.2668808197698507e-15,
+          "bitwise": false
+        },
+        "edge_reconstruction": {
+          "max_abs": 3.164135620181696e-15,
+          "relative_l2": 1.3105638068965422e-15,
+          "bitwise": false
+        },
+        "decomposition_dtype": "float64",
+        "retained_parameter_dtype": "torch.float64",
+        "no_rank_threshold": true
+      },
+      "original_attention_scale": 0.044194173824159216,
+      "trainable_source_values": 4202496,
+      "trainable_reduced_values": 243024,
+      "stored_source_component_values": 6678528,
+      "stored_reduced_component_values": 2750833,
+      "storage_includes": "input,query,key,value,sharededge,skip weights/biases and compiled constant coordinates/score-edge tables",
+      "storage_excludes": "comparison-only U/R, activations, gradients, temporary products and all remaining Mol-JEPA layers",
+      "maximum_over_trajectory": {
+        "conv_output": 7.105427357601002e-15,
+        "attention": 2.6645352591003757e-15,
+        "raw_logits": 3.375077994860476e-14,
+        "raw_node_gradient": 1.5265566588595902e-16,
+        "edge_feature_gradient": 1.0842021724855044e-17
+      },
+      "records": [
+        {
+          "step": 1,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 1.8318679906315083e-15,
+            "relative_l2": 2.3570406415838207e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 6.106226635438361e-16,
+            "relative_l2": 2.256321098324404e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.0658141036401503e-14,
+            "relative_l2": 7.623617695646484e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.3183898417423734e-16,
+            "relative_l2": 1.6849493947899755e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.228388472693467e-18,
+            "relative_l2": 1.0438589930446648e-15,
+            "bitwise": false
+          },
+          "query_projected_parameters": {
+            "max_abs": 1.2434497875801753e-14,
+            "relative_l2": 1.0489999366692927e-15,
+            "bitwise": false
+          },
+          "key_projected_parameters": {
+            "max_abs": 4.884981308350689e-15,
+            "relative_l2": 9.643280016007966e-16,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 2,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 5.929089314958676e-17,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.1102230246251565e-16,
+            "relative_l2": 5.248267877317556e-17,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.019806626980426e-14,
+            "relative_l2": 1.788433725400278e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.2959746043559335e-17,
+            "relative_l2": 9.707788793429457e-16,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.686287386450715e-18,
+            "relative_l2": 1.0809149672313739e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 3,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.105427357601002e-15,
+            "relative_l2": 4.363548316541731e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.6645352591003757e-15,
+            "relative_l2": 5.499464065758271e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.9539925233402755e-14,
+            "relative_l2": 9.41474686554332e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 7.892991815694472e-17,
+            "relative_l2": 1.902424394466418e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 1.0842021724855044e-17,
+            "relative_l2": 1.9669019530190272e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 4,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 3.552713678800501e-15,
+            "relative_l2": 2.1394480827750107e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.7763568394002505e-15,
+            "relative_l2": 3.120419661895743e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.842170943040401e-14,
+            "relative_l2": 1.6049288739264124e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.688821387764051e-17,
+            "relative_l2": 1.1709473484826214e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.6020852139652106e-18,
+            "relative_l2": 1.4951100738882435e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 5,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 1.5543122344752192e-15,
+            "relative_l2": 1.9783523441146462e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 5.551115123125783e-16,
+            "relative_l2": 2.1234646243204492e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.4210854715202004e-14,
+            "relative_l2": 9.069013360281263e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.85722573273506e-17,
+            "relative_l2": 1.0489896942020747e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 5.5294310796760726e-18,
+            "relative_l2": 9.772526522859664e-16,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 6,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 6.774381534854041e-17,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.3530843112619095e-16,
+            "relative_l2": 6.8161335302113e-17,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.019806626980426e-14,
+            "relative_l2": 1.988772480779221e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 5.377642775528102e-17,
+            "relative_l2": 1.2786097259363682e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.2526065174565133e-18,
+            "relative_l2": 1.3966278916296793e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 7,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 3.552713678800501e-15,
+            "relative_l2": 3.908424755931698e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.7763568394002505e-15,
+            "relative_l2": 4.915074671189769e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.5987211554602254e-14,
+            "relative_l2": 9.083932727717347e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.423544863740858e-17,
+            "relative_l2": 1.5647064189510635e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 6.071532165918825e-18,
+            "relative_l2": 1.4866052405209864e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 8,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 1.9984014443252818e-15,
+            "relative_l2": 1.736686605121243e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 9.992007221626409e-16,
+            "relative_l2": 2.4290690692734807e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.6645352591003757e-14,
+            "relative_l2": 1.6488058402289572e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.5102810375396984e-17,
+            "relative_l2": 1.2567971638087289e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.710505431213761e-18,
+            "relative_l2": 1.44734938746259e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 9,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 2.220446049250313e-15,
+            "relative_l2": 2.5472104491317746e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 7.216449660063518e-16,
+            "relative_l2": 2.301037279377893e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.0658141036401503e-14,
+            "relative_l2": 8.364998227087727e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 9.020562075079397e-17,
+            "relative_l2": 1.5032817769531061e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 5.204170427930421e-18,
+            "relative_l2": 1.0238090504554795e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 10,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 1.0163686317560378e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 3.3306690738754696e-16,
+            "relative_l2": 9.018142506344872e-17,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.3092638912203256e-14,
+            "relative_l2": 1.5503204518389772e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.469446951953614e-17,
+            "relative_l2": 1.4643526062783938e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.391018798566293e-18,
+            "relative_l2": 1.2638009313142775e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 11,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.218847493575595e-15,
+            "relative_l2": 3.9271404677302137e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.7208456881689926e-15,
+            "relative_l2": 5.016751690392712e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.5987211554602254e-14,
+            "relative_l2": 9.686273658729065e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.2500725161431774e-17,
+            "relative_l2": 1.4595861972303242e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 8.131516293641283e-18,
+            "relative_l2": 1.745435495956351e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 12,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.440892098500626e-15,
+            "relative_l2": 2.0001700747667973e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.7763568394002505e-15,
+            "relative_l2": 3.38807145004258e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.6645352591003757e-14,
+            "relative_l2": 1.6259017054215516e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.469446951953614e-17,
+            "relative_l2": 1.332397668688904e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.574980159653073e-18,
+            "relative_l2": 1.5819552261343866e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 13,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 2.6645352591003757e-15,
+            "relative_l2": 3.0137872057169446e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 2.7067601131341906e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.2434497875801753e-14,
+            "relative_l2": 7.607050401726545e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.5265566588595902e-16,
+            "relative_l2": 1.5410807747311835e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.662069341687669e-18,
+            "relative_l2": 9.947909120971469e-16,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 14,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 4.591829169548508e-17,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 9.194034422677078e-17,
+            "relative_l2": 3.594757004014067e-17,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.019806626980426e-14,
+            "relative_l2": 1.6790587726734495e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.2551405187698492e-17,
+            "relative_l2": 9.200270799544906e-16,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.119968255444917e-18,
+            "relative_l2": 1.1891755638624103e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 15,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 5.995204332975845e-15,
+            "relative_l2": 4.4260227940857344e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.6645352591003757e-15,
+            "relative_l2": 5.893173074740194e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.7763568394002505e-14,
+            "relative_l2": 9.506281951981587e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.9439619065339e-17,
+            "relative_l2": 1.6191872683839142e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.065758146820642e-18,
+            "relative_l2": 1.523586461543663e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 16,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 5.551115123125783e-15,
+            "relative_l2": 2.44539591322379e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.3314683517128287e-15,
+            "relative_l2": 3.584022335120671e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.375077994860476e-14,
+            "relative_l2": 1.76799022775645e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.7730235602495554e-17,
+            "relative_l2": 1.5919015223221286e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 5.421010862427522e-18,
+            "relative_l2": 2.2135030533068734e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 17,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 2.6645352591003757e-15,
+            "relative_l2": 2.918312224930888e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 8.326672684688674e-16,
+            "relative_l2": 2.54722383423387e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.2434497875801753e-14,
+            "relative_l2": 8.294415549926159e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 6.591949208711867e-17,
+            "relative_l2": 1.1083923661915296e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 6.071532165918825e-18,
+            "relative_l2": 1.1074294073215465e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 18,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 1.2971239391496628e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.440892098500626e-16,
+            "relative_l2": 1.220762907140404e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.375077994860476e-14,
+            "relative_l2": 1.896854071478943e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.85722573273506e-17,
+            "relative_l2": 1.5204209061880186e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 4.716279450311944e-18,
+            "relative_l2": 1.5010470958367522e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 19,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.6629367034256575e-15,
+            "relative_l2": 4.187535611462606e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.1094237467877974e-15,
+            "relative_l2": 5.566696354760355e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.4210854715202004e-14,
+            "relative_l2": 9.087575487606445e-16,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 6.938893903907228e-17,
+            "relative_l2": 1.8447537858601885e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.686287386450715e-18,
+            "relative_l2": 1.4466907948341076e-15,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 20,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.218847493575595e-15,
+            "relative_l2": 2.085764216183563e-16,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.1094237467877974e-15,
+            "relative_l2": 3.426520358306539e-16,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.019806626980426e-14,
+            "relative_l2": 1.6849947519447184e-15,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.209238430557093e-17,
+            "relative_l2": 1.2345863394880617e-15,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 8.023096076392733e-18,
+            "relative_l2": 1.8807896269896922e-15,
+            "bitwise": false
+          },
+          "query_projected_parameters": {
+            "max_abs": 1.509903313490213e-14,
+            "relative_l2": 1.0854342557696811e-15,
+            "bitwise": false
+          },
+          "key_projected_parameters": {
+            "max_abs": 5.329070518200751e-15,
+            "relative_l2": 1.0501527139687792e-15,
+            "bitwise": false
+          }
+        }
+      ],
+      "unusual_coo_checks": [
+        {
+          "case": "mixed_coo",
+          "conv_output": {
+            "max_abs": 8.881784197001252e-16,
+            "relative_l2": 4.9570442364174926e-17,
+            "bitwise": false,
+            "mixed_tolerance_pass": true
+          },
+          "attention": {
+            "max_abs": 4.440892098500626e-16,
+            "relative_l2": 1.2130037134159324e-16,
+            "bitwise": false,
+            "mixed_tolerance_pass": true
+          },
+          "raw_logits": {
+            "max_abs": 1.9895196601282805e-13,
+            "relative_l2": 1.5697325300169358e-15,
+            "bitwise": false,
+            "mixed_tolerance_pass": true
+          }
+        },
+        {
+          "case": "no_edges",
+          "conv_output": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          },
+          "attention": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          },
+          "raw_logits": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          }
+        }
+      ]
+    },
+    {
+      "dtype": "torch.float32",
+      "steps": 20,
+      "all_training_gates_pass": true,
+      "all_stress_gates_pass": false,
+      "absolute_tolerance": 1e-05,
+      "relative_tolerance": 1e-05,
+      "basis_audit": {
+        "input_width": 513,
+        "reduced_input_width": 83,
+        "head_width": 512,
+        "reduced_head_width": 183,
+        "orthonormal_U_max_abs": 1.3322676295501878e-15,
+        "orthonormal_R_max_abs": 1.7763568394002505e-15,
+        "input_reconstruction": {
+          "max_abs": 1.3877787807814457e-15,
+          "relative_l2": 8.846887305206264e-16,
+          "bitwise": false
+        },
+        "reachable_Q_reconstruction": {
+          "max_abs": 3.564855100002262e-08,
+          "relative_l2": 2.5609443772566132e-08,
+          "bitwise": false
+        },
+        "reachable_K_reconstruction": {
+          "max_abs": 4.132096503850491e-08,
+          "relative_l2": 2.572062398516003e-08,
+          "bitwise": false
+        },
+        "edge_reconstruction": {
+          "max_abs": 3.384462593514215e-08,
+          "relative_l2": 2.606005407750547e-08,
+          "bitwise": false
+        },
+        "decomposition_dtype": "float64",
+        "retained_parameter_dtype": "torch.float32",
+        "no_rank_threshold": true
+      },
+      "original_attention_scale": 0.044194173824159216,
+      "trainable_source_values": 4202496,
+      "trainable_reduced_values": 243024,
+      "stored_source_component_values": 6678528,
+      "stored_reduced_component_values": 2750833,
+      "storage_includes": "input,query,key,value,sharededge,skip weights/biases and compiled constant coordinates/score-edge tables",
+      "storage_excludes": "comparison-only U/R, activations, gradients, temporary products and all remaining Mol-JEPA layers",
+      "maximum_over_trajectory": {
+        "conv_output": 1.430511474609375e-06,
+        "attention": 4.76837158203125e-07,
+        "raw_logits": 5.7220458984375e-06,
+        "raw_node_gradient": 5.587935447692871e-08,
+        "edge_feature_gradient": 3.627064870670438e-09
+      },
+      "records": [
+        {
+          "step": 1,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 9.5367431640625e-07,
+            "relative_l2": 7.39913351176967e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.086162567138672e-07,
+            "relative_l2": 5.677649841341174e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 5.7220458984375e-06,
+            "relative_l2": 2.669527006709533e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.7939677238464355e-08,
+            "relative_l2": 5.028973569353497e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.7939677238464355e-09,
+            "relative_l2": 4.4480604332053317e-07,
+            "bitwise": false
+          },
+          "query_projected_parameters": {
+            "max_abs": 7.253696701070567e-07,
+            "relative_l2": 3.713181390571316e-08,
+            "bitwise": false
+          },
+          "key_projected_parameters": {
+            "max_abs": 2.1051959198103987e-07,
+            "relative_l2": 3.581913482712779e-08,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 2,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 9.5367431640625e-07,
+            "relative_l2": 6.942895857351085e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_l2": 6.297186887204693e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.7109308865719596e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.5832483768463135e-08,
+            "relative_l2": 5.964697434297558e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.627064870670438e-09,
+            "relative_l2": 9.680041409897833e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 3,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 1.430511474609375e-06,
+            "relative_l2": 8.366127709121189e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 1.1107249233758936e-07,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 5.7220458984375e-06,
+            "relative_l2": 2.512057872839438e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.5832483768463135e-08,
+            "relative_l2": 5.450151078828233e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.3760443329811096e-09,
+            "relative_l2": 6.130185723492602e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 4,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 3.935178163901244e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.172325134277344e-07,
+            "relative_l2": 7.19438063902595e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.814697265625e-06,
+            "relative_l2": 1.747026949632471e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.0489096641540527e-08,
+            "relative_l2": 5.477049850790178e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.2118911147117615e-09,
+            "relative_l2": 7.010296228239164e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 5,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 5.3310329720034916e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.4901161193847656e-07,
+            "relative_l2": 4.8271743334988175e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 4.76837158203125e-06,
+            "relative_l2": 1.8676776038932265e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.3527612686157227e-08,
+            "relative_l2": 4.951926512207291e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 1.862645149230957e-09,
+            "relative_l2": 3.983899373934563e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 6,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 6.480927252589019e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_l2": 6.49065585889855e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.814697265625e-06,
+            "relative_l2": 2.4009726830888123e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.60770320892334e-08,
+            "relative_l2": 6.771474545234432e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.5174813345074654e-09,
+            "relative_l2": 8.217609261794253e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 7,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.152557373046875e-07,
+            "relative_l2": 7.128386049246077e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 3.2782554626464844e-07,
+            "relative_l2": 8.165624545349342e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 4.76837158203125e-06,
+            "relative_l2": 2.1174669496295674e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.0489096641540527e-08,
+            "relative_l2": 5.708916516415699e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.561137080192566e-09,
+            "relative_l2": 7.162169401906641e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 8,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.152557373046875e-07,
+            "relative_l2": 4.1981459031033045e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.0116567611694336e-07,
+            "relative_l2": 5.336307073489459e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.858180419504753e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 7.450580596923828e-09,
+            "relative_l2": 5.18780327972629e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.6193447411060333e-09,
+            "relative_l2": 7.174526533472708e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 9,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 4.0403642833579524e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.4901161193847656e-07,
+            "relative_l2": 3.5464678513113214e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.5033950805664062e-06,
+            "relative_l2": 1.3860337652090562e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 3.3527612686157227e-08,
+            "relative_l2": 5.45505689441951e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.4924596548080444e-09,
+            "relative_l2": 5.252917732333801e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 10,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 9.5367431640625e-07,
+            "relative_l2": 7.431771649514341e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_l2": 6.612772687077644e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.9582956650306903e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.2351741790771484e-08,
+            "relative_l2": 6.420629995664092e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.5756889954209328e-09,
+            "relative_l2": 8.088507956755406e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 11,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.152557373046875e-07,
+            "relative_l2": 9.790155876441339e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 1.2933821176627602e-07,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.895578652806924e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.514570951461792e-08,
+            "relative_l2": 6.328027818389764e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.0954757928848267e-09,
+            "relative_l2": 5.773576124328848e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 12,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 5.312036961507509e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.172325134277344e-07,
+            "relative_l2": 7.931761011564359e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.814697265625e-06,
+            "relative_l2": 1.8798249495314554e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.6763806343078613e-08,
+            "relative_l2": 6.06657366541496e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 1.7462298274040222e-09,
+            "relative_l2": 8.04417079586749e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 13,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 5.5933281453125776e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 1.7881393432617188e-07,
+            "relative_l2": 5.271403633429556e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.4650856937354622e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 5.587935447692871e-08,
+            "relative_l2": 5.917216381179936e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.3865140974521637e-09,
+            "relative_l2": 5.131827827481193e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 14,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_l2": 1.8049048890860596e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.421438694000244e-08,
+            "relative_l2": 9.283556559199245e-09,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 1.9073486328125e-06,
+            "relative_l2": 1.6140221410629587e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.4901161193847656e-08,
+            "relative_l2": 4.6835206294711656e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.6193447411060333e-09,
+            "relative_l2": 5.802092772578648e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 15,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.152557373046875e-07,
+            "relative_l2": 8.144222443325e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 3.2782554626464844e-07,
+            "relative_l2": 9.811774381469234e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.337860107421875e-06,
+            "relative_l2": 1.9394391199485862e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 2.537854015827179e-08,
+            "relative_l2": 6.965689295444931e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.0954757928848267e-09,
+            "relative_l2": 6.580517450604395e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 16,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 5.364418029785156e-07,
+            "relative_l2": 4.722119836734287e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.980232238769531e-07,
+            "relative_l2": 6.605197212821782e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.814697265625e-06,
+            "relative_l2": 1.9223780972257403e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.3969838619232178e-08,
+            "relative_l2": 5.668018600074627e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 1.2223608791828156e-09,
+            "relative_l2": 6.353099960393551e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 17,
+          "nodes": 9,
+          "edges": 16,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 7.152557373046875e-07,
+            "relative_l2": 7.250329581354683e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.086162567138672e-07,
+            "relative_l2": 6.27246790021551e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 2.86102294921875e-06,
+            "relative_l2": 1.1371448878088188e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 4.0978193283081055e-08,
+            "relative_l2": 5.430227714206873e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 2.852175384759903e-09,
+            "relative_l2": 4.90126989209176e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 18,
+          "nodes": 12,
+          "edges": 24,
+          "loss_difference": 1.1920928955078125e-07,
+          "conv_output": {
+            "max_abs": 9.5367431640625e-07,
+            "relative_l2": 6.977671756444166e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 2.384185791015625e-07,
+            "relative_l2": 6.210793447770839e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 4.76837158203125e-06,
+            "relative_l2": 2.5481520901514075e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.7695128917694092e-08,
+            "relative_l2": 6.944228769759531e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.550667315721512e-09,
+            "relative_l2": 1.001688141295251e-06,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 19,
+          "nodes": 13,
+          "edges": 24,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 9.5367431640625e-07,
+            "relative_l2": 9.237860614345303e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.172325134277344e-07,
+            "relative_l2": 1.198798919469495e-07,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.337860107421875e-06,
+            "relative_l2": 1.9586282652006866e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.8510036170482635e-08,
+            "relative_l2": 6.215518598132987e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 3.434251993894577e-09,
+            "relative_l2": 6.844005186983967e-07,
+            "bitwise": false
+          }
+        },
+        {
+          "step": 20,
+          "nodes": 21,
+          "edges": 42,
+          "loss_difference": 0.0,
+          "conv_output": {
+            "max_abs": 5.960464477539062e-07,
+            "relative_l2": 5.147643787406204e-08,
+            "bitwise": false
+          },
+          "attention": {
+            "max_abs": 4.3213367462158203e-07,
+            "relative_l2": 8.08581853732401e-08,
+            "bitwise": false
+          },
+          "raw_logits": {
+            "max_abs": 3.814697265625e-06,
+            "relative_l2": 2.397229088803455e-07,
+            "bitwise": false
+          },
+          "raw_node_gradient": {
+            "max_abs": 1.0244548320770264e-08,
+            "relative_l2": 5.502435415963151e-07,
+            "bitwise": false
+          },
+          "edge_feature_gradient": {
+            "max_abs": 1.57160684466362e-09,
+            "relative_l2": 6.561192660817124e-07,
+            "bitwise": false
+          },
+          "query_projected_parameters": {
+            "max_abs": 3.8201244034752335e-06,
+            "relative_l2": 1.6450029893172236e-07,
+            "bitwise": false
+          },
+          "key_projected_parameters": {
+            "max_abs": 1.1218011257696503e-06,
+            "relative_l2": 1.3170238296510315e-07,
+            "bitwise": false
+          }
+        }
+      ],
+      "unusual_coo_checks": [
+        {
+          "case": "mixed_coo",
+          "conv_output": {
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 6.368192296118148e-09,
+            "bitwise": false,
+            "mixed_tolerance_pass": true
+          },
+          "attention": {
+            "max_abs": 1.6298145055770874e-09,
+            "relative_l2": 3.329436157255152e-10,
+            "bitwise": false,
+            "mixed_tolerance_pass": true
+          },
+          "raw_logits": {
+            "max_abs": 5.340576171875e-05,
+            "relative_l2": 2.4310262403792483e-07,
+            "bitwise": false,
+            "mixed_tolerance_pass": false
+          }
+        },
+        {
+          "case": "no_edges",
+          "conv_output": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          },
+          "attention": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          },
+          "raw_logits": {
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "mixed_tolerance_pass": true
+          }
+        }
+      ]
+    }
+  ],
+  "consumer_obstructions": {
+    "shared_edge_gradient_outside_retained_score_span": 0.008902981806010646,
+    "shared_edge_gradient_outside_fraction": 0.7474343575973387,
+    "query_response_to_input_projection_gradient_outside_span": 0.1222154812727268,
+    "query_response_outside_fraction": 0.045140378208679346,
+    "interpretation": "Nonzero omitted directions show why unrestricted shared-edge/input-projection SGD is outside this fixed-subspace contract."
+  },
+  "checkpoint_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14",
+  "torch_geometric": "2.8.0.post1"
+}

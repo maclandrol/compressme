@@ -1,0 +1,24 @@
+{
+  "model_id": "chandar-lab/NovoMolGen_32M_SMILES_AtomWise",
+  "revision": "dcd3f59261bebf84142c13617d4e129b4b0d0fdc",
+  "checkpoint_sha256": "3cf10749dce97e74edbb0c4d4e609265014e90f7be2fa50d731af67977cd0699",
+  "config_sha256": "f3cc487205aa417f4786f50d49a4120097baaffd80a9510ccfe5c37aa4ed3a34",
+  "llama_source_sha256": "733e7625fec5abcfa416ab9b866cb91875d41007f2e31c3e90d2ae0111ae98f7",
+  "tokenizer_sha256": {
+    "generation_config.json": "2c13e64df63c6cd0a5e174a177c222bef64892a42105fe9f92ef6f0e59502308",
+    "tokenizer.json": "4baa7905f4431811d024de231313a4935a28575f84d08793b2d258a0d6a419cd",
+    "tokenizer_config.json": "d83cf3df2f4567f89fe50fa6d6c36f832258f6920d41668eb4d48e8410835a13",
+    "special_tokens_map.json": "db82f8bd9b25d14f9c788e6bde64de84d42f1c2538f1c245ba6cb3e872d14b18"
+  },
+  "original_numeric_stage_functions_unchanged": [
+    "stage",
+    "all_outputs",
+    "tuple_outputs",
+    "embedded_inputs",
+    "cache_roundtrip",
+    "trimmed_logits",
+    "generate",
+    "plain_generation"
+  ],
+  "ast_python310_syntax_check": true
+}

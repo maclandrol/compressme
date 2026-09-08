@@ -1,0 +1,233 @@
+{
+  "torch": "2.14.0",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "execution_device": "cpu",
+  "artifact": "/private/tmp/compressme-novo-byte-artifact-cpu",
+  "weights_sha256": "be3df7395541fe5aebe27f33484612819460dca41764017d03433349793586cd",
+  "manifest_sha256": "16ceb9dd487bbb4f9db1a00b6b2abf534453296baad530298acfdd8985f11d87",
+  "prototype_sha256": "3f0c37a1c6e38ef7eeb2e8a753eb50268e150593c4f0fe0206e5d51acbe85643",
+  "shape": [
+    84,
+    1536
+  ],
+  "table_names": [
+    "tables.group_0",
+    "tables.group_1"
+  ],
+  "original_registered_bytes": 1032192,
+  "base_options": [
+    {
+      "base_route": 0,
+      "resident_bytes": 759024,
+      "modes": [
+        "same",
+        "8"
+      ]
+    },
+    {
+      "base_route": 1,
+      "resident_bytes": 759024,
+      "modes": [
+        "8",
+        "same"
+      ]
+    }
+  ],
+  "bulk_base_registered_bytes": 759024,
+  "bulk_base_reduction_fraction": 0.2646484375,
+  "pair_statistics": {
+    "0->1": {
+      "values": 129024,
+      "equal_values": 8448,
+      "nonzero_byte_counts_low_to_high": [
+        120559,
+        7581,
+        59,
+        0
+      ],
+      "highest_xor": 8173472,
+      "raw_bytes": 516096,
+      "candidates": {
+        "8": {
+          "dense_low_bytes": 129024,
+          "exception_values": 7581,
+          "max_exceptions_per_row": 226,
+          "padded_exception_bytes": 113904,
+          "total_bytes": 242928,
+          "csr_bytes_lower_layout": 174850
+        },
+        "16": {
+          "dense_low_bytes": 258048,
+          "exception_values": 59,
+          "max_exceptions_per_row": 4,
+          "padded_exception_bytes": 1344,
+          "total_bytes": 259392,
+          "csr_bytes_lower_layout": 258624
+        }
+      },
+      "sparse_full_xor_csr_bytes": 723796
+    }
+  },
+  "state": {
+    "base": {
+      "shape": [
+        84,
+        1536
+      ],
+      "dtype": "torch.float32",
+      "bytes": 516096
+    },
+    "routes.1.low": {
+      "shape": [
+        84,
+        1536
+      ],
+      "dtype": "torch.uint8",
+      "bytes": 129024
+    },
+    "routes.1.columns": {
+      "shape": [
+        84,
+        226
+      ],
+      "dtype": "torch.int16",
+      "bytes": 37968
+    },
+    "routes.1.high": {
+      "shape": [
+        84,
+        226
+      ],
+      "dtype": "torch.int32",
+      "bytes": 75936
+    }
+  },
+  "scope": "Exact selected-row value-byte reconstruction of existing profile tables, not a new whole-model gate",
+  "value_byte_validation": {
+    "accepted": true,
+    "comparisons": 176,
+    "different_bytes": 0
+  },
+  "timings": {
+    "bulk_32_ids": {
+      "full_table": {
+        "median_us": 15.6625,
+        "mean_us": 16.852300952380954,
+        "sample_sd_us": 3.823474213599334,
+        "samples_us": [
+          15.715,
+          15.156659999999999,
+          14.235840000000001,
+          15.6625,
+          15.21,
+          15.616679999999999,
+          15.9275,
+          17.3225,
+          24.68084,
+          13.98416,
+          26.730819999999998,
+          15.72084,
+          14.3575,
+          15.0325,
+          15.978320000000002,
+          12.4975,
+          13.57582,
+          16.71,
+          24.03,
+          15.36334,
+          20.39
+        ]
+      },
+      "xor_lookup": {
+        "median_us": 23.69666,
+        "mean_us": 27.323766666666668,
+        "sample_sd_us": 7.014047018531693,
+        "samples_us": [
+          22.36,
+          22.09166,
+          23.69666,
+          23.245,
+          22.47084,
+          21.83834,
+          45.45582,
+          38.75582,
+          24.13416,
+          22.65916,
+          36.37668,
+          23.066660000000002,
+          24.14166,
+          26.046660000000003,
+          35.1275,
+          22.8475,
+          34.99416,
+          34.50584,
+          22.38582,
+          25.33,
+          22.269160000000003
+        ]
+      },
+      "median_overhead_us": 8.034160000000002
+    },
+    "alternate_1_id": {
+      "full_table": {
+        "median_us": 0.89166,
+        "mean_us": 1.0989704761904762,
+        "sample_sd_us": 0.6112117849197297,
+        "samples_us": [
+          0.84834,
+          0.82584,
+          0.86834,
+          0.92334,
+          0.8775,
+          0.90168,
+          0.87334,
+          0.86584,
+          0.8425,
+          0.8325,
+          0.8375,
+          0.84666,
+          0.89166,
+          3.42666,
+          1.06918,
+          0.9775,
+          2.2275,
+          1.085,
+          1.10582,
+          1.03584,
+          0.91584
+        ]
+      },
+      "xor_lookup": {
+        "median_us": 18.6125,
+        "mean_us": 18.661546666666666,
+        "sample_sd_us": 4.118631790438827,
+        "samples_us": [
+          13.85416,
+          14.005,
+          15.5325,
+          22.664160000000003,
+          19.97666,
+          24.40082,
+          14.585840000000001,
+          14.7975,
+          13.885,
+          13.696679999999999,
+          14.273340000000001,
+          16.2825,
+          21.500819999999997,
+          22.64666,
+          22.561680000000003,
+          17.91,
+          18.6125,
+          22.485,
+          26.871660000000002,
+          20.35084,
+          20.999160000000003
+        ]
+      },
+      "median_overhead_us": 17.72084
+    }
+  },
+  "timing_scope": "Tiny lookup-only calls, preloaded IDs and state, 4 CPU threads; interleaved synchronized batches, no whole-model speed claim"
+}

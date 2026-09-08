@@ -1,0 +1,35 @@
+{
+  "status": "small_tests_passed_ready_for_review",
+  "format": "CMPRPACK-v1",
+  "tests": 25,
+  "passed": true,
+  "largest_test_raw_bytes": 2097171,
+  "byte_api_compatibility_cases": 24,
+  "original_packing_py_modified": false,
+  "full_boltz_file_run": true,
+  "functions": [
+    "pack_file",
+    "unpack_file"
+  ],
+  "default_output_cap_bytes": 1073741824,
+  "default_window_cap_bytes": 67108864,
+  "minimum_window_cap_bytes": 1024,
+  "decoder_window_limit_enforced": true,
+  "window_unit_probe_payload_bytes": 2048,
+  "default_block_bytes": 1048576,
+  "files": {
+    "packing_files.py": "5fd6525b8546ac317d32ff89e3ff772b94de0a013d39509f7c2f4189cfeb4db5",
+    "test_packing_files.py": "12b9686c30fa292e98155fc69ab425edd9fcb22d64855932003b61e126a3c1ab",
+    "full_checkpoint.py": "3589490736e6186389b9528f86e50b9e25b7c4e35a25a0b2c6dcb2355aa5fbf8",
+    "README.md": "0dc4b573ea0fb99e3e769ae92fcce0b34ff5179afe8047d11c5a6307f9e99c88"
+  },
+  "full_checkpoint_report": "full-checkpoint/full-result.json",
+  "full_checkpoint_summary": {
+    "source_bytes": 2062669224,
+    "packed_bytes": 1759531547,
+    "all_bytes_equal": true,
+    "disk_bytes_saved": 303137677,
+    "peak_process_rss_bytes": 56360960,
+    "torch_imported": false
+  }
+}

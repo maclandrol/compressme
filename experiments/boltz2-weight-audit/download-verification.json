@@ -1,0 +1,21 @@
+{
+  "repository": "boltz-community/boltz-2",
+  "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607",
+  "files": [
+    {
+      "name": "boltz2_conf.ckpt",
+      "bytes": 2286561469,
+      "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+      "verified": true,
+      "downloaded": true
+    },
+    {
+      "name": "boltz2_aff.ckpt",
+      "bytes": 2062139170,
+      "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+      "verified": true,
+      "downloaded": true
+    }
+  ],
+  "deserialization": "none"
+}

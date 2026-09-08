@@ -1,0 +1,261 @@
+{
+  "device": "cpu",
+  "batch": 12,
+  "contraction": {
+    "operation": "bilinear_graph_attention",
+    "parameters_before": 39902721,
+    "parameters_after": 35225561,
+    "aggregate_before_value": false,
+    "skip_single_neighbors": false,
+    "guarantee": "real-arithmetic equality including softmax row-shift invariance"
+  },
+  "aggregation": {
+    "operation": "bilinear_graph_attention",
+    "parameters_before": 39902721,
+    "parameters_after": 35225561,
+    "aggregate_before_value": true,
+    "skip_single_neighbors": false,
+    "guarantee": "real-arithmetic equality including softmax row-shift invariance"
+  },
+  "original": {
+    "parameters": 45406721,
+    "error": {
+      "predictions": {
+        "shape": [
+          12,
+          12,
+          512
+        ],
+        "max_abs": 0.0,
+        "rms": 0.0,
+        "relative_l2": 0.0,
+        "exact": true
+      },
+      "cls": {
+        "shape": [
+          12,
+          512
+        ],
+        "max_abs": 0.0,
+        "rms": 0.0,
+        "relative_l2": 0.0,
+        "exact": true
+      },
+      "embeddings": {
+        "shape": [
+          12,
+          13,
+          512
+        ],
+        "max_abs": 0.0,
+        "rms": 0.0,
+        "relative_l2": 0.0,
+        "exact": true
+      }
+    },
+    "median_seconds": 0.027249396007391624,
+    "seconds": [
+      0.028531916992506012,
+      0.02776799999992363,
+      0.027436584001407027,
+      0.027299792011035606,
+      0.027073875011410564,
+      0.026799458981258795,
+      0.027199000003747642,
+      0.027044958987971768
+    ]
+  },
+  "affine_fused": {
+    "parameters": 39902721,
+    "error": {
+      "predictions": {
+        "shape": [
+          12,
+          12,
+          512
+        ],
+        "max_abs": 2.5033950805664062e-06,
+        "rms": 2.9228708555374805e-07,
+        "relative_l2": 3.3971023036482334e-07,
+        "exact": false
+      },
+      "cls": {
+        "shape": [
+          12,
+          512
+        ],
+        "max_abs": 3.2782554626464844e-07,
+        "rms": 7.146664951472014e-08,
+        "relative_l2": 5.423516789865377e-07,
+        "exact": false
+      },
+      "embeddings": {
+        "shape": [
+          12,
+          13,
+          512
+        ],
+        "max_abs": 5.960464477539062e-07,
+        "rms": 8.492000828271118e-08,
+        "relative_l2": 3.909055746301142e-07,
+        "exact": false
+      }
+    },
+    "median_seconds": 0.02473214549536351,
+    "seconds": [
+      0.02477858299971558,
+      0.024966791999759153,
+      0.02472437499091029,
+      0.02473991599981673,
+      0.024715042003663257,
+      0.024934541987022385,
+      0.02470224999706261,
+      0.024689875019248575
+    ]
+  },
+  "bilinear": {
+    "parameters": 35225561,
+    "error": {
+      "predictions": {
+        "shape": [
+          12,
+          12,
+          512
+        ],
+        "max_abs": 2.384185791015625e-06,
+        "rms": 3.1222932683042763e-07,
+        "relative_l2": 3.628880706216278e-07,
+        "exact": false
+      },
+      "cls": {
+        "shape": [
+          12,
+          512
+        ],
+        "max_abs": 3.5762786865234375e-07,
+        "rms": 7.587960505290423e-08,
+        "relative_l2": 5.758410598610968e-07,
+        "exact": false
+      },
+      "embeddings": {
+        "shape": [
+          12,
+          13,
+          512
+        ],
+        "max_abs": 1.1324882507324219e-06,
+        "rms": 9.094507321005373e-08,
+        "relative_l2": 4.1864028068155114e-07,
+        "exact": false
+      }
+    },
+    "median_seconds": 0.021261208501528017,
+    "seconds": [
+      0.021521791990380734,
+      0.020731750002596527,
+      0.02071145799709484,
+      0.021219957998255268,
+      0.021752875007223338,
+      0.021302459004800767,
+      0.021393542003352195,
+      0.020954167004674673
+    ]
+  },
+  "bilinear_aggregate": {
+    "parameters": 35225561,
+    "error": {
+      "predictions": {
+        "shape": [
+          12,
+          12,
+          512
+        ],
+        "max_abs": 2.384185791015625e-06,
+        "rms": 2.8883858629674565e-07,
+        "relative_l2": 3.357022172335221e-07,
+        "exact": false
+      },
+      "cls": {
+        "shape": [
+          12,
+          512
+        ],
+        "max_abs": 3.2782554626464844e-07,
+        "rms": 7.424375457009114e-08,
+        "relative_l2": 5.634267902409452e-07,
+        "exact": false
+      },
+      "embeddings": {
+        "shape": [
+          12,
+          13,
+          512
+        ],
+        "max_abs": 5.364418029785156e-07,
+        "rms": 8.490144964268511e-08,
+        "relative_l2": 3.9082014510660794e-07,
+        "exact": false
+      }
+    },
+    "median_seconds": 0.02038683350838255,
+    "seconds": [
+      0.020343499985756353,
+      0.020387625001603737,
+      0.02036683398182504,
+      0.020590792002622038,
+      0.020323542004916817,
+      0.020386042015161365,
+      0.020619916991563514,
+      0.02047008299268782
+    ]
+  },
+  "bilinear_skip": {
+    "parameters": 35225561,
+    "error": {
+      "predictions": {
+        "shape": [
+          12,
+          12,
+          512
+        ],
+        "max_abs": 2.384185791015625e-06,
+        "rms": 2.8883858629674565e-07,
+        "relative_l2": 3.357022172335221e-07,
+        "exact": false
+      },
+      "cls": {
+        "shape": [
+          12,
+          512
+        ],
+        "max_abs": 3.2782554626464844e-07,
+        "rms": 7.424375457009114e-08,
+        "relative_l2": 5.634267902409452e-07,
+        "exact": false
+      },
+      "embeddings": {
+        "shape": [
+          12,
+          13,
+          512
+        ],
+        "max_abs": 5.364418029785156e-07,
+        "rms": 8.490144964268511e-08,
+        "relative_l2": 3.9082014510660794e-07,
+        "exact": false
+      }
+    },
+    "median_seconds": 0.0198222295002779,
+    "seconds": [
+      0.019536792009603232,
+      0.019322750013088807,
+      0.01992295798845589,
+      0.019788750010775402,
+      0.019855708989780396,
+      0.019751249987166375,
+      0.02046479200362228,
+      0.020903791999444366
+    ]
+  },
+  "specialized_bilinear_parameters": 19763160
+}

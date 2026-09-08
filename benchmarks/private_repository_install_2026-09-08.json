@@ -1,0 +1,842 @@
+{
+  "date": "2026-09-08",
+  "installed_files": [
+    {
+      "path": ".github/workflows/docs.yml",
+      "before_sha256": null,
+      "after_sha256": "5c5db161824f57bfc789fbca57c24e701b490d5cdfca48e6e14be7212fcd78d5",
+      "bytes": 1377
+    },
+    {
+      "path": ".gitignore",
+      "before_sha256": "79e18ffe8abf220ffce4377aa16661417f84126106a7512860e4d86c92204c19",
+      "after_sha256": "d963c27a1af37441f913df7273d4bb628bda8e76126231de4ee133ce5015fec5",
+      "bytes": 380
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "before_sha256": null,
+      "after_sha256": "fa85ff4910d93e645a793e4685e9ac01dfa1371968d45c582bc6bd9ffb85edfd",
+      "bytes": 1448
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "a40d48895e0c2510bc646ae3ae21aed25b248ae26a5f3d2205ad616979ea3538",
+      "after_sha256": "f47d79b7d8e5ae5a8353c1a0d4fe8f43313110abf8f2cd73d7102e5c5045c34e",
+      "bytes": 6282
+    },
+    {
+      "path": "benchmarks/README.md",
+      "before_sha256": null,
+      "after_sha256": "18ef9b2d32f47ab30722d91203cbd2d6e70a152b8863f3a085749ffd71c10025",
+      "bytes": 713
+    },
+    {
+      "path": "benchmarks/private_repository_2026-09-08_verification.json",
+      "before_sha256": null,
+      "after_sha256": "bcfac35ef842e81fde712d0c78166b7eb3918b5891f6c65dbe005a173d845a1d",
+      "bytes": 1957
+    },
+    {
+      "path": "docs/assets/evidence/boltz2-transport-readme.txt",
+      "before_sha256": null,
+      "after_sha256": "addb788dda752b1013baf5e1752b4ef53270a28518a88682f4a1b10651d79e91",
+      "bytes": 1686
+    },
+    {
+      "path": "docs/assets/evidence/provenance.json",
+      "before_sha256": null,
+      "after_sha256": "bf550fcf564b05b3d556ac35dea2bb9058eeb58bf24c8224639192fe7b0ee8e8",
+      "bytes": 1013
+    },
+    {
+      "path": "docs/assets/evidence/transformers-license-provenance.json",
+      "before_sha256": null,
+      "after_sha256": "e2761202b3c3544a348525083e1623de24cf7977f5f04abef54ccf0fee4030a4",
+      "bytes": 323
+    },
+    {
+      "path": "docs/assets/evidence/transformers-license.txt",
+      "before_sha256": null,
+      "after_sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "bytes": 11418
+    },
+    {
+      "path": "docs/assets/katex/LICENSE",
+      "before_sha256": null,
+      "after_sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+      "bytes": 1107
+    },
+    {
+      "path": "docs/assets/katex/PROVENANCE.json",
+      "before_sha256": null,
+      "after_sha256": "8baae011fba7c9e33d4a4146cd6beb07b7bbcb86307e73fdb1d38308ca632193",
+      "bytes": 11009
+    },
+    {
+      "path": "docs/assets/katex/auto-render.min.js",
+      "before_sha256": null,
+      "after_sha256": "bb53eb953394531aae36fdd537065c4244eb8542901a3ce914601d932675b8ac",
+      "bytes": 3467
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+      "bytes": 63632
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251",
+      "bytes": 33516
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "bytes": 28076
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Bold.ttf",
+      "before_sha256": null,
+      "after_sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+      "bytes": 12368
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff",
+      "before_sha256": null,
+      "after_sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed",
+      "bytes": 7716
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
+      "before_sha256": null,
+      "after_sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "bytes": 6912
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+      "bytes": 12344
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c",
+      "bytes": 7656
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "bytes": 6908
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Bold.ttf",
+      "before_sha256": null,
+      "after_sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+      "bytes": 19584
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Bold.woff",
+      "before_sha256": null,
+      "after_sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb",
+      "bytes": 13296
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Bold.woff2",
+      "before_sha256": null,
+      "after_sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "bytes": 11348
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+      "bytes": 19572
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463",
+      "bytes": 13208
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "bytes": 11316
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Bold.ttf",
+      "before_sha256": null,
+      "after_sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+      "bytes": 51336
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Bold.woff",
+      "before_sha256": null,
+      "after_sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822",
+      "bytes": 29912
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Bold.woff2",
+      "before_sha256": null,
+      "after_sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "bytes": 25324
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-BoldItalic.ttf",
+      "before_sha256": null,
+      "after_sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+      "bytes": 32968
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-BoldItalic.woff",
+      "before_sha256": null,
+      "after_sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c",
+      "bytes": 19412
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-BoldItalic.woff2",
+      "before_sha256": null,
+      "after_sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "bytes": 16780
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Italic.ttf",
+      "before_sha256": null,
+      "after_sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+      "bytes": 33580
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Italic.woff",
+      "before_sha256": null,
+      "after_sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf",
+      "bytes": 19676
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Italic.woff2",
+      "before_sha256": null,
+      "after_sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "bytes": 16988
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+      "bytes": 53580
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc",
+      "bytes": 30772
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "bytes": 26272
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-BoldItalic.ttf",
+      "before_sha256": null,
+      "after_sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+      "bytes": 31196
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-BoldItalic.woff",
+      "before_sha256": null,
+      "after_sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e",
+      "bytes": 18668
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-BoldItalic.woff2",
+      "before_sha256": null,
+      "after_sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "bytes": 16400
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-Italic.ttf",
+      "before_sha256": null,
+      "after_sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+      "bytes": 31308
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-Italic.woff",
+      "before_sha256": null,
+      "after_sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571",
+      "bytes": 18748
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-Italic.woff2",
+      "before_sha256": null,
+      "after_sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "bytes": 16440
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Bold.ttf",
+      "before_sha256": null,
+      "after_sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+      "bytes": 24504
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Bold.woff",
+      "before_sha256": null,
+      "after_sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba",
+      "bytes": 14408
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Bold.woff2",
+      "before_sha256": null,
+      "after_sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "bytes": 12216
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Italic.ttf",
+      "before_sha256": null,
+      "after_sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+      "bytes": 22364
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Italic.woff",
+      "before_sha256": null,
+      "after_sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2",
+      "bytes": 14112
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Italic.woff2",
+      "before_sha256": null,
+      "after_sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "bytes": 12028
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+      "bytes": 19436
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605",
+      "bytes": 12316
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "bytes": 10344
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Script-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+      "bytes": 16648
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Script-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a",
+      "bytes": 10588
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Script-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "bytes": 9644
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size1-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+      "bytes": 12228
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size1-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9",
+      "bytes": 6496
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size1-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "bytes": 5468
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size2-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+      "bytes": 11508
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size2-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d",
+      "bytes": 6188
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size2-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "bytes": 5208
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size3-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+      "bytes": 7588
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size3-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949",
+      "bytes": 4420
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size3-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995",
+      "bytes": 3624
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size4-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+      "bytes": 10364
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size4-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58",
+      "bytes": 5980
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size4-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "bytes": 4928
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Typewriter-Regular.ttf",
+      "before_sha256": null,
+      "after_sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+      "bytes": 27556
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Typewriter-Regular.woff",
+      "before_sha256": null,
+      "after_sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7",
+      "bytes": 16028
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Typewriter-Regular.woff2",
+      "before_sha256": null,
+      "after_sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "bytes": 13568
+    },
+    {
+      "path": "docs/assets/katex/katex.min.css",
+      "before_sha256": null,
+      "after_sha256": "19095127357ed6d29fe0a63a6b000c913a89f7f1963b765dd3715e97c9852e75",
+      "bytes": 23352
+    },
+    {
+      "path": "docs/assets/katex/katex.min.js",
+      "before_sha256": null,
+      "after_sha256": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89",
+      "bytes": 276701
+    },
+    {
+      "path": "docs/assets/math.js",
+      "before_sha256": null,
+      "after_sha256": "ff68c89f03a92d3bf90cb22cf5d1d1424e526170b56e94cad63909bfea674ba7",
+      "bytes": 368
+    },
+    {
+      "path": "docs/assets/site.css",
+      "before_sha256": null,
+      "after_sha256": "48d8dba39450b5fdb47c6ee44543990a8b44a776232d461db921167ae146cd8d",
+      "bytes": 422
+    },
+    {
+      "path": "docs/biology-targets.md",
+      "before_sha256": "cc52cbdc1c161890ef40b54176981a177fb0c8b00c735afbde40c5e52ff02d97",
+      "after_sha256": "31b5536897f45f25117ff286ffbd111f6230f04bd881d98b7c80516378e4cbf4",
+      "bytes": 9352
+    },
+    {
+      "path": "docs/building-docs.md",
+      "before_sha256": null,
+      "after_sha256": "dfcdf78679768f3c379221d2b89c0d8f553da9d9f93748c8eed0821e3ab777fb",
+      "bytes": 3999
+    },
+    {
+      "path": "docs/gpu-validation.md",
+      "before_sha256": "e979355a46525780c4256c2f73aecf9872ea3a0f79a70e274b3bb88947ca7619",
+      "after_sha256": "c6d8463efbd257b9ed9ce41d6d7afddc2d5bc32ab9ac5714110da70d786f81db",
+      "bytes": 11786
+    },
+    {
+      "path": "docs/index.md",
+      "before_sha256": null,
+      "after_sha256": "bd9c9f4d1b41ce531f570de06481d597afbd02caab51d14e6102631d9d5fca1a",
+      "bytes": 1472
+    },
+    {
+      "path": "docs/installation.md",
+      "before_sha256": "337ddeca363b80b2c0624dc0194020bb594b91e0dbb964e67a71346158af70cd",
+      "after_sha256": "154cb24133eed3a0ba8f0716e725078cbd1193a2104097a7f1dcb6117d382896",
+      "bytes": 4148
+    },
+    {
+      "path": "docs/optimization-record.md",
+      "before_sha256": "91da1ec3011e8aa245dc841fbae92043e44762d1a94469dc021d811d4294c331",
+      "after_sha256": "ba65bd277991150708542bd9016983170e127e4cb148d8e4017f8d40a92b7170",
+      "bytes": 11071
+    },
+    {
+      "path": "docs/packed-embeddings.md",
+      "before_sha256": null,
+      "after_sha256": "2cbdf1ec34afb88bd3303fa5ff4a84a7292c5c4346f4511c1287171faa2e8532",
+      "bytes": 2964
+    },
+    {
+      "path": "docs/state.md",
+      "before_sha256": "7e24f9e57cd3652967b7745d11b574a8366cde460a1c3ab08512410d47b5499c",
+      "after_sha256": "a4dc49b2ced7f44ba5a2b5558bb370b9e3beaca52a2c1ea77f4b9cb5a7d2f1ca",
+      "bytes": 15870
+    },
+    {
+      "path": "docs/technical-report.md",
+      "before_sha256": "b1385d849e4c7ca3c853721baff57ca681f3838d3665eb6eef96c6a975201465",
+      "after_sha256": "200fba2aef9c774f4220ecf5ff21b16ef2113e133ecc7914b2e1f0a3cc45029e",
+      "bytes": 6504
+    },
+    {
+      "path": "docs/tutorials/boltz2.md",
+      "before_sha256": null,
+      "after_sha256": "e78f772799872432e75a300fdacccee7b8b6b1d6b35eb306e00c6c832584f7a1",
+      "bytes": 10439
+    },
+    {
+      "path": "docs/tutorials/moljepa.md",
+      "before_sha256": null,
+      "after_sha256": "d1018a3aa6a36d536c38bd9630a17295f14a9a3efdcecc64933ad85f38d87bbf",
+      "bytes": 7997
+    },
+    {
+      "path": "examples/reproduce/MOLJEPA_LICENSE.txt",
+      "before_sha256": null,
+      "after_sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "bytes": 19347
+    },
+    {
+      "path": "examples/reproduce/README.md",
+      "before_sha256": null,
+      "after_sha256": "d8d3a37485fc5a7311deb90a007fe08ee9a0801438e216c1f511ecc6cca4fb79",
+      "bytes": 2615
+    },
+    {
+      "path": "examples/reproduce/SHA256.json",
+      "before_sha256": null,
+      "after_sha256": "13ac7aae305b22afe4535eb5e378b7d9b6f2ee63b1c7e00b5889f46fac96354c",
+      "bytes": 1839
+    },
+    {
+      "path": "examples/reproduce/boltz-macos-tested.txt",
+      "before_sha256": null,
+      "after_sha256": "693e0f4ce9479db03ef5a7373c13ffa7b38a6a4fbc151e1f9d951cbdb6239e75",
+      "bytes": 1241
+    },
+    {
+      "path": "examples/reproduce/boltz2.py",
+      "before_sha256": null,
+      "after_sha256": "80964a55e4ed621d0c76952e028c5ca749a42bb01be51a64191141a25bc1fe35",
+      "bytes": 8834
+    },
+    {
+      "path": "examples/reproduce/common.py",
+      "before_sha256": null,
+      "after_sha256": "4372b1d9d4b71dd635285fb3351b0cfaedefb124122b4e36c8b91cbc46687cf0",
+      "bytes": 2106
+    },
+    {
+      "path": "examples/reproduce/download_checkpoints.py",
+      "before_sha256": null,
+      "after_sha256": "849f049d08ede035d0ccdd6b8361ad475247eaee5bb618a8c55ff45dcd2afdde",
+      "bytes": 351
+    },
+    {
+      "path": "examples/reproduce/export_shared_tensors.py",
+      "before_sha256": null,
+      "after_sha256": "51f2de7205c249e9f38b1f2c7eb4f8899ac30768bb0ddfffcd553215b3cd0839",
+      "bytes": 7710
+    },
+    {
+      "path": "examples/reproduce/fetch.py",
+      "before_sha256": null,
+      "after_sha256": "2c4ce4476e092dbf198a61e9a352761eb91cdbe711ff8c7974927f94209462ba",
+      "bytes": 4522
+    },
+    {
+      "path": "examples/reproduce/moljepa-benchmark.json",
+      "before_sha256": null,
+      "after_sha256": "e875fde46438c3bc6a7309b282b82d65bfa9bccb59a209c2c9bdc7883e70b13a",
+      "bytes": 1267
+    },
+    {
+      "path": "examples/reproduce/moljepa-init.txt",
+      "before_sha256": null,
+      "after_sha256": "790a096e3c1a9e401629848d66aac2ce34c2e09e91f8cbc5da46fba89563fa02",
+      "bytes": 213
+    },
+    {
+      "path": "examples/reproduce/moljepa-macos-tested.txt",
+      "before_sha256": null,
+      "after_sha256": "97eb98fc8d4ff3d4746d571a5b59244a5b64713b745f50646e7d7cf2283ff2df",
+      "bytes": 146
+    },
+    {
+      "path": "examples/reproduce/moljepa-source.json",
+      "before_sha256": null,
+      "after_sha256": "6a194c059298875eb3320bc1cab98eb23af5ca6371e0f1f6c01ed752bda484d2",
+      "bytes": 1175
+    },
+    {
+      "path": "examples/reproduce/moljepa.py",
+      "before_sha256": null,
+      "after_sha256": "e833c98d7617e45b5bf7b673ab5843daeb57c2b81c06bb8308fda1b74f7c3566",
+      "bytes": 9652
+    },
+    {
+      "path": "examples/reproduce/reproduction-smoke.json",
+      "before_sha256": null,
+      "after_sha256": "ec2d226c012a95ce9e7c14286b55eead42efbb19cc9162b81c07a569dc458c41",
+      "bytes": 3297
+    },
+    {
+      "path": "examples/reproduce/safe_state.py",
+      "before_sha256": null,
+      "after_sha256": "af89c241cdd5d27d70cceafd664ac048b76e76759046e4e7b82c230c6a4de5f2",
+      "bytes": 2009
+    },
+    {
+      "path": "examples/reproduce/static_metadata.py",
+      "before_sha256": null,
+      "after_sha256": "e4cea3d92c70cff42350412fc61e8a44d31ee6892cebbfe363c6d9955120b4f0",
+      "bytes": 4559
+    },
+    {
+      "path": "examples/reproduce/test_helpers.py",
+      "before_sha256": null,
+      "after_sha256": "eb20f03c3e2b878e1eeee8d9ae5099519e5feb0636c4d605a386e643bb9ab195",
+      "bytes": 5919
+    },
+    {
+      "path": "examples/reproduce/tiny_complex.yaml",
+      "before_sha256": null,
+      "after_sha256": "62315f7ce758bfae92c0de6c29fa01f8892c5947b052150a1c6e0293b631da62",
+      "bytes": 185
+    },
+    {
+      "path": "examples/reproduce/verification_smiles.json",
+      "before_sha256": null,
+      "after_sha256": "1d63069d11311a796de12f95e3a224611e546242182674cb1f65359598303271",
+      "bytes": 1061
+    },
+    {
+      "path": "examples/state_se/README.md",
+      "before_sha256": "c40b5f5d31d6a1171ad05de4782763fbc31179a8f2822c2e105341c28618010b",
+      "after_sha256": "40309da34aa8ddd9b52f8a5d9f75dc4435961f39102f52a86ea9c465a00a0db1",
+      "bytes": 2977
+    },
+    {
+      "path": "examples/state_se/benchmark_lossless.py",
+      "before_sha256": null,
+      "after_sha256": "47a390a0a0350ee62d0ee8183d976dc2c5de02cc63f3b8e1d1de7d3f89443495",
+      "bytes": 3815
+    },
+    {
+      "path": "examples/state_se/build_lossless.py",
+      "before_sha256": null,
+      "after_sha256": "c3197e599d491b749f73d99399c84906464eaeefa709c1343add603b12eab5c4",
+      "bytes": 4117
+    },
+    {
+      "path": "examples/state_se/lossless_backend.py",
+      "before_sha256": null,
+      "after_sha256": "bdd948c2f8b69e813c4213f0c16d81ca5b0885c05347a8a16068d4de5925b010",
+      "bytes": 3285
+    },
+    {
+      "path": "examples/state_se/lossless_checks.py",
+      "before_sha256": null,
+      "after_sha256": "406c8d15114493b3c9834f6e62162a10a790e7c9153612e1b4a2c2cb0ef37d22",
+      "bytes": 2937
+    },
+    {
+      "path": "examples/validate_backends.py",
+      "before_sha256": "d6661b42681fc4af91418bcaec0dca8b5e9f6e05f327d9d7bcb24dfb037d615b",
+      "after_sha256": "278eea9cad6419430b3f96a9199b4ef5182bc29c17cef82d5a26237048fd8709",
+      "bytes": 23157
+    },
+    {
+      "path": "experiments/README.md",
+      "before_sha256": "676fc9bf058549625fe81ff85913e9c65bfc4688f379c03bfccd1dc21c2ccb3c",
+      "after_sha256": "c449855e3fad833fb6b90aa5caed6d38c326a41ed53b63705c39a8eb27ab2d7d",
+      "bytes": 830
+    },
+    {
+      "path": "experiments/state-se-mps-fix/README.md",
+      "before_sha256": null,
+      "after_sha256": "57e5aaabad07523d22aec6a06a0b15589316b3c3935820b88928ee3633f837d2",
+      "bytes": 2393
+    },
+    {
+      "path": "experiments/state-se-mps-fix/backend-options.json",
+      "before_sha256": null,
+      "after_sha256": "659854c2a201a006f654986c1e35856afd2114cc97761161391116b898fa0546",
+      "bytes": 178
+    },
+    {
+      "path": "experiments/state-se-mps-fix/latency-cpu.json",
+      "before_sha256": null,
+      "after_sha256": "24db48b93c906a8135541f66a7dcd564a8533bc6197f1e4eabc0bc6508c79e57",
+      "bytes": 8651
+    },
+    {
+      "path": "experiments/state-se-mps-fix/latency-mps.json",
+      "before_sha256": null,
+      "after_sha256": "8cb921085ab4cebd21af69b70e43061efa60535c7dc1b4273108143806d4d6bf",
+      "bytes": 8652
+    },
+    {
+      "path": "experiments/state-se-mps-fix/portable-reload-cpu.json",
+      "before_sha256": null,
+      "after_sha256": "547ebcbdd9ea7a5e1e1a8f6ae0c6f6a2e8c4f141b1440fa043a7930b0d903ad8",
+      "bytes": 175896
+    },
+    {
+      "path": "experiments/state-se-mps-fix/portable-reload-mps.json",
+      "before_sha256": null,
+      "after_sha256": "ab126248f72df4d7467f6611a66d18910c4aed938cb2f7f4db414eab46e8418d",
+      "bytes": 175896
+    },
+    {
+      "path": "experiments/state-se-mps-fix/sample-integer-delta-estimate.json",
+      "before_sha256": null,
+      "after_sha256": "5ccdaf37d0cf2125af7595aaada088ae6d6231d2944c3d0400f3491b62dd295c",
+      "bytes": 4414
+    },
+    {
+      "path": "experiments/state-se-mps-fix/sample-original-row-blocks.json",
+      "before_sha256": null,
+      "after_sha256": "dec625a70e48d091cc18c342449df6002e3e3c8d14c5028229fe9e00b5b2ed1f",
+      "bytes": 887
+    },
+    {
+      "path": "experiments/state-se-mps-fix/sample-signed-layered-estimate.json",
+      "before_sha256": null,
+      "after_sha256": "aa7e0bbd6f3e147aee240fd85cff05072cb26c9849168ee2720552cd7c88650a",
+      "bytes": 1992
+    },
+    {
+      "path": "experiments/state-se-mps-fix/sample-xor-estimate.json",
+      "before_sha256": null,
+      "after_sha256": "2562b859b1d35bf62c7ac98b82a925488891df3f89433060f0861aa0695a32db",
+      "bytes": 2972
+    },
+    {
+      "path": "mkdocs.yml",
+      "before_sha256": null,
+      "after_sha256": "95cd5ae004e0e80a2b69c1ec5be9d1013c0a2bbcc0618ebbcebb061aed075cf4",
+      "bytes": 1860
+    },
+    {
+      "path": "pyproject.toml",
+      "before_sha256": "cf5f8814a36518775509d26d0cbb2c33829e00e39fcd9ac1dc134c52c22f1588",
+      "after_sha256": "a1b386c6f56c35a432367422d7ebb16c5714e2839d0ae62882f4bd985d6fed46",
+      "bytes": 1253
+    },
+    {
+      "path": "requirements/docs.txt",
+      "before_sha256": null,
+      "after_sha256": "6ccc2316e9810d5e1c08cca3be5a63ab006e9f70526ade6cd2612645d71ae96d",
+      "bytes": 366
+    },
+    {
+      "path": "src/compressme/packed_embedding.py",
+      "before_sha256": null,
+      "after_sha256": "d64325c810ea9d17631be19a6bf9c397e3a6c773449b7f265c8a38b50b9d49b3",
+      "bytes": 9711
+    },
+    {
+      "path": "src/compressme/serialization.py",
+      "before_sha256": "56cce642c06bd4e4b9f9644ca21c9e0f5d85cd671adf04046d7380b5b49e72ea",
+      "after_sha256": "6dcf462af93847e877b85790c9079a38a33ebcf842d7919de391c743925e3c3a",
+      "bytes": 20305
+    },
+    {
+      "path": "src/compressme/state_se_io.py",
+      "before_sha256": "c506b6e0d1b16c3af190f87b95dc24a04f6ed43b6e249d7714cee30d79c98889",
+      "after_sha256": "ffd96650d33f1b0dc05ebbf01c4ffc157b88db3118f2a258e8366d9856443c60",
+      "bytes": 7534
+    },
+    {
+      "path": "src/compressme/targets.py",
+      "before_sha256": "1ea12cf311cccd4a1f470d5e14a2e21974e2dc3c890b401124d6443fa8721c24",
+      "after_sha256": "006a21190ca5c994de7eeea82f42409d1e626d02bc875988bfa5c0d1d3d807f9",
+      "bytes": 16850
+    },
+    {
+      "path": "tests/test_backend_validation.py",
+      "before_sha256": "70acc1bff727877ab482bd78d79e23722917c7c0b6c9605107f95a27acc47813",
+      "after_sha256": "7455cec613e7057eeceb8297b748b776fa7bb7d764bcfcbd4a9b683473fd9e1c",
+      "bytes": 7984
+    },
+    {
+      "path": "tests/test_docs_hooks.py",
+      "before_sha256": null,
+      "after_sha256": "07bbde30fa0ef284dc364a60110b6b55106816cbd2e6ac2e353aff1ed7ff3d85",
+      "bytes": 4402
+    },
+    {
+      "path": "tests/test_packed_embedding.py",
+      "before_sha256": null,
+      "after_sha256": "c3f80b5522b6613f0c111bd2e9c7a4f733d19688c1b98149e9edcbf3e260202d",
+      "bytes": 2594
+    },
+    {
+      "path": "tests/test_packed_embedding_serialization.py",
+      "before_sha256": null,
+      "after_sha256": "d68099c61b37a10f05a9466ec6de569fe51c1602174bd47aa12a0b62b2f9ff77",
+      "bytes": 6847
+    },
+    {
+      "path": "tests/test_sparse_graph.py",
+      "before_sha256": "bf28ad700b2739285b5423089ba0811b1be7d0ef9fb6ee77748041b35eae5b5f",
+      "after_sha256": "7f73bbaddf222e18b6ef79f464c73df3e7e839a2bb43d41b9807ecb4b4fe8f43",
+      "bytes": 2198
+    },
+    {
+      "path": "tests/test_state_se_lossless.py",
+      "before_sha256": null,
+      "after_sha256": "ea40217d7a47e54991f07c9f675a0e6d6c4f9a85a9b22c05411e503b594a61c2",
+      "bytes": 1615
+    },
+    {
+      "path": "tools/docs_hooks.py",
+      "before_sha256": null,
+      "after_sha256": "241dec4e85e3ee6fc422ad8afe90acfdd10e25da2cc778c99052d1448cc07f41",
+      "bytes": 5153
+    }
+  ],
+  "model_assets_and_environments_modified": false,
+  "repository": "https://github.com/maclandrol/compressme",
+  "visibility_verified": "PRIVATE"
+}

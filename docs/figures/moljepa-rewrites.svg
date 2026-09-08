@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="319.652589pt" viewBox="0 0 684 319.652589" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-08T08:23:27.200085</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 319.652589 
+L 684 319.652589 
+L 684 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 25.871538 245.64744 
+L 219.669231 245.64744 
+Q 229.970769 245.64744 229.970769 240.76872 
+L 229.970769 57.20688 
+Q 229.970769 52.32816 219.669231 52.32816 
+L 25.871538 52.32816 
+Q 15.57 52.32816 15.57 57.20688 
+L 15.57 240.76872 
+Q 15.57 245.64744 25.871538 245.64744 
+z
+" clip-path="url(#pbfb34beaa7)" style="fill: #f7f9fa; stroke: #d7e0e5; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 243.491538 245.64744 
+L 437.289231 245.64744 
+Q 447.590769 245.64744 447.590769 240.76872 
+L 447.590769 57.20688 
+Q 447.590769 52.32816 437.289231 52.32816 
+L 243.491538 52.32816 
+Q 233.19 52.32816 233.19 57.20688 
+L 233.19 240.76872 
+Q 233.19 245.64744 243.491538 245.64744 
+z
+" clip-path="url(#pbfb34beaa7)" style="fill: #f7f9fa; stroke: #d7e0e5; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 461.111538 245.64744 
+L 654.909231 245.64744 
+Q 665.210769 245.64744 665.210769 240.76872 
+L 665.210769 57.20688 
+Q 665.210769 52.32816 654.909231 52.32816 
+L 461.111538 52.32816 
+Q 450.81 52.32816 450.81 57.20688 
+L 450.81 240.76872 
+Q 450.81 245.64744 461.111538 245.64744 
+z
+" clip-path="url(#pbfb34beaa7)" style="fill: #f7f9fa; stroke: #d7e0e5; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 23.296154 293.51988 
+L 657.484615 293.51988 
+Q 663.279231 293.51988 663.279231 290.7756 
+L 663.279231 262.72296 
+Q 663.279231 259.97868 657.484615 259.97868 
+L 23.296154 259.97868 
+Q 17.501538 259.97868 17.501538 262.72296 
+L 17.501538 290.7756 
+Q 17.501538 293.51988 23.296154 293.51988 
+z
+" clip-path="url(#pbfb34beaa7)" style="fill: #e8f4f4"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="20.076923" y="23.161631" transform="rotate(-0 20.076923 23.161631)">Mol-JEPA: what the compiler changes</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="20.076923" y="45.315" transform="rotate(-0 20.076923 45.315)">Selected rewrites under a SMILES-only input contract</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="31.022308" y="72.45288" transform="rotate(-0 31.022308 72.45288)">1  SPECIALISE THE INPUT</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f8c" x="31.022308" y="227.96208" transform="rotate(-0 31.022308 227.96208)">15.46M fewer parameters</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="248.642308" y="72.45288" transform="rotate(-0 248.642308 72.45288)">2  COMPOSE AFFINE MAPS</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f8c" x="248.642308" y="227.96208" transform="rotate(-0 248.642308 227.96208)">5.50M fewer parameters</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="466.262308" y="72.45288" transform="rotate(-0 466.262308 72.45288)">3  STORE THE INTERACTION</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 13.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f8c" x="466.262308" y="227.96208" transform="rotate(-0 466.262308 227.96208)">4.68M fewer parameters</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="34.885385" y="104.7744" transform="rotate(-0 34.885385 104.7744)">SMILES → graph encoder</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="34.885385" y="132.2172" transform="rotate(-0 34.885385 132.2172)">Extra modality inputs: absent</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 121.160769 149.46126 
+Q 121.160769 159.659815 121.160769 167.845909 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 123.160769 163.845909 
+L 121.160769 167.845909 
+L 119.160769 163.845909 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="34.885385" y="190.152" transform="rotate(-0 34.885385 190.152)">Omit their inactive encoders</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #53636c" x="34.885385" y="209.9718" transform="rotate(-0 34.885385 209.9718)">Saves weights; no active work removed</text>
+   </g>
+   <g id="text_13">
+    <!-- $x\ \to\ Ax+a\ \to\ W(Ax+a)+b$ -->
+    <g style="fill: #192f3c" transform="translate(252.505385 104.7744)">
+     <text>
+      <tspan x="0" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">x</tspan>
+      <tspan x="32.093666" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">A</tspan>
+      <tspan x="40.986732" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">x</tspan>
+      <tspan x="64.638099" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">a</tspan>
+      <tspan x="97.004714" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">W</tspan>
+      <tspan x="114.930495" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">A</tspan>
+      <tspan x="123.823562" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">x</tspan>
+      <tspan x="147.474929" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">a</tspan>
+      <tspan x="176.471023" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">b</tspan>
+      <tspan x="14.447223" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">→</tspan>
+      <tspan x="51.212806" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">+</tspan>
+      <tspan x="79.358272" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">→</tspan>
+      <tspan x="109.858718" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">(</tspan>
+      <tspan x="134.049636" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">+</tspan>
+      <tspan x="155.441237" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">)</tspan>
+      <tspan x="163.04573" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #192f3c">+</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 337.493077 125.069521 
+Q 337.493077 136.792439 337.493077 146.502896 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 339.493077 142.502896 
+L 337.493077 146.502896 
+L 335.493077 142.502896 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <!-- $x\ \to\ (WA)x+(Wa+b)$ -->
+    <g style="fill: #087f8c" transform="translate(252.505385 168.8076)">
+     <text>
+      <tspan x="0" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">x</tspan>
+      <tspan x="40.024323" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">W</tspan>
+      <tspan x="53.867097" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">A</tspan>
+      <tspan x="68.906159" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">x</tspan>
+      <tspan x="99.838776" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">W</tspan>
+      <tspan x="113.68155" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">a</tspan>
+      <tspan x="139.446198" y="-0.359375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">b</tspan>
+      <tspan x="15.558548" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">→</tspan>
+      <tspan x="34.562409" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">(</tspan>
+      <tspan x="63.444245" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">)</tspan>
+      <tspan x="79.918854" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">+</tspan>
+      <tspan x="94.376862" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">(</tspan>
+      <tspan x="124.98819" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">+</tspan>
+      <tspan x="148.332917" y="-0.359375" style="font-size: 14px; font-family: 'DejaVu Sans'; fill: #087f8c">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="252.505385" y="193.81104" transform="rotate(-0 252.505385 193.81104)">The consumer sees the narrow input.</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #53636c" x="252.505385" y="209.9718" transform="rotate(-0 252.505385 209.9718)">Retain the original projection for residuals.</text>
+   </g>
+   <g id="text_17">
+    <!-- $(Qx_i)^\top(Kx_j)$ -->
+    <g style="fill: #192f3c" transform="translate(470.125385 104.7744)">
+     <text>
+      <tspan x="0" y="-0.455" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">(</tspan>
+      <tspan x="29.863037" y="-0.455" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">)</tspan>
+      <tspan x="49.506592" y="-0.455" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">(</tspan>
+      <tspan x="77.399414" y="-0.455" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">)</tspan>
+      <tspan x="5.852051" y="-0.455" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">Q</tspan>
+      <tspan x="17.658691" y="-0.455" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">x</tspan>
+      <tspan x="55.358643" y="-0.455" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">K</tspan>
+      <tspan x="65.195068" y="-0.455" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #192f3c">x</tspan>
+      <tspan x="26.535645" y="1.794993" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #192f3c">i</tspan>
+      <tspan x="74.072021" y="1.794993" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #192f3c">j</tspan>
+      <tspan x="37.904297" y="-6.65" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #192f3c">⊤</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 555.113077 125.069521 
+Q 555.113077 136.792439 555.113077 146.502896 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 557.113077 142.502896 
+L 555.113077 146.502896 
+L 553.113077 142.502896 
+" style="fill: none; stroke: #087f8c; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_18">
+    <!-- $x_i^\top (Q^\top K)x_j$ -->
+    <g style="fill: #087f8c" transform="translate(470.125385 168.8076)">
+     <text>
+      <tspan x="0" y="-0.0875" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">x</tspan>
+      <tspan x="29.046875" y="-0.0875" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">Q</tspan>
+      <tspan x="55.582637" y="-0.0875" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">K</tspan>
+      <tspan x="71.271113" y="-0.0875" style="font-style: oblique; font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">x</tspan>
+      <tspan x="11.592529" y="-6.65" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #087f8c">⊤</tspan>
+      <tspan x="43.980342" y="-6.2825" style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #087f8c">⊤</tspan>
+      <tspan x="8.876953" y="5.073437" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #087f8c">i</tspan>
+      <tspan x="80.148066" y="2.162493" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #087f8c">j</tspan>
+      <tspan x="23.194824" y="-0.0875" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">(</tspan>
+      <tspan x="65.419062" y="-0.0875" style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #087f8c">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="470.125385" y="193.81104" transform="rotate(-0 470.125385 193.81104)">Store the bilinear map when smaller.</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #53636c" x="470.125385" y="209.9718" transform="rotate(-0 470.125385 209.9718)">Preserve biases, edge terms and each head.</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f8c" x="36.173077" y="278.737096" transform="rotate(-0 36.173077 278.737096)">RETAINED OUTPUTS</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #192f3c" x="168.161538" y="278.841409" transform="rotate(-0 168.161538 278.841409)">12 predicted embeddings  ·  CLS  ·  13 latent embeddings  ·  requested attentions</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #53636c" x="23.296154" y="310.29048" transform="rotate(-0 23.296154 310.29048)">Schematic of selected projections, not a full architecture diagram. Float32 reassociation can change final bits.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbfb34beaa7">
+   <rect x="7.2" y="7.2" width="669.6" height="304.92"/>
+  </clipPath>
+ </defs>
+</svg>

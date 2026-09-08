@@ -1,0 +1,17 @@
+{
+  "candidate_file": "boltz2_runtime.py",
+  "sha256": "25cedfc5a6769ff3893832a962c618a31edd5a9e1ed3c412e706885cf6ff1c02",
+  "public_api": "boltz2_invariant_sampling(model, *, immutable_request)",
+  "public_contract_keyword_is_required": true,
+  "routing_guard_tests": {
+    "script": "test_fast_scope.py",
+    "tests": 15,
+    "passed": true,
+    "scope": "tiny routing/source guard fixtures, not actual pretrained numerical gates"
+  },
+  "native_full_gate": "pending independent final candidate hash verification",
+  "arithmetic": "original operation order and repeated shapes unchanged",
+  "guard_mode": "explicit exclusive immutable outer model scope and per-request static data; resolved full state entry/exit, cheap static-input checks per score",
+  "source_revision": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+  "exception_cleanup": "always clear memo/release active ownership even if restoration or state audit raises; preserve primary sampling error and record cleanup error"
+}
