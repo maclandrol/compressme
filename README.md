@@ -83,18 +83,18 @@ parameter enumeration and arithmetic. [CLI reference and runnable adapter](docs/
 
 | Model and contract | Result | Validation boundary |
 | --- | --- | --- |
-| Mol-JEPA, SMILES only; all embedding outputs retained | **56.47% fewer parameters; 1.96–2.21× MPS speed** | All tested outputs and requested attentions within 1e-5; finite test inputs |
-| Boltz-2 confidence and affinity loaded together | **49.55% less joint registered weight storage** | All 48 tested outputs byte-identical on CPU/MPS; no reliable MPS speedup |
-| State ST, original inference and token-ID APIs | **21.25% fewer parameters** | Tested outputs byte-identical on CPU/MPS; no active-compute speedup claimed |
+| [Mol-JEPA](https://arxiv.org/abs/2608.22642), SMILES only; all embedding outputs retained | **56.47% fewer parameters; 1.96–2.21× MPS speed** | All tested outputs and requested attentions within 1e-5; finite test inputs |
+| [Boltz-2](https://doi.org/10.1101/2025.06.14.659707) confidence and affinity loaded together | **49.55% less joint registered weight storage** | All 48 tested outputs byte-identical on CPU/MPS; no reliable MPS speedup |
+| [STATE ST](https://arcinstitute.org/manuscripts/State), original inference and token-ID APIs | **21.25% fewer parameters** | Tested outputs byte-identical on CPU/MPS; no active-compute speedup claimed |
 
 ![Mol-JEPA parameter reductions and measured MPS latency](docs/figures/moljepa-results.png)
 
 These are output-preservation tests on actual checkpoints, not biological quality
 benchmarks. **Apple MPS has been tested. NVIDIA CUDA remains unverified because
-no NVIDIA GPU is available.** State SE's 28.67% parameter reduction remains
+no NVIDIA GPU is available.** STATE SE's 28.67% parameter reduction remains
 CPU-only. A separate lossless original-table mode now passes byte-exact CPU/MPS
 checks and saves 6.31% of registered model-state bytes, but its tested MPS calls
-are about five times slower because of decoding. See [State modes](docs/state.md).
+are about five times slower because of decoding. See [STATE modes](docs/state.md).
 Full results, including modest and rejected gains,
 remain in the [research notes](docs/research-notes.md).
 
@@ -124,7 +124,7 @@ conditions and numerical gates are described in the [general workflow](docs/gene
 - `benchmarks/`, `experiments/`: measurements, reproduction scripts and negative results.
 - `artifacts/`, `vendor/`, `.venv*`: local weights, research checkouts and model environments, excluded from release packages.
 
-Prepared model workflows: [Mol-JEPA](docs/runtime.md), [State](docs/state.md),
+Prepared model workflows: [Mol-JEPA](docs/runtime.md), [STATE](docs/state.md),
 [Boltz-2](docs/boltz2.md). The [optimisation record](docs/optimization-record.md)
 keeps accepted, rejected and optional ideas separate. X-Cell and OmniCell are
 removed from active scope; stFormer and gated Bioptimus are deferred. Only the

@@ -42,7 +42,7 @@ index buffers. No original checkpoint is required to reload a complete artifact.
 Tests cover arbitrary float32 bit patterns, signed zero, NaN payloads, empty and
 strided indices, block boundaries, corruption, device movement and portable replay.
 
-[State SE](state.md) is the actual-checkpoint example: 754 fresh CPU/MPS tensor
+[STATE SE](state.md) is the actual-checkpoint example: 754 fresh CPU/MPS tensor
 comparisons passed byte-for-byte, including all original weights and complete
 outputs. Stored state falls 6.31%, while tested MPS calls take 4.89–5.44 times longer.
 CPU finite-table compilation remains a separate, more compact option. CUDA code

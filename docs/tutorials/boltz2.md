@@ -1,5 +1,8 @@
 # Reproduce complete Boltz-2 storage sharing on a Mac
 
+**Original work:** Passaro et al., [Boltz-2 (2025)](https://doi.org/10.1101/2025.06.14.659707) · [original code](https://github.com/jwohlwend/boltz) · [upstream checkpoints](https://huggingface.co/boltz-community/boltz-2).
+{ .original-work }
+
 This tutorial builds the complete original Boltz-2 **confidence/structure and affinity pair** from pinned public checkpoints, then shares equal frozen parameter storage. All original computations and native outputs remain. This is a joint resident-storage and artifact-storage reduction; it does not halve either model's arithmetic or establish faster inference.
 
 The generic engine is `share_frozen_parameters`. The recipe supplies the pinned architecture, strict original load order, native preprocessing and complete-output verification that a weights-only CLI cannot infer. [Storage sharing](../sharing.md) gives the general contract.

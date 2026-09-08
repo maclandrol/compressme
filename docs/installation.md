@@ -16,7 +16,7 @@ python -m compressme targets
 | `hub` | Hugging Face Hub client | Pinned checkpoint metadata inspection; works without Torch |
 | `test` | pytest | Test runner; select other extras for the features being tested |
 | `molecules` | Torch/safetensors, Transformers, PyG, RDKit, Molfeat and NumPy | The optional Mol-JEPA artifact loader and molecular execution |
-| `state` | Torch/safetensors and State loader dependencies, including Transformers 4.52.3 | The optional audited State ST/SE artifact loaders |
+| `state` | Torch/safetensors and STATE loader dependencies, including Transformers 4.52.3 | The optional audited STATE ST/SE artifact loaders |
 | `boltz` | Torch/safetensors/NumPy and Boltz 2.2.1 | The optional Boltz-2 artifact loader; the installed source must also match the recorded revision |
 
 For model compression using your own local PyTorch architecture:
@@ -38,7 +38,7 @@ NumPy is included in the model runtime because the safetensors Torch serializer 
 
 All existing top-level Python APIs remain available. They load their implementation when requested. Requesting a Torch-based API without that extra raises an installation hint. Avoid `from compressme import *` in lightweight applications: it requests every model API and therefore requires the model runtime.
 
-Use separate environments for model stacks with conflicting requirements. In particular, the audited State loaders use Transformers 4.52.3, while the Mol-JEPA research environment was validated separately. Model extras provide dependencies; they do not include checkpoints, data assets or exported artifact directories. Mol-JEPA and State artifacts contain separately supplied, trusted architecture files. The Boltz loader checks the installed source against revision `b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc`; a matching version string alone is insufficient.
+Use separate environments for model stacks with conflicting requirements. In particular, the audited STATE loaders use Transformers 4.52.3, while the Mol-JEPA research environment was validated separately. Model extras provide dependencies; they do not include checkpoints, data assets or exported artifact directories. Mol-JEPA and STATE artifacts contain separately supplied, trusted architecture files. The Boltz loader checks the installed source against revision `b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc`; a matching version string alone is insufficient.
 
 For CPU or Apple MPS execution, install a PyTorch build supporting that backend. CUDA requires a suitable PyTorch build, driver and device. Installing an extra does not establish that a particular model, shape or backend has passed numerical validation.
 

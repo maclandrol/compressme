@@ -1,5 +1,8 @@
 # Reproduce Mol-JEPA compression on a Mac
 
+**Original work:** Rottach et al., [Mol-JEPA (2026)](https://arxiv.org/abs/2608.22642) · [authors’ code](https://github.com/Boehringer-Ingelheim/mol-jepa) · [author-linked checkpoint](https://huggingface.co/Flogrammer/Mol-JEPA).
+{ .original-work }
+
 This recipe starts with a checkout of this private repository and the original published weights. It builds a new portable **SMILES-only** artifact, preserving predictions, CLS, all latent embeddings and requested attentions. It uses no fitting, distillation or lower-precision weights. The architecture-specific recipe composes affine projections, contracts eligible attention score maps and removes modality encoders unreachable when `embeddings_data=None`.
 
 The universal CLI's `--method affine` is not a substitute for this complete model recipe. [General workflow](../general-workflow.md) explains that boundary.

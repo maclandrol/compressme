@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-08",
+  "theme": "Material for MkDocs 9.7.7 with local Enoutahi palette and system fonts",
+  "checks": {
+    "strict_build_passed": true,
+    "documentation_tests_passed": 9,
+    "cli_optional_dependency_tests_passed": 25,
+    "light_and_dark_modes_checked": true,
+    "desktop_sidebar_checked_at_width": 1440,
+    "mobile_navigation_checked_at_width": 390,
+    "page_horizontal_overflow_observed": false,
+    "search_queries_verified": [
+      "Mol-JEPA",
+      "Boltz"
+    ],
+    "search_result_pages_each": 19,
+    "equations_and_report_figures_checked": true,
+    "external_font_or_repository_stat_requests_enabled": false
+  },
+  "navigation": {
+    "Models": [
+      "Mol-JEPA",
+      "Boltz-2 / Reproduce",
+      "Boltz-2 / Results and limits",
+      "STATE"
+    ],
+    "Evidence": [
+      "Technical report",
+      "Model status",
+      "Optimization record"
+    ]
+  },
+  "attribution": {
+    "Mol-JEPA": [
+      "https://arxiv.org/abs/2608.22642",
+      "https://github.com/Boehringer-Ingelheim/mol-jepa",
+      "https://huggingface.co/Flogrammer/Mol-JEPA"
+    ],
+    "Boltz-2": [
+      "https://doi.org/10.1101/2025.06.14.659707",
+      "https://github.com/jwohlwend/boltz",
+      "https://huggingface.co/boltz-community/boltz-2"
+    ],
+    "STATE": [
+      "https://doi.org/10.1101/2025.06.26.661135",
+      "https://arcinstitute.org/manuscripts/State",
+      "https://github.com/ArcInstitute/state"
+    ]
+  },
+  "implementation_sha256": {
+    "mkdocs.yml": "9cf8aac03d323f841b79e6352ef07b36332805db3975aa224723629cf3830b40",
+    "docs/assets/site.css": "572cfbf06f88027b7125a23ad7badd6243956c6ee32de6fb00b5e2a072b3dd9c",
+    "docs/overrides/partials/source.html": "7c3eb898bd03a52710cce9b449c6b1c8d857ec994ff0553f1201e6c9fb0ce1ac",
+    "requirements/docs.txt": "2109315df7a411c171c94665109b047427fbedc8a32a0f384e8243a02d5caa56"
+  }
+}

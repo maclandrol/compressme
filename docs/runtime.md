@@ -1,5 +1,8 @@
 # Accelerating the computation that remains
 
+**Original work:** Rottach et al., [Mol-JEPA (2026)](https://arxiv.org/abs/2608.22642) · [authors’ code](https://github.com/Boehringer-Ingelheim/mol-jepa) · [author-linked checkpoint](https://huggingface.co/Flogrammer/Mol-JEPA).
+{ .original-work }
+
 Removing an encoder that a SMILES request never visits reduces resident weights,
 but does not shorten that request. The original parameter reduction therefore
 did not imply a comparable inference speedup. The next optimization targets the

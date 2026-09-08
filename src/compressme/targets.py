@@ -45,7 +45,7 @@ _TARGETS = {
         "blockers":["from_pretrained and inference are NotImplementedError stubs", "HF contains only README, image and .gitattributes; no weights"],
     },
     "state-st": {
-        "name":"State ST (HVG Replogle, K562)", "aliases":["state","state-transition","st-hvg-replogle"],
+        "name":"STATE ST (HVG Replogle, K562)", "aliases":["state","state-transition","st-hvg-replogle"],
         "status":"pretrained_numerically_verified", "adapter_available":True,
         "repository":"https://github.com/ArcInstitute/state",
         "source_revision":"9bbfe78a434a55205e4de834e1ea99f85f7a3add",
@@ -63,7 +63,7 @@ _TARGETS = {
         "validation_scope":"Synthetic numerical API probes on real pretrained weights, not a biological benchmark",
     },
     "state-se": {
-        "name":"State SE-100M", "aliases":["state-embedding","se-100m"],
+        "name":"STATE SE-100M", "aliases":["state-embedding","se-100m"],
         "status":"pretrained_numerically_verified_cpu_mps", "adapter_available":True,
         "repository":"https://github.com/ArcInstitute/state",
         "source_revision":"9bbfe78a434a55205e4de834e1ea99f85f7a3add",

@@ -60,7 +60,7 @@ is a valid outcome when no exact condition applies. Dynamic Python forwards
 can require a model-specific adapter instead of FX tracing.
 
 If several checkpoints exist in a repository, provide `filename`. The selected
-State release, for example, uses
+STATE release, for example, uses
 `filename="fewshot/k562/checkpoints/final.ckpt"`. `.ckpt` is accepted only when
 explicitly selected and loaded with `torch.load(weights_only=True)`; the loader
 does not fall back to unrestricted pickle. Safetensors can be single or sharded.
@@ -71,7 +71,7 @@ filled only from another name for the same local tensor object. Conflicting
 aliases are rejected. No Hub Python is downloaded or executed by this workflow;
 the architecture factory is ordinary caller-owned local Python.
 
-Live inspection of Mol-JEPA, X-Cell and State is recorded in
+Live inspection of Mol-JEPA, X-Cell and STATE is recorded in
 `benchmarks/huggingface_live_inspection.json`. X-Cell resolves successfully but
 has no selected weights, because none are published in the inspected revision.
 Single/sharded loading, strict aliases, rollback and export/reload are also

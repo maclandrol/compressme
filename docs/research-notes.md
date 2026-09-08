@@ -5,7 +5,7 @@ This document preserves the detailed research overview from 7 September 2026. Fo
 **A working, training-free PyTorch compressor that removes algebraic redundancy.**
 It changes the representation of a trained function, without training a student,
 collecting teacher targets, or reducing weight precision. The first validated
-checkpoints include Mol-JEPA, State ST, State SE on CPU, and the complete Boltz-2
+checkpoints include Mol-JEPA, STATE ST, STATE SE on CPU, and the complete Boltz-2
 confidence/affinity pair on CPU and Apple MPS. The rewrite primitives also work
 independently of them.
 
@@ -175,7 +175,7 @@ identical bits can retain one row and expose an expanded weight view. Ordinary
 token lookup, vocabulary size and output values remain available. The general
 `deduplicate_embeddings` pass checks equality, trainability, hooks and aliases;
 it performs no model fitting. Custom consumers of weight strides need separate
-validation. This pass reduces the published State ST-HVG-Replogle K562 model
+validation. This pass reduces the published STATE ST-HVG-Replogle K562 model
 from **49,396,728 to 38,901,056 parameters (21.25%)**. All tested expression/count
 outputs were **bitwise identical on CPU and MPS**, using constructed numerical
 batches with the actual checkpoint. Its zero table was already skipped during
@@ -184,7 +184,7 @@ expression prediction, so this saves resident weights, not active computation.
 The portable artifact is `artifacts/state-st-hvg-k562`; use
 `load_state_st(directory, device="mps")` in `.venv-state`. That separate environment
 preserves the published model's Transformers 4.52.3 dependency. The original
-checkpoint is not required to reload. See [State usage and scope](../docs/state.md).
+checkpoint is not required to reload. See [STATE usage and scope](../docs/state.md).
 
 **Evaluate the whole finite token domain.** A fixed vocabulary can be passed
 through its original row-local encoder once, including LayerNorm and nonlinear
@@ -200,7 +200,7 @@ packs all declared outputs, preserves their separate dtypes, and accounts for
 shared backing storage. Portable recipes retain the compiled representation.
 See [the finite-domain API and limits](../docs/finite-domains.md).
 
-State SE uses two such tables for its raw and normalized gene branches, plus
+STATE SE uses two such tables for its raw and normalized gene branches, plus
 shape-matched constant tokens. It retains the original 5,120-feature encoder for
 custom raw-vector inputs. Parameters fall from **212,038,824 to 151,243,944
 (28.67%)**. Extended CPU tests include 2,048-gene inputs and every numerical head;
@@ -212,7 +212,7 @@ original preprocessing and all 1,034 exported features bitwise. Use
 `load_state_se_encoder(...).encode_adata(...)` for that workflow. The original
 model gene-name helper still requires its protein dictionary separately.
 The portable artifact is `artifacts/state-se-100m-cpu`; load it with
-`load_state_se(...)` in `.venv-state`. See [State scope](../docs/state.md) and
+`load_state_se(...)` in `.venv-state`. See [STATE scope](../docs/state.md) and
 [the general derivation](../docs/finite-domains.md).
 
 ## Apply the passes to other models
@@ -323,7 +323,7 @@ new compressor code is separate from that upstream material.
 `benchmarks/` contains raw timings, errors and fixed verification SMILES. The
 optional-modality audit is reproducible with `examples/audit_moljepa_api.py`.
 
-State ST and the numerical State SE adapter are validated as described above.
+STATE ST and the numerical STATE SE adapter are validated as described above.
 Boltz-2 now has a [portable shared bundle](../docs/boltz2.md), described below
 and in the `list_targets()` registry. NovoMolGen 32M AtomWise has a [token-only research
 experiment](../docs/novomolgen.md): 12,599 complete-output tensor comparisons per

@@ -1,5 +1,8 @@
 # Optimization evidence and stopping criteria
 
+**Original models:** [Mol-JEPA — Rottach et al.](https://arxiv.org/abs/2608.22642) · [Boltz-2 — Passaro et al.](https://doi.org/10.1101/2025.06.14.659707) · [STATE — Arc Institute](https://arcinstitute.org/manuscripts/State).
+{ .original-work }
+
 This record distinguishes algebraic correctness, checkpoint agreement, resident
 weights, file size and elapsed time. A passing result in one column does not
 establish the others. None of the delivered reductions uses distillation,
@@ -13,17 +16,17 @@ quantization or truncated low-rank approximation.
 | Store bilinear query/key interactions | Mol-JEPA graph attention | 4,677,160 fewer parameters |
 | Remove branches excluded by a declared input contract | Mol-JEPA SMILES only | 15,462,401 fewer inactive parameters; all embedding heads retained |
 | Sparse graph features, fused graph operations and batched affine heads | Mol-JEPA complete CPU/MPS calls | About 2× original warmed MPS speed in the recorded run |
-| Store bit-identical frozen embedding rows once | State ST K562 actual weights | 21.25% fewer resident parameters; tested outputs bitwise equal |
+| Store bit-identical frozen embedding rows once | STATE ST K562 actual weights | 21.25% fewer resident parameters; tested outputs bitwise equal |
 | Lossless byte packing | Portable Mol-JEPA artifact | 67.51 MB weight file; no added numerical error |
 | Store shared state entries once | Generic tied-parameter export/reload tests | Smaller file when multiple state keys share the same storage view |
 | Share byte-identical immutable parameters across models | Complete Boltz-2 confidence/affinity pair, CPU and MPS | 49.55% lower joint registered storage; original Parameter objects and arithmetic retained |
 | Stream reversible byte shuffling and compression | Complete 2.063 GB shared Boltz tensor file | 1.760 GB packed file; every restored byte equal; 53.75 MiB standalone peak RSS |
-| Full-vocabulary partial evaluation through nonlinear row encoders | State SE CPU, including 2,048-gene numerical inputs | 28.67% fewer parameters while retaining raw-vector forward; maximum observed error 6.68e-6 |
+| Full-vocabulary partial evaluation through nonlinear row encoders | STATE SE CPU, including 2,048-gene numerical inputs | 28.67% fewer parameters while retaining raw-vector forward; maximum observed error 6.68e-6 |
 | Contract a LayerNorm sandwich using its denominator statistic | Constructed eligible operator | 83.7% fewer parameters in an 82→512→512 example; not an extra biology-model saving |
 
 General integration now discovers closed finite-token blocks inside ordinary
 PyTorch models and exposes the pass through the Hugging Face workflow. It checks
-complete requested outputs and rolls back failed proposals. State SE also has a
+complete requested outputs and rolls back failed proposals. STATE SE also has a
 portable h5ad loader: seven constructed variants preserve preprocessing and all
 1,034 exported features bitwise, without the original protein dictionary.
 
@@ -44,13 +47,13 @@ generic-layout timings are recorded separately. See [the detailed audit](novomol
   inconsistent; CPU affinity improves slightly in three pairs. Optional only,
   with extra request cache memory and an explicit immutable ownership contract.
   [Complete results](../experiments/boltz2-request-runtime/lean/README.md).
-- **State SE lossless original-table storage:** a portable representation restores
+- **STATE SE lossless original-table storage:** a portable representation restores
   all original float32 row bytes before inference and preserves the broader
   original API. Fresh CPU and MPS reloads each pass 377 tensor byte comparisons.
   Registered model state falls by 6.31%, but the small MPS timing check is
   4.89–5.44 times slower. It is an opt-in storage mode; the faster 28.67% CPU
-  parameter reduction and its MPS guard remain separate. [State guide](state.md).
-- **State SE scalar piecewise count encoder:** a real-arithmetic hinge
+  parameter reduction and its MPS guard remain separate. [STATE guide](state.md).
+- **STATE SE scalar piecewise count encoder:** a real-arithmetic hinge
   representation saves 502 values, but failed 4 of 105 complete output comparisons
   (maximum absolute error 2.66e-5). The candidate was not exported.
 - **OmniCell finite router:** actual weights give a larger resident model, and a
@@ -61,13 +64,13 @@ generic-layout timings are recorded separately. See [the detailed audit](novomol
 - **stFormer GeneEncoder:** a source definition outside the active construction
   cannot establish a reachable compression opportunity. Trained equality of its
   actual copied position tables remains unverified.
-- **State SE shared projected table plus norms:** 38.2% parameter reduction, but
+- **STATE SE shared projected table plus norms:** 38.2% parameter reduction, but
   the actual dataset classifier amplified rounding errors above the chosen gate.
   CPU and MPS diagnostics remain rejected. Local agreement did not suffice.
-- **State SE final tables on MPS:** CPU-built tables changed some complete outputs
+- **STATE SE final tables on MPS:** CPU-built tables changed some complete outputs
   beyond tolerance. The artifact is restricted to CPU float32; raw-vector-only
   MPS agreement does not qualify the complete adapter.
-- **Higher-precision offline State projection:** rounding closer to exact real
+- **Higher-precision offline STATE projection:** rounding closer to exact real
   arithmetic did not consistently match the original float32 program better.
 - **Attention gauge fixing:** smaller Mol-JEPA files in an experiment, but dense
   reconstruction caches increased resident memory and CPU timing was neutral.
@@ -77,7 +80,7 @@ generic-layout timings are recorded separately. See [the detailed audit](novomol
   timing; optional and off by default. Values and requested attentions match.
 - **Residual/LayerNorm kernel fusion:** no dependable additional gain in the
   measured complete workload; not enabled.
-- **State ST packed size:** its removed all-zero table already compressed very
+- **STATE ST packed size:** its removed all-zero table already compressed very
   well. The earlier equally packed comparison was 10,392 bytes larger after the
   rewrite. The claim is resident/raw weight saving, not smaller packed files.
 
@@ -137,7 +140,7 @@ and correctness experiment, with no complete-model speed claim.
 The optional [lossless table codec](frozen-tables.md) also preserves every stored
 float32 bit. Its earlier prototype reduced NovoMolGen's extra profile-table
 storage by 26.46% CPU and 35.74% MPS, adding a small decode cost; it is not enabled
-automatically. [State MPS sampling](../experiments/state_mps_profiles/README.md)
+automatically. [STATE MPS sampling](../experiments/state_mps_profiles/README.md)
 found five encoder row-count regimes and a separate normalized singleton case.
 Dense complete tables for those regimes would increase storage by 47.8%; no
 full-domain MPS adapter was built or promoted from that sample.

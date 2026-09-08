@@ -1,5 +1,8 @@
 # Boltz-2: complete models with shared frozen storage
 
+**Original work:** Passaro et al., [Boltz-2 (2025)](https://doi.org/10.1101/2025.06.14.659707) · [original code](https://github.com/jwohlwend/boltz) · [upstream checkpoints](https://huggingface.co/boltz-community/boltz-2).
+{ .original-work }
+
 The portable bundle contains the original Boltz-2 confidence and affinity models.
 Its general compression pass stores byte-identical, immutable parameters once
 across the pair. It uses no distillation, rank truncation or precision change.
@@ -169,7 +172,7 @@ All 48 output tensor leaves pass byte comparisons on both CPU and MPS, including
 original self-repeat and post-restoration controls.
 
 The model must be frozen, unmodified, exclusively owned by the request and used
-without gradients. State and conditioning must remain immutable throughout the
+without gradients. Model state and conditioning must remain immutable throughout the
 scope. Entry/exit audits and per-call checks reject detectable violations; writes
 that bypass tensor version tracking remain prohibited by this explicit contract.
 This is not a training adapter. Its caches are cleared after each request and

@@ -1,6 +1,8 @@
-# Reproduce State SE numerical artifacts
+# Reproduce STATE SE numerical artifacts
 
-Use the separate State environment with the pinned SE-100M safetensors checkpoint.
+**Original work:** [STATE paper](https://doi.org/10.1101/2025.06.26.661135) · [Arc Institute project](https://arcinstitute.org/manuscripts/State) · [original code](https://github.com/ArcInstitute/state) · [ST checkpoint](https://huggingface.co/arcinstitute/ST-HVG-Replogle) · [SE checkpoint](https://huggingface.co/arcinstitute/SE-100M).
+
+Use the separate STATE environment with the pinned SE-100M safetensors checkpoint.
 The portable artifact includes hash-verified architecture, configuration,
 vocabulary and licenses; production source is not needed for normal reload.
 
@@ -17,7 +19,7 @@ All three paths are explicit. The builder packs original frozen gene rows and
 checks every reconstructed row. It does not change normalization, encoder,
 transformer, heads, raw 5,120-dimensional vector inputs or original gene-name behavior. The
 result is smaller in registered storage but slower to run because requested
-rows must be decoded. See [State results](../../docs/state.md) and
+rows must be decoded. See [STATE results](../../docs/state.md) and
 [the general storage operator](../../docs/packed-embeddings.md).
 
 Create an options file with local paths:
@@ -63,5 +65,5 @@ The public loader for both representations is `compressme.load_state_se`;
 representation is read from the manifest. CPU AnnData ingestion/export is
 validated separately for the finite-table artifact through
 `compressme.load_state_se_encoder`. The new lossless MPS numerical evidence does
-not extend that AnnData pipeline to GPU. See [the State guide](../../docs/state.md)
+not extend that AnnData pipeline to GPU. See [the STATE guide](../../docs/state.md)
 for its exact scope and reproduction instructions.

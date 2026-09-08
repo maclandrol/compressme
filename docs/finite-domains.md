@@ -203,7 +203,7 @@ that retained projection.
 
 This is useful when the original embedding dimension is much wider than the
 observed projection. It is not restricted to genes, a particular training
-algorithm or a Hugging Face model family. The State SE adapter is the current
+algorithm or a Hugging Face model family. The STATE SE adapter is the current
 real-checkpoint experiment; its complete-output validation determines whether
 that particular application is accepted.
 

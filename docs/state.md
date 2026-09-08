@@ -1,8 +1,11 @@
-# State ST and SE: general passes on pretrained models
+# STATE ST and SE: general passes on pretrained models
+
+**Original work:** [STATE paper](https://doi.org/10.1101/2025.06.26.661135) · [Arc Institute project](https://arcinstitute.org/manuscripts/State) · [original code](https://github.com/ArcInstitute/state) · [ST checkpoint](https://huggingface.co/arcinstitute/ST-HVG-Replogle) · [SE checkpoint](https://huggingface.co/arcinstitute/SE-100M).
+{ .original-work }
 
 The selected checkpoint is
 [`arcinstitute/ST-HVG-Replogle`, K562](https://huggingface.co/arcinstitute/ST-HVG-Replogle/tree/bb6a9562cbbf1fd152df14cc53b4cc7517c77175),
-with the published State source pinned to
+with the published STATE source pinned to
 [`9bbfe78`](https://github.com/ArcInstitute/state/tree/9bbfe78a434a55205e4de834e1ea99f85f7a3add).
 
 Its 32,000 × 328 token table is frozen and entirely zero. The ordinary expression
@@ -25,7 +28,7 @@ weights and unpacked storage. The original 471.7 MB training checkpoint contains
 additional training state and is not the fair inference-weight denominator.
 
 The artifact, including local architecture/configuration and original licenses,
-is prepared in `artifacts/state-st-hvg-k562`. Use the separate State environment:
+is prepared in `artifacts/state-st-hvg-k562`. Use the separate STATE environment:
 
 ```bash
 .venv-state/bin/python
@@ -35,7 +38,7 @@ is prepared in `artifacts/state-st-hvg-k562`. Use the separate State environment
 from compressme import load_state_st
 
 model = load_state_st("artifacts/state-st-hvg-k562", device="mps")
-# Supply the same correctly ordered numerical batch as the original State API.
+# Supply the same correctly ordered numerical batch as the original STATE API.
 output = model.predict_step(batch, batch_idx=0, padded=False)
 ```
 
@@ -47,7 +50,7 @@ original `forward` and `predict_step`; this is not a replacement AnnData CLI.
 For a new machine, install `.[state,packing,hub]` in a separate environment.
 The published checkpoint requires Transformers 4.52.3 for its explicit
 head-dimension configuration. The tested Mol-JEPA environment remains separate.
-The local State loader defers an unused legacy VCI decoder import that otherwise
+The local STATE loader defers an unused legacy VCI decoder import that otherwise
 references an obsolete namespace; requesting that branch still fails explicitly.
 Every class used by this checkpoint is loaded from the unchanged, hashed source.
 
@@ -68,13 +71,13 @@ through `compress_huggingface(..., method="constant_embeddings")`. It is not
 specific to gene models or zero values. It accepts any eligible frozen table
 whose rows are bitwise identical, and retains tables that fail its conditions.
 
-## What the State SE 5,120-dimensional vectors mean
+## What the STATE SE 5,120-dimensional vectors mean
 
 Each known gene has a fixed vector of 5,120 floating-point features derived from
 its protein sequence by ESM2. These are protein features, not 5,120 different
 genes and not a cell's expression measurements. In an ordinary workflow, gene
 names select these vectors and expression counts provide separate cell-specific
-information. State projects the protein features to 1,024 internal features
+information. STATE projects the protein features to 1,024 internal features
 before processing the cell.
 
 For 19,790 entries, the original float32 protein table occupies about 405.30 MB.
@@ -96,7 +99,7 @@ helper tests a sum over raw protein vectors; preserving that exact helper needs
 the original protein dictionary supplied separately. Direct access to the removed
 raw `pe_embedding.weight` is not reconstructed by the compressed lookup.
 
-## Run the portable State SE numerical adapter
+## Run the portable STATE SE numerical adapter
 
 Use the prepared `.venv-state` environment. The artifact includes the smaller
 float32 tables, all retained numerical heads, the original raw-vector encoder,
@@ -156,10 +159,10 @@ case spends more time in the unchanged transformer, so the same weight reduction
 does not imply the same runtime gain. First calls at a new shape and all raw
 samples are retained in `benchmarks/state_se_cpu_runtime.json`.
 
-## Lossless original State SE on Apple GPU
+## Lossless original STATE SE on Apple GPU
 
 A separate artifact, `artifacts/state-se-100m-lossless`, now passes the original
-State SE model on CPU and Apple MPS. It keeps the complete original encoder and
+STATE SE model on CPU and Apple MPS. It keeps the complete original encoder and
 all heads. The 19,790 × 5,120 gene table is stored as independently compressed
 16-row blocks. Each request reconstructs the selected original float32 bytes,
 then executes the original normalization, projection and transformer operations

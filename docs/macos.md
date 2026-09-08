@@ -1,11 +1,11 @@
 # Running compressme on macOS
 
-The prepared environments use Python 3.12.14 and PyTorch 2.14.0 on an Apple M5 MacBook Air with 16 GB unified memory. Both CPU and MPS have been exercised with actual trained Mol-JEPA and State ST checkpoints. State SE is additionally validated on CPU float32; its MPS candidates failed the output gates.
+The prepared environments use Python 3.12.14 and PyTorch 2.14.0 on an Apple M5 MacBook Air with 16 GB unified memory. Both CPU and MPS have been exercised with actual trained Mol-JEPA and STATE ST checkpoints. STATE SE now has a lossless original-table mode with byte-identical CPU/MPS checks and a 6.31% registered-state saving, at a substantial decoding cost. Its smaller 28.67% finite-table reduction remains CPU-only. See [STATE modes and timings](state.md).
 
 ## Prepared environments
 
 - `.venv`: Mol-JEPA, the general compressor, Hugging Face inspection and core tests.
-- `.venv-state`: the portable State ST and SE loaders, with Transformers 4.52.3 required by the ST checkpoint.
+- `.venv-state`: the portable STATE ST and SE loaders, with Transformers 4.52.3 required by the ST checkpoint.
 - `.venv-boltz`: the verified Boltz-2 source, native YAML/FASTA example and lossless packing dependencies.
 
 The core package and CLI have a separate, lightweight installation; these are
@@ -22,13 +22,13 @@ model = load_moljepa("artifacts/moljepa-smiles", device="mps")
 output = model(["CCO", "c1ccccc1"], return_attn=True)
 ```
 
-Run State in its separate environment and call `load_state_st` as documented in [state.md](state.md). CPU is also supported. The main package does not change global Python settings or install CUDA compatibility shims.
+Run STATE in its separate environment and call `load_state_st` as documented in [state.md](state.md). CPU is also supported. The main package does not change global Python settings or install CUDA compatibility shims.
 
 ## Evidence and limits
 
 The main Mol-JEPA runtime is about 2× faster than the original in the recorded warmed full-API comparisons, including fresh SMILES parsing and transfers. Its 19,763,160 parameters retain float32 precision. All 64 validation SMILES and requested attention outputs passed the 1e-5 numerical gates. Details and exact comparison workloads are in [runtime.md](runtime.md) and the benchmark JSON files.
 
-State ST uses a generic frozen-table storage reduction. All tested numerical batch outputs, decoded counts and token lookup were bitwise identical on CPU and MPS. It saves 21.25% of resident weights but does not remove active inference work on the expression route.
+STATE ST uses a generic frozen-table storage reduction. All tested numerical batch outputs, decoded counts and token lookup were bitwise identical on CPU and MPS. It saves 21.25% of resident weights but does not remove active inference work on the expression route.
 
 The generic tensor transfer utility coalesces multiple independent CPU tensors before a device copy. Its separate transport measurements improved substantially, but whole-model timings were mixed; it remains opt-in. Residual/LayerNorm fusion did not show a dependable additional gain and was not enabled.
 

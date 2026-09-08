@@ -6,10 +6,10 @@ The workflow installs the pinned documentation tools, checks the source-link han
 
 ## Build locally
 
-From the repository root:
+From the repository root, using Python 3.12 (the same version as the documentation workflow):
 
 ```sh
-python -m venv .venv-docs
+python3.12 -m venv .venv-docs
 . .venv-docs/bin/activate
 python -m pip install --constraint requirements/docs.txt '.[docs]'
 python -m unittest discover -s tests -p test_docs_hooks.py
@@ -17,7 +17,7 @@ python -m mkdocs build --strict
 python -m mkdocs serve
 ```
 
-Open the local address printed by MkDocs. The `docs` extra is independent of `torch`, `molecules`, `state` and `boltz`. The exact documentation dependency versions are recorded in `requirements/docs.txt`; update them deliberately and rerun the strict build.
+Open the local address printed by MkDocs. The `docs` extra is independent of `torch`, `molecules`, `state` and `boltz`. The theme is Material for MkDocs 9.7.7, with MkDocs 1.6.1 and PyMdown Extensions 10.16.1. The complete documentation dependency versions are pinned in `requirements/docs.txt`; update them deliberately and rerun the strict build.
 
 ## Read a pushed build
 
@@ -41,4 +41,4 @@ The Markdown build hook only resolves links and verifies files. It does not impo
 
 ## Workflow pins
 
-MkDocs is pinned to 1.6.1, and the GitHub actions use immutable commit references verified against their official releases: [checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1), [setup-python v7.0.0](https://github.com/actions/setup-python/releases/tag/v7.0.0), and [upload-artifact v7.0.1](https://github.com/actions/upload-artifact/releases/tag/v7.0.1). [MkDocs strict validation](https://www.mkdocs.org/user-guide/configuration/#validation) explains the local link checks.
+MkDocs is pinned to 1.6.1 and [Material for MkDocs to 9.7.7](https://github.com/squidfunk/mkdocs-material/releases/tag/9.7.7). The GitHub actions use immutable commit references verified against their official releases: [checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1), [setup-python v7.0.0](https://github.com/actions/setup-python/releases/tag/v7.0.0), and [upload-artifact v7.0.1](https://github.com/actions/upload-artifact/releases/tag/v7.0.1). [MkDocs strict validation](https://www.mkdocs.org/user-guide/configuration/#validation) explains the local link checks.

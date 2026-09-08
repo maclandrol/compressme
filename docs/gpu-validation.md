@@ -1,5 +1,8 @@
 # GPU validation: Apple MPS measured, NVIDIA CUDA not run
 
+**Original models:** [Mol-JEPA — Rottach et al.](https://arxiv.org/abs/2608.22642) · [Boltz-2 — Passaro et al.](https://doi.org/10.1101/2025.06.14.659707) · [STATE — Arc Institute](https://arcinstitute.org/manuscripts/State).
+{ .original-work }
+
 The current results include actual Apple GPU inference. They do not establish
 NVIDIA CUDA equivalence. On 8 September 2026 the available machine was an Apple
 M5 MacBook Air with 16 GB unified memory, macOS 26.6.1, Python 3.12.14 and
@@ -25,7 +28,7 @@ links the detailed metrics and report hashes.
 |---|---:|---:|---:|---|
 | Mol-JEPA SMILES runtime | 33 | 133 | 2.146e-6 | Numerical gate passed |
 | Mol-JEPA full modalities | 34 | 138 | 2.146e-6 | Numerical gate passed |
-| State ST HVG K562 | 5 | 17 | 0 | Byte-identical |
+| STATE ST HVG K562 | 5 | 17 | 0 | Byte-identical |
 | Boltz-2 confidence and affinity | 2 | 48 | 0 | Byte-identical |
 
 Mol-JEPA covers all 64 verification SMILES, with attention both requested and
@@ -36,7 +39,7 @@ differences: at most 1.594e-6 for the SMILES run and 1.788e-6 for the full run.
 These results therefore establish numerical agreement on the cases, not byte
 equality for Mol-JEPA or an absence of transformation error.
 
-State ST checks every `predict_step` field for 1, 7, 64 and 128 cells, including
+STATE ST checks every `predict_step` field for 1, 7, 64 and 128 cells, including
 padded/unpadded and integer/one-hot batch labels, plus all 32,000 token IDs.
 Inputs are synthetic numerical probes on trained weights. Boltz uses the native
 20-residue protein/ethanol fixture, all structure/confidence/affinity outputs,
@@ -45,7 +48,7 @@ samples. Both models' source self-repeats were also byte-identical. The optional
 Boltz request-conditioning runtime was not enabled in this new storage-artifact
 check; its separate results remain in [the Boltz documentation](boltz2.md).
 
-State SE now has two distinct artifacts. The **28.67% parameter reduction remains
+STATE SE now has two distinct artifacts. The **28.67% parameter reduction remains
 CPU-only**: its precomputed encoder tables failed the complete MPS numerical gate.
 The [guard check](../benchmarks/gpu_validation_2026-09-08_state_se_mps_rejected.json)
 continues to apply to that artifact. A new **lossless original-table mode** restores
@@ -57,7 +60,7 @@ It does not remove arithmetic or change precision; its small MPS timing check wa
 4.89–5.44 times slower because of decoding. AnnData export remains CPU-only.
 See the [CPU reload report](../experiments/state-se-mps-fix/portable-reload-cpu.json),
 [MPS reload report](../experiments/state-se-mps-fix/portable-reload-mps.json) and
-[State guide](state.md). CUDA is unvalidated for both representations.
+[STATE guide](state.md). CUDA is unvalidated for both representations.
 
 None of these checks measures biological accuracy, throughput, large-complex
 memory requirements, or equality between CPU, Apple GPU and NVIDIA GPU. PyTorch
@@ -109,7 +112,7 @@ available-device inventory is not a successful model gate.
 
 Run from the checkout. Substitute your trusted original checkpoint paths. The
 artifacts are read-only inputs. Keep the separate tested environments because
-Mol-JEPA and State use different Transformers releases.
+Mol-JEPA and STATE use different Transformers releases.
 
 ```bash
 .venv/bin/python examples/validate_backends.py --device mps \
@@ -139,7 +142,7 @@ The runner strictly loads those original state names into the unmodified native
 classes. It does not validate the shared artifact against itself. `--native-dir`
 can point to another copy of the native fixture evidence; its default is the
 checkout's `experiments/boltz2-runtime`. That small chemistry directory supports
-this fixture, not arbitrary molecules. State ST uses `torch.load(weights_only=True)`
+this fixture, not arbitrary molecules. STATE ST uses `torch.load(weights_only=True)`
 for its verified original checkpoint; portable candidate loading is separate.
 
 ## Portable NVIDIA job — not yet run on NVIDIA
@@ -157,7 +160,7 @@ CUBLAS_WORKSPACE_CONFIG=:4096:8 python examples/validate_backends.py \
   --output /tmp/mol-smiles-cuda-strict.json
 ```
 
-Repeat the State ST and Boltz commands with `--device cuda:0 --determinism strict`
+Repeat the STATE ST and Boltz commands with `--device cuda:0 --determinism strict`
 and preserve their `--require-bitwise` gate. Mol-JEPA's Metal shaders are specific
 to MPS; the loader chooses the PyTorch path on CUDA. This is a backend selection,
 not evidence that CUDA numerics or performance have passed.

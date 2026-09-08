@@ -1,5 +1,8 @@
 # Removing avoidable inference cost from Mol-JEPA
 
+**Original models:** [Mol-JEPA — Rottach et al.](https://arxiv.org/abs/2608.22642) · [Boltz-2 — Passaro et al.](https://doi.org/10.1101/2025.06.14.659707) · [STATE — Arc Institute](https://arcinstitute.org/manuscripts/State).
+{ .original-work }
+
 **compressme technical report · 8 September 2026**
 
 For SMILES-only inference, the tested Mol-JEPA checkpoint can retain all its
@@ -90,11 +93,11 @@ incompressible or unsupported model is a legitimate unchanged result. Local
 rewrites still need complete-output checks in their enclosing model.
 
 **GPU evidence currently means Apple MPS. NVIDIA CUDA is unverified because no
-NVIDIA GPU is available.** State SE's 28.67% parameter reduction remains CPU-only.
+NVIDIA GPU is available.** STATE SE's 28.67% parameter reduction remains CPU-only.
 A separate lossless original-table representation now preserves all tested output
 bytes on CPU/MPS after reload, saving 6.31% of registered state. Its MPS decoding
 cost makes the tested calls about five times slower, so it is an optional storage
-tradeoff rather than a speed result. [State details](state.md).
+tradeoff rather than a speed result. [STATE details](state.md).
 Backend-specific kernels and precision settings can change
 floating-point results, so CUDA requires its own comparisons against an original
 CUDA reference. [GPU validation guide](gpu-validation.md) ·

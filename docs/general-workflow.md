@@ -48,8 +48,8 @@ The immediate targets cover complementary architectures:
 | Target | What it tests |
 |---|---|
 | Mol-JEPA | Affine reachability, bilinear graph attention, sparse execution, full embedding outputs |
-| State ST | Frozen redundant tables and expression/count prediction API preservation |
-| State SE | Fixed gene lookup paths, aliases, normalization and large gene-level tables |
+| STATE ST | Frozen redundant tables and expression/count prediction API preservation |
+| STATE SE | Fixed gene lookup paths, aliases, normalization and large gene-level tables |
 | Boltz-2 | Iterative structure/affinity computations and large pair activations |
 | NovoMolGen | Small token vocabularies, first-layer projection fanout, autoregressive masks/cache and sampling |
 

@@ -8,10 +8,36 @@ site_dir: site
 use_directory_urls: false
 strict: true
 theme:
-  name: mkdocs
-  color_mode: light
-  user_color_mode_toggle: true
-  highlightjs: false
+  name: material
+  custom_dir: docs/overrides
+  font: false
+  language: en
+  icon:
+    logo: material/vector-combine
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+extra:
+  generator: false
 nav:
   - Start: index.md
   - Usage:
@@ -20,12 +46,15 @@ nav:
       - General workflow: general-workflow.md
       - Hugging Face: huggingface.md
   - Models:
-      - Reproduce Boltz-2: tutorials/boltz2.md
-      - Reproduce Mol-JEPA: tutorials/moljepa.md
-      - Boltz-2 results and limits: boltz2.md
-      - State: state.md
-      - Target status: biology-targets.md
-  - Results: technical-report.md
+      - Mol-JEPA: tutorials/moljepa.md
+      - Boltz-2:
+          - Reproduce: tutorials/boltz2.md
+          - Results and limits: boltz2.md
+      - STATE: state.md
+  - Evidence:
+      - Technical report: technical-report.md
+      - Model status: biology-targets.md
+      - Optimization record: optimization-record.md
   - Methods:
       - Theory and prior art: theory.md
       - Shared frozen weights: sharing.md
@@ -42,7 +71,9 @@ markdown_extensions:
   - admonition
   - attr_list
   - tables
-  - fenced_code
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
   - toc:
@@ -60,6 +91,7 @@ extra_javascript:
   - assets/math.js
 exclude_docs: |
   social-posts.md
+  overrides/
 validation:
   nav:
     omitted_files: info
