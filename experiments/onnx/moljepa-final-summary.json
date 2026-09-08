@@ -1,0 +1,160 @@
+{
+  "report_file": "moljepa-final-2026-09-08.json",
+  "report_sha256": "6d25a2d444a88593dc8b83c5066eabcdc416aaf7629c82675d4c15ab8084edb4",
+  "benchmark_script_sha256": "333d1cf2d9b5f2af51f4c5ad4756d5f351e0cdfddfb6eb83a548b457aa1860e3",
+  "summary_script_sha256": "4cebc57c3292d5b2cc07484765a9c52e377404e83f3e0bc4cddc307bc41e3777",
+  "tensor_comparisons": 660,
+  "all_accepted": true,
+  "byte_equal_comparisons": 170,
+  "max_absolute_error": 3.814697265625e-06,
+  "max_relative_l2_error": 7.430159244162351e-07,
+  "exports": {
+    "original": {
+      "initializer_values_by_dtype": {
+        "FLOAT": 29996607,
+        "INT64": 2119,
+        "BOOL": 8
+      },
+      "total_graph_and_external_data_bytes": 120777202,
+      "files": {
+        "model.onnx": {
+          "bytes": 715250,
+          "sha256": "e041db5c459919112be23cf96ed1c1815c301ad23777aaaf23f33343002cffcd"
+        },
+        "model.onnx.data": {
+          "bytes": 120061952,
+          "sha256": "22fb41bb31265f3023878d28bdd9a526850df6fdf43dabb9b6e863ca6725b2f3"
+        }
+      },
+      "graph_nodes": 277
+    },
+    "compressed": {
+      "initializer_values_by_dtype": {
+        "FLOAT": 19815447,
+        "INT64": 2119,
+        "BOOL": 8
+      },
+      "total_graph_and_external_data_bytes": 80062191,
+      "files": {
+        "model.onnx": {
+          "bytes": 698095,
+          "sha256": "4062f2f500863158b50952e39dcb2b5ed996c90eb1e9a8920d35a87dc494c6de"
+        },
+        "model.onnx.data": {
+          "bytes": 79364096,
+          "sha256": "c66e9d731176791f8672662b821f8b5e90788a5b5f4cff39f5e2bba9376daf9a"
+        }
+      },
+      "graph_nodes": 290
+    }
+  },
+  "timing": {
+    "tensor_core": {
+      "arms": {
+        "original_pytorch": {
+          "median_ms": 19.758000009460375,
+          "min_ms": 17.899291997309774,
+          "max_ms": 28.11708298395388,
+          "median_paired_speedup_vs_original_pytorch": 1.0
+        },
+        "compressed_pytorch": {
+          "median_ms": 13.866916997358203,
+          "min_ms": 13.610124995466322,
+          "max_ms": 20.755665987962857,
+          "median_paired_speedup_vs_original_pytorch": 1.3758555601655194
+        },
+        "final_runtime_pytorch": {
+          "median_ms": 11.026646010577679,
+          "min_ms": 10.54979200125672,
+          "max_ms": 12.222624995047227,
+          "median_paired_speedup_vs_original_pytorch": 1.7605226465139272
+        },
+        "original_onnxruntime": {
+          "median_ms": 16.890042010345496,
+          "min_ms": 16.09454199206084,
+          "max_ms": 21.728499996243045,
+          "median_paired_speedup_vs_original_pytorch": 1.123726802897508
+        },
+        "compressed_onnxruntime": {
+          "median_ms": 8.41402099467814,
+          "min_ms": 7.965500000864267,
+          "max_ms": 11.724957992555574,
+          "median_paired_speedup_vs_original_pytorch": 2.2987077424553384
+        }
+      },
+      "original_ort_over_compressed_ort": {
+        "median_paired_ratio": 2.0671302656309853,
+        "min_paired_ratio": 1.8531836114073017,
+        "max_paired_ratio": 2.2726687675554826,
+        "paired_ratios": [
+          2.0076974401464014,
+          2.0941712390559046,
+          2.0896430045374372,
+          2.0951070015951325,
+          2.0446175267245335,
+          2.122502291769081,
+          1.8768050857130631,
+          1.8531836114073017,
+          2.2726687675554826,
+          1.9421821313557464
+        ]
+      }
+    },
+    "common_preprocessing_complete_call": {
+      "arms": {
+        "original_pytorch": {
+          "median_ms": 27.0189165166812,
+          "min_ms": 26.744708011392504,
+          "max_ms": 27.524208009708673,
+          "median_paired_speedup_vs_original_pytorch": 1.0
+        },
+        "compressed_pytorch": {
+          "median_ms": 21.79333301319275,
+          "min_ms": 21.491624996997416,
+          "max_ms": 22.17787498375401,
+          "median_paired_speedup_vs_original_pytorch": 1.2447059987566313
+        },
+        "final_runtime_pytorch": {
+          "median_ms": 18.285875499714166,
+          "min_ms": 17.904415988596156,
+          "max_ms": 19.334541982971132,
+          "median_paired_speedup_vs_original_pytorch": 1.4906587770085094
+        },
+        "original_onnxruntime": {
+          "median_ms": 25.71154199540615,
+          "min_ms": 25.001707981573418,
+          "max_ms": 26.405333017464727,
+          "median_paired_speedup_vs_original_pytorch": 1.0510164275887337
+        },
+        "compressed_onnxruntime": {
+          "median_ms": 15.677917006541975,
+          "min_ms": 15.361750003648922,
+          "max_ms": 16.05512501555495,
+          "median_paired_speedup_vs_original_pytorch": 1.7239678049390583
+        }
+      },
+      "original_ort_over_compressed_ort": {
+        "median_paired_ratio": 1.6264352490385328,
+        "min_paired_ratio": 1.5572415635101318,
+        "max_paired_ratio": 1.6753408304507547,
+        "paired_ratios": [
+          1.6168088844944628,
+          1.6213516426020878,
+          1.6658385282041268,
+          1.6315188554749778,
+          1.6629987266892725,
+          1.5572415635101318,
+          1.6151478839219653,
+          1.6527779797822817,
+          1.6157248382468248,
+          1.6753408304507547
+        ]
+      }
+    }
+  },
+  "export_comparison": {
+    "float_initializer_values_removed": 10181160,
+    "float_initializer_reduction_percent": 33.94103873148053,
+    "onnx_file_reduction_percent": 33.71084138875812
+  }
+}

@@ -33,9 +33,16 @@ The enclosing model still needs a complete-output comparison. Compilation uses
 the learned parameters, but the exported table is an inference representation
 and cannot preserve their original training parameterization.
 
-Enumerating every possible token lets the table include nonlinear operations.
-This is partial evaluation of a known program over a finite domain. Continuous
-inputs or interactions between tokens fall outside that derivation.
+This is established finite-domain tabulation: nonlinear operations can be
+precomputed just as affine operations can when every input is known and the
+function is fixed. Program specialization has a classical treatment in
+[Jones, Gomard and Sestoft's *Partial Evaluation and Automatic Program Generation*](https://studwww.itu.dk/people/sestoft/pebook/).
+A familiar deployment example is Google's
+[two-tower retrieval workflow](https://cloud.google.com/blog/products/ai-machine-learning/scaling-deep-retrieval-tensorflow-two-towers-architecture),
+which precomputes a trained candidate network's embeddings for every candidate.
+Here the same principle is applied inside a model, with explicit consumer,
+storage and complete-output checks. Continuous inputs or interactions between
+tokens fall outside this finite-token derivation.
 
 ## Preserve several consumers of the same token
 
@@ -218,9 +225,10 @@ complete-output validation determines whether that application is accepted.
 ## Real arithmetic and numerical agreement
 
 The identities are exact in real arithmetic. Stored float32 results can differ
-because GEMM reductions depend on batch shape and backend. Even identical input
-rows can receive slightly different last bits in a batched operation. The
-compiler therefore reports full-domain numerical measurements alongside
+because GEMM reductions depend on batch shape and backend. PyTorch documents
+that [batched and sliced computations need not agree bitwise](https://docs.pytorch.org/docs/2.14/notes/numerical_accuracy.html#batched-computations-or-slice-computations).
+Even identical input rows can receive slightly different last bits in a batched
+operation. The compiler therefore reports full-domain numerical measurements alongside
 the algebraic identity. Those measurements are not a universal floating-point
 certificate.
 

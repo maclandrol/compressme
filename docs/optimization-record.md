@@ -8,6 +8,12 @@ different conditions. The tables separate those effects from algebraic
 correctness and agreement with the original checkpoint. None of the delivered
 reductions uses distillation, quantization or truncated low-rank approximation.
 
+Most entries apply established algebra, program specialisation, tabulation or
+storage deduplication. The measured gains show where those methods help these
+checkpoints. [Methods and prior art](theory.md) give the attribution;
+[the ONNX Runtime comparison](onnx.md) explains the overlap with standard
+deployment optimisation.
+
 ## Validated reductions
 
 | General operation | Real checkpoint evidence | Practical effect |

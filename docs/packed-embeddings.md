@@ -6,6 +6,12 @@ passing them to the original downstream model. The stored data are the trained
 weights themselves, preserved without precision change or floating-point
 approximation. No training, distillation or input/output cache is needed.
 
+Blocking numerical arrays and shuffling their bytes before compression are
+established storage techniques, used by
+[Blosc](https://github.com/Blosc/c-blosc/blob/main/README.md).
+Here they are integrated into a frozen embedding interface that decodes selected
+rows and counts codec buffers alongside the model's weights.
+
 ```python
 from compressme.packed_embedding import PackedFrozenEmbedding
 

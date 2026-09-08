@@ -13,6 +13,7 @@ Start with [installation](installation.md) and the [command-line guide](cli.md).
 | Check Nesso-1 runtime changes | [Nesso-1 results](nesso.md) and [tutorial](tutorials/nesso.md) |
 | Validate a complete model on CPU, MPS or CUDA | [Backend validation](gpu-validation.md) |
 | Understand what has actually been verified | [Results and evidence](technical-report.md) |
+| Compare with a standard deployment baseline | [ONNX Runtime comparison](onnx.md) |
 
 The documentation build downloads no checkpoints and imports no model frameworks. The reproduction tutorials explicitly install their own dependencies and download their pinned inputs when you run them.
 

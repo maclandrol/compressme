@@ -28,6 +28,12 @@ The general pass uses hashes to identify candidates, then compares their actual
 bytes, shape, dtype and layout. It preserves Parameter objects and enumeration;
 only backing storage changes. See [the transferable pass and its contract](sharing.md).
 
+Shared immutable weights are an established deployment technique.
+[ONNX Runtime documents the same situation](https://onnxruntime.ai/docs/get-started/with-c.html):
+models with common weights and different final layers. Here, the result is the
+verified amount of sharing in the published Boltz-2 pair and a loader that
+retains both native PyTorch APIs.
+
 ## Load on a Mac
 
 For a fresh checkout, follow the [Boltz-2 reproduction tutorial](tutorials/boltz2.md)

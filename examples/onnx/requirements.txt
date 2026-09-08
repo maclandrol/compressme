@@ -1,0 +1,8 @@
+# Optional exporter/runtime additions to the Mol-JEPA tutorial environment.
+# Tested on macOS arm64, Python 3.12.14; no model or core dependency changes.
+onnx==1.22.0
+onnxruntime==1.29.0
+onnxscript==0.7.1
+onnx-ir==1.0.0
+ml-dtypes==0.6.0
+flatbuffers==25.12.19

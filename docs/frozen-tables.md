@@ -5,6 +5,12 @@ rounding of different floating-point execution shapes. `pack_lookup_tables`
 stores equally shaped float32 tables as one explicit base plus exact integer
 XOR differences.
 
+XOR coding is an established way to compress related floating-point values.
+For example, [Gorilla's value codec](https://www.vldb.org/pvldb/vol8/p1816-teller.pdf)
+encodes the XOR of successive time-series values. This layout uses the same
+reversible identity between table routes, with indexed exceptions and row lookup
+instead of Gorilla's time-series encoding.
+
 ```python
 from compressme import pack_lookup_tables
 

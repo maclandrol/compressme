@@ -1,0 +1,1589 @@
+{
+  "status": "export_blocked",
+  "accepted": false,
+  "model": "Mol-JEPA",
+  "device": "cpu",
+  "smiles": [
+    "CCCCCC",
+    "CN(C)C",
+    "c1ccc2[nH]ccc2c1",
+    "OC[C@H]1O[C@@H](O)[C@H](O)[C@@H](O)[C@@H]1O"
+  ],
+  "input_contract": "SMILES only; embeddings_data=None; return_attn=True; fixed four-graph tensor shapes",
+  "excluded_from_onnx": [
+    "SMILES strings, RDKit and molfeat preprocessing",
+    "optional modality inputs",
+    "other tensor shapes, batching and graph sizes"
+  ],
+  "all_declared_outputs": [
+    "predictions",
+    "cls",
+    "embeddings",
+    "attention_0",
+    "attention_1"
+  ],
+  "tolerance": {
+    "max_abs": 1e-05,
+    "relative_l2": 1e-05,
+    "bitwise_required": false
+  },
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "python": "3.12.14",
+  "versions": {
+    "torch": "2.14.0",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.29.0",
+    "onnxscript": "0.7.1",
+    "onnx_ir": "1.0.0",
+    "torch-geometric": "2.8.0.post1",
+    "transformers": "5.16.1",
+    "rdkit": "2026.3.6",
+    "molfeat": "0.11.0",
+    "numpy": "2.5.3"
+  },
+  "threads": 4,
+  "interop_threads": 1,
+  "rounds": 10,
+  "warmup": 3,
+  "torch_mha_fastpath_enabled": true,
+  "torch_float32_matmul_precision": "highest",
+  "torch_deterministic_algorithms": false,
+  "available_ort_providers": [
+    "CoreMLExecutionProvider",
+    "AzureExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "selected_ort_providers": [
+    "CPUExecutionProvider"
+  ],
+  "onnx_opset": 18,
+  "exporters_requested": [
+    "dynamo",
+    "legacy"
+  ],
+  "checkpoint_sha256": "a443592193075334b55483501f1e04cdf4ef9c461db103f687ba4335b036cf14",
+  "artifact_manifest_sha256": "e9836147a2f32aab28a309b70d5c5908d154b7579f8d49715f10706f21ed4d89",
+  "script_sha256": "474f42ea6b181ce40a3077292be3cda3c84920539fd386e27563420c2cea5fc6",
+  "source_manifest": {
+    "source_repository": "https://huggingface.co/Flogrammer/Mol-JEPA",
+    "revision": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+    "license": "CC-BY-NC-4.0",
+    "upstream_code_files_unmodified": [
+      "modeling_moljepa.py",
+      "configuration_moljepa.py",
+      "collator.py",
+      "data.py",
+      "config.json",
+      "README.md"
+    ],
+    "local_additions": [
+      "__init__.py",
+      "SOURCE.json",
+      "LICENSE.txt"
+    ],
+    "checkpoint_included": false,
+    "sha256": {
+      "LICENSE.txt": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "README.md": "93192e45c97b928610e8040c3e1ca256646c5e13f7fdf33f9d6512888a76a63d",
+      "__init__.py": "790a096e3c1a9e401629848d66aac2ce34c2e09e91f8cbc5da46fba89563fa02",
+      "collator.py": "7fee36ea055ad42f5413f4f5785965c94572782297efc36536f59e36907b8d3b",
+      "config.json": "b325b094e4c2c7b7d41fb3880b2963cdc34d14af9846cdbeca4b26ed34716c3e",
+      "configuration_moljepa.py": "018dc87dabcdac7c4a5a41ea31cd9abdd69e4a62d0be561dfc213eaab2f98fde",
+      "data.py": "0a42442271324795549273ad3c43bd1a045f1fcae295c8df1bf93673e4447e21",
+      "modeling_moljepa.py": "89eed5f7ebd458b2d4e6a1e4ad90aed275b7b35bfaa88f4a85a59833e57a0d4d"
+    }
+  },
+  "core_modules_sha256": {
+    "moljepa.py": "2dd581b2f38b2d36f2bac9072d32fe78f3e5a224df53a3ffb719ef04f404dfbb",
+    "moljepa_io.py": "df38228ffb56a4f31c7a1db5b1f95fdddb0cd68775e9590d27797744f0816ec3",
+    "smiles_runtime.py": "d745172f06f2e2c8775429ebbbd62ef1856eafa4658984a09ba1d9c0fc3ec37d",
+    "readouts.py": "47d193fa16fac6378aae399df0a2fd15d5bfd613b749a5b96774ba52f6982361",
+    "sparse_graph.py": "f17476a5a598c8e78960df71edbe6a3734eb45834f0d66f389431b8169cf3d05"
+  },
+  "exports": {
+    "original": {
+      "attempts": [
+        {
+          "exporter": "dynamo",
+          "status": "failed",
+          "warnings": [
+            "While compiling, we found certain side effects happened in the model.forward. Here are the list of potential sources you can double check: [\"L['self']._modules['_export_root']._modules['owner']._modules['model']._modules['encoders']._modules['graph']._modules['convs']._modules['0']\", \"L['self']._modules['_export_root']._modules['owner']._modules['model']._modules['encoders']._modules['graph']._modules['convs']._modules['1']\", \"L['self']._modules['_export_root']._modules['owner']._modules['model']._modules['encoders']._modules['graph']._modules['convs']._modules['2']\", \"L['self']._modules['_export_root']._modules['owner']._modules['model']._modules['transformer_head']._modules['transformer']._modules['layers']._modules['0']\", \"L['self']._modules['_export_root']._modules['owner']._modules['model']._modules['transformer_head']._modules['transformer']._modules['layers']._modules['1']\"]"
+          ],
+          "export_seconds": 4.980425167013891,
+          "error_type": "Fail",
+          "error": "[ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/original_dynamo/model.onnx failed:Type Error: Type parameter (T) of Optype (Concat) bound to different types (tensor(int64) and tensor(float) in node (node_stack).",
+          "elapsed_seconds": 5.155844916997012,
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/manu/Code/compressme/examples/onnx/moljepa.py\", line 195, in main\n    session=ort.InferenceSession(str(file),sess_options=options,providers=['CPUExecutionProvider'])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 534, in __init__\n    self._create_inference_session(providers, provider_options, disabled_optimizers)\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 629, in _create_inference_session\n    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nonnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/original_dynamo/model.onnx failed:Type Error: Type parameter (T) of Optype (Concat) bound to different types (tensor(int64) and tensor(float) in node (node_stack).\n",
+          "export_log_sha256": "cd8a08a14bab37613fad1a698dc66fa8719b3708313d5d6420ab18d3c633983f"
+        },
+        {
+          "exporter": "legacy",
+          "status": "failed",
+          "warnings": [
+            "You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html",
+            "The feature will be removed. Please remove usage of this function",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!"
+          ],
+          "export_seconds": 0.5080634170153644,
+          "error_type": "Fail",
+          "error": "[ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/original_legacy/model.onnx failed:Node (/graph/convs.0/Sub) Op (Sub) [ShapeInferenceError] Incompatible dimensions",
+          "elapsed_seconds": 1.26905525001348,
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/manu/Code/compressme/examples/onnx/moljepa.py\", line 195, in main\n    session=ort.InferenceSession(str(file),sess_options=options,providers=['CPUExecutionProvider'])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 534, in __init__\n    self._create_inference_session(providers, provider_options, disabled_optimizers)\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 629, in _create_inference_session\n    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nonnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/original_legacy/model.onnx failed:Node (/graph/convs.0/Sub) Op (Sub) [ShapeInferenceError] Incompatible dimensions\n",
+          "export_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "onnx": {
+        "initializer_values": 29950464,
+        "initializer_count": 92,
+        "float_initializer_types": [
+          "FLOAT"
+        ],
+        "operator_types": [
+          "Add",
+          "Cast",
+          "Concat",
+          "Constant",
+          "ConstantOfShape",
+          "Div",
+          "Equal",
+          "Erf",
+          "Exp",
+          "Expand",
+          "Gather",
+          "Gemm",
+          "Greater",
+          "If",
+          "LayerNormalization",
+          "MatMul",
+          "Mod",
+          "Mul",
+          "NonZero",
+          "Not",
+          "ReduceMean",
+          "ReduceMin",
+          "ReduceSum",
+          "Relu",
+          "Reshape",
+          "ScatterElements",
+          "ScatterND",
+          "Shape",
+          "Size",
+          "Slice",
+          "Softmax",
+          "Squeeze",
+          "Sub",
+          "Transpose",
+          "Unsqueeze",
+          "Where"
+        ],
+        "nodes": 875,
+        "files": {
+          "model.onnx": {
+            "bytes": 120072191,
+            "sha256": "a9f24b72479aa35d6da5e0bb1c8ae9a3aa34536d1b1dbeaaad8e03935da47a59"
+          }
+        }
+      }
+    },
+    "compressed": {
+      "attempts": [
+        {
+          "exporter": "dynamo",
+          "status": "failed",
+          "warnings": [
+            "While compiling, we found certain side effects happened in the model.forward. Here are the list of potential sources you can double check: [\"L['self']._modules['_export_root']._modules['owner']._modules['backbone']._modules['model']._modules['transformer_head']._modules['transformer']._modules['layers']._modules['0']\", \"L['self']._modules['_export_root']._modules['owner']._modules['backbone']._modules['model']._modules['transformer_head']._modules['transformer']._modules['layers']._modules['1']\"]"
+          ],
+          "export_seconds": 3.6865275420132093,
+          "error_type": "Fail",
+          "error": "[ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/compressed_dynamo/model.onnx failed:Type Error: Type parameter (T) of Optype (Concat) bound to different types (tensor(int64) and tensor(float) in node (node_stack).",
+          "elapsed_seconds": 3.7779478330048732,
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/manu/Code/compressme/examples/onnx/moljepa.py\", line 195, in main\n    session=ort.InferenceSession(str(file),sess_options=options,providers=['CPUExecutionProvider'])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 534, in __init__\n    self._create_inference_session(providers, provider_options, disabled_optimizers)\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 629, in _create_inference_session\n    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nonnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/compressed_dynamo/model.onnx failed:Type Error: Type parameter (T) of Optype (Concat) bound to different types (tensor(int64) and tensor(float) in node (node_stack).\n",
+          "export_log_sha256": "5f3bb963710cf55869aee839fbd57f2f31ddabe0bf42a6e02dcf341ff8435773"
+        },
+        {
+          "exporter": "legacy",
+          "status": "failed",
+          "warnings": [
+            "You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html",
+            "The feature will be removed. Please remove usage of this function",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!",
+            "Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!"
+          ],
+          "export_seconds": 0.3824407920183148,
+          "error_type": "Fail",
+          "error": "[ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/compressed_legacy/model.onnx failed:Node (/graph/convs.0/Sub) Op (Sub) [ShapeInferenceError] Incompatible dimensions",
+          "elapsed_seconds": 0.8293072920059785,
+          "traceback": "Traceback (most recent call last):\n  File \"/Users/manu/Code/compressme/examples/onnx/moljepa.py\", line 195, in main\n    session=ort.InferenceSession(str(file),sess_options=options,providers=['CPUExecutionProvider'])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 534, in __init__\n    self._create_inference_session(providers, provider_options, disabled_optimizers)\n  File \"/private/tmp/compressme-onnx-deps/onnxruntime/capi/onnxruntime_inference_collection.py\", line 629, in _create_inference_session\n    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nonnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /Users/manu/Code/compressme/work/onnx-moljepa-2026-09-08/compressed_legacy/model.onnx failed:Node (/graph/convs.0/Sub) Op (Sub) [ShapeInferenceError] Incompatible dimensions\n",
+          "export_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "onnx": {
+        "initializer_values": 19769304,
+        "initializer_count": 92,
+        "float_initializer_types": [
+          "FLOAT"
+        ],
+        "operator_types": [
+          "Add",
+          "Cast",
+          "Concat",
+          "Constant",
+          "ConstantOfShape",
+          "Div",
+          "Equal",
+          "Erf",
+          "Exp",
+          "Expand",
+          "Gather",
+          "Gemm",
+          "Greater",
+          "If",
+          "LayerNormalization",
+          "MatMul",
+          "Mod",
+          "Mul",
+          "NonZero",
+          "Not",
+          "ReduceMean",
+          "ReduceMin",
+          "ReduceSum",
+          "Relu",
+          "Reshape",
+          "ScatterElements",
+          "ScatterND",
+          "Shape",
+          "Size",
+          "Slice",
+          "Softmax",
+          "Split",
+          "Squeeze",
+          "Sub",
+          "Transpose",
+          "Unsqueeze",
+          "Where"
+        ],
+        "nodes": 887,
+        "files": {
+          "model.onnx": {
+            "bytes": 79345914,
+            "sha256": "30d768e4395dcd26eb3e915f409bcac2829e0c9ec64669988fa3d94e1bca0e26"
+          }
+        }
+      }
+    }
+  },
+  "gates": {
+    "original_native_vs_core": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "original_vs_original_native": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "original_self_repeat": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "compressed_native_vs_core": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "compressed_vs_original_native": {
+      "accepted": true,
+      "bitwise": false,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.360152639134867e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 3.129243850708008e-07,
+          "relative_l2": 5.361908288397806e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 4.470348358154297e-07,
+          "relative_l2": 3.668262143685959e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 3.8743019104003906e-07,
+          "relative_l2": 9.301182124680585e-08,
+          "bitwise": false,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 6.258487701416016e-07,
+          "relative_l2": 2.612198667946666e-07,
+          "bitwise": false,
+          "accepted": true
+        }
+      }
+    },
+    "compressed_self_repeat": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "final_runtime_native_vs_core": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    },
+    "final_runtime_vs_original_native": {
+      "accepted": true,
+      "bitwise": false,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 1.9073486328125e-06,
+          "relative_l2": 3.5301545163389954e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 3.2782554626464844e-07,
+          "relative_l2": 5.835832525735642e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 4.470348358154297e-07,
+          "relative_l2": 3.693897946009442e-07,
+          "bitwise": false,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 3.5762786865234375e-07,
+          "relative_l2": 9.705669832728319e-08,
+          "bitwise": false,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 7.748603820800781e-07,
+          "relative_l2": 2.8527273193704366e-07,
+          "bitwise": false,
+          "accepted": true
+        }
+      }
+    },
+    "final_runtime_self_repeat": {
+      "accepted": true,
+      "bitwise": true,
+      "metrics": {
+        "predictions": {
+          "shape": [
+            4,
+            12,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "cls": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "embeddings": {
+          "shape": [
+            4,
+            13,
+            512
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_0": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        },
+        "attention_1": {
+          "shape": [
+            4,
+            4,
+            13,
+            13
+          ],
+          "dtype": "torch.float32",
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "bitwise": true,
+          "accepted": true
+        }
+      }
+    }
+  },
+  "timing": {},
+  "pytorch_registered_parameters": {
+    "original": 45406721,
+    "compressed": 19763160,
+    "final_runtime": 19763160
+  },
+  "tensor_inputs": {
+    "graph_x": {
+      "shape": [
+        73,
+        82
+      ],
+      "dtype": "torch.float32",
+      "stride": [
+        82,
+        1
+      ],
+      "sha256": "5dfce0dc71eeac300f56c2ebf4918b17675e17adf59f7673137dd293309ef264"
+    },
+    "graph_edge_index": {
+      "shape": [
+        2,
+        144
+      ],
+      "dtype": "torch.int64",
+      "stride": [
+        144,
+        1
+      ],
+      "sha256": "120011ea6f95e6e190143484dcce2f634724d9c40502d25b60eed111ab8dbd69"
+    },
+    "graph_edge_attr": {
+      "shape": [
+        144,
+        17
+      ],
+      "dtype": "torch.float32",
+      "stride": [
+        17,
+        1
+      ],
+      "sha256": "b8490fb346afe0f25deb3d1afada7bf002b3014783852e96bf91a8e9e1993eaa"
+    },
+    "graph_x_batch": {
+      "shape": [
+        73
+      ],
+      "dtype": "torch.int64",
+      "stride": [
+        1
+      ],
+      "sha256": "6b07e0e21ae13d0207016669bb48a6df6ec522fb89cdb1a4afca2cdb1c782157"
+    },
+    "graph_x_ptr": {
+      "shape": [
+        5
+      ],
+      "dtype": "torch.int64",
+      "stride": [
+        1
+      ],
+      "sha256": "f020b7c480072e2b0b4e25edd0bc2ccbc5fc1a88c306685566c797f039f7e8bf"
+    }
+  },
+  "changed_tensor_gates": {
+    "features": {
+      "original_pytorch": {
+        "accepted": true,
+        "bitwise": true,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          }
+        }
+      },
+      "compressed_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.384185791015625e-06,
+            "relative_l2": 3.4145079457971247e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.980232238769531e-07,
+            "relative_l2": 5.675308925719376e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 5.960464477539062e-07,
+            "relative_l2": 3.806861845105435e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.980232238769531e-07,
+            "relative_l2": 8.954114482690796e-08,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 8.344650268554688e-07,
+            "relative_l2": 2.985280620897829e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      },
+      "final_runtime_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.0994415283203125e-06,
+            "relative_l2": 3.5771123255210197e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.427267074584961e-07,
+            "relative_l2": 5.72938941645974e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 5.364418029785156e-07,
+            "relative_l2": 3.7950051141542506e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.682209014892578e-07,
+            "relative_l2": 9.623031799401535e-08,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 8.940696716308594e-07,
+            "relative_l2": 3.136446396562397e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      }
+    },
+    "edge_order": {
+      "original_pytorch": {
+        "accepted": true,
+        "bitwise": true,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          }
+        }
+      },
+      "compressed_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.2649765014648438e-06,
+            "relative_l2": 3.5129562575091677e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.2782554626464844e-07,
+            "relative_l2": 5.729404356132222e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 5.066394805908203e-07,
+            "relative_l2": 3.9544499975400573e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 5.066394805908203e-07,
+            "relative_l2": 1.190344929652804e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 8.344650268554688e-07,
+            "relative_l2": 3.1061681859812343e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      },
+      "final_runtime_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 2.1457672119140625e-06,
+            "relative_l2": 3.626090937368686e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.2782554626464844e-07,
+            "relative_l2": 6.000429845798758e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 5.364418029785156e-07,
+            "relative_l2": 3.989796767209734e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 4.76837158203125e-07,
+            "relative_l2": 1.2327621653020148e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 8.344650268554688e-07,
+            "relative_l2": 3.2759480773608466e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      }
+    },
+    "node_relabel": {
+      "original_pytorch": {
+        "accepted": true,
+        "bitwise": true,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "bitwise": true,
+            "accepted": true
+          }
+        }
+      },
+      "compressed_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 1.9073486328125e-06,
+            "relative_l2": 3.360152639134867e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.129243850708008e-07,
+            "relative_l2": 5.361908288397806e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 4.470348358154297e-07,
+            "relative_l2": 3.668262143685959e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.8743019104003906e-07,
+            "relative_l2": 9.301182124680585e-08,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 6.258487701416016e-07,
+            "relative_l2": 2.612198667946666e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      },
+      "final_runtime_pytorch": {
+        "accepted": true,
+        "bitwise": false,
+        "metrics": {
+          "predictions": {
+            "shape": [
+              4,
+              12,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 1.9073486328125e-06,
+            "relative_l2": 3.5301545163389954e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "cls": {
+            "shape": [
+              4,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.2782554626464844e-07,
+            "relative_l2": 5.835832525735642e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "embeddings": {
+            "shape": [
+              4,
+              13,
+              512
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 4.470348358154297e-07,
+            "relative_l2": 3.693897946009442e-07,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_0": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 3.5762786865234375e-07,
+            "relative_l2": 9.705669832728319e-08,
+            "bitwise": false,
+            "accepted": true
+          },
+          "attention_1": {
+            "shape": [
+              4,
+              4,
+              13,
+              13
+            ],
+            "dtype": "torch.float32",
+            "max_abs": 7.748603820800781e-07,
+            "relative_l2": 2.8527273193704366e-07,
+            "bitwise": false,
+            "accepted": true
+          }
+        }
+      }
+    }
+  }
+}

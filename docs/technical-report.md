@@ -39,6 +39,11 @@ Three reductions account for the complete parameter change:
 | Store eligible query/key interactions as bilinear maps | 4,677,160 | The attention score observes `QᵀK`, allowing a smaller interaction representation while preserving each head and its edge terms. |
 | **Total** | **25,643,561** | **45,406,721 → 19,763,160 retained parameters** |
 
+Removing the unused input encoders leaves 29,944,320 parameters. The affine and
+attention rewrites then remove another 10,181,160, or **34.00% of that
+SMILES-specialised model**. This separates the benefit of narrowing the input
+API from the reduction in the representation used for inference.
+
 Sparse bond-only graph preparation, graph kernels that avoid large edge-message
 intermediates, fewer device synchronisations and batched readouts then improve
 execution. These changes retain all output heads and add no further parameter
@@ -90,6 +95,25 @@ together; sequentially unloading one model has a different memory baseline.
 We did not establish a single-model speedup. Optional conditioning reuse gave
 no reliable MPS gain.
 [Boltz evidence and limits](boltz2.md).
+
+## How this relates to existing tools
+
+Program specialisation, affine composition, tabulation and weight deduplication
+are established techniques. Joint query/key compression also has prior work;
+the useful application here handles Mol-JEPA's oversized graph-attention heads,
+including their biases and edge features. The [methods notes](theory.md#relationship-to-existing-compression-work)
+attribute these ideas and state the conditions of each rewrite.
+
+The practical contribution is finding where these reductions apply to published
+checkpoints, retaining the requested outputs, and providing reproducible exports
+and measurements. ONNX Runtime already offers graph optimisations and shared
+weight initializers. It is a relevant deployment baseline. The approximately
+2× Mol-JEPA result above compares with the recorded original PyTorch workflow;
+it does not establish a speed advantage over ONNX Runtime.
+A separate four-molecule CPU test found that applying the structural rewrites
+before ONNX export improved ONNX Runtime calls by 1.63× in median paired timing,
+with the same original preprocessing and all embedding and attention outputs.
+That fixed-shape test has its own [ONNX Runtime results and limits](onnx.md).
 
 ## Transferability and limits
 

@@ -9,6 +9,12 @@ is an optional integration with a trusted architecture and its dependencies.
 The [illustrated technical report](docs/technical-report.md) explains the largest
 measured gains, focusing on Mol-JEPA.
 
+The package applies established compiler and numerical techniques to pretrained
+models, with explicit input contracts and complete-output checks. The
+[methods and prior art](docs/theory.md) explain the individual rewrites;
+[the ONNX Runtime comparison](docs/onnx.md) covers their overlap with a standard
+deployment tool.
+
 ## Install what you use
 
 From this local checkout:
@@ -87,6 +93,11 @@ parameter enumeration and arithmetic. [CLI reference and runnable adapter](docs/
 | [Mol-JEPA](https://arxiv.org/abs/2608.22642), SMILES only; all embedding outputs retained | **56.47% fewer parameters; 1.96–2.21× MPS speed** | All tested outputs and requested attentions within 1e-5; finite test inputs |
 | [Boltz-2](https://doi.org/10.1101/2025.06.14.659707) confidence and affinity loaded together | **49.55% less joint registered weight storage** | All 48 tested outputs byte-identical on CPU/MPS; no reliable MPS speedup |
 | [STATE ST](https://arcinstitute.org/manuscripts/State), original inference and token-ID APIs | **21.25% fewer parameters** | Tested outputs byte-identical on CPU/MPS; no active-compute speedup claimed |
+
+For Mol-JEPA, removing unused input encoders leaves 29,944,320 parameters.
+The algebraic rewrites reduce that specialised model by another **34.00%**,
+to 19,763,160. The reported speedup includes separate runtime changes and uses
+the original PyTorch workflow as its baseline.
 
 ![Mol-JEPA parameter reductions and measured MPS latency](docs/figures/moljepa-results.png)
 

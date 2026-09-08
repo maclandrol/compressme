@@ -51,6 +51,11 @@ The builder loads the original safetensors strictly, freezes the model, applies 
 
 The expected parameter count is **45,406,721 → 19,763,160**. Algebraic equivalence is in real arithmetic; floating-point reassociation can change the last bits. The gate requires both maximum absolute error and relative L2 error at most `1e-5` on the supplied examples. This verifies this workload, not all possible molecules or downstream biological accuracy. `--packing` additionally applies a reversible file codec; it does not change resident parameters or arithmetic. The exact packed size can vary with serializer/codec versions.
 
+Removing only unused input encoders leaves 29,944,320 parameters; the affine
+and attention rewrites save 34.00% of that specialised baseline. The
+[technical report](../technical-report.md) separates those contributions, and
+[the ONNX Runtime comparison](../onnx.md) covers a standard deployment alternative.
+
 The exported input contract explicitly rejects non-`None` `embeddings_data`. It retains **all output embeddings**; it does not turn the model into a prediction-only wrapper. Fine-tuning the reparameterised model is a different optimisation trajectory and is outside this inference recipe.
 
 ## 4. Verify from a fresh process on CPU and Metal

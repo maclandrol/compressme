@@ -18,6 +18,10 @@ This reduces 49,396,728 parameters to 38,901,056 and raw tensor storage from
 197,586,912 to 155,604,224 bytes. The published STATE source is pinned to
 [`9bbfe78`](https://github.com/ArcInstitute/state/tree/9bbfe78a434a55205e4de834e1ea99f85f7a3add).
 
+This is ordinary deduplication of redundant stored state. The 21.25% figure
+measures the zero table's storage; the learned weights used for expression
+prediction are unchanged.
+
 All outputs of `predict_step`, including decoded gene counts and metadata, were
 bitwise identical on CPU and MPS for 1, 7, 64 and 128 cells, padded/unpadded
 inputs, and integer/one-hot batch labels. These are constructed numerical probes

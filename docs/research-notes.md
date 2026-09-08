@@ -155,9 +155,12 @@ These classical identities turn the compiler problem into locating observable
 parameter combinations in a trained program. Exporting those combinations
 produces checkpoint savings here without an approximation hypothesis; the
 identities themselves are not new linear algebra theorems.
-Query/key composition is also related to prior compression work such as
-[KQ-SVD](https://arxiv.org/abs/2512.05916); this implementation performs no SVD
-truncation on that path. See [the derivations and prior art](../docs/theory.md).
+[Collaborative Multi-Head Attention](https://arxiv.org/abs/2006.16362) already
+uses joint query/key products and the same softmax bias decomposition.
+[KQ-SVD](https://arxiv.org/abs/2512.05916) optimizes low-rank attention inner
+products for KV-cache compression. This graph implementation retains the full
+product and edge semantics, with no SVD truncation on that path. See
+[the derivations and prior art](../docs/theory.md).
 
 **Contract around the normalization statistic.** For
 `Linear(d,n) → LayerNorm(n) → Linear(n,m)`, center the first affine map to form
@@ -173,8 +176,12 @@ test block drops from **306,176 to 49,897 parameters (83.7%)**, with float32
 relative output error about 4.8e-7. This result comes from a constructed
 general-operator test. Mol-JEPA gains no additional reduction from it because
 GELU interrupts the relevant encoder paths. FX discovers eligible sandwiches
-automatically. See the
-[proof and limitations](../docs/normalization-statistic.md).
+automatically. The scalar separation has close precedent in
+[QK-Normed MLA](https://arxiv.org/abs/2606.16310), and
+[SliceGPT](https://arxiv.org/abs/2401.15024) uses related normalization
+rearrangements and orthogonal invariance before approximate slicing. Priority
+for this particular centered QR compiler transformation has not been established.
+See the [proof and limitations](../docs/normalization-statistic.md).
 
 **Store identical frozen rows once.** A frozen embedding table whose rows have
 identical bits can retain one row and expose an expanded weight view. Ordinary
@@ -397,12 +404,25 @@ fused parameters changes the optimizer trajectory, and freely updating contracte
 attention maps can change the original factor coupling. Inference equivalence
 at conversion is the established result.
 
+The [product-and-Gram SGD experiment](../experiments/gram_sgd/gram-sgd-note.md)
+checks finite-step updates on constructed linear blocks. It follows established
+block-lifting and factorized-gradient reasoning, with all quadratic step-size
+terms retained. [Tarmoun et al.](https://proceedings.mlr.press/v139/tarmoun21a.html)
+provide related Gramian dynamics for linear-model gradient flow and a scalar
+discrete-time example; that analysis does not establish the full matrix
+recurrences or attention construction tested here. The Gram state only saves
+storage for sufficiently wide expansions and can be larger than the factors.
+
 A separate [restricted SGD experiment](../experiments/moljepa_subspace_sgd/note.md)
 uses fixed orthonormal subspaces to preserve first-layer Q/K updates with
-243,024 trainable coefficients instead of 4,202,496. It requires frozen input
-and shared-edge projections, is not an additional inference-artifact reduction,
-and has no measured training speedup. Its failed arbitrary-input float32
-raw-logit stress check remains in the evidence.
+243,024 trainable coefficients instead of 4,202,496. It trains only Q/K with
+ordinary SGD, requires frozen input and shared-edge projections, and tests
+actual pretrained weights against a changing synthetic downstream target.
+This is not an additional inference-artifact reduction or a whole-model
+fine-tuning result, and it has no measured training speedup. Its failed
+arbitrary-input float32 raw-logit stress check remains in the evidence.
+The fixed-subspace construction is a specific component experiment whose
+novelty has not been established.
 
 The [optimization record](../docs/optimization-record.md) keeps the accepted,
 rejected and optional candidates, including unsupported cases and failed

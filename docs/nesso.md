@@ -32,6 +32,10 @@ C_{bijd}=\sum_k A_{bikd}B_{bjkd}.
 
 The [general contraction helper](../src/compressme/contractions.py) packs each operand into contiguous matrices, performs the batched matrix multiplication, then restores the axes. The Nesso adapter uses it for 608 triangle contractions per prediction. All surrounding projections, normalisation, masks and gates stay in their original order. The amount of arithmetic is unchanged; the aim is to avoid repeated handling of strided matrices. Layout changes can select different floating-point kernels, which is why the complete output comparison remains necessary.
 
+Matrix layout, batching and removal of Python overhead are standard performance
+engineering. This experiment measures their value in Nesso's native workflow.
+An optimising runtime is another relevant baseline; see the [ONNX Runtime comparison](onnx.md).
+
 There was also avoidable Python work. The adapter originally walked the module tree three times to inspect modules, parameters and buffers. It now inspects registered state in one pass, retaining every alias path and the same tensor identity, storage, shape, dtype, layout and version checks. Across 40 paired metadata measurements, one check fell from **4.724 to 2.914 ms**. That saves about 5.43 ms over the three checks in a fresh scope; it is not a 1.62× model speedup. A more elaborate cached checker cost more to construct than it saved and was discarded. [Python benchmark](../experiments/nesso/reports/python_checks.json).
 
 File packing uses the existing general byte-shuffle/Zstandard codec. The exact size change was 165,426,752 → 140,754,378 bytes, and the restored file matched every original byte. It adds no prediction error and changes neither resident weight size nor computation. [Packing report](../experiments/nesso/reports/transport_roundtrip.json).

@@ -105,7 +105,7 @@ For equal source and receiver feature width \(d\), edge width \(e\), and biased 
 
 which is positive when \(d+e<2c\). For the audited \(H=8,c=512,e=17\) configuration, the first layer after affine fusion has \(d=82\), giving 614,200 fewer parameters. A later layer with \(d=512\) saves 2,031,480. These counts retain the edge-value projection and exclude unchanged value, skip and normalisation parameters. If the edge width or source feature width is too large, retain the original score implementation.
 
-Query-key product compression is established prior art. Here the contraction retains the full interaction, without rank truncation. It can save parameters because the audited graph attention expands each head to a width equal to or larger than its input features.
+The joint query-key product and its bias decomposition are established. [Collaborative Multi-Head Attention](https://arxiv.org/abs/2006.16362) explicitly removes the softmax-invisible key bias and retains the query-bias contribution; it also compresses joint products across heads. [KQ-SVD](https://arxiv.org/abs/2512.05916) uses a low-rank objective on attention inner products to compress the KV cache. Here we retain the full interaction without rank truncation and implement the graph-specific edge, scaling and output semantics below. The saving comes from head projections that are wide relative to their inputs.
 
 ### Aggregate values before their linear expansion
 
@@ -256,10 +256,10 @@ Fewer parameters or multiply-accumulates do not guarantee lower wall time. Two s
 
 ## Relationship to existing compression work
 
-Affine composition applies standard algebra to proven model dataflow; removing inactive modalities is program specialisation. These are established principles, not new compression theorems.
+Affine composition applies standard algebra to proven model dataflow; removing inactive modalities is program specialisation, as described in [Jones, Gomard and Sestoft's textbook](https://studwww.itu.dk/people/sestoft/pebook/). Both are established principles.
 
-Activation-aware and training-free low-rank methods already include [SVD-LLM](https://arxiv.org/abs/2403.07378), [BALF](https://arxiv.org/abs/2509.25136) and [Swift-SVD](https://arxiv.org/abs/2604.01609). [KQ-SVD](https://arxiv.org/abs/2512.05916) treats query-key interactions directly, while [SAFE-SVD](https://arxiv.org/abs/2605.17985) studies output-function sensitivity and physical fidelity in scientific foundation models. Joint attention factorisation or output-aware rank allocation alone would duplicate substantial prior work.
+Activation-aware and training-free low-rank methods already include [SVD-LLM](https://arxiv.org/abs/2403.07378), [BALF](https://arxiv.org/abs/2509.25136) and [Swift-SVD](https://arxiv.org/abs/2604.01609). [KQ-SVD](https://arxiv.org/abs/2512.05916) treats query-key interactions directly, while [SAFE-SVD](https://arxiv.org/abs/2605.17985) studies output-function sensitivity and physical fidelity in scientific foundation models. These provide prior work for joint attention factorisation and output-aware rank allocation.
 
 A different theoretical route, [width-independent compression of analytic networks](https://arxiv.org/abs/2608.21752), constructs smaller networks through derivative matching and reweighting. Its width dependence on the effective input dimension limits direct application to large structural models; it does not supply a ready general-purpose Boltz compressor.
 
-The proposed contribution is to turn these principles into a compiler: discover a valid reduction, preserve the declared API, record its exact or approximate guarantee, and reject it if the error or cost is unacceptable. Measurements on actual Boltz-2 and Mol-JEPA checkpoints determine how much this saves on each supported execution path.
+The work here turns these principles into a compiler: discover a valid reduction, preserve the declared API, record its exact or approximate guarantee, and reject it if the error or cost is unacceptable. Measurements on actual Boltz-2 and Mol-JEPA checkpoints establish the savings on each tested execution path. The narrower LayerNorm contraction and restricted SGD constructions have their own derivations and component tests; priority for those specific constructions has not been established.

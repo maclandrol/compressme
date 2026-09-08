@@ -35,6 +35,13 @@ sometimes be evaluated once per token and replaced by its outputs. Each case
 has algebraic or structural conditions that must hold before a rewrite applies;
 none requires fitting a student or changing precision.
 
+Affine composition, removal of unused branches, deduplication and finite-domain
+tabulation are established techniques. The package combines their eligibility
+checks with model-level validation and export. [The methods notes](theory.md)
+attribute the individual ideas. [ONNX Runtime](onnx.md) provides overlapping
+graph optimisations and is a relevant baseline before crediting a gain to these
+additional rewrites.
+
 There cannot be a guaranteed large compression ratio for every trained tensor
 under an exact-output requirement. A model may contain no removable algebraic
 redundancy, and a matrix with a small-looking spectrum can still matter at a

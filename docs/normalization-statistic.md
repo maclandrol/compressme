@@ -1,6 +1,6 @@
 # Exact contraction across LayerNorm
 
-LayerNorm appears to interrupt affine composition, but its denominator only needs one scalar norm. In an affine expansion followed by LayerNorm and another affine map, we can compute that norm from the narrow input and contract the remaining maps in advance. The expanded representation no longer has to be constructed.
+LayerNorm appears to interrupt affine composition, but its denominator only needs one scalar norm. In an affine expansion followed by LayerNorm and another affine map, we can compute that norm from the narrow input and contract the remaining maps in advance. The denominator remains input-dependent and is evaluated at runtime. The expanded representation no longer has to be constructed.
 
 Let
 
@@ -54,4 +54,6 @@ Twenty-four focused tests check output and input-gradient agreement in float64/f
 
 Independent fine-tuning of \(D,R,c\) changes the original coupling between numerator and denominator. Inference equivalence at conversion does not establish the same optimisation trajectory or function class during training.
 
-The underlying scalar-statistic idea has close precedent in [QK-Normed MLA](https://arxiv.org/abs/2606.16310), which preserves an exact latent attention path with post-projection RMSNorm. This prototype applies the algebra to generic affine–LayerNorm–affine chains, with centering, biases and a QR denominator. The contribution is this exact compiler transformation; the underlying normalisation identity is not a new theorem.
+The scalar-statistic idea has a close precedent in [QK-Normed MLA](https://arxiv.org/abs/2606.16310): it absorbs static RMSNorm weights into attention projections while retaining a dynamic scalar per cached key and KV group, preserving the latent attention computation in real arithmetic. [SliceGPT](https://arxiv.org/abs/2401.15024) also absorbs LayerNorm's linear operations into adjacent weights and uses exact orthogonal invariance around RMSNorm; its subsequent PCA slicing introduces approximation.
+
+This prototype implements the centered affine–LayerNorm–affine case with biases and a full QR denominator. No directions are discarded. The specific compiler transformation and its constructed-block tests are the result here; novelty relative to these and other normalization methods has not been established.

@@ -44,6 +44,7 @@ nav:
       - Installation: installation.md
       - Command line: cli.md
       - General workflow: general-workflow.md
+      - ONNX Runtime comparison: onnx.md
       - Hugging Face: huggingface.md
   - Models:
       - Mol-JEPA: tutorials/moljepa.md

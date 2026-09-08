@@ -5,6 +5,14 @@ for each model wastes memory. `share_frozen_parameters` lets frozen models
 share that storage while executing their original operations. It works within
 one ordinary model or across several models in an `nn.ModuleDict`.
 
+Shared immutable weights are an established deployment technique.
+[ONNX Runtime documents initializer sharing across sessions](https://onnxruntime.ai/docs/get-started/with-c.html),
+including models that differ only in their last few layers. `AddInitializer`
+shares supplied weights; a shared container can also share their prepacked
+versions. This pass identifies equal frozen tensors in native PyTorch models
+and records their storage aliases for replay. The equality checks and measured checkpoint savings below describe
+that implementation.
+
 ```python
 import torch
 from compressme import share_frozen_parameters
@@ -59,3 +67,10 @@ model-level sharing and full-output execution
 checks. The saving applies to joint storage: each model still performs its
 original arithmetic. A workflow that unloads models sequentially has a different
 resident-memory baseline.
+
+The separate `deduplicate_embeddings` pass handles repeated rows. In the selected
+[STATE ST checkpoint](state.md), the frozen 32,000 × 328 token table is entirely
+zero. Keeping one row removes redundant stored state while retaining ordinary
+token lookup. The reported 21.25% resident-weight reduction comes from this
+table; expression prediction already bypasses it. The learned biological
+computation is unchanged.

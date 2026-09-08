@@ -2,6 +2,12 @@
 
 Packing reduces checkpoint storage and transfer size without rounding any values. It first rearranges bytes within fixed-size blocks, then applies Zstandard. Unpacking verifies the original length and SHA256 and returns exactly the original bytes, including tensor headers, signed zeros and NaN payload bits.
 
+Byte shuffling followed by compression is a standard reversible storage
+pipeline. [Blosc](https://github.com/Blosc/c-blosc/blob/main/README.md) combines
+shuffle and bitshuffle filters with codecs including Zstandard. compressme uses
+this approach in its checked checkpoint format; the measurements below report
+the resulting file savings and decoding cost.
+
 Install the optional dependencies with `pip install 'compressme[packing]'`. The core package can be imported without them.
 
 ```python
