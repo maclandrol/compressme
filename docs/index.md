@@ -17,4 +17,4 @@ Start with [installation](installation.md) and the [command-line guide](cli.md).
 
 The documentation build downloads no checkpoints and imports no model frameworks. The reproduction tutorials explicitly install their own dependencies and download their pinned inputs when you run them.
 
-These pages are built as a private GitHub Actions artifact. See [building and reading the documentation](building-docs.md) for local preview, pushed-commit builds and artifact access.
+These pages are published on [GitHub Pages](https://maclandrol.github.io/compressme/). See [building and reading the documentation](building-docs.md) for local preview, automatic publication and downloadable builds.

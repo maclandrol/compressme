@@ -21,7 +21,7 @@ jobs:
       PYTHONDONTWRITEBYTECODE: "1"
       COMPRESSME_DOCS_REVISION: ${{ github.sha }}
     steps:
-      - name: Check out the private source
+      - name: Check out the source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -35,10 +35,31 @@ jobs:
         run: python -m unittest discover -s tests -p test_docs_hooks.py
       - name: Build with strict local link checks
         run: python -m mkdocs build --strict
-      - name: Store private HTML artifact
+      - name: Store HTML artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: compressme-docs-${{ github.sha }}
           path: site/
           if-no-files-found: error
           retention-days: 14
+
+      - name: Upload Pages site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: site/
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy documentation
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

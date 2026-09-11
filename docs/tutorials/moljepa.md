@@ -3,13 +3,13 @@
 **Original work:** Rottach et al., [Mol-JEPA (2026)](https://arxiv.org/abs/2608.22642) · [authors’ code](https://github.com/Boehringer-Ingelheim/mol-jepa) · [author-linked checkpoint](https://huggingface.co/Flogrammer/Mol-JEPA).
 { .original-work }
 
-This recipe starts with a checkout of this private repository and the original published weights. It builds a new portable **SMILES-only** artifact, preserving predictions, CLS, all latent embeddings and requested attentions. It uses no fitting, distillation or lower-precision weights. The architecture-specific recipe composes affine projections, contracts eligible attention score maps and removes modality encoders unreachable when `embeddings_data=None`.
+This recipe starts with a checkout of this repository and the original published weights. It builds a new portable **SMILES-only** artifact, preserving predictions, CLS, all latent embeddings and requested attentions. It uses no fitting, distillation or lower-precision weights. The architecture-specific recipe composes affine projections, contracts eligible attention score maps and removes modality encoders unreachable when `embeddings_data=None`.
 
 This recipe combines several transformations beyond the general CLI's `--method affine` pass. [General workflow](../general-workflow.md) explains that boundary.
 
 ## 1. Install in an isolated environment
 
-Access to the private repository is required. Run the commands from its root:
+Clone [the repository](https://github.com/maclandrol/compressme) and run the commands from its root:
 
 ```sh
 git clone git@github.com:maclandrol/compressme.git

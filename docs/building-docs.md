@@ -21,7 +21,7 @@ Open the local address printed by MkDocs. The `docs` extra is independent of `to
 
 ## Read a pushed build
 
-1. Open the private repository's **Actions** tab and choose a successful **Documentation** run.
+1. Open the repository's **Actions** tab and choose a successful **Documentation** run.
 2. Download the artifact named `compressme-docs-<commit>` and extract it.
 3. Open `index.html`, or serve the extracted directory with `python -m http.server 8000` and visit `http://127.0.0.1:8000`.
 
@@ -29,11 +29,11 @@ Pages use file-style URLs so ordinary navigation also works directly from the ex
 
 Equations render with bundled KaTeX 0.16.22 scripts, styles and fonts. The extracted site needs no external math CDN. Its [license](assets/katex/LICENSE), [download provenance and file hashes](assets/katex/PROVENANCE.json) are included; the build tests verify those bytes. This follows the [KaTeX self-hosting approach](https://katex.org/docs/browser.html).
 
-The workflow produces downloadable HTML and leaves public hosting disabled. For a private repository, artifact downloads require a signed-in account with repository read access. The artifact retention is set to 14 days and is also subject to repository policy. See [GitHub's artifact access documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts) and [artifact storage guide](https://docs.github.com/en/actions/tutorials/store-and-share-data).
+Successful `main` builds publish to [the public documentation site](https://maclandrol.github.io/compressme/) through GitHub Pages. Pull requests build and validate the documentation without publishing. The workflow also produces downloadable HTML; GitHub requires sign-in to download Actions artifacts. The artifact retention is set to 14 days and is also subject to repository policy. See [GitHub's artifact access documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/download-workflow-artifacts) and [artifact storage guide](https://docs.github.com/en/actions/tutorials/store-and-share-data).
 
 ## Source and historical evidence links
 
-Documentation-to-documentation links stay inside the generated site. Links to checked-in source, scripts and historical benchmark reports point to the private repository. In Actions they use the build's commit; local builds default to `main`. You need repository access to follow them.
+Documentation-to-documentation links stay inside the generated site. Links to checked-in source, scripts and historical benchmark reports point to the public repository. In Actions they use the build's commit; local builds default to `main`.
 
 Three small legacy references originally lived beside excluded vendor or model artifact directories. Their license/provenance text and artifact README are copied into [bounded documentation attachments](assets/evidence/provenance.json); their original byte hashes are recorded there. No model tensors are copied into the site. Missing repository references fail the build.
 

@@ -1,7 +1,8 @@
 site_name: compressme
+site_url: https://maclandrol.github.io/compressme/
 site_description: Training-free model transformations, tested outputs and reproducible workflows.
 repo_url: https://github.com/maclandrol/compressme
-repo_name: Private source repository
+repo_name: maclandrol/compressme
 edit_uri: blob/main/docs/
 docs_dir: docs
 site_dir: site

@@ -6,7 +6,8 @@ biology-model reductions use no distillation, retraining or precision reduction.
 
 The base package imports neither PyTorch nor biology packages. Model execution
 is an optional integration with a trusted architecture and its dependencies.
-The [illustrated technical report](docs/technical-report.md) explains the largest
+The [public documentation](https://maclandrol.github.io/compressme/) includes an
+[illustrated technical report](https://maclandrol.github.io/compressme/technical-report.html) explains the largest
 measured gains, focusing on Mol-JEPA.
 
 The package applies established compiler and numerical techniques to pretrained
@@ -51,10 +52,10 @@ python -m mkdocs build --strict
 python -m mkdocs serve
 ```
 
-A local Git commit saves the documentation source. Pushing commits or opening a
-pull request triggers the documentation workflow, which checks the build and
-uploads the generated HTML as an Actions artifact. The repository and its build
-artifacts are private; no public documentation site is deployed.
+Pushing commits or opening a pull request triggers the documentation workflow,
+which checks the build and uploads the generated HTML as an Actions artifact.
+Successful builds on `main` publish the
+[public documentation](https://maclandrol.github.io/compressme/) to GitHub Pages.
 [Build and download instructions](docs/building-docs.md).
 
 ## Weights, source repository and CLI
